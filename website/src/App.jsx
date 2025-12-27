@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, NavLink, useLocation, Navigate } from 'react-router-dom'
 import Dashboard from './pages/Dashboard'
 import Predictions from './pages/Predictions'
 import Safety from './pages/Safety'
@@ -15,12 +15,8 @@ import Semis from './pages/Semis'
 import DeepAnalysis from './pages/DeepAnalysis'
 import BatteryAnalysis from './pages/BatteryAnalysis'
 import TechEnergy from './pages/TechEnergy'
-import MLInsights from './pages/MLInsights'
-import AISupplyChain from './pages/AISupplyChain'
-import ExpandedAnalysis from './pages/ExpandedAnalysis'
 import AITimeline from './pages/AITimeline'
 import PartComplexity from './pages/PartComplexity'
-import PartComplexityDeepDive from './pages/PartComplexityDeepDive'
 import AdvancedAnalytics from './pages/AdvancedAnalytics'
 import './index.css'
 
@@ -77,22 +73,13 @@ function AppContent() {
             <span>🔋</span> Batteries
           </NavLink>
           <NavLink to="/tech-energy" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>💻</span> AI & Tech
+            <span>💻</span> AI &amp; Tech
           </NavLink>
-          <NavLink to="/ml-insights" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>🧠</span> ML Insights
-          </NavLink>
-          <NavLink to="/ai-supply-chain" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>🔗</span> AI Supply Chain
-          </NavLink>
-          <NavLink to="/expanded-analysis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>📈</span> Expanded ML
+          <NavLink to="/ml-analytics" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🧠</span> ML Analytics
           </NavLink>
           <NavLink to="/ai-timeline" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🤖</span> AI Timeline
-          </NavLink>
-          <NavLink to="/advanced-analytics" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>🔬</span> Advanced Analytics
           </NavLink>
 
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
@@ -105,14 +92,11 @@ function AppContent() {
           <NavLink to="/semis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🚛</span> Semi Trucks
           </NavLink>
-          <NavLink to="/part-complexity" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>🔧</span> Part Complexity
-          </NavLink>
-          <NavLink to="/part-complexity-deep" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>🔬</span> Parts Deep Dive
+          <NavLink to="/parts" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🔧</span> Parts Analysis
           </NavLink>
           <NavLink to="/predictions" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-            <span>📈</span> ML Predictions
+            <span>📈</span> Predictions
           </NavLink>
 
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>HOME ENERGY</div>
@@ -154,16 +138,12 @@ function AppContent() {
           <Route path="/deep-analysis" element={<DeepAnalysis />} />
           <Route path="/batteries" element={<BatteryAnalysis />} />
           <Route path="/tech-energy" element={<TechEnergy />} />
-          <Route path="/ml-insights" element={<MLInsights />} />
-          <Route path="/ai-supply-chain" element={<AISupplyChain />} />
-          <Route path="/expanded-analysis" element={<ExpandedAnalysis />} />
+          <Route path="/ml-analytics" element={<AdvancedAnalytics />} />
           <Route path="/ai-timeline" element={<AITimeline />} />
-          <Route path="/advanced-analytics" element={<AdvancedAnalytics />} />
           <Route path="/market" element={<MarketInsights />} />
           <Route path="/used-evs" element={<UsedEVs />} />
           <Route path="/semis" element={<Semis />} />
-          <Route path="/part-complexity" element={<PartComplexity />} />
-          <Route path="/part-complexity-deep" element={<PartComplexityDeepDive />} />
+          <Route path="/parts" element={<PartComplexity />} />
           <Route path="/home-energy" element={<HomeEnergy />} />
           <Route path="/solar" element={<Solar />} />
           <Route path="/predictions" element={<Predictions />} />
@@ -172,6 +152,14 @@ function AppContent() {
           <Route path="/supply-chain" element={<SupplyChain />} />
           <Route path="/environment" element={<Environment />} />
           <Route path="/sources" element={<Sources />} />
+
+          {/* Redirects for old URLs */}
+          <Route path="/ml-insights" element={<Navigate to="/ml-analytics" replace />} />
+          <Route path="/ai-supply-chain" element={<Navigate to="/supply-chain" replace />} />
+          <Route path="/expanded-analysis" element={<Navigate to="/ml-analytics" replace />} />
+          <Route path="/advanced-analytics" element={<Navigate to="/ml-analytics" replace />} />
+          <Route path="/part-complexity" element={<Navigate to="/parts" replace />} />
+          <Route path="/part-complexity-deep" element={<Navigate to="/parts" replace />} />
         </Routes>
       </main>
     </div>
