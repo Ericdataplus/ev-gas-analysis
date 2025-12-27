@@ -1,0 +1,1006 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-27T14:39:22.630109",
+    "title": "Comprehensive Cost Analysis",
+    "version": "2.0"
+  },
+  "electricity_by_state": {
+    "cheapest_states": [
+      {
+        "state": "Louisiana",
+        "abbr": "LA",
+        "cents_kwh": 9.37,
+        "ev_cost_per_mile": 0.028,
+        "annual_fuel_cost": 420
+      },
+      {
+        "state": "Oklahoma",
+        "abbr": "OK",
+        "cents_kwh": 9.56,
+        "ev_cost_per_mile": 0.029,
+        "annual_fuel_cost": 429
+      },
+      {
+        "state": "Idaho",
+        "abbr": "ID",
+        "cents_kwh": 9.67,
+        "ev_cost_per_mile": 0.029,
+        "annual_fuel_cost": 435
+      },
+      {
+        "state": "Utah",
+        "abbr": "UT",
+        "cents_kwh": 9.89,
+        "ev_cost_per_mile": 0.03,
+        "annual_fuel_cost": 445
+      },
+      {
+        "state": "Washington",
+        "abbr": "WA",
+        "cents_kwh": 9.91,
+        "ev_cost_per_mile": 0.03,
+        "annual_fuel_cost": 446
+      },
+      {
+        "state": "Arkansas",
+        "abbr": "AR",
+        "cents_kwh": 10.12,
+        "ev_cost_per_mile": 0.03,
+        "annual_fuel_cost": 455
+      },
+      {
+        "state": "North Dakota",
+        "abbr": "ND",
+        "cents_kwh": 10.24,
+        "ev_cost_per_mile": 0.031,
+        "annual_fuel_cost": 461
+      },
+      {
+        "state": "Wyoming",
+        "abbr": "WY",
+        "cents_kwh": 10.36,
+        "ev_cost_per_mile": 0.031,
+        "annual_fuel_cost": 466
+      },
+      {
+        "state": "Kentucky",
+        "abbr": "KY",
+        "cents_kwh": 10.48,
+        "ev_cost_per_mile": 0.031,
+        "annual_fuel_cost": 472
+      },
+      {
+        "state": "Texas",
+        "abbr": "TX",
+        "cents_kwh": 10.52,
+        "ev_cost_per_mile": 0.032,
+        "annual_fuel_cost": 473
+      }
+    ],
+    "most_expensive_states": [
+      {
+        "state": "Hawaii",
+        "abbr": "HI",
+        "cents_kwh": 32.76,
+        "ev_cost_per_mile": 0.098,
+        "annual_fuel_cost": 1474
+      },
+      {
+        "state": "California",
+        "abbr": "CA",
+        "cents_kwh": 27.54,
+        "ev_cost_per_mile": 0.083,
+        "annual_fuel_cost": 1239
+      },
+      {
+        "state": "Massachusetts",
+        "abbr": "MA",
+        "cents_kwh": 24.98,
+        "ev_cost_per_mile": 0.075,
+        "annual_fuel_cost": 1124
+      },
+      {
+        "state": "Connecticut",
+        "abbr": "CT",
+        "cents_kwh": 24.67,
+        "ev_cost_per_mile": 0.074,
+        "annual_fuel_cost": 1110
+      },
+      {
+        "state": "Rhode Island",
+        "abbr": "RI",
+        "cents_kwh": 23.44,
+        "ev_cost_per_mile": 0.07,
+        "annual_fuel_cost": 1055
+      },
+      {
+        "state": "New Hampshire",
+        "abbr": "NH",
+        "cents_kwh": 22.89,
+        "ev_cost_per_mile": 0.069,
+        "annual_fuel_cost": 1030
+      },
+      {
+        "state": "Vermont",
+        "abbr": "VT",
+        "cents_kwh": 20.67,
+        "ev_cost_per_mile": 0.062,
+        "annual_fuel_cost": 930
+      },
+      {
+        "state": "Alaska",
+        "abbr": "AK",
+        "cents_kwh": 20.45,
+        "ev_cost_per_mile": 0.061,
+        "annual_fuel_cost": 920
+      },
+      {
+        "state": "New York",
+        "abbr": "NY",
+        "cents_kwh": 19.87,
+        "ev_cost_per_mile": 0.06,
+        "annual_fuel_cost": 894
+      },
+      {
+        "state": "Maine",
+        "abbr": "ME",
+        "cents_kwh": 18.92,
+        "ev_cost_per_mile": 0.057,
+        "annual_fuel_cost": 851
+      }
+    ],
+    "national_average": {
+      "cents_kwh": 15.45,
+      "ev_cost_per_mile": 0.046,
+      "annual_fuel_cost": 695,
+      "gas_cost_per_mile": 0.12,
+      "gas_annual_fuel_cost": 1800
+    },
+    "ev_still_cheaper_in_most_expensive_state": {
+      "hawaii_ev_annual": 1474,
+      "hawaii_gas_annual": 3200,
+      "savings": 1726
+    }
+  },
+  "time_of_use": {
+    "example_california_pge": {
+      "utility": "PG&E (California)",
+      "rates": {
+        "peak": {
+          "time": "4pm-9pm",
+          "rate": 0.52,
+          "color": "#ef4444"
+        },
+        "off_peak": {
+          "time": "9pm-4pm",
+          "rate": 0.28,
+          "color": "#f97316"
+        },
+        "super_off_peak": {
+          "time": "12am-6am",
+          "rate": 0.18,
+          "color": "#22c55e"
+        }
+      },
+      "annual_comparison": {
+        "always_peak": 2340,
+        "always_off_peak": 1260,
+        "super_off_peak": 810,
+        "savings_smart_charging": 1530
+      }
+    },
+    "example_texas_oncor": {
+      "utility": "Oncor (Texas)",
+      "rates": {
+        "peak": {
+          "time": "2pm-8pm",
+          "rate": 0.18,
+          "color": "#ef4444"
+        },
+        "off_peak": {
+          "time": "8pm-2pm",
+          "rate": 0.08,
+          "color": "#22c55e"
+        }
+      },
+      "annual_comparison": {
+        "always_peak": 810,
+        "always_off_peak": 360,
+        "savings_smart_charging": 450
+      }
+    },
+    "smart_charging_benefits": {
+      "average_savings_percent": 50,
+      "optimal_charge_time": "12am-6am",
+      "grid_benefit": "Reduced peak demand",
+      "battery_benefit": "Slower charging = longer life"
+    },
+    "free_charging_options": [
+      {
+        "provider": "Workplace charging",
+        "typical_savings": 500
+      },
+      {
+        "provider": "Tesla Supercharger (some hotels)",
+        "typical_savings": 100
+      },
+      {
+        "provider": "Electrify America (promos)",
+        "typical_savings": 200
+      },
+      {
+        "provider": "Retail (Target, Whole Foods)",
+        "typical_savings": 150
+      }
+    ]
+  },
+  "depreciation": {
+    "ev_models": {
+      "tesla_model_3": {
+        "name": "Tesla Model 3",
+        "msrp": 42000,
+        "depreciation_5yr_percent": 32,
+        "value_after_5yr": 28560,
+        "annual_depreciation": 2688,
+        "ranking": "Best EV retention"
+      },
+      "tesla_model_y": {
+        "name": "Tesla Model Y",
+        "msrp": 47000,
+        "depreciation_5yr_percent": 35,
+        "value_after_5yr": 30550,
+        "annual_depreciation": 3290,
+        "ranking": "Excellent"
+      },
+      "ford_mach_e": {
+        "name": "Ford Mustang Mach-E",
+        "msrp": 45000,
+        "depreciation_5yr_percent": 48,
+        "value_after_5yr": 23400,
+        "annual_depreciation": 4320,
+        "ranking": "Average"
+      },
+      "chevy_bolt": {
+        "name": "Chevrolet Bolt EV",
+        "msrp": 27000,
+        "depreciation_5yr_percent": 55,
+        "value_after_5yr": 12150,
+        "annual_depreciation": 2970,
+        "ranking": "Below Average"
+      },
+      "nissan_leaf": {
+        "name": "Nissan Leaf",
+        "msrp": 28000,
+        "depreciation_5yr_percent": 62,
+        "value_after_5yr": 10640,
+        "annual_depreciation": 3472,
+        "ranking": "Poor"
+      },
+      "bmw_i4": {
+        "name": "BMW i4",
+        "msrp": 52000,
+        "depreciation_5yr_percent": 52,
+        "value_after_5yr": 24960,
+        "annual_depreciation": 5408,
+        "ranking": "Below Average"
+      }
+    },
+    "gas_comparison": {
+      "toyota_camry": {
+        "name": "Toyota Camry",
+        "msrp": 28000,
+        "depreciation_5yr_percent": 42,
+        "value_after_5yr": 16240,
+        "annual_depreciation": 2352
+      },
+      "honda_accord": {
+        "name": "Honda Accord",
+        "msrp": 29000,
+        "depreciation_5yr_percent": 44,
+        "value_after_5yr": 16240,
+        "annual_depreciation": 2552
+      },
+      "bmw_3_series": {
+        "name": "BMW 3 Series",
+        "msrp": 45000,
+        "depreciation_5yr_percent": 55,
+        "value_after_5yr": 20250,
+        "annual_depreciation": 4950
+      }
+    },
+    "depreciation_curve": [
+      {
+        "year": 0,
+        "tesla_model_3": 100,
+        "avg_ev": 100,
+        "avg_gas": 100,
+        "nissan_leaf": 100
+      },
+      {
+        "year": 1,
+        "tesla_model_3": 90,
+        "avg_ev": 80,
+        "avg_gas": 82,
+        "nissan_leaf": 75
+      },
+      {
+        "year": 2,
+        "tesla_model_3": 82,
+        "avg_ev": 68,
+        "avg_gas": 70,
+        "nissan_leaf": 60
+      },
+      {
+        "year": 3,
+        "tesla_model_3": 76,
+        "avg_ev": 58,
+        "avg_gas": 60,
+        "nissan_leaf": 48
+      },
+      {
+        "year": 4,
+        "tesla_model_3": 70,
+        "avg_ev": 50,
+        "avg_gas": 52,
+        "nissan_leaf": 40
+      },
+      {
+        "year": 5,
+        "tesla_model_3": 68,
+        "avg_ev": 45,
+        "avg_gas": 48,
+        "nissan_leaf": 38
+      }
+    ],
+    "key_insight": "Tesla holds value like Toyota. Most other EVs depreciate faster than gas cars, but this is improving as battery concerns fade."
+  },
+  "insurance": {
+    "average_annual_premium": {
+      "ev_average": 2280,
+      "gas_average": 1780,
+      "difference": 500,
+      "difference_percent": 28
+    },
+    "by_model": [
+      {
+        "model": "Tesla Model Y",
+        "type": "EV",
+        "annual_premium": 2400,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Tesla Model 3",
+        "type": "EV",
+        "annual_premium": 2340,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Rivian R1T",
+        "type": "EV",
+        "annual_premium": 3200,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Ford Mach-E",
+        "type": "EV",
+        "annual_premium": 2100,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Chevy Bolt",
+        "type": "EV",
+        "annual_premium": 1850,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Toyota Camry",
+        "type": "Gas",
+        "annual_premium": 1650,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Honda Accord",
+        "type": "Gas",
+        "annual_premium": 1580,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Ford F-150",
+        "type": "Gas",
+        "annual_premium": 1920,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Ford F-150 Lightning",
+        "type": "EV",
+        "annual_premium": 2650,
+        "color": "#22c55e"
+      }
+    ],
+    "why_evs_cost_more": [
+      {
+        "reason": "Higher repair costs",
+        "impact": "Parts and specialized labor"
+      },
+      {
+        "reason": "Expensive batteries",
+        "impact": "$15-25k replacement cost"
+      },
+      {
+        "reason": "Fewer repair shops",
+        "impact": "Less competition on pricing"
+      },
+      {
+        "reason": "Higher MSRP",
+        "impact": "More expensive to replace"
+      },
+      {
+        "reason": "Performance acceleration",
+        "impact": "Higher accident risk (Teslas)"
+      }
+    ],
+    "ways_to_save": [
+      {
+        "method": "Shop around",
+        "savings": "15-30%"
+      },
+      {
+        "method": "Increase deductible",
+        "savings": "10-20%"
+      },
+      {
+        "method": "Bundle home + auto",
+        "savings": "10-15%"
+      },
+      {
+        "method": "Usage-based insurance",
+        "savings": "10-30%"
+      },
+      {
+        "method": "Tesla Insurance (Tesla owners)",
+        "savings": "20-40%"
+      }
+    ]
+  },
+  "repair_costs": {
+    "common_ev_repairs": [
+      {
+        "repair": "12V Battery Replacement",
+        "cost_low": 150,
+        "cost_high": 300,
+        "frequency": "Every 3-5 years"
+      },
+      {
+        "repair": "Brake Pad Replacement",
+        "cost_low": 150,
+        "cost_high": 400,
+        "frequency": "Less frequent (regen)"
+      },
+      {
+        "repair": "Tire Replacement (set)",
+        "cost_low": 600,
+        "cost_high": 1200,
+        "frequency": "Every 25-40k miles"
+      },
+      {
+        "repair": "Cabin Air Filter",
+        "cost_low": 50,
+        "cost_high": 100,
+        "frequency": "Every 2 years"
+      },
+      {
+        "repair": "HVAC Heat Pump",
+        "cost_low": 1500,
+        "cost_high": 2500,
+        "frequency": "Rare"
+      },
+      {
+        "repair": "Drive Unit (Motor)",
+        "cost_low": 5000,
+        "cost_high": 8000,
+        "frequency": "Very rare"
+      },
+      {
+        "repair": "Battery Pack (out of warranty)",
+        "cost_low": 12000,
+        "cost_high": 25000,
+        "frequency": "Very rare"
+      }
+    ],
+    "common_gas_repairs": [
+      {
+        "repair": "Oil Change",
+        "cost_low": 35,
+        "cost_high": 100,
+        "frequency": "Every 5-7k miles"
+      },
+      {
+        "repair": "Transmission Fluid",
+        "cost_low": 100,
+        "cost_high": 250,
+        "frequency": "Every 30-60k miles"
+      },
+      {
+        "repair": "Spark Plugs",
+        "cost_low": 100,
+        "cost_high": 300,
+        "frequency": "Every 30-100k miles"
+      },
+      {
+        "repair": "Brake Pad Replacement",
+        "cost_low": 150,
+        "cost_high": 400,
+        "frequency": "Every 30-50k miles"
+      },
+      {
+        "repair": "Alternator",
+        "cost_low": 400,
+        "cost_high": 800,
+        "frequency": "Every 80-150k miles"
+      },
+      {
+        "repair": "Starter Motor",
+        "cost_low": 300,
+        "cost_high": 600,
+        "frequency": "Every 80-150k miles"
+      },
+      {
+        "repair": "Transmission Rebuild",
+        "cost_low": 2500,
+        "cost_high": 5000,
+        "frequency": "Variable"
+      },
+      {
+        "repair": "Engine Rebuild",
+        "cost_low": 4000,
+        "cost_high": 8000,
+        "frequency": "Rare"
+      }
+    ],
+    "annual_maintenance_comparison": {
+      "ev": {
+        "items": [
+          "Tire rotation",
+          "Cabin filter",
+          "Brake fluid check",
+          "Wiper blades"
+        ],
+        "annual_cost": 400,
+        "dealer_visits": 1
+      },
+      "gas": {
+        "items": [
+          "Oil changes (3-4)",
+          "Tire rotation",
+          "Air filter",
+          "Cabin filter",
+          "Wiper blades",
+          "Fluid checks"
+        ],
+        "annual_cost": 1200,
+        "dealer_visits": 4
+      }
+    },
+    "ten_year_maintenance": {
+      "ev": 4000,
+      "gas": 12000,
+      "savings": 8000
+    }
+  },
+  "lease_vs_buy": {
+    "example_tesla_model_3": {
+      "msrp": 42000,
+      "lease": {
+        "months": 36,
+        "monthly_payment": 499,
+        "down_payment": 4500,
+        "total_cost": 22464,
+        "miles_allowed": 36000,
+        "overage_per_mile": 0.25,
+        "pros": [
+          "Lower monthly cost",
+          "Always new tech",
+          "No depreciation risk"
+        ],
+        "cons": [
+          "No ownership",
+          "Mileage limits",
+          "No federal tax credit"
+        ]
+      },
+      "buy_loan": {
+        "months": 72,
+        "apr": 6.5,
+        "monthly_payment": 692,
+        "down_payment": 5000,
+        "total_loan_cost": 49824,
+        "value_after_6yr": 23100,
+        "net_cost": 26724,
+        "pros": [
+          "Own the car",
+          "No mileage limits",
+          "$7,500 tax credit"
+        ],
+        "cons": [
+          "Higher monthly",
+          "Depreciation risk",
+          "Repair costs"
+        ]
+      },
+      "buy_cash": {
+        "purchase_price": 42000,
+        "minus_tax_credit": 7500,
+        "net_cost": 34500,
+        "value_after_6yr": 23100,
+        "true_cost_ownership": 11400,
+        "pros": [
+          "No interest",
+          "Lowest total cost",
+          "Full flexibility"
+        ],
+        "cons": [
+          "Large upfront",
+          "Opportunity cost"
+        ]
+      }
+    },
+    "when_to_lease": [
+      "You want the latest tech every 3 years",
+      "You drive under 12,000 miles/year",
+      "Business use (tax deductions)",
+      "You can't claim the federal tax credit",
+      "You want predictable costs"
+    ],
+    "when_to_buy": [
+      "You plan to keep the car 5+ years",
+      "You drive more than 12,000 miles/year",
+      "You qualify for $7,500 tax credit",
+      "You want to build equity",
+      "You want to sell/trade when you choose"
+    ],
+    "ev_specific_considerations": {
+      "battery_warranty": "8 years / 100k-150k miles typically",
+      "tech_obsolescence": "Less concern with OTA updates",
+      "residual_uncertainty": "EV residuals harder to predict than gas"
+    }
+  },
+  "tco": {
+    "scenarios": {
+      "average_driver": {
+        "annual_miles": 12000,
+        "ownership_years": 7,
+        "loan_apr": 6.5
+      }
+    },
+    "comparison": {
+      "tesla_model_3_lr": {
+        "category": "EV",
+        "msrp": 47000,
+        "tax_credit": 7500,
+        "net_purchase": 39500,
+        "annual_fuel": 540,
+        "annual_maintenance": 400,
+        "annual_insurance": 2340,
+        "registration_annual": 350,
+        "depreciation_7yr": 20000,
+        "total_7yr_cost": 62700,
+        "cost_per_mile": 0.75
+      },
+      "toyota_camry_xse": {
+        "category": "Gas",
+        "msrp": 35000,
+        "tax_credit": 0,
+        "net_purchase": 35000,
+        "annual_fuel": 1800,
+        "annual_maintenance": 1200,
+        "annual_insurance": 1650,
+        "registration_annual": 250,
+        "depreciation_7yr": 16000,
+        "total_7yr_cost": 69350,
+        "cost_per_mile": 0.82
+      },
+      "honda_accord_hybrid": {
+        "category": "Hybrid",
+        "msrp": 33000,
+        "tax_credit": 0,
+        "net_purchase": 33000,
+        "annual_fuel": 1100,
+        "annual_maintenance": 900,
+        "annual_insurance": 1580,
+        "registration_annual": 250,
+        "depreciation_7yr": 14000,
+        "total_7yr_cost": 57430,
+        "cost_per_mile": 0.68
+      }
+    },
+    "tco_breakdown_chart": [
+      {
+        "category": "Purchase (net)",
+        "Tesla Model 3": 39500,
+        "Camry": 35000,
+        "Accord Hybrid": 33000
+      },
+      {
+        "category": "Fuel (7yr)",
+        "Tesla Model 3": 3780,
+        "Camry": 12600,
+        "Accord Hybrid": 7700
+      },
+      {
+        "category": "Maintenance (7yr)",
+        "Tesla Model 3": 2800,
+        "Camry": 8400,
+        "Accord Hybrid": 6300
+      },
+      {
+        "category": "Insurance (7yr)",
+        "Tesla Model 3": 16380,
+        "Camry": 11550,
+        "Accord Hybrid": 11060
+      },
+      {
+        "category": "Registration (7yr)",
+        "Tesla Model 3": 2450,
+        "Camry": 1750,
+        "Accord Hybrid": 1750
+      }
+    ],
+    "who_wins": {
+      "short_term_3yr": "Hybrid (lowest depreciation hit)",
+      "medium_term_5yr": "EV (fuel savings compound)",
+      "long_term_7yr_plus": "EV (maintenance savings dominate)",
+      "high_mileage_20k_yr": "EV (fuel savings are huge)",
+      "low_mileage_8k_yr": "Hybrid or gas (less fuel benefit)"
+    }
+  },
+  "key_insights": [
+    {
+      "category": "electricity",
+      "title": "Louisiana = cheapest EV charging",
+      "detail": "$0.028/mile vs $0.098/mile in Hawaii. 3.5x difference!",
+      "icon": "\u26a1"
+    },
+    {
+      "category": "tou",
+      "title": "Smart charging saves $1,500/year",
+      "detail": "Charging 12am-6am vs peak hours in California",
+      "icon": "\u23f0"
+    },
+    {
+      "category": "depreciation",
+      "title": "Tesla holds value like Toyota",
+      "detail": "Only 32% depreciation in 5 years vs 55% for Nissan Leaf",
+      "icon": "\ud83d\udcc8"
+    },
+    {
+      "category": "insurance",
+      "title": "EVs cost 28% more to insure",
+      "detail": "$2,280 vs $1,780 average. Shop around - Tesla Insurance saves 30%",
+      "icon": "\ud83d\udee1\ufe0f"
+    },
+    {
+      "category": "maintenance",
+      "title": "$8,000 maintenance savings over 10 years",
+      "detail": "No oil changes, less brake wear, fewer parts to fail",
+      "icon": "\ud83d\udd27"
+    },
+    {
+      "category": "tco",
+      "title": "EVs win on TCO after 5 years",
+      "detail": "Despite higher purchase price, fuel + maintenance savings add up",
+      "icon": "\ud83d\udcb0"
+    }
+  ],
+  "charts": {
+    "electricity_comparison": [
+      {
+        "state": "Louisiana",
+        "rate": 9.37,
+        "ev_annual": 420,
+        "gas_annual": 1800,
+        "color": "#22c55e"
+      },
+      {
+        "state": "Texas",
+        "rate": 10.52,
+        "ev_annual": 473,
+        "gas_annual": 1800,
+        "color": "#22c55e"
+      },
+      {
+        "state": "National Avg",
+        "rate": 15.45,
+        "ev_annual": 695,
+        "gas_annual": 1800,
+        "color": "#3b82f6"
+      },
+      {
+        "state": "New York",
+        "rate": 19.87,
+        "ev_annual": 894,
+        "gas_annual": 1800,
+        "color": "#f97316"
+      },
+      {
+        "state": "California",
+        "rate": 27.54,
+        "ev_annual": 1239,
+        "gas_annual": 2200,
+        "color": "#ef4444"
+      },
+      {
+        "state": "Hawaii",
+        "rate": 32.76,
+        "ev_annual": 1474,
+        "gas_annual": 3200,
+        "color": "#ef4444"
+      }
+    ],
+    "depreciation_curves": [
+      {
+        "year": 0,
+        "tesla_model_3": 100,
+        "avg_ev": 100,
+        "avg_gas": 100,
+        "nissan_leaf": 100
+      },
+      {
+        "year": 1,
+        "tesla_model_3": 90,
+        "avg_ev": 80,
+        "avg_gas": 82,
+        "nissan_leaf": 75
+      },
+      {
+        "year": 2,
+        "tesla_model_3": 82,
+        "avg_ev": 68,
+        "avg_gas": 70,
+        "nissan_leaf": 60
+      },
+      {
+        "year": 3,
+        "tesla_model_3": 76,
+        "avg_ev": 58,
+        "avg_gas": 60,
+        "nissan_leaf": 48
+      },
+      {
+        "year": 4,
+        "tesla_model_3": 70,
+        "avg_ev": 50,
+        "avg_gas": 52,
+        "nissan_leaf": 40
+      },
+      {
+        "year": 5,
+        "tesla_model_3": 68,
+        "avg_ev": 45,
+        "avg_gas": 48,
+        "nissan_leaf": 38
+      }
+    ],
+    "insurance_by_model": [
+      {
+        "model": "Tesla Model Y",
+        "type": "EV",
+        "annual_premium": 2400,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Tesla Model 3",
+        "type": "EV",
+        "annual_premium": 2340,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Rivian R1T",
+        "type": "EV",
+        "annual_premium": 3200,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Ford Mach-E",
+        "type": "EV",
+        "annual_premium": 2100,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Chevy Bolt",
+        "type": "EV",
+        "annual_premium": 1850,
+        "color": "#22c55e"
+      },
+      {
+        "model": "Toyota Camry",
+        "type": "Gas",
+        "annual_premium": 1650,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Honda Accord",
+        "type": "Gas",
+        "annual_premium": 1580,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Ford F-150",
+        "type": "Gas",
+        "annual_premium": 1920,
+        "color": "#ef4444"
+      },
+      {
+        "model": "Ford F-150 Lightning",
+        "type": "EV",
+        "annual_premium": 2650,
+        "color": "#22c55e"
+      }
+    ],
+    "maintenance_annual": [
+      {
+        "type": "EV",
+        "cost": 400,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hybrid",
+        "cost": 900,
+        "color": "#f97316"
+      },
+      {
+        "type": "Gas",
+        "cost": 1200,
+        "color": "#ef4444"
+      }
+    ],
+    "tco_breakdown": [
+      {
+        "category": "Purchase (net)",
+        "Tesla Model 3": 39500,
+        "Camry": 35000,
+        "Accord Hybrid": 33000
+      },
+      {
+        "category": "Fuel (7yr)",
+        "Tesla Model 3": 3780,
+        "Camry": 12600,
+        "Accord Hybrid": 7700
+      },
+      {
+        "category": "Maintenance (7yr)",
+        "Tesla Model 3": 2800,
+        "Camry": 8400,
+        "Accord Hybrid": 6300
+      },
+      {
+        "category": "Insurance (7yr)",
+        "Tesla Model 3": 16380,
+        "Camry": 11550,
+        "Accord Hybrid": 11060
+      },
+      {
+        "category": "Registration (7yr)",
+        "Tesla Model 3": 2450,
+        "Camry": 1750,
+        "Accord Hybrid": 1750
+      }
+    ],
+    "tco_total": [
+      {
+        "vehicle": "Accord Hybrid",
+        "total": 57430,
+        "color": "#f97316"
+      },
+      {
+        "vehicle": "Tesla Model 3",
+        "total": 62700,
+        "color": "#22c55e"
+      },
+      {
+        "vehicle": "Toyota Camry",
+        "total": 69350,
+        "color": "#ef4444"
+      }
+    ]
+  }
+}
