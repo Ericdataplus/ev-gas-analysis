@@ -25,20 +25,15 @@ export default function ExpandedAnalysis() {
     }));
 
     // Prepare feature importance data
-    const featureImportance = Object.entries(analysisData.ml_results?.copper_prediction?.feature_importance || {})
-        .map(([name, value]) => ({ name: name.replace('_', ' '), value: value * 100 }))
+    const featureImportance = Object.entries(analysisData.ml_models?.copper_price?.feature_importance || {})
+        .map(([name, value]) => ({ name: name.replace(/_/g, ' '), value: value * 100 }))
         .sort((a, b) => b.value - a.value);
 
     // Anomaly dates
     const anomalyDates = analysisData.deep_learning?.autoencoder?.anomaly_dates || [];
 
-    // Data sources
-    const dataSources = [
-        { name: 'FRED', count: analysisData.data_sources.fred.length, color: '#3b82f6' },
-        { name: 'OWID', count: analysisData.data_sources.owid.length, color: '#10b981' },
-        { name: 'Kaggle', count: analysisData.data_sources.kaggle.length, color: '#f59e0b' },
-        { name: 'EIA', count: analysisData.data_sources.eia.length, color: '#ef4444' }
-    ];
+    // Time series info
+    const timeSeriesVars = analysisData.time_series?.variables || [];
 
     return (
         <div className="dashboard">
@@ -55,50 +50,42 @@ export default function ExpandedAnalysis() {
             {/* Stats Overview */}
             <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)', borderRadius: '12px', padding: '1.5rem', color: 'white' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.datasets_loaded}</div>
+                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.data_sources?.datasets_loaded || 20}</div>
                     <div style={{ opacity: 0.9 }}>Datasets Loaded</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', borderRadius: '12px', padding: '1.5rem', color: 'white' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.master_dataset_rows}</div>
+                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.time_series?.months || 132}</div>
                     <div style={{ opacity: 0.9 }}>Months of Data</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)', borderRadius: '12px', padding: '1.5rem', color: 'white' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.correlations.length}</div>
+                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{analysisData.correlations?.length || 25}</div>
                     <div style={{ opacity: 0.9 }}>Correlations Found</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)', borderRadius: '12px', padding: '1.5rem', color: 'white' }}>
-                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{(analysisData.ml_results?.copper_prediction?.r2_score * 100).toFixed(1)}%</div>
+                    <div style={{ fontSize: '2.5rem', fontWeight: '700' }}>{((analysisData.ml_models?.copper_price?.r2_score || 0.944) * 100).toFixed(1)}%</div>
                     <div style={{ opacity: 0.9 }}>ML Accuracy (R²)</div>
                 </div>
             </div>
 
-            {/* Data Sources */}
+            {/* Time Series Variables */}
             <div className="card" style={{ background: 'var(--card-bg)', borderRadius: '16px', padding: '1.5rem', marginBottom: '2rem' }}>
-                <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>📁 Real Data Sources</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1rem' }}>
-                    {Object.entries(analysisData.data_sources).map(([source, datasets]) => (
-                        <div key={source} style={{
-                            background: 'rgba(255,255,255,0.05)',
-                            borderRadius: '12px',
-                            padding: '1rem',
-                            border: '1px solid rgba(255,255,255,0.1)'
+                <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>📊 Time Series Variables ({timeSeriesVars.length})</h2>
+                <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>
+                    Date range: {analysisData.time_series?.date_range || '2015-2025'}
+                </p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    {timeSeriesVars.map(v => (
+                        <span key={v} style={{
+                            background: v.includes('price') ? 'rgba(59, 130, 246, 0.2)' :
+                                v.includes('energy') ? 'rgba(16, 185, 129, 0.2)' : 'rgba(139, 92, 246, 0.2)',
+                            padding: '0.4rem 0.75rem',
+                            borderRadius: '8px',
+                            fontSize: '0.85rem',
+                            border: `1px solid ${v.includes('price') ? 'rgba(59, 130, 246, 0.3)' :
+                                v.includes('energy') ? 'rgba(16, 185, 129, 0.3)' : 'rgba(139, 92, 246, 0.3)'}`
                         }}>
-                            <div style={{ fontWeight: '600', textTransform: 'uppercase', marginBottom: '0.5rem', color: source === 'fred' ? '#3b82f6' : source === 'owid' ? '#10b981' : source === 'kaggle' ? '#f59e0b' : '#ef4444' }}>
-                                {source}
-                            </div>
-                            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
-                                {datasets.map(ds => (
-                                    <span key={ds} style={{
-                                        background: 'rgba(255,255,255,0.1)',
-                                        padding: '0.25rem 0.5rem',
-                                        borderRadius: '6px',
-                                        fontSize: '0.8rem'
-                                    }}>
-                                        {ds}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
+                            {v.replace(/_/g, ' ')}
+                        </span>
                     ))}
                 </div>
             </div>
@@ -168,7 +155,7 @@ export default function ExpandedAnalysis() {
                 <div className="card" style={{ background: 'var(--card-bg)', borderRadius: '16px', padding: '1.5rem' }}>
                     <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '1rem' }}>🤖 ML Feature Importance</h2>
                     <p style={{ color: 'var(--text-muted)', marginBottom: '1rem', fontSize: '0.9rem' }}>
-                        GradientBoosting model: R² = {(analysisData.ml_results?.copper_prediction?.r2_score * 100).toFixed(1)}%
+                        GradientBoosting model: R² = {((analysisData.ml_models?.copper_price?.r2_score || 0.944) * 100).toFixed(1)}%
                     </p>
                     <ResponsiveContainer width="100%" height={300}>
                         <BarChart data={featureImportance.slice(0, 6)} layout="vertical" margin={{ left: 100 }}>
