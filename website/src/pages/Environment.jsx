@@ -12,8 +12,8 @@ export default function Environment() {
 
             <div className="grid-2">
                 <ChartModal
-                    title="🚛 Transport Efficiency (CO2/ton-mile)"
-                    insight="Ships are 82x more efficient than planes for freight! Air cargo produces 1.23 lbs CO2 per ton-mile vs just 0.015 for ships. This is why most global trade uses shipping. Trucking (0.15) is 10x less efficient than ships - a key reason for freight rail investment."
+                    title="🚛 Freight Emissions (CO2 lbs/ton-mile) - Lower is Better"
+                    insight="Ships are 82x CLEANER than planes for freight! Air cargo produces 1.23 lbs CO2 per ton-mile vs just 0.015 for ships. This is why most global trade uses shipping. Trucking (0.15) is 10x worse than ships - a key reason for freight rail investment."
                 >
                     <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={data.transport.efficiency} layout="vertical">
