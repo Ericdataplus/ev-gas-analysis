@@ -1,184 +1,149 @@
-# Electric vs Gas Vehicle Environmental Analysis 🚗⚡
+# 🚗⚡ EV vs Gas Analysis
 
-> **[📖 View Interactive HTML Version](README.html)** | **[📊 Research Findings](RESEARCH_QUESTIONS.html)**
-
-A comprehensive data analysis and machine learning project analyzing electric vehicles, gas vehicles, hybrids, and hydrogen - including environmental impact, infrastructure, costs, safety, and global energy consumption.
-
----
-
-## 🎯 Key Findings
-
-| Metric | Value | Source |
-|--------|-------|--------|
-| **CO2 Reduction (EV vs Gas)** | 74-96% | Depends on charging source |
-| **EV Maintenance Savings** | 60% lower | Fewer moving parts |
-| **EV Fire Risk** | 98% lower | 25 vs 1,530 per 100K vehicles |
-| **Powertrain Complexity** | 100x simpler | 20 vs 2,000 moving parts |
-| **EV Fleet by 2050** | 95% | ML prediction (logistic model) |
-
----
-
-## 📊 Analysis Scope
-
-### Vehicle Types Analyzed
-- ⛽ **ICE** (Internal Combustion Engine) - Gasoline/Diesel
-- ⚡ **BEV** (Battery Electric Vehicle)
-- 🔋 **HEV/PHEV** (Hybrid / Plug-in Hybrid)
-- 💧 **FCEV** (Hydrogen Fuel Cell)
-
-### Topics Covered
-
-| Category | Scripts | Key Insights |
-|----------|---------|--------------|
-| **Waste & Toxicity** | `waste_toxicity_analysis.py` | Motor oil contaminates 1M gal water per gal |
-| **Infrastructure** | `infrastructure_comparison.py`, `charging_source_analysis.py` | EVs beat gas on EVERY grid mix |
-| **Hypothetical Scenarios** | `hypothetical_fleet_scenarios.py` | All-EV fleet = 92% CO2 reduction |
-| **Manufacturing** | `vehicle_manufacturing_analysis.py` | China produces 2x more EVs than Tesla |
-| **Maintenance Costs** | `maintenance_cost_comparison.py` | EVs cheapest over 10 years |
-| **Commercial Vehicles** | `commercial_vehicle_analysis.py` | 1 semi = 30 cars in fuel consumption |
-| **Home Solar + EV** | `home_solar_ev_economics.py` | 30% tax credit expires Dec 2025! |
-| **Global Energy** | `expanded_global_analysis.py` | Transportation = 46% of global oil |
-| **Safety** | `expanded_global_analysis.py` | EVs 40% fewer injury claims |
-
----
-
-## 🤖 Machine Learning Models
-
-### GPU Accelerated Training (RTX 3060 12GB)
-
-| Model | Framework | Use Case |
-|-------|-----------|----------|
-| XGBoost | GPU | Fleet composition, sales predictions |
-| LightGBM | GPU | Infrastructure growth |
-| CatBoost | GPU | Price trend analysis |
-| Neural Network | PyTorch CUDA | Complex time-series |
-| Logistic Growth | SciPy | S-curve adoption modeling |
-| Exponential Decay | SciPy | Gas station decline |
-
-### Predictions (2025-2050)
-
-```
-EV Fleet Share:     2024: 2%   → 2030: 8.5%  → 2040: 69%   → 2050: 95%
-Charging Stations:  2024: 75K  → 2030: 111K  → 2040: 123K  → 2050: 124K
-Gas Stations:       2024: 146K → 2030: 135K  → 2040: 116K  → 2050: 97K
-Battery $/kWh:      2024: $115 → 2030: $40   → 2040: $40   → 2050: $40
-```
-
----
-
-## 📁 Project Structure
-
-```
-├── scripts/
-│   ├── analysis/              # 12 analysis scripts
-│   │   ├── waste_toxicity_analysis.py
-│   │   ├── hypothetical_fleet_scenarios.py
-│   │   ├── charging_source_analysis.py
-│   │   ├── hydrogen_infrastructure_analysis.py
-│   │   ├── tesla_supercharger_analysis.py
-│   │   ├── vehicle_manufacturing_analysis.py
-│   │   ├── maintenance_cost_comparison.py
-│   │   ├── commercial_vehicle_analysis.py
-│   │   ├── home_solar_ev_economics.py
-│   │   ├── expanded_global_analysis.py
-│   │   └── infrastructure_comparison.py
-│   │
-│   ├── ml/                    # 7 ML training scripts
-│   │   ├── train_ev_adoption_models.py
-│   │   ├── train_infrastructure_models.py
-│   │   ├── train_waste_models.py
-│   │   ├── train_timeseries_models.py
-│   │   ├── train_production_models.py
-│   │   └── train_all_models.py
-│   │
-│   └── visualization/         # Chart generation
-│
-├── outputs/
-│   ├── reports/               # 33+ CSV analysis reports
-│   └── models/                # Trained ML models
-│
-├── data/raw/kaggle/           # 63MB real-world data
-│
-├── README.html                # Interactive HTML version
-├── RESEARCH_QUESTIONS.html    # Detailed findings with charts
-├── RESEARCH_QUESTIONS.md      # Markdown version
-└── run_all.py                 # Master runner script
-```
-
----
+> Comprehensive ML-powered analysis of electric vs gas vehicles
 
 ## 🚀 Quick Start
 
-### 1. Setup
-```bash
-git clone https://github.com/yourusername/ev-gas-analysis.git
-cd ev-gas-analysis
+| What You Want | How to Get It |
+|---------------|---------------|
+| **See all insights** | Read [📊 INSIGHTS.md](INSIGHTS.md) |
+| **Navigate the repo** | Read [🗺️ NAVIGATION.md](NAVIGATION.md) |
+| **View graphs** | Open [outputs/ml_graphs/](outputs/ml_graphs/) |
+| **Run dashboard** | `streamlit run dashboard.py` |
+| **View online** | [GitHub Pages](https://ericdataplus.github.io/ev-gas-analysis/) |
 
-python -m venv venv
-.\venv\Scripts\activate  # Windows
-pip install -r requirements.txt
+---
 
-# For GPU ML training (optional)
-pip install torch --index-url https://download.pytorch.org/whl/cu118
+## 📊 Key Findings
+
+| Metric | Value |
+|--------|-------|
+| EV Fleet by 2050 | **95%** |
+| EV Lifetime CO2 Reduction | **57-73%** |
+| EV Fire Risk Reduction | **98%** |
+| EV Maintenance Savings | **60%** |
+| Battery Life | **280,000+ miles** |
+| 10-Year TCO Savings | **$10,000+** |
+
+---
+
+## 📁 Repository Structure
+
+```
+📊 INSIGHTS.md         ← All discoveries in one place
+🗺️ NAVIGATION.md       ← How to find things
+📖 README.md           ← This file
+
+outputs/
+├── ml_graphs/         ← 7 prediction graphs (PNG)
+└── reports/           ← CSV/JSON data
+
+scripts/
+├── analysis/          ← 13 analysis scripts
+├── ml/
+│   ├── exploratory/   ← Non-predictive ML (clustering)
+│   ├── advanced/      ← Graph neural networks
+│   ├── causal/        ← Causal inference
+│   └── train_*.py     ← Predictive models
+└── visualization/     ← Graph generation
+
+dashboard.py           ← Interactive Streamlit dashboard
 ```
 
-### 2. Run All Analysis
-```bash
-python run_all.py
-```
+**📖 Full structure guide: [NAVIGATION.md](NAVIGATION.md)**
 
-### 3. Train ML Models
+---
+
+## 🔬 Analysis Types
+
+### 1. Predictive ML
+Predicts EV adoption, infrastructure, battery costs to 2050
+- XGBoost, LightGBM, CatBoost (GPU accelerated)
+- PyTorch neural networks
+- Logistic growth models
+
+### 2. Non-Predictive ML 
+Discovers hidden patterns without prediction targets
+- Clustering (K-means, DBSCAN)
+- Dimensionality reduction (PCA, UMAP)
+- Anomaly detection
+
+### 3. Causal Inference
+Understands WHY, not just WHAT
+- DoWhy causal graphs
+- Counterfactual analysis
+- Confounding bias detection
+
+### 4. Graph Network Analysis
+Models relationships and dependencies
+- Supply chain risk networks
+- Correlation communities
+- PageRank for critical nodes
+
+---
+
+## 📈 Prediction Graphs
+
+All graphs are in [`outputs/ml_graphs/`](outputs/ml_graphs/):
+
+| Graph | Shows |
+|-------|-------|
+| `00_ml_predictions_dashboard.png` | 4-panel summary |
+| `01_ev_sales_prediction.png` | EV sales to 2050 |
+| `02_fleet_composition_prediction.png` | EV vs Hybrid vs ICE % |
+| `03_infrastructure_crossover.png` | When EVs > Gas stations |
+| `04_battery_cost_prediction.png` | Cost decline curve |
+| `05_ev_stock_prediction.png` | EVs on road (millions) |
+| `06_model_comparison.png` | Training speed comparison |
+
+---
+
+## 🛠️ Commands
+
 ```bash
-python scripts/ml/train_all_models.py        # All models
-python scripts/ml/train_production_models.py # Best predictions
+# View interactive dashboard
+streamlit run dashboard.py
+
+# Generate prediction graphs
+python scripts/visualization/generate_ml_graphs.py
+
+# Run deep insights analysis
+python scripts/analysis/deep_insights_analysis.py
+
+# Run non-predictive ML
+python scripts/ml/exploratory/pattern_discovery.py
+
+# Run causal inference
+python scripts/ml/causal/causal_inference.py
+
+# Train all ML models (GPU)
+python scripts/ml/train_all_models.py
 ```
 
 ---
 
-## 📊 Output Reports (33 CSV files)
+## 📚 Documentation
 
-| Report | Description |
-|--------|-------------|
-| `final_ml_predictions.csv` | ML predictions 2025-2050 |
-| `hypothetical_fleet_scenarios.csv` | What if all EVs? |
-| `waste_toxicity_ranking.csv` | Environmental impact scores |
-| `charging_source_analysis.csv` | Grid vs solar emissions |
-| `tco_10year_comparison.csv` | Total cost of ownership |
-| `commercial_vehicle_analysis.csv` | Semi truck electrification |
-| `vehicle_complexity.csv` | Parts count comparison |
-| ... | 26 more reports |
+| File | Description |
+|------|-------------|
+| [INSIGHTS.md](INSIGHTS.md) | All findings & discoveries |
+| [NAVIGATION.md](NAVIGATION.md) | Repo structure guide |
+| [RESEARCH_QUESTIONS.md](RESEARCH_QUESTIONS.md) | Original research questions |
+| [RESEARCH_QUESTIONS.html](RESEARCH_QUESTIONS.html) | Interactive version |
 
 ---
 
-## 📈 Data Sources
+## 🔧 Tech Stack
 
-- **IEA** (International Energy Agency)
-- **EIA** (US Energy Information Administration)
-- **EPA** (Environmental Protection Agency)
-- **NHTSA** (Highway Traffic Safety)
-- **BloombergNEF** (Energy Research)
-- **Kaggle** (EV stations, emissions, population data)
-- **Tesla** (Safety reports, Supercharger data)
-
----
-
-## 🔮 Future Roadmap
-
-- [ ] Real-time news sentiment analysis (societal changes)
-- [ ] Regional analysis (state-by-state)
-- [ ] Interactive web dashboard
-- [ ] GitHub Actions for automated updates
-- [ ] More Kaggle dataset integration
-- [ ] Supply chain complexity analysis
+- **ML:** XGBoost, LightGBM, CatBoost, PyTorch
+- **Analysis:** Pandas, NumPy, SciPy
+- **Visualization:** Matplotlib, Plotly, Chart.js
+- **Dashboard:** Streamlit
+- **Causal:** DoWhy, EconML
+- **GPU:** RTX 3060 12GB VRAM
 
 ---
 
 ## 📄 License
 
 MIT License - Feel free to use and modify!
-
----
-
-**Built with ❤️ using Python, PyTorch, XGBoost, LightGBM, CatBoost**
-
-*GPU Accelerated · RTX 3060 12GB VRAM*
