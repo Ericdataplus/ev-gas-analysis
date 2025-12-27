@@ -51,7 +51,7 @@ function App() {
 
             <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
             <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
-              <span>🏆</span> 2024 Market
+              <span>🏆</span> 2025 Market
             </NavLink>
             <NavLink to="/used-evs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🚗</span> Used EVs

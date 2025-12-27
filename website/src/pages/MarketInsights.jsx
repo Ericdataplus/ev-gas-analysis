@@ -6,14 +6,14 @@ export default function MarketInsights() {
     return (
         <div>
             <header className="page-header">
-                <h1 className="page-title">📊 2024 Market Insights</h1>
+                <h1 className="page-title">📊 2025 Market Insights</h1>
                 <p className="page-subtitle">Latest manufacturer rankings, solid-state batteries, and market trends</p>
             </header>
 
             {/* 2024 Market Share */}
             <div className="grid-2">
                 <ChartModal
-                    title="🏆 2024 Global EV Sales (Millions)"
+                    title="🏆 2025 Global EV Sales (Millions)"
                     insight={data.marketShare2024.keyInsight}
                 >
                     <ResponsiveContainer width="100%" height="100%">

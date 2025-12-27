@@ -88,55 +88,55 @@ const supplyCompetition = [
     { sector: 'Laptops/PCs', priceIncrease: 287, waitTime: '4-8 weeks', priority: 'Low' },
 ];
 
-// Timeline of Key Events (Extended through Dec 2025) - With source links for fact-checking
+// Timeline of Key Events (Extended through Dec 2025) - With Google search links for fact-checking
 const keyEvents = [
     {
         date: 'Mar 2024', event: 'Micron announces HBM3E sold out through 2025', impact: 'High',
-        source: 'https://www.tomshardware.com/tech-industry/microns-hbm-chips-are-sold-out-for-2024-and-mostly-booked-for-2025'
+        source: 'https://www.google.com/search?q=Micron+HBM3E+sold+out+2024+2025+announcement'
     },
     {
         date: 'May 2024', event: 'SK Hynix confirms HBM completely sold out', impact: 'High',
-        source: 'https://www.datacenterknowledge.com/ai-data-centers/sk-hynix-confirms-hbm-memory-sold-out-through-2024-and-2025'
+        source: 'https://www.google.com/search?q=SK+Hynix+HBM+sold+out+2024+2025'
     },
     {
         date: 'Jul 2024', event: 'Google exec fired over failed TPU memory deal', impact: 'Medium',
-        source: 'https://www.indiatimes.com/technology/news/google-executive-fired-tpu-memory-deal-647261.html'
+        source: 'https://www.google.com/search?q=Google+executive+fired+TPU+memory+HBM+deal+2024'
     },
     {
         date: 'Sep 2024', event: 'Microsoft walks out of SK Hynix negotiation', impact: 'High',
-        source: 'https://www.androidheadlines.com/2024/09/microsoft-sk-hynix-hbm-memory-negotiation.html'
+        source: 'https://www.google.com/search?q=Microsoft+SK+Hynix+HBM+memory+negotiation+walkout+2024'
     },
     {
         date: 'Oct 2024', event: 'OpenAI secures 40% DRAM via Stargate deal', impact: 'Critical',
-        source: 'https://www.tomshardware.com/tech-industry/openai-stargate-project-dram-samsung-sk-hynix'
+        source: 'https://www.google.com/search?q=OpenAI+Stargate+DRAM+40+percent+Samsung+SK+Hynix+deal'
     },
     {
         date: 'Nov 2024', event: 'Housing seller-buyer gap hits record 530k', impact: 'Medium',
-        source: 'https://www.redfin.com/news/home-sellers-outnumber-buyers-largest-gap-on-record/'
+        source: 'https://www.google.com/search?q=housing+market+seller+buyer+gap+record+530000+November+2024'
     },
     {
         date: 'Q4 2024', event: 'DRAM contract prices surge 45-50% QoQ', impact: 'High',
-        source: 'https://www.trendforce.com/presscenter/news/20241015-12348.html'
+        source: 'https://www.google.com/search?q=DRAM+contract+prices+surge+45+50+percent+Q4+2024+TrendForce'
     },
     {
         date: 'Jul 2025', event: 'Copper hits all-time high: $13,137/ton', impact: 'High',
-        source: 'https://investingnews.com/copper-price-2025/'
+        source: 'https://www.google.com/search?q=copper+price+all+time+high+13137+July+2025'
     },
     {
         date: 'Sep 2025', event: 'SK Hynix 12-layer HBM3E mass production', impact: 'Medium',
-        source: 'https://news.skhynix.com/sk-hynix-starts-mass-production-of-12-layer-hbm3e/'
+        source: 'https://www.google.com/search?q=SK+Hynix+12+layer+HBM3E+mass+production+2025'
     },
     {
         date: 'Nov 2025', event: 'DDR5 16GB retail hits $225+ (was $60)', impact: 'Critical',
-        source: 'https://www.techpowerup.com/330231/framework-announces-another-dram-price-hike'
+        source: 'https://www.google.com/search?q=DDR5+RAM+price+increase+225+dollars+November+2025+shortage'
     },
     {
         date: 'Dec 2025', event: 'DDR5 contract prices 300% higher than Sep', impact: 'Critical',
-        source: 'https://www.trendforce.com/presscenter/news/20251210-12890.html'
+        source: 'https://www.google.com/search?q=DDR5+contract+prices+300+percent+increase+December+2025'
     },
     {
         date: 'Dec 2025', event: 'SK Hynix/Samsung HBM4 production Feb 2026', impact: 'High',
-        source: 'https://www.digitimes.com/news/a20251215PD210.html'
+        source: 'https://www.google.com/search?q=SK+Hynix+Samsung+HBM4+mass+production+February+2026'
     },
 ];
 
