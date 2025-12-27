@@ -18,6 +18,7 @@ import TechEnergy from './pages/TechEnergy'
 import AITimeline from './pages/AITimeline'
 import PartComplexity from './pages/PartComplexity'
 import AdvancedAnalytics from './pages/AdvancedAnalytics'
+import BreakthroughInsights from './pages/BreakthroughInsights'
 import './index.css'
 
 function AppContent() {
@@ -81,6 +82,9 @@ function AppContent() {
           <NavLink to="/ai-timeline" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🤖</span> AI Timeline
           </NavLink>
+          <NavLink to="/breakthrough" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🔮</span> Breakthrough
+          </NavLink>
 
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
           <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
@@ -140,6 +144,7 @@ function AppContent() {
           <Route path="/tech-energy" element={<TechEnergy />} />
           <Route path="/ml-analytics" element={<AdvancedAnalytics />} />
           <Route path="/ai-timeline" element={<AITimeline />} />
+          <Route path="/breakthrough" element={<BreakthroughInsights />} />
           <Route path="/market" element={<MarketInsights />} />
           <Route path="/used-evs" element={<UsedEVs />} />
           <Route path="/semis" element={<Semis />} />
