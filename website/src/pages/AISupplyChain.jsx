@@ -6,6 +6,9 @@ import {
 } from 'recharts';
 import ChartModal from '../components/ChartModal';
 
+// Import ML Analysis Results
+import mlAnalysis from '../data/ai_supply_chain_analysis.json';
+
 // RAM/DRAM Price Data - Historical and 2024-2025 surge (Updated Dec 2025)
 // Source: TrendForce, IDC, TechInsights - Dec 2025 data shows ~300% increase in DDR5 contract prices
 const dramPriceData = [
@@ -690,6 +693,105 @@ export default function AISupplyChain() {
                             Capital following AI over EVs in 2024-2025. EV investment cooling while AI capex explodes to $371B. Similar to our ML findings on policy importance.
                         </p>
                     </div>
+                </div>
+            </div>
+
+            {/* ML Analysis Insights - From Python Script */}
+            <div className="chart-card" onClick={() => openModal(
+                'Cross-Domain ML Analysis Methodology',
+                'This analysis used 71 months of cross-domain data including memory prices, AI model sizes, copper/commodities, housing market, tech layoffs, and more. We employed: (1) Correlation Analysis with statistical significance testing (p<0.05), (2) GradientBoosting and RandomForest for trajectory predictions, (3) K-Means clustering to identify market regimes, (4) PCA for dimensionality reduction, (5) IsolationForest for anomaly detection, and (6) T-tests and Spearman correlations for hypothesis validation.'
+            )}>
+                <h3 className="chart-title">🤖 ML Analysis: Cross-Domain Correlations</h3>
+                <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '20px', textAlign: 'center' }}>
+                    Statistical analysis of {mlAnalysis.dataset_info.months_analyzed} months across {mlAnalysis.dataset_info.variables} variables
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+                    {/* Surprising Correlations */}
+                    <div style={{ backgroundColor: 'rgba(139, 92, 246, 0.1)', borderRadius: '12px', padding: '20px' }}>
+                        <h4 style={{ color: '#8b5cf6', marginBottom: '16px' }}>🔍 Surprising Correlations</h4>
+                        {mlAnalysis.correlations.surprising_insights.map((insight, idx) => (
+                            <div key={idx} style={{
+                                marginBottom: '12px',
+                                padding: '10px',
+                                backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                                borderRadius: '8px'
+                            }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
+                                    <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem' }}>
+                                        {insight.variables}
+                                    </span>
+                                    <span style={{
+                                        color: insight.correlation > 0.5 ? '#10b981' : insight.correlation > 0 ? '#f59e0b' : '#ef4444',
+                                        fontWeight: '700'
+                                    }}>
+                                        r = {insight.correlation.toFixed(2)}
+                                    </span>
+                                </div>
+                                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem' }}>
+                                    {insight.interpretation}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Hypothesis Tests */}
+                    <div style={{ backgroundColor: 'rgba(16, 185, 129, 0.1)', borderRadius: '12px', padding: '20px' }}>
+                        <h4 style={{ color: '#10b981', marginBottom: '16px' }}>🧪 Hypothesis Testing</h4>
+                        {mlAnalysis.hypothesis_tests.map((test, idx) => (
+                            <div key={idx} style={{
+                                marginBottom: '12px',
+                                padding: '10px',
+                                backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                                borderRadius: '8px'
+                            }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
+                                    <span style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.9rem' }}>
+                                        {test.hypothesis}
+                                    </span>
+                                    <span style={{
+                                        padding: '2px 8px',
+                                        borderRadius: '12px',
+                                        fontSize: '0.75rem',
+                                        backgroundColor: test.result === 'SUPPORTED' ? 'rgba(16, 185, 129, 0.3)' : 'rgba(239, 68, 68, 0.3)',
+                                        color: test.result === 'SUPPORTED' ? '#10b981' : '#ef4444',
+                                        fontWeight: '600'
+                                    }}>
+                                        {test.result}
+                                    </span>
+                                </div>
+                                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem' }}>
+                                    {test.correlation !== undefined
+                                        ? `Correlation: r = ${test.correlation}, p < 0.001`
+                                        : `Pre-AI: $${test.pre_ai_mean}/GB → AI Era: $${test.ai_era_mean}/GB (Effect Size: ${test.effect_size})`
+                                    }
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Key ML Insights */}
+                <div style={{ marginTop: '20px', padding: '16px', backgroundColor: 'rgba(59, 130, 246, 0.1)', borderRadius: '12px' }}>
+                    <h4 style={{ color: '#3b82f6', marginBottom: '12px' }}>📊 Key ML Insights</h4>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+                        {mlAnalysis.key_insights.map((insight, idx) => (
+                            <div key={idx} style={{
+                                padding: '10px',
+                                backgroundColor: 'rgba(59, 130, 246, 0.15)',
+                                borderRadius: '8px',
+                                color: 'rgba(255,255,255,0.8)',
+                                fontSize: '0.85rem'
+                            }}>
+                                ✓ {insight}
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="chart-insight" style={{ marginTop: '20px' }}>
+                    <strong>📈 Prediction:</strong> Memory prices forecast at $23.79/GB through 2027 (R² = {mlAnalysis.predictions.memory_price.r2_score}).
+                    PCA shows 3 components explain {(mlAnalysis.pca.total_variance * 100).toFixed(1)}% of market variance.
                 </div>
             </div>
 
