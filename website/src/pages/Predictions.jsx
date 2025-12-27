@@ -1,4 +1,5 @@
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, ComposedChart, Bar } from 'recharts'
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area } from 'recharts'
+import ChartModal from '../components/ChartModal'
 import data from '../data/insights.json'
 
 export default function Predictions() {
@@ -10,9 +11,11 @@ export default function Predictions() {
             </header>
 
             <div className="grid-2">
-                <div className="chart-container">
-                    <h3 className="chart-title">🚗 Fleet Composition Forecast</h3>
-                    <ResponsiveContainer width="100%" height={350}>
+                <ChartModal
+                    title="🚗 Fleet Composition Forecast"
+                    insight="By 2050, 95% of vehicles will be electric. The transition accelerates after 2030 when battery costs hit $45/kWh. Hybrids peak at 30% around 2045-2050 before declining as pure EVs dominate."
+                >
+                    <ResponsiveContainer width="100%" height="100%">
                         <AreaChart data={data.evAdoption.predictions}>
                             <defs>
                                 <linearGradient id="evGrad" x1="0" y1="0" x2="0" y2="1">
@@ -32,11 +35,13 @@ export default function Predictions() {
                             <Area type="monotone" dataKey="hybridPct" name="Hybrid %" stackId="1" stroke="#3b82f6" fill="url(#hybridGrad)" />
                         </AreaChart>
                     </ResponsiveContainer>
-                </div>
+                </ChartModal>
 
-                <div className="chart-container">
-                    <h3 className="chart-title">⚡ Infrastructure Crossover</h3>
-                    <ResponsiveContainer width="100%" height={350}>
+                <ChartModal
+                    title="⚡ Infrastructure Crossover"
+                    insight="Around 2035, the number of EV charging stations will exceed gas stations for the first time in history. Gas stations peaked at 202K in 1994 and have been declining ever since. By 2050, EV stations will outnumber gas stations by ~27%."
+                >
+                    <ResponsiveContainer width="100%" height="100%">
                         <LineChart data={data.evAdoption.predictions}>
                             <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
                             <XAxis dataKey="year" stroke="#71717a" />
@@ -46,10 +51,7 @@ export default function Predictions() {
                             <Line type="monotone" dataKey="gasStations" name="Gas Stations" stroke="#ef4444" strokeWidth={3} dot={false} />
                         </LineChart>
                     </ResponsiveContainer>
-                    <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
-                        ⚡ Crossover point: ~2035 when EV stations exceed gas stations
-                    </p>
-                </div>
+                </ChartModal>
             </div>
 
             {/* Predictions Table */}
@@ -60,10 +62,9 @@ export default function Predictions() {
                         <tr>
                             <th>Year</th>
                             <th>EV %</th>
-                            <th>EVs on Road (M)</th>
+                            <th>EVs on Road</th>
                             <th>Battery Cost</th>
                             <th>EV Stations</th>
-                            <th>Gas Stations</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -74,7 +75,6 @@ export default function Predictions() {
                                 <td>{row.evStock}M</td>
                                 <td>${row.batteryCost}/kWh</td>
                                 <td>{(row.chargingStations / 1000).toFixed(0)}K</td>
-                                <td>{(row.gasStations / 1000).toFixed(0)}K</td>
                             </tr>
                         ))}
                     </tbody>
