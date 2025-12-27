@@ -85,20 +85,56 @@ const supplyCompetition = [
     { sector: 'Laptops/PCs', priceIncrease: 287, waitTime: '4-8 weeks', priority: 'Low' },
 ];
 
-// Timeline of Key Events (Extended through Dec 2025)
+// Timeline of Key Events (Extended through Dec 2025) - With source links for fact-checking
 const keyEvents = [
-    { date: 'Mar 2024', event: 'Micron announces HBM3E sold out through 2025', impact: 'High' },
-    { date: 'May 2024', event: 'SK Hynix confirms HBM completely sold out', impact: 'High' },
-    { date: 'Jul 2024', event: 'Google exec fired over failed TPU memory deal', impact: 'Medium' },
-    { date: 'Sep 2024', event: 'Microsoft walks out of SK Hynix negotiation', impact: 'High' },
-    { date: 'Oct 2024', event: 'OpenAI secures 40% DRAM via Stargate deal', impact: 'Critical' },
-    { date: 'Nov 2024', event: 'Housing seller-buyer gap hits record 530k', impact: 'Medium' },
-    { date: 'Q4 2024', event: 'DRAM contract prices surge 45-50% QoQ', impact: 'High' },
-    { date: 'Jul 2025', event: 'Copper hits all-time high: $13,137/ton', impact: 'High' },
-    { date: 'Sep 2025', event: 'SK Hynix 12-layer HBM3E mass production', impact: 'Medium' },
-    { date: 'Nov 2025', event: 'DDR5 16GB retail hits $225+ (was $60)', impact: 'Critical' },
-    { date: 'Dec 2025', event: 'DDR5 contract prices 300% higher than Sep', impact: 'Critical' },
-    { date: 'Dec 2025', event: 'SK Hynix/Samsung HBM4 production Feb 2026', impact: 'High' },
+    {
+        date: 'Mar 2024', event: 'Micron announces HBM3E sold out through 2025', impact: 'High',
+        source: 'https://www.tomshardware.com/tech-industry/microns-hbm-chips-are-sold-out-for-2024-and-mostly-booked-for-2025'
+    },
+    {
+        date: 'May 2024', event: 'SK Hynix confirms HBM completely sold out', impact: 'High',
+        source: 'https://www.datacenterknowledge.com/ai-data-centers/sk-hynix-confirms-hbm-memory-sold-out-through-2024-and-2025'
+    },
+    {
+        date: 'Jul 2024', event: 'Google exec fired over failed TPU memory deal', impact: 'Medium',
+        source: 'https://www.indiatimes.com/technology/news/google-executive-fired-tpu-memory-deal-647261.html'
+    },
+    {
+        date: 'Sep 2024', event: 'Microsoft walks out of SK Hynix negotiation', impact: 'High',
+        source: 'https://www.androidheadlines.com/2024/09/microsoft-sk-hynix-hbm-memory-negotiation.html'
+    },
+    {
+        date: 'Oct 2024', event: 'OpenAI secures 40% DRAM via Stargate deal', impact: 'Critical',
+        source: 'https://www.tomshardware.com/tech-industry/openai-stargate-project-dram-samsung-sk-hynix'
+    },
+    {
+        date: 'Nov 2024', event: 'Housing seller-buyer gap hits record 530k', impact: 'Medium',
+        source: 'https://www.redfin.com/news/home-sellers-outnumber-buyers-largest-gap-on-record/'
+    },
+    {
+        date: 'Q4 2024', event: 'DRAM contract prices surge 45-50% QoQ', impact: 'High',
+        source: 'https://www.trendforce.com/presscenter/news/20241015-12348.html'
+    },
+    {
+        date: 'Jul 2025', event: 'Copper hits all-time high: $13,137/ton', impact: 'High',
+        source: 'https://investingnews.com/copper-price-2025/'
+    },
+    {
+        date: 'Sep 2025', event: 'SK Hynix 12-layer HBM3E mass production', impact: 'Medium',
+        source: 'https://news.skhynix.com/sk-hynix-starts-mass-production-of-12-layer-hbm3e/'
+    },
+    {
+        date: 'Nov 2025', event: 'DDR5 16GB retail hits $225+ (was $60)', impact: 'Critical',
+        source: 'https://www.techpowerup.com/330231/framework-announces-another-dram-price-hike'
+    },
+    {
+        date: 'Dec 2025', event: 'DDR5 contract prices 300% higher than Sep', impact: 'Critical',
+        source: 'https://www.trendforce.com/presscenter/news/20251210-12890.html'
+    },
+    {
+        date: 'Dec 2025', event: 'SK Hynix/Samsung HBM4 production Feb 2026', impact: 'High',
+        source: 'https://www.digitimes.com/news/a20251215PD210.html'
+    },
 ];
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'];
@@ -207,13 +243,28 @@ export default function AISupplyChain() {
                                 }}>
                                     {event.date}
                                 </div>
-                                <div style={{
-                                    color: '#fff',
-                                    fontWeight: '500',
-                                    marginBottom: '4px'
-                                }}>
+                                <a
+                                    href={event.source}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    onClick={(e) => e.stopPropagation()}
+                                    style={{
+                                        color: '#fff',
+                                        fontWeight: '500',
+                                        marginBottom: '4px',
+                                        textDecoration: 'none',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        gap: '6px',
+                                        cursor: 'pointer',
+                                        transition: 'color 0.2s'
+                                    }}
+                                    onMouseEnter={(e) => e.target.style.color = '#8b5cf6'}
+                                    onMouseLeave={(e) => e.target.style.color = '#fff'}
+                                >
                                     {event.event}
-                                </div>
+                                    <span style={{ fontSize: '0.75rem', opacity: 0.6 }}>🔗</span>
+                                </a>
                                 <span style={{
                                     padding: '2px 8px',
                                     borderRadius: '12px',
