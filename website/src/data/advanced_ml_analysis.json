@@ -1,0 +1,893 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-27T15:03:29.773337",
+    "title": "Advanced Deep ML Analysis",
+    "version": "3.0"
+  },
+  "clustering": {
+    "commodity_clusters": {
+      "Cluster_0": {
+        "members": [
+          "Cocoa",
+          "Corn",
+          "Feeder Cattle",
+          "Gold",
+          "Live Cattle",
+          "Soybean Meal",
+          "Soybean Oil",
+          "Soybean"
+        ],
+        "avg_volatility": 24.1,
+        "count": 8
+      },
+      "Cluster_1": {
+        "members": [
+          "Crude Oil"
+        ],
+        "avg_volatility": 99.9,
+        "count": 1
+      },
+      "Cluster_2": {
+        "members": [
+          "Brent Crude Oil",
+          "Coffee",
+          "Copper",
+          "Cotton",
+          "Heating Oil",
+          "Lean Hogs",
+          "Natural Gas",
+          "Oat",
+          "Platinum",
+          "RBOB Gasoline",
+          "Silver",
+          "Sugar",
+          "Wheat"
+        ],
+        "avg_volatility": 34.9,
+        "count": 13
+      },
+      "Cluster_3": {
+        "members": [
+          "Lumber",
+          "Palladium"
+        ],
+        "avg_volatility": 38.3,
+        "count": 2
+      }
+    },
+    "pca_variance_explained": {
+      "PC1": 81.0,
+      "PC2": 12.5
+    }
+  },
+  "time_series": {
+    "decompositions": {
+      "gas_price_regular": {
+        "trend_strength": 99.5,
+        "seasonal_strength": 33.0,
+        "trend_direction": "Down"
+      },
+      "copper_price": {
+        "trend_strength": 100.0,
+        "seasonal_strength": 3.1,
+        "trend_direction": "Down"
+      },
+      "crude_oil_wti_weekly": {
+        "trend_strength": 100.0,
+        "seasonal_strength": 3.8,
+        "trend_direction": "Down"
+      },
+      "housing_starts": {
+        "trend_strength": 100.0,
+        "seasonal_strength": 1.0,
+        "trend_direction": "Down"
+      },
+      "industrial_production": {
+        "trend_strength": 100.0,
+        "seasonal_strength": 0.2,
+        "trend_direction": "Down"
+      },
+      "consumer_sentiment": {
+        "trend_strength": 100.0,
+        "seasonal_strength": 3.6,
+        "trend_direction": "Down"
+      }
+    },
+    "stationarity_tests": {
+      "gas_price_regular": {
+        "adf_statistic": -1.54,
+        "p_value": 0.5136,
+        "is_stationary": "False"
+      },
+      "copper_price": {
+        "adf_statistic": -0.975,
+        "p_value": 0.7623,
+        "is_stationary": "False"
+      },
+      "crude_oil_wti_weekly": {
+        "adf_statistic": -1.899,
+        "p_value": 0.3327,
+        "is_stationary": "False"
+      },
+      "housing_starts": {
+        "adf_statistic": -3.843,
+        "p_value": 0.0025,
+        "is_stationary": "True"
+      },
+      "industrial_production": {
+        "adf_statistic": 0.191,
+        "p_value": 0.9718,
+        "is_stationary": "False"
+      },
+      "consumer_sentiment": {
+        "adf_statistic": -2.476,
+        "p_value": 0.1215,
+        "is_stationary": "False"
+      }
+    }
+  },
+  "anomalies": {
+    "anomalies": {
+      "Copper": {
+        "total_anomalies": 260,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "2008-10-29",
+            "return_pct": 12.5
+          },
+          {
+            "date": "2006-05-23",
+            "return_pct": 12.0
+          },
+          {
+            "date": "2008-10-10",
+            "return_pct": -11.0
+          },
+          {
+            "date": "2004-10-13",
+            "return_pct": -11.0
+          },
+          {
+            "date": "2009-01-02",
+            "return_pct": 10.5
+          }
+        ]
+      },
+      "Gold": {
+        "total_anomalies": 259,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "2013-04-15",
+            "return_pct": -9.4
+          },
+          {
+            "date": "2008-09-17",
+            "return_pct": 9.0
+          },
+          {
+            "date": "2009-03-19",
+            "return_pct": 7.8
+          },
+          {
+            "date": "2006-06-13",
+            "return_pct": -7.3
+          },
+          {
+            "date": "2001-09-14",
+            "return_pct": 6.8
+          }
+        ]
+      },
+      "Crude Oil": {
+        "total_anomalies": 260,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "2020-04-20",
+            "return_pct": -306.0
+          },
+          {
+            "date": "2020-04-21",
+            "return_pct": -126.6
+          },
+          {
+            "date": "2020-04-22",
+            "return_pct": 37.7
+          },
+          {
+            "date": "2020-04-30",
+            "return_pct": 25.1
+          },
+          {
+            "date": "2020-04-02",
+            "return_pct": 24.7
+          }
+        ]
+      },
+      "Natural Gas": {
+        "total_anomalies": 258,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "2003-02-24",
+            "return_pct": 38.2
+          },
+          {
+            "date": "2009-09-29",
+            "return_pct": 30.7
+          },
+          {
+            "date": "2006-09-28",
+            "return_pct": 28.4
+          },
+          {
+            "date": "2001-09-27",
+            "return_pct": 23.1
+          },
+          {
+            "date": "2020-09-29",
+            "return_pct": 21.9
+          }
+        ]
+      },
+      "gas_price_regular": {
+        "total_anomalies": 92,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "2005-09-05",
+            "return_pct": 17.6
+          },
+          {
+            "date": "2022-03-07",
+            "return_pct": 13.7
+          },
+          {
+            "date": "2017-09-04",
+            "return_pct": 11.7
+          },
+          {
+            "date": "1991-01-21",
+            "return_pct": -11.1
+          },
+          {
+            "date": "2008-11-03",
+            "return_pct": -9.6
+          }
+        ]
+      },
+      "copper_price": {
+        "total_anomalies": 22,
+        "anomaly_pct": 5.2,
+        "top_anomalies": [
+          {
+            "date": "2008-10-01",
+            "return_pct": -29.8
+          },
+          {
+            "date": "2006-05-01",
+            "return_pct": 25.8
+          },
+          {
+            "date": "2006-04-01",
+            "return_pct": 25.0
+          },
+          {
+            "date": "2008-11-01",
+            "return_pct": -23.8
+          },
+          {
+            "date": "2007-04-01",
+            "return_pct": 19.9
+          }
+        ]
+      },
+      "housing_starts": {
+        "total_anomalies": 40,
+        "anomaly_pct": 5.0,
+        "top_anomalies": [
+          {
+            "date": "1982-07-01",
+            "return_pct": 29.3
+          },
+          {
+            "date": "1980-06-01",
+            "return_pct": 29.0
+          },
+          {
+            "date": "1977-02-01",
+            "return_pct": 27.2
+          },
+          {
+            "date": "1984-03-01",
+            "return_pct": -26.4
+          },
+          {
+            "date": "1960-03-01",
+            "return_pct": -26.2
+          }
+        ]
+      }
+    },
+    "market_wide_anomalies": [
+      {
+        "date": "2008-10-06",
+        "assets_affected": 17
+      },
+      {
+        "date": "2008-10-10",
+        "assets_affected": 17
+      },
+      {
+        "date": "2008-10-15",
+        "assets_affected": 16
+      },
+      {
+        "date": "2008-10-02",
+        "assets_affected": 14
+      },
+      {
+        "date": "2008-09-29",
+        "assets_affected": 14
+      },
+      {
+        "date": "2008-12-01",
+        "assets_affected": 14
+      },
+      {
+        "date": "2008-10-29",
+        "assets_affected": 14
+      },
+      {
+        "date": "2008-12-08",
+        "assets_affected": 13
+      },
+      {
+        "date": "2008-11-24",
+        "assets_affected": 13
+      },
+      {
+        "date": "2020-03-12",
+        "assets_affected": 13
+      }
+    ]
+  },
+  "causality": {
+    "causality_tests": [
+      {
+        "cause": "treasury_10yr",
+        "effect": "housing_starts",
+        "p_value": 0.0,
+        "best_lag_months": 4,
+        "significant": "True",
+        "interpretation": "treasury_10yr \u2192 housing_starts"
+      },
+      {
+        "cause": "fed_funds_rate",
+        "effect": "housing_starts",
+        "p_value": 0.0001,
+        "best_lag_months": 6,
+        "significant": "True",
+        "interpretation": "fed_funds_rate \u2192 housing_starts"
+      },
+      {
+        "cause": "consumer_sentiment",
+        "effect": "vehicle_sales",
+        "p_value": 0.0003,
+        "best_lag_months": 1,
+        "significant": "True",
+        "interpretation": "consumer_sentiment \u2192 vehicle_sales"
+      },
+      {
+        "cause": "copper_price",
+        "effect": "industrial_production",
+        "p_value": 0.001,
+        "best_lag_months": 2,
+        "significant": "True",
+        "interpretation": "copper_price \u2192 industrial_production"
+      },
+      {
+        "cause": "housing_starts",
+        "effect": "us_employment",
+        "p_value": 0.0027,
+        "best_lag_months": 3,
+        "significant": "True",
+        "interpretation": "housing_starts \u2192 us_employment"
+      },
+      {
+        "cause": "crude_oil_wti_weekly",
+        "effect": "cpi_energy",
+        "p_value": 0.0135,
+        "best_lag_months": 3,
+        "significant": "True",
+        "interpretation": "crude_oil_wti_weekly \u2192 cpi_energy"
+      }
+    ]
+  },
+  "cross_correlation": {
+    "lag_analysis": [
+      {
+        "var1": "crude_oil_wti_weekly",
+        "var2": "gas_price_regular",
+        "best_lag_months": -12,
+        "best_correlation": 0.904,
+        "zero_lag_correlation": 0.883,
+        "interpretation": "crude leads by 12 months"
+      },
+      {
+        "var1": "copper_price",
+        "var2": "industrial_production",
+        "best_lag_months": 0,
+        "best_correlation": 0.231,
+        "zero_lag_correlation": 0.231,
+        "interpretation": "Contemporaneous"
+      },
+      {
+        "var1": "fed_funds_rate",
+        "var2": "treasury_10yr",
+        "best_lag_months": 0,
+        "best_correlation": 0.731,
+        "zero_lag_correlation": 0.731,
+        "interpretation": "Contemporaneous"
+      },
+      {
+        "var1": "Gold",
+        "var2": "treasury_10yr",
+        "best_lag_months": 0,
+        "best_correlation": -0.073,
+        "zero_lag_correlation": -0.073,
+        "interpretation": "Contemporaneous"
+      },
+      {
+        "var1": "Copper",
+        "var2": "industrial_production",
+        "best_lag_months": 0,
+        "best_correlation": 0.234,
+        "zero_lag_correlation": 0.234,
+        "interpretation": "Contemporaneous"
+      },
+      {
+        "var1": "consumer_sentiment",
+        "var2": "vehicle_sales",
+        "best_lag_months": -12,
+        "best_correlation": 0.712,
+        "zero_lag_correlation": 0.609,
+        "interpretation": "consumer leads by 12 months"
+      }
+    ]
+  },
+  "regimes": {
+    "regimes": {
+      "Crude Oil": {
+        "regimes": [
+          {
+            "regime": 2,
+            "mean_vol": 30.9,
+            "frequency_pct": 92.0,
+            "label": "Low Vol"
+          },
+          {
+            "regime": 0,
+            "mean_vol": 86.0,
+            "frequency_pct": 7.6,
+            "label": "Normal"
+          },
+          {
+            "regime": 1,
+            "mean_vol": 1184.1,
+            "frequency_pct": 0.4,
+            "label": "High Vol"
+          }
+        ],
+        "current_regime": "Low Vol",
+        "regime_count": 3
+      },
+      "Gold": {
+        "regimes": [
+          {
+            "regime": 1,
+            "mean_vol": 12.3,
+            "frequency_pct": 62.9,
+            "label": "Low Vol"
+          },
+          {
+            "regime": 0,
+            "mean_vol": 20.2,
+            "frequency_pct": 30.2,
+            "label": "Normal"
+          },
+          {
+            "regime": 2,
+            "mean_vol": 35.5,
+            "frequency_pct": 7.0,
+            "label": "High Vol"
+          }
+        ],
+        "current_regime": "Low Vol",
+        "regime_count": 3
+      },
+      "gas_price_regular": {
+        "regimes": [
+          {
+            "regime": 2,
+            "mean_vol": 16.7,
+            "frequency_pct": 59.0,
+            "label": "Low Vol"
+          },
+          {
+            "regime": 0,
+            "mean_vol": 34.6,
+            "frequency_pct": 36.8,
+            "label": "Normal"
+          },
+          {
+            "regime": 1,
+            "mean_vol": 66.0,
+            "frequency_pct": 4.2,
+            "label": "High Vol"
+          }
+        ],
+        "current_regime": "Low Vol",
+        "regime_count": 3
+      },
+      "treasury_10yr": {
+        "regimes": [
+          {
+            "regime": 2,
+            "mean_vol": 12.0,
+            "frequency_pct": 74.9,
+            "label": "Low Vol"
+          },
+          {
+            "regime": 0,
+            "mean_vol": 37.4,
+            "frequency_pct": 24.4,
+            "label": "Normal"
+          },
+          {
+            "regime": 1,
+            "mean_vol": 136.8,
+            "frequency_pct": 0.7,
+            "label": "High Vol"
+          }
+        ],
+        "current_regime": "Low Vol",
+        "regime_count": 3
+      }
+    }
+  },
+  "forecasting": {
+    "forecasts": {
+      "gas_price": {
+        "model": "RandomForest",
+        "mape": 5.2,
+        "forecast_12mo": [
+          2.94,
+          2.93,
+          2.93,
+          2.93,
+          2.9,
+          2.88,
+          2.86,
+          2.87,
+          2.86,
+          2.85,
+          2.86,
+          2.86
+        ],
+        "current": 2.84
+      },
+      "ev_sales": {
+        "model": "Exponential Growth",
+        "formula": "0.17 * exp(0.336 * (year-2010)) + -0.39",
+        "forecast": [
+          {
+            "year": 2025,
+            "sales_millions": 25.6
+          },
+          {
+            "year": 2026,
+            "sales_millions": 35.9
+          },
+          {
+            "year": 2027,
+            "sales_millions": 50.4
+          },
+          {
+            "year": 2028,
+            "sales_millions": 70.8
+          },
+          {
+            "year": 2029,
+            "sales_millions": 99.2
+          },
+          {
+            "year": 2030,
+            "sales_millions": 139.0
+          },
+          {
+            "year": 2031,
+            "sales_millions": 194.7
+          },
+          {
+            "year": 2032,
+            "sales_millions": 272.7
+          },
+          {
+            "year": 2033,
+            "sales_millions": 381.9
+          },
+          {
+            "year": 2034,
+            "sales_millions": 534.7
+          },
+          {
+            "year": 2035,
+            "sales_millions": 748.6
+          }
+        ]
+      },
+      "battery_cost": {
+        "model": "Wright's Law",
+        "learning_rate": 18.8,
+        "floor_cost": 50.0,
+        "forecast": [
+          {
+            "year": 2025,
+            "cost": 357.0
+          },
+          {
+            "year": 2026,
+            "cost": 317.0
+          },
+          {
+            "year": 2027,
+            "cost": 293.0
+          },
+          {
+            "year": 2028,
+            "cost": 277.0
+          },
+          {
+            "year": 2029,
+            "cost": 264.0
+          },
+          {
+            "year": 2030,
+            "cost": 254.0
+          },
+          {
+            "year": 2031,
+            "cost": 245.0
+          },
+          {
+            "year": 2032,
+            "cost": 238.0
+          },
+          {
+            "year": 2033,
+            "cost": 232.0
+          },
+          {
+            "year": 2034,
+            "cost": 227.0
+          },
+          {
+            "year": 2035,
+            "cost": 222.0
+          }
+        ]
+      }
+    }
+  },
+  "economic_cycle": {
+    "indicators": {
+      "consumer_sentiment": {
+        "type": "Leading",
+        "current_value": 51.0,
+        "yoy_change_pct": -29.0,
+        "momentum": "Weakening",
+        "historical_percentile": 0.0
+      },
+      "housing_starts": {
+        "type": "Leading",
+        "current_value": "1307",
+        "yoy_change_pct": -6.0,
+        "momentum": "Improving",
+        "historical_percentile": 34.0
+      },
+      "high_yield_spread": {
+        "type": "Leading",
+        "current_value": 2.84,
+        "yoy_change_pct": -2.7,
+        "momentum": "Improving",
+        "historical_percentile": 4.0
+      },
+      "industrial_production": {
+        "type": "Coincident",
+        "current_value": 101.79,
+        "yoy_change_pct": 2.5,
+        "momentum": "Improving",
+        "historical_percentile": 97.0
+      },
+      "us_employment": {
+        "type": "Coincident",
+        "current_value": "159552",
+        "yoy_change_pct": 0.6,
+        "momentum": "Improving",
+        "historical_percentile": 100.0
+      },
+      "personal_consumption": {
+        "type": "Coincident",
+        "current_value": 21152.2,
+        "yoy_change_pct": 5.0,
+        "momentum": "Improving",
+        "historical_percentile": 100.0
+      },
+      "us_unemployment": {
+        "type": "Lagging",
+        "current_value": 4.6,
+        "yoy_change_pct": 12.2,
+        "momentum": "Improving",
+        "historical_percentile": 29.0
+      },
+      "cpi_all_items": {
+        "type": "Lagging",
+        "current_value": 325.03,
+        "yoy_change_pct": 3.0,
+        "momentum": "Improving",
+        "historical_percentile": 100.0
+      },
+      "labor_participation": {
+        "type": "Lagging",
+        "current_value": 62.5,
+        "yoy_change_pct": 0.0,
+        "momentum": "Improving",
+        "historical_percentile": 43.0
+      }
+    },
+    "cycle_assessment": {
+      "current_phase": "Expansion",
+      "leading_indicator_score": 0.33,
+      "confidence": "Medium"
+    }
+  },
+  "correlation_network": {
+    "hub_variables": [
+      {
+        "variable": "imports_goods_services",
+        "strong_connections": 21
+      },
+      {
+        "variable": "Lumber",
+        "strong_connections": 20
+      },
+      {
+        "variable": "cpi_energy",
+        "strong_connections": 19
+      },
+      {
+        "variable": "manufacturing_orders",
+        "strong_connections": 19
+      },
+      {
+        "variable": "gas_price_regular",
+        "strong_connections": 18
+      },
+      {
+        "variable": "case_shiller_home_price",
+        "strong_connections": 17
+      },
+      {
+        "variable": "durable_goods",
+        "strong_connections": 17
+      },
+      {
+        "variable": "gas_price_diesel",
+        "strong_connections": 17
+      },
+      {
+        "variable": "us_employment",
+        "strong_connections": 17
+      },
+      {
+        "variable": "gas_regular_west",
+        "strong_connections": 17
+      }
+    ],
+    "unexpected_correlations": [
+      {
+        "commodity": "Copper",
+        "economic_indicator": "copper_price",
+        "correlation": 0.957,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Crude Oil",
+        "economic_indicator": "crude_oil_wti_weekly",
+        "correlation": 0.941,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Palladium",
+        "economic_indicator": "case_shiller_home_price",
+        "correlation": 0.94,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Lumber",
+        "economic_indicator": "case_shiller_home_price",
+        "correlation": 0.939,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Brent Crude Oil",
+        "economic_indicator": "crude_oil_brent_weekly",
+        "correlation": 0.938,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Heating Oil",
+        "economic_indicator": "crude_oil_brent_weekly",
+        "correlation": 0.937,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "RBOB Gasoline",
+        "economic_indicator": "crude_oil_brent_weekly",
+        "correlation": 0.934,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Palladium",
+        "economic_indicator": "cpi_all_items",
+        "correlation": 0.933,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Palladium",
+        "economic_indicator": "personal_consumption",
+        "correlation": 0.932,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Palladium",
+        "economic_indicator": "real_pce",
+        "correlation": 0.931,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Crude Oil",
+        "economic_indicator": "crude_oil_brent_weekly",
+        "correlation": 0.924,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Lumber",
+        "economic_indicator": "personal_consumption",
+        "correlation": 0.919,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Lumber",
+        "economic_indicator": "cpi_all_items",
+        "correlation": 0.916,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Lumber",
+        "economic_indicator": "real_pce",
+        "correlation": 0.906,
+        "direction": "Positive"
+      },
+      {
+        "commodity": "Brent Crude Oil",
+        "economic_indicator": "crude_oil_wti_weekly",
+        "correlation": 0.905,
+        "direction": "Positive"
+      }
+    ]
+  }
+}
