@@ -15,6 +15,7 @@ import DeepAnalysis from './pages/DeepAnalysis'
 import BatteryAnalysis from './pages/BatteryAnalysis'
 import TechEnergy from './pages/TechEnergy'
 import MLInsights from './pages/MLInsights'
+import AISupplyChain from './pages/AISupplyChain'
 import './index.css'
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
             </NavLink>
             <NavLink to="/ml-insights" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🧠</span> ML Insights
+            </NavLink>
+            <NavLink to="/ai-supply-chain" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🔗</span> AI Supply Chain
             </NavLink>
 
             <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
@@ -99,6 +103,7 @@ function App() {
             <Route path="/batteries" element={<BatteryAnalysis />} />
             <Route path="/tech-energy" element={<TechEnergy />} />
             <Route path="/ml-insights" element={<MLInsights />} />
+            <Route path="/ai-supply-chain" element={<AISupplyChain />} />
             <Route path="/market" element={<MarketInsights />} />
             <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/semis" element={<Semis />} />
