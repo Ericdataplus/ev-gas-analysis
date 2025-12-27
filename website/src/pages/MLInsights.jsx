@@ -131,9 +131,9 @@ export default function MLInsights() {
                         <div key={i} className="card" style={{
                             padding: '1rem',
                             borderLeft: `3px solid ${insight.category === 'prediction' ? 'var(--accent-green)' :
-                                    insight.category === 'correlation' ? 'var(--accent-blue)' :
-                                        insight.category === 'anomaly' ? 'var(--accent-orange)' :
-                                            'var(--accent-purple)'
+                                insight.category === 'correlation' ? 'var(--accent-blue)' :
+                                    insight.category === 'anomaly' ? 'var(--accent-orange)' :
+                                        'var(--accent-purple)'
                                 }`
                         }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -225,10 +225,10 @@ export default function MLInsights() {
                                         {(feat.importance * 100).toFixed(1)}%
                                     </span>
                                 </div>
-                                <div style={{ background: '#27272a', borderRadius: '4px', height: '6px' }}>
+                                <div style={{ background: '#27272a', borderRadius: '4px', height: '6px', overflow: 'hidden' }}>
                                     <div style={{
                                         background: i < 3 ? 'var(--accent-green)' : 'var(--accent-purple)',
-                                        width: `${feat.importance * 100 * 5}%`, // Scale for visibility
+                                        width: `${Math.min(feat.importance / (featureData[0]?.importance || 1) * 100, 100)}%`,
                                         height: '100%',
                                         borderRadius: '4px'
                                     }}></div>

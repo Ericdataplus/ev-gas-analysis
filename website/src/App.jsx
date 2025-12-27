@@ -18,6 +18,7 @@ import MLInsights from './pages/MLInsights'
 import AISupplyChain from './pages/AISupplyChain'
 import ExpandedAnalysis from './pages/ExpandedAnalysis'
 import AITimeline from './pages/AITimeline'
+import PartComplexity from './pages/PartComplexity'
 import './index.css'
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
             </NavLink>
             <NavLink to="/semis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🚛</span> Semi Trucks
+            </NavLink>
+            <NavLink to="/part-complexity" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🔧</span> Part Complexity
             </NavLink>
             <NavLink to="/predictions" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📈</span> ML Predictions
@@ -117,6 +121,7 @@ function App() {
             <Route path="/market" element={<MarketInsights />} />
             <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/semis" element={<Semis />} />
+            <Route path="/part-complexity" element={<PartComplexity />} />
             <Route path="/home-energy" element={<HomeEnergy />} />
             <Route path="/solar" element={<Solar />} />
             <Route path="/predictions" element={<Predictions />} />
