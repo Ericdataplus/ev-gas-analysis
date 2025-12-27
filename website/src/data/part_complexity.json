@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-12-27T14:06:20.378917",
+    "generated_at": "2025-12-27T14:15:41.794975",
     "title": "Vehicle Part Complexity Analysis",
     "description": "Comparing gas, electric, hybrid, and hydrogen vehicles"
   },
@@ -399,6 +399,468 @@
       "total": 136500
     }
   },
+  "component_pricing": {
+    "gas": {
+      "powertrain": {
+        "Engine (4-cylinder)": 3500,
+        "Transmission (8-speed auto)": 2800,
+        "Exhaust System": 800,
+        "Fuel Tank & Lines": 350,
+        "Radiator & Cooling": 400,
+        "Starter Motor": 150,
+        "Alternator": 200,
+        "Emission System (Catalytic)": 1200,
+        "Turbocharger (if equipped)": 1200,
+        "Air Intake System": 250
+      },
+      "chassis": {
+        "Frame/Unibody": 2500,
+        "Suspension (front+rear)": 1200,
+        "Steering System": 600,
+        "Brakes (4-wheel disc)": 800,
+        "Wheels & Tires": 1000,
+        "Axles & Driveshafts": 700
+      },
+      "body": {
+        "Body Panels (stamped steel)": 2000,
+        "Doors (4)": 1600,
+        "Glass (all windows)": 600,
+        "Paint & Coating": 800,
+        "Interior Trim": 1500,
+        "Seats": 1200
+      },
+      "electronics": {
+        "Wiring Harness": 500,
+        "ECU & Sensors": 800,
+        "Infotainment": 600,
+        "HVAC System": 700,
+        "Lighting (LED)": 400,
+        "Safety Systems (airbags)": 600
+      },
+      "total_parts_cost": 23000,
+      "assembly_labor": 2500,
+      "total_manufacturing_cost": 25500
+    },
+    "electric": {
+      "powertrain": {
+        "Battery Pack (75 kWh)": 9000,
+        "Electric Motor (single)": 1500,
+        "Inverter/Power Electronics": 1200,
+        "Onboard Charger": 500,
+        "DC-DC Converter": 200,
+        "Battery Management System": 800,
+        "Thermal Management": 600,
+        "Reduction Gear (single-speed)": 300,
+        "High-Voltage Cables": 400
+      },
+      "chassis": {
+        "Skateboard Platform": 3000,
+        "Suspension (front+rear)": 1200,
+        "Steering System": 600,
+        "Brakes (regenerative + disc)": 900,
+        "Wheels & Tires": 1000,
+        "Axles": 500
+      },
+      "body": {
+        "Body Panels (aluminum/steel)": 2200,
+        "Doors (4)": 1600,
+        "Glass (all windows)": 600,
+        "Paint & Coating": 800,
+        "Interior Trim": 1500,
+        "Seats": 1200
+      },
+      "electronics": {
+        "Wiring Harness (HV+LV)": 800,
+        "Vehicle Control Unit": 600,
+        "Infotainment": 700,
+        "HVAC (heat pump)": 900,
+        "Lighting (LED)": 400,
+        "Safety Systems (airbags)": 600,
+        "ADAS Sensors": 800
+      },
+      "total_parts_cost": 28000,
+      "assembly_labor": 1500,
+      "total_manufacturing_cost": 29500
+    },
+    "hybrid": {
+      "powertrain": {
+        "Engine (4-cylinder)": 3500,
+        "Transmission (eCVT)": 2200,
+        "Electric Motor(s)": 1800,
+        "Battery Pack (1.5 kWh)": 1500,
+        "Inverter": 800,
+        "Exhaust System": 800,
+        "Dual Cooling Systems": 700,
+        "Generator": 600,
+        "Power Split Device": 500,
+        "Emission System": 1000
+      },
+      "chassis": {
+        "Frame/Unibody": 2500,
+        "Suspension": 1200,
+        "Steering System": 600,
+        "Brakes (regen + disc)": 900,
+        "Wheels & Tires": 1000,
+        "Axles": 600
+      },
+      "body": {
+        "Body Panels": 2000,
+        "Doors (4)": 1600,
+        "Glass": 600,
+        "Paint & Coating": 800,
+        "Interior Trim": 1500,
+        "Seats": 1200
+      },
+      "electronics": {
+        "Wiring Harness (HV+LV)": 700,
+        "Hybrid Control Unit": 500,
+        "Infotainment": 600,
+        "HVAC System": 750,
+        "Lighting": 400,
+        "Safety Systems": 600
+      },
+      "total_parts_cost": 28500,
+      "assembly_labor": 3000,
+      "total_manufacturing_cost": 31500
+    },
+    "hydrogen": {
+      "powertrain": {
+        "Fuel Cell Stack": 8000,
+        "Hydrogen Tanks (Type IV)": 3500,
+        "Electric Motor": 1500,
+        "Battery Buffer (1.5 kWh)": 1000,
+        "Air Compressor": 1200,
+        "Humidifier System": 400,
+        "Power Electronics": 800,
+        "Thermal Management": 700,
+        "H2 Recirculation Pump": 500
+      },
+      "chassis": {
+        "Platform (reinforced)": 3200,
+        "Suspension": 1200,
+        "Steering System": 600,
+        "Brakes (regen + disc)": 900,
+        "Wheels & Tires": 1000,
+        "Axles": 500
+      },
+      "body": {
+        "Body Panels": 2200,
+        "Doors (4)": 1600,
+        "Glass": 600,
+        "Paint & Coating": 800,
+        "Interior Trim": 1500,
+        "Seats": 1200
+      },
+      "electronics": {
+        "Wiring Harness": 700,
+        "Fuel Cell Control": 600,
+        "Infotainment": 600,
+        "HVAC": 800,
+        "Lighting": 400,
+        "Safety Systems": 600,
+        "H2 Sensors & Safety": 500
+      },
+      "total_parts_cost": 34000,
+      "assembly_labor": 2200,
+      "total_manufacturing_cost": 36200
+    }
+  },
+  "logistics": {
+    "gas": {
+      "supply_chain": {
+        "raw_materials_sourcing": {
+          "steel": {
+            "cost": 800,
+            "origin": "Global (China, US, EU)",
+            "transport": "Ship/Rail"
+          },
+          "aluminum": {
+            "cost": 400,
+            "origin": "Australia, Canada",
+            "transport": "Ship"
+          },
+          "copper": {
+            "cost": 200,
+            "origin": "Chile, Peru",
+            "transport": "Ship"
+          },
+          "rubber": {
+            "cost": 150,
+            "origin": "Thailand, Indonesia",
+            "transport": "Ship"
+          },
+          "plastics": {
+            "cost": 300,
+            "origin": "US, China",
+            "transport": "Truck/Rail"
+          },
+          "glass": {
+            "cost": 100,
+            "origin": "Regional",
+            "transport": "Truck"
+          },
+          "other_metals": {
+            "cost": 200,
+            "origin": "Various",
+            "transport": "Mixed"
+          }
+        },
+        "tier_2_suppliers": {
+          "cost": 600,
+          "description": "Component sub-suppliers (fasteners, bearings, seals)"
+        },
+        "tier_1_suppliers": {
+          "cost": 800,
+          "description": "Major component assembly (engine plant, transmission plant)"
+        }
+      },
+      "inbound_logistics": {
+        "parts_to_factory": 850,
+        "just_in_time_premium": 150,
+        "warehousing": 100,
+        "total": 1100
+      },
+      "manufacturing_overhead": {
+        "factory_operations": 1200,
+        "quality_control": 300,
+        "tooling_amortization": 400,
+        "total": 1900
+      },
+      "outbound_logistics": {
+        "factory_to_dealer": 800,
+        "dealer_prep": 200,
+        "advertising_per_unit": 600,
+        "dealer_margin": 2000,
+        "total": 3600
+      },
+      "total_logistics_cost": 6600,
+      "countries_in_supply_chain": 25,
+      "avg_shipping_distance_miles": 8000
+    },
+    "electric": {
+      "supply_chain": {
+        "raw_materials_sourcing": {
+          "lithium": {
+            "cost": 1200,
+            "origin": "Australia, Chile",
+            "transport": "Ship"
+          },
+          "cobalt": {
+            "cost": 800,
+            "origin": "DRC, Australia",
+            "transport": "Ship"
+          },
+          "nickel": {
+            "cost": 600,
+            "origin": "Indonesia, Philippines",
+            "transport": "Ship"
+          },
+          "graphite": {
+            "cost": 300,
+            "origin": "China, Mozambique",
+            "transport": "Ship"
+          },
+          "copper": {
+            "cost": 500,
+            "origin": "Chile, Peru",
+            "transport": "Ship"
+          },
+          "aluminum": {
+            "cost": 500,
+            "origin": "Australia, Canada",
+            "transport": "Ship"
+          },
+          "steel": {
+            "cost": 600,
+            "origin": "Global",
+            "transport": "Ship/Rail"
+          },
+          "rare_earths": {
+            "cost": 400,
+            "origin": "China (90%)",
+            "transport": "Ship"
+          }
+        },
+        "tier_2_suppliers": {
+          "cost": 800,
+          "description": "Cell components (cathode, anode, separator, electrolyte)"
+        },
+        "tier_1_suppliers": {
+          "cost": 1200,
+          "description": "Battery cell manufacturing, motor assembly"
+        }
+      },
+      "inbound_logistics": {
+        "parts_to_factory": 700,
+        "just_in_time_premium": 100,
+        "warehousing": 150,
+        "total": 950
+      },
+      "manufacturing_overhead": {
+        "factory_operations": 900,
+        "quality_control": 400,
+        "tooling_amortization": 300,
+        "total": 1600
+      },
+      "outbound_logistics": {
+        "factory_to_dealer": 900,
+        "dealer_prep": 150,
+        "advertising_per_unit": 800,
+        "dealer_margin": 2500,
+        "total": 4350
+      },
+      "total_logistics_cost": 6900,
+      "countries_in_supply_chain": 30,
+      "avg_shipping_distance_miles": 12000
+    },
+    "hybrid": {
+      "supply_chain": {
+        "raw_materials_sourcing": {
+          "steel": {
+            "cost": 800,
+            "origin": "Global",
+            "transport": "Ship/Rail"
+          },
+          "aluminum": {
+            "cost": 400,
+            "origin": "Australia, Canada",
+            "transport": "Ship"
+          },
+          "copper": {
+            "cost": 350,
+            "origin": "Chile, Peru",
+            "transport": "Ship"
+          },
+          "lithium": {
+            "cost": 300,
+            "origin": "Australia, Chile",
+            "transport": "Ship"
+          },
+          "nickel": {
+            "cost": 200,
+            "origin": "Indonesia",
+            "transport": "Ship"
+          },
+          "rubber": {
+            "cost": 150,
+            "origin": "Thailand",
+            "transport": "Ship"
+          },
+          "plastics": {
+            "cost": 300,
+            "origin": "US, China",
+            "transport": "Truck/Rail"
+          },
+          "rare_earths": {
+            "cost": 250,
+            "origin": "China",
+            "transport": "Ship"
+          }
+        },
+        "tier_2_suppliers": {
+          "cost": 700,
+          "description": "ICE + EV component sub-suppliers"
+        },
+        "tier_1_suppliers": {
+          "cost": 1000,
+          "description": "Engine, transmission, motor, battery integration"
+        }
+      },
+      "inbound_logistics": {
+        "parts_to_factory": 950,
+        "just_in_time_premium": 200,
+        "warehousing": 120,
+        "total": 1270
+      },
+      "manufacturing_overhead": {
+        "factory_operations": 1400,
+        "quality_control": 400,
+        "tooling_amortization": 500,
+        "total": 2300
+      },
+      "outbound_logistics": {
+        "factory_to_dealer": 850,
+        "dealer_prep": 250,
+        "advertising_per_unit": 700,
+        "dealer_margin": 2200,
+        "total": 4000
+      },
+      "total_logistics_cost": 7570,
+      "countries_in_supply_chain": 28,
+      "avg_shipping_distance_miles": 9500
+    },
+    "hydrogen": {
+      "supply_chain": {
+        "raw_materials_sourcing": {
+          "platinum": {
+            "cost": 2000,
+            "origin": "South Africa (70%)",
+            "transport": "Air/Ship"
+          },
+          "carbon_fiber": {
+            "cost": 1500,
+            "origin": "Japan, US",
+            "transport": "Ship"
+          },
+          "steel": {
+            "cost": 700,
+            "origin": "Global",
+            "transport": "Ship/Rail"
+          },
+          "aluminum": {
+            "cost": 500,
+            "origin": "Australia, Canada",
+            "transport": "Ship"
+          },
+          "copper": {
+            "cost": 400,
+            "origin": "Chile, Peru",
+            "transport": "Ship"
+          },
+          "rare_earths": {
+            "cost": 300,
+            "origin": "China",
+            "transport": "Ship"
+          },
+          "specialized_polymers": {
+            "cost": 500,
+            "origin": "Japan, Germany",
+            "transport": "Ship"
+          }
+        },
+        "tier_2_suppliers": {
+          "cost": 1200,
+          "description": "Fuel cell membranes, gas diffusion layers, catalyst"
+        },
+        "tier_1_suppliers": {
+          "cost": 1500,
+          "description": "Fuel cell stack assembly, tank manufacturing"
+        }
+      },
+      "inbound_logistics": {
+        "parts_to_factory": 1100,
+        "just_in_time_premium": 250,
+        "warehousing": 200,
+        "total": 1550
+      },
+      "manufacturing_overhead": {
+        "factory_operations": 1100,
+        "quality_control": 600,
+        "tooling_amortization": 600,
+        "total": 2300
+      },
+      "outbound_logistics": {
+        "factory_to_dealer": 950,
+        "dealer_prep": 300,
+        "advertising_per_unit": 1000,
+        "dealer_margin": 3000,
+        "total": 5250
+      },
+      "total_logistics_cost": 9100,
+      "countries_in_supply_chain": 20,
+      "avg_shipping_distance_miles": 10000
+    }
+  },
   "insights": [
     {
       "category": "parts",
@@ -595,6 +1057,134 @@
         "type": "Hybrid",
         "hours": 22,
         "color": "#f97316"
+      }
+    ],
+    "manufacturing_cost": [
+      {
+        "type": "Gas",
+        "parts": 23000,
+        "labor": 2500,
+        "total": 25500,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Electric",
+        "parts": 28000,
+        "labor": 1500,
+        "total": 29500,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hybrid",
+        "parts": 28500,
+        "labor": 3000,
+        "total": 31500,
+        "color": "#f97316"
+      },
+      {
+        "type": "Hydrogen",
+        "parts": 34000,
+        "labor": 2200,
+        "total": 36200,
+        "color": "#3b82f6"
+      }
+    ],
+    "logistics_cost": [
+      {
+        "type": "Gas",
+        "inbound": 1100,
+        "overhead": 1900,
+        "outbound": 3600,
+        "total": 6600,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Electric",
+        "inbound": 950,
+        "overhead": 1600,
+        "outbound": 4350,
+        "total": 6900,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hybrid",
+        "inbound": 1270,
+        "overhead": 2300,
+        "outbound": 4000,
+        "total": 7570,
+        "color": "#f97316"
+      },
+      {
+        "type": "Hydrogen",
+        "inbound": 1550,
+        "overhead": 2300,
+        "outbound": 5250,
+        "total": 9100,
+        "color": "#3b82f6"
+      }
+    ],
+    "supply_chain_stats": [
+      {
+        "type": "Gas",
+        "countries": 25,
+        "distance": 8000,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Electric",
+        "countries": 30,
+        "distance": 12000,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hybrid",
+        "countries": 28,
+        "distance": 9500,
+        "color": "#f97316"
+      },
+      {
+        "type": "Hydrogen",
+        "countries": 20,
+        "distance": 10000,
+        "color": "#3b82f6"
+      }
+    ],
+    "full_cost_breakdown": [
+      {
+        "type": "Gas",
+        "parts": 23000,
+        "labor": 2500,
+        "logistics": 6600,
+        "total": 32100,
+        "msrp": 35000,
+        "margin": 2900
+      },
+      {
+        "type": "Electric",
+        "parts": 28000,
+        "labor": 1500,
+        "logistics": 6900,
+        "total": 36400,
+        "msrp": 45000,
+        "margin": 8600
+      },
+      {
+        "type": "Hybrid",
+        "parts": 28500,
+        "labor": 3000,
+        "logistics": 7570,
+        "total": 39070,
+        "msrp": 38000,
+        "margin": -1070
+      },
+      {
+        "type": "Hydrogen",
+        "parts": 34000,
+        "labor": 2200,
+        "logistics": 9100,
+        "total": 45300,
+        "msrp": 50000,
+        "margin": 4700
       }
     ]
   }

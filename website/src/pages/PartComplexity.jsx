@@ -9,6 +9,8 @@ export default function PartComplexity() {
     const failurePoints = partData.failure_points
     const manufacturing = partData.manufacturing
     const tco = partData.ten_year_tco
+    const componentPricing = partData.component_pricing
+    const logistics = partData.logistics
 
     // Moving parts comparison (log scale friendly)
     const movingPartsData = [
@@ -63,10 +65,10 @@ export default function PartComplexity() {
                         <div key={i} className="card" style={{
                             padding: '1rem',
                             borderLeft: `3px solid ${insight.category === 'parts' ? 'var(--accent-green)' :
-                                    insight.category === 'maintenance' ? 'var(--accent-blue)' :
-                                        insight.category === 'hybrid' ? 'var(--accent-orange)' :
-                                            insight.category === 'hydrogen' ? '#3b82f6' :
-                                                'var(--accent-purple)'
+                                insight.category === 'maintenance' ? 'var(--accent-blue)' :
+                                    insight.category === 'hybrid' ? 'var(--accent-orange)' :
+                                        insight.category === 'hydrogen' ? '#3b82f6' :
+                                            'var(--accent-purple)'
                                 }`
                         }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
@@ -416,6 +418,257 @@ export default function PartComplexity() {
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+
+            {/* Component Pricing - NEW SECTION */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">💵 Component Pricing (OEM Costs)</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    <ChartModal
+                        title="Manufacturing Cost Breakdown"
+                        insight="EVs have higher parts costs ($28k) vs gas ($23k) mainly due to the battery pack ($9,000). However, EVs save on labor costs due to simpler assembly. Hydrogen has the highest total manufacturing cost at $36,200."
+                    >
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={chartData.manufacturing_cost}>
+                                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                                <XAxis dataKey="type" stroke="#71717a" />
+                                <YAxis stroke="#71717a" tickFormatter={(v) => `$${v / 1000}k`} />
+                                <Tooltip
+                                    contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }}
+                                    formatter={(v) => `$${v.toLocaleString()}`}
+                                />
+                                <Legend />
+                                <Bar dataKey="parts" name="Parts Cost" stackId="a" fill="#6b7280" />
+                                <Bar dataKey="labor" name="Labor Cost" stackId="a" fill="#a855f7" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </ChartModal>
+
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Key Powertrain Component Costs</h4>
+                        <div className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem', borderLeft: '3px solid #ef4444' }}>
+                            <strong>⛽ Gas Powertrain: ~$10,850</strong>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                                Engine: $3,500 • Transmission: $2,800 • Emission: $1,200 • Other: $3,350
+                            </div>
+                        </div>
+                        <div className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem', borderLeft: '3px solid #22c55e' }}>
+                            <strong>⚡ EV Powertrain: ~$14,500</strong>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                                Battery (75kWh): $9,000 • Motor: $1,500 • Electronics: $1,900 • Other: $2,100
+                            </div>
+                        </div>
+                        <div className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem', borderLeft: '3px solid #3b82f6' }}>
+                            <strong>💧 Hydrogen Powertrain: ~$17,600</strong>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.25rem' }}>
+                                Fuel Cell: $8,000 • H2 Tanks: $3,500 • Motor: $1,500 • Other: $4,600
+                            </div>
+                        </div>
+                        <div style={{ marginTop: '0.75rem', padding: '0.75rem', background: '#27272a', borderRadius: '8px', textAlign: 'center' }}>
+                            <p style={{ margin: 0, fontSize: '0.85rem' }}>
+                                💡 Battery cost dropping 15% per year → EVs reaching cost parity
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Logistics & Supply Chain - NEW SECTION */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">🚚 Logistics & Supply Chain Costs</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    <ChartModal
+                        title="Logistics Cost Breakdown"
+                        insight="Logistics costs from raw materials to consumer: Gas $6,600, EV $6,900, Hybrid $7,570, Hydrogen $9,100. Hydrogen's specialized components (platinum, carbon fiber tanks) require complex supply chains."
+                    >
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={chartData.logistics_cost}>
+                                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                                <XAxis dataKey="type" stroke="#71717a" />
+                                <YAxis stroke="#71717a" tickFormatter={(v) => `$${v / 1000}k`} />
+                                <Tooltip
+                                    contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }}
+                                    formatter={(v) => `$${v.toLocaleString()}`}
+                                />
+                                <Legend />
+                                <Bar dataKey="inbound" name="Inbound Logistics" stackId="a" fill="#3b82f6" />
+                                <Bar dataKey="overhead" name="Factory Overhead" stackId="a" fill="#f97316" />
+                                <Bar dataKey="outbound" name="Outbound to Consumer" stackId="a" fill="#22c55e" />
+                            </BarChart>
+                        </ResponsiveContainer>
+                    </ChartModal>
+
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Supply Chain Journey</h4>
+                        <table style={{ width: '100%', fontSize: '0.8rem' }}>
+                            <thead>
+                                <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <th style={{ textAlign: 'left', padding: '0.4rem' }}>Stage</th>
+                                    <th style={{ textAlign: 'right', padding: '0.4rem' }}>Gas</th>
+                                    <th style={{ textAlign: 'right', padding: '0.4rem' }}>EV</th>
+                                    <th style={{ textAlign: 'right', padding: '0.4rem' }}>H2</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <td style={{ padding: '0.4rem' }}>🌍 Raw Materials</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$2,150</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$4,900</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$5,900</td>
+                                </tr>
+                                <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <td style={{ padding: '0.4rem' }}>📦 Parts to Factory</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$1,100</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$950</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$1,550</td>
+                                </tr>
+                                <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <td style={{ padding: '0.4rem' }}>🏭 Factory Overhead</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$1,900</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$1,600</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$2,300</td>
+                                </tr>
+                                <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <td style={{ padding: '0.4rem' }}>🚗 To Consumer</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$3,600</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$4,350</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem' }}>$5,250</td>
+                                </tr>
+                                <tr style={{ fontWeight: 600, background: '#27272a' }}>
+                                    <td style={{ padding: '0.4rem' }}>Total Logistics</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem', color: '#ef4444' }}>$6,600</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem', color: '#22c55e' }}>$6,900</td>
+                                    <td style={{ textAlign: 'right', padding: '0.4rem', color: '#3b82f6' }}>$9,100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            {/* Supply Chain Geography - NEW SECTION */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">🌍 Global Supply Chain Complexity</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Countries in Supply Chain</h4>
+                        {chartData.supply_chain_stats.map((item, i) => (
+                            <div key={i} className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                                    <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                        <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: item.color }}></span>
+                                        {item.type}
+                                    </span>
+                                    <span style={{ fontWeight: 600 }}>{item.countries} countries</span>
+                                </div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                                    Avg shipping distance: {item.distance.toLocaleString()} miles
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Key Raw Material Sources</h4>
+                        <div className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                            <strong style={{ color: '#22c55e' }}>🔋 EV Battery Materials</strong>
+                            <ul style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0', paddingLeft: '1rem' }}>
+                                <li>Lithium: Australia, Chile ($1,200)</li>
+                                <li>Cobalt: DRC, Australia ($800)</li>
+                                <li>Nickel: Indonesia, Philippines ($600)</li>
+                                <li>Rare Earths: China 90% ($400)</li>
+                            </ul>
+                        </div>
+                        <div className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                            <strong style={{ color: '#3b82f6' }}>💧 Hydrogen Fuel Cell</strong>
+                            <ul style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0', paddingLeft: '1rem' }}>
+                                <li>Platinum: South Africa 70% ($2,000)</li>
+                                <li>Carbon Fiber: Japan, US ($1,500)</li>
+                                <li>Specialized Polymers: Japan, Germany ($500)</li>
+                            </ul>
+                        </div>
+                        <div className="card" style={{ padding: '0.75rem' }}>
+                            <strong style={{ color: '#ef4444' }}>⛽ Traditional ICE</strong>
+                            <ul style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0', paddingLeft: '1rem' }}>
+                                <li>Steel: Global (China, US, EU) ($800)</li>
+                                <li>Aluminum: Australia, Canada ($400)</li>
+                                <li>Rubber: Thailand, Indonesia ($150)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Full Cost Breakdown - NEW SECTION */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">💰 Complete Cost to Consumer (Parts + Labor + Logistics)</h3>
+                <div style={{ marginTop: '1rem' }}>
+                    <table style={{ width: '100%', fontSize: '0.85rem' }}>
+                        <thead>
+                            <tr style={{ borderBottom: '2px solid var(--border)' }}>
+                                <th style={{ textAlign: 'left', padding: '0.75rem' }}>Cost Component</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>⛽ Gas</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>⚡ Electric</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>🔋⛽ Hybrid</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>💧 Hydrogen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {chartData.full_cost_breakdown && (
+                                <>
+                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                        <td style={{ padding: '0.75rem' }}>Parts Cost</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[0]?.parts?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[1]?.parts?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[2]?.parts?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[3]?.parts?.toLocaleString()}</td>
+                                    </tr>
+                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                        <td style={{ padding: '0.75rem' }}>Assembly Labor</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[0]?.labor?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', color: 'var(--accent-green)' }}>${chartData.full_cost_breakdown[1]?.labor?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', color: 'var(--accent-red)' }}>${chartData.full_cost_breakdown[2]?.labor?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[3]?.labor?.toLocaleString()}</td>
+                                    </tr>
+                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                        <td style={{ padding: '0.75rem' }}>Total Logistics</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[0]?.logistics?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[1]?.logistics?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[2]?.logistics?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', color: 'var(--accent-red)' }}>${chartData.full_cost_breakdown[3]?.logistics?.toLocaleString()}</td>
+                                    </tr>
+                                    <tr style={{ borderBottom: '2px solid var(--border)', background: '#27272a' }}>
+                                        <td style={{ padding: '0.75rem', fontWeight: 700 }}>Total Cost to Build</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700 }}>${chartData.full_cost_breakdown[0]?.total?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700 }}>${chartData.full_cost_breakdown[1]?.total?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700, color: 'var(--accent-red)' }}>${chartData.full_cost_breakdown[2]?.total?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700 }}>${chartData.full_cost_breakdown[3]?.total?.toLocaleString()}</td>
+                                    </tr>
+                                    <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                        <td style={{ padding: '0.75rem' }}>MSRP (Retail)</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[0]?.msrp?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[1]?.msrp?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[2]?.msrp?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem' }}>${chartData.full_cost_breakdown[3]?.msrp?.toLocaleString()}</td>
+                                    </tr>
+                                    <tr style={{ background: 'rgba(34, 197, 94, 0.1)' }}>
+                                        <td style={{ padding: '0.75rem', fontWeight: 700 }}>OEM Margin</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700 }}>${chartData.full_cost_breakdown[0]?.margin?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700, color: 'var(--accent-green)' }}>${chartData.full_cost_breakdown[1]?.margin?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700, color: 'var(--accent-red)' }}>${chartData.full_cost_breakdown[2]?.margin?.toLocaleString()}</td>
+                                        <td style={{ textAlign: 'right', padding: '0.75rem', fontWeight: 700 }}>${chartData.full_cost_breakdown[3]?.margin?.toLocaleString()}</td>
+                                    </tr>
+                                </>
+                            )}
+                        </tbody>
+                    </table>
+                    <div style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(34, 197, 94, 0.1)', borderRadius: '8px' }}>
+                        <p style={{ margin: 0, fontSize: '0.9rem' }}>
+                            <strong>💡 Key Insight:</strong> EVs generate the highest profit margin ($8,600) despite higher costs,
+                            while hybrids often sell at a loss (-$1,070) due to complexity. This is why automakers are rapidly shifting to EVs!
+                        </p>
                     </div>
                 </div>
             </div>
