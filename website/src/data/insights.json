@@ -1,0 +1,66 @@
+{
+  "evAdoption": {
+    "historical": [
+      { "year": 2010, "sales": 0.02, "stock": 0.00, "batteryCost": 1100, "range": 73 },
+      { "year": 2011, "sales": 0.05, "stock": 0.02, "batteryCost": 800, "range": 94 },
+      { "year": 2012, "sales": 0.13, "stock": 0.07, "batteryCost": 650, "range": 89 },
+      { "year": 2013, "sales": 0.20, "stock": 0.17, "batteryCost": 450, "range": 84 },
+      { "year": 2014, "sales": 0.32, "stock": 0.30, "batteryCost": 373, "range": 84 },
+      { "year": 2015, "sales": 0.55, "stock": 0.42, "batteryCost": 293, "range": 107 },
+      { "year": 2016, "sales": 0.75, "stock": 0.57, "batteryCost": 214, "range": 114 },
+      { "year": 2017, "sales": 1.20, "stock": 0.76, "batteryCost": 176, "range": 151 },
+      { "year": 2018, "sales": 2.10, "stock": 1.12, "batteryCost": 156, "range": 200 },
+      { "year": 2019, "sales": 2.26, "stock": 1.45, "batteryCost": 137, "range": 250 },
+      { "year": 2020, "sales": 3.10, "stock": 1.75, "batteryCost": 132, "range": 260 },
+      { "year": 2021, "sales": 6.60, "stock": 2.00, "batteryCost": 151, "range": 280 },
+      { "year": 2022, "sales": 10.20, "stock": 3.00, "batteryCost": 139, "range": 290 },
+      { "year": 2023, "sales": 13.80, "stock": 4.00, "batteryCost": 115, "range": 300 },
+      { "year": 2024, "sales": 17.30, "stock": 5.50, "batteryCost": 100, "range": 320 }
+    ],
+    "predictions": [
+      { "year": 2025, "evPct": 2.5, "hybridPct": 5.0, "evStock": 7.2, "batteryCost": 90, "chargingStations": 82427, "gasStations": 144133 },
+      { "year": 2030, "evPct": 8.5, "hybridPct": 10.0, "evStock": 30, "batteryCost": 45, "chargingStations": 111240, "gasStations": 134800 },
+      { "year": 2035, "evPct": 40, "hybridPct": 15.0, "evStock": 100, "batteryCost": 41, "chargingStations": 120000, "gasStations": 120000 },
+      { "year": 2040, "evPct": 69, "hybridPct": 19.0, "evStock": 193, "batteryCost": 40, "chargingStations": 123000, "gasStations": 105000 },
+      { "year": 2045, "evPct": 89, "hybridPct": 28.0, "evStock": 248, "batteryCost": 40, "chargingStations": 123700, "gasStations": 98000 },
+      { "year": 2050, "evPct": 95, "hybridPct": 30.0, "evStock": 266, "batteryCost": 40, "chargingStations": 123975, "gasStations": 97467 }
+    ]
+  },
+  "keyStats": [
+    { "label": "EV Fleet by 2050", "value": "95%", "change": "+93% from today", "icon": "🚗" },
+    { "label": "Lifetime CO2 Reduction", "value": "57-73%", "change": "vs gas cars", "icon": "🌍" },
+    { "label": "Fire Risk Reduction", "value": "98%", "change": "EVs safer", "icon": "🔥" },
+    { "label": "Maintenance Savings", "value": "60%", "change": "lower costs", "icon": "🔧" },
+    { "label": "10-Year TCO Savings", "value": "$10K+", "change": "cheaper than gas", "icon": "💰" },
+    { "label": "Battery Life", "value": "280K mi", "change": "outlasts vehicle", "icon": "🔋" }
+  ],
+  "safety": {
+    "fireRates": [
+      { "type": "Gas Cars", "rate": 1530, "color": "#ef4444" },
+      { "type": "Hybrids", "rate": 500, "color": "#f97316" },
+      { "type": "EVs", "rate": 25, "color": "#22c55e" }
+    ]
+  },
+  "costs": {
+    "perMile": [
+      { "type": "Gas Car", "cost": 0.107, "color": "#ef4444" },
+      { "type": "EV (Home)", "cost": 0.038, "color": "#22c55e" },
+      { "type": "EV (Fast)", "cost": 0.105, "color": "#3b82f6" }
+    ]
+  },
+  "supplyChain": [
+    { "material": "Lithium", "kgPerEV": 10, "risk": 8, "topProducer": "Australia", "recycling": 5 },
+    { "material": "Cobalt", "kgPerEV": 8, "risk": 9, "topProducer": "DRC Congo", "recycling": 80 },
+    { "material": "Nickel", "kgPerEV": 25, "risk": 6, "topProducer": "Indonesia", "recycling": 70 },
+    { "material": "Copper", "kgPerEV": 85, "risk": 3, "topProducer": "Chile", "recycling": 90 },
+    { "material": "Rare Earths", "kgPerEV": 1, "risk": 9, "topProducer": "China", "recycling": 1 }
+  ],
+  "transport": {
+    "efficiency": [
+      { "mode": "Ship", "co2PerTonMile": 0.015 },
+      { "mode": "Rail", "co2PerTonMile": 0.025 },
+      { "mode": "Truck", "co2PerTonMile": 0.150 },
+      { "mode": "Air", "co2PerTonMile": 1.230 }
+    ]
+  }
+}
