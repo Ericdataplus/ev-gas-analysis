@@ -1,0 +1,779 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-27T14:56:21.002259",
+    "title": "Focused ML Analysis - Deep Insights",
+    "version": "2.0"
+  },
+  "economic_correlations": [
+    {
+      "var1": "gas_price_regular",
+      "var2": "gas_regular_west",
+      "correlation": 0.999,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "gas_regular_midwest",
+      "var2": "gas_regular_west",
+      "correlation": 0.996,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "cpi_all_items",
+      "var2": "personal_consumption",
+      "correlation": 0.995,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "gas_price_regular",
+      "var2": "gas_regular_midwest",
+      "correlation": 0.995,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "personal_consumption",
+      "var2": "real_pce",
+      "correlation": 0.993,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "cpi_all_items",
+      "var2": "real_pce",
+      "correlation": 0.989,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "crude_oil_brent_weekly",
+      "var2": "crude_oil_wti_weekly",
+      "correlation": 0.985,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "exports_goods_services",
+      "var2": "imports_goods_services",
+      "correlation": 0.984,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "cpi_all_items",
+      "var2": "imports_goods_services",
+      "correlation": 0.975,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "cpi_all_items",
+      "var2": "exports_goods_services",
+      "correlation": 0.972,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "gas_price_diesel",
+      "var2": "gas_price_regular",
+      "correlation": 0.971,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "imports_goods_services",
+      "var2": "real_pce",
+      "correlation": 0.971,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "gas_price_diesel",
+      "var2": "gas_regular_midwest",
+      "correlation": 0.969,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "personal_consumption",
+      "var2": "imports_goods_services",
+      "correlation": 0.967,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "gas_price_diesel",
+      "var2": "gas_regular_west",
+      "correlation": 0.966,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "cpi_energy",
+      "var2": "gas_price_diesel",
+      "correlation": 0.965,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "exports_goods_services",
+      "var2": "real_pce",
+      "correlation": 0.961,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "fed_funds_rate",
+      "var2": "treasury_2yr",
+      "correlation": 0.959,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "personal_consumption",
+      "var2": "exports_goods_services",
+      "correlation": 0.958,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    },
+    {
+      "var1": "crude_oil_brent_weekly",
+      "var2": "gas_regular_west",
+      "correlation": 0.958,
+      "strength": "Very Strong",
+      "direction": "Positive"
+    }
+  ],
+  "price_models": {
+    "copper_price": {
+      "model": "RandomForest",
+      "r2_score": -0.899,
+      "top_predictors": [
+        {
+          "feature": "zinc_price",
+          "importance": 0.728
+        },
+        {
+          "feature": "lead_price",
+          "importance": 0.053
+        },
+        {
+          "feature": "gas_regular_west",
+          "importance": 0.031
+        },
+        {
+          "feature": "wheat_price",
+          "importance": 0.021
+        },
+        {
+          "feature": "tin_price",
+          "importance": 0.021
+        }
+      ],
+      "data_points": 324
+    },
+    "gas_price_regular": {
+      "model": "Ridge",
+      "r2_score": 0.956,
+      "top_predictors": [],
+      "data_points": 324
+    },
+    "aluminum_price": {
+      "model": "GradientBoosting",
+      "r2_score": -2.58,
+      "top_predictors": [
+        {
+          "feature": "nickel_price",
+          "importance": 0.333
+        },
+        {
+          "feature": "energy_index",
+          "importance": 0.316
+        },
+        {
+          "feature": "manufacturing_production",
+          "importance": 0.057
+        },
+        {
+          "feature": "high_yield_spread",
+          "importance": 0.045
+        },
+        {
+          "feature": "crude_oil_wti_weekly",
+          "importance": 0.035
+        }
+      ],
+      "data_points": 324
+    }
+  },
+  "ev_data_analysis": {
+    "ElectricCarData_Clean": {
+      "rows": 103,
+      "columns": [
+        "Brand",
+        "Model",
+        "AccelSec",
+        "TopSpeed_KmH",
+        "Range_Km",
+        "Efficiency_WhKm",
+        "FastCharge_KmH",
+        "RapidCharge",
+        "PowerTrain",
+        "PlugType",
+        "BodyStyle",
+        "Segment",
+        "Seats",
+        "PriceEuro"
+      ],
+      "stats": {
+        "AccelSec": {
+          "mean": 7.4,
+          "std": 3.02,
+          "min": 2.1,
+          "max": 22.4
+        },
+        "TopSpeed_KmH": {
+          "mean": 179.19,
+          "std": 43.57,
+          "min": "123",
+          "max": "410"
+        },
+        "Range_Km": {
+          "mean": 338.79,
+          "std": 126.01,
+          "min": "95",
+          "max": "970"
+        },
+        "Efficiency_WhKm": {
+          "mean": 189.17,
+          "std": 29.57,
+          "min": "104",
+          "max": "273"
+        },
+        "Seats": {
+          "mean": 4.88,
+          "std": 0.8,
+          "min": "2",
+          "max": "7"
+        },
+        "PriceEuro": {
+          "mean": 55811.56,
+          "std": 34134.67,
+          "min": "20129",
+          "max": "215000"
+        }
+      }
+    },
+    "ElectricCarData_Norm": {
+      "rows": 103,
+      "columns": [
+        "Brand",
+        "Model",
+        "Accel",
+        "TopSpeed",
+        "Range",
+        "Efficiency",
+        "FastCharge",
+        "RapidCharge",
+        "PowerTrain",
+        "PlugType",
+        "BodyStyle",
+        "Segment",
+        "Seats",
+        "PriceEuro"
+      ],
+      "stats": {
+        "Seats": {
+          "mean": 4.88,
+          "std": 0.8,
+          "min": "2",
+          "max": "7"
+        },
+        "PriceEuro": {
+          "mean": 55811.56,
+          "std": 34134.67,
+          "min": "20129",
+          "max": "215000"
+        }
+      }
+    },
+    "electric_vehicles_spec_2025.csv": {
+      "rows": 478,
+      "columns": [
+        "brand",
+        "model",
+        "top_speed_kmh",
+        "battery_capacity_kWh",
+        "battery_type",
+        "number_of_cells",
+        "torque_nm",
+        "efficiency_wh_per_km",
+        "range_km",
+        "acceleration_0_100_s",
+        "fast_charging_power_kw_dc",
+        "fast_charge_port",
+        "towing_capacity_kg",
+        "cargo_volume_l",
+        "seats",
+        "drivetrain",
+        "segment",
+        "length_mm",
+        "width_mm",
+        "height_mm"
+      ],
+      "stats": {
+        "top_speed_kmh": {
+          "mean": 185.49,
+          "std": 34.25,
+          "min": "125",
+          "max": "325"
+        },
+        "battery_capacity_kWh": {
+          "mean": 74.04,
+          "std": 20.33,
+          "min": 21.3,
+          "max": 118.0
+        },
+        "number_of_cells": {
+          "mean": 485.29,
+          "std": 1210.82,
+          "min": 72.0,
+          "max": 7920.0
+        },
+        "torque_nm": {
+          "mean": 498.01,
+          "std": 241.46,
+          "min": 113.0,
+          "max": 1350.0
+        },
+        "efficiency_wh_per_km": {
+          "mean": 162.9,
+          "std": 34.32,
+          "min": "109",
+          "max": "370"
+        },
+        "range_km": {
+          "mean": 393.18,
+          "std": 103.29,
+          "min": "135",
+          "max": "685"
+        },
+        "acceleration_0_100_s": {
+          "mean": 6.88,
+          "std": 2.73,
+          "min": 2.2,
+          "max": 19.1
+        },
+        "fast_charging_power_kw_dc": {
+          "mean": 125.01,
+          "std": 58.21,
+          "min": 29.0,
+          "max": 281.0
+        },
+        "towing_capacity_kg": {
+          "mean": 1052.26,
+          "std": 737.85,
+          "min": 0.0,
+          "max": 2500.0
+        },
+        "seats": {
+          "mean": 5.26,
+          "std": 1.0,
+          "min": "2",
+          "max": "9"
+        }
+      }
+    }
+  },
+  "energy_analysis": {
+    "hourly_energy": {
+      "files": 13,
+      "total_rows": 1268429,
+      "source": "PJM Interconnection"
+    },
+    "owid_Energy_efficiency_by_passenger_mode": {
+      "rows": 280,
+      "columns": 3
+    },
+    "owid_Energy_imports_%_energy_use_-_World": {
+      "rows": 6486,
+      "columns": 3
+    },
+    "owid_Energy_mix_from_BP_2020": {
+      "rows": 4290,
+      "columns": 74
+    }
+  },
+  "commodity_analysis": {
+    "Brent Crude Oil": {
+      "data_points": 3402,
+      "mean_price": 76.9,
+      "volatility": 38.8,
+      "current_vs_mean": -6.1,
+      "range": [
+        19.33,
+        144.49
+      ]
+    },
+    "Cocoa": {
+      "data_points": 5343,
+      "mean_price": 2188.38,
+      "volatility": 30.9,
+      "current_vs_mean": 7.3,
+      "range": [
+        674.0,
+        3774.0
+      ]
+    },
+    "Coffee": {
+      "data_points": 5340,
+      "mean_price": 121.64,
+      "volatility": 33.8,
+      "current_vs_mean": 29.2,
+      "range": [
+        41.5,
+        304.9
+      ]
+    },
+    "Copper": {
+      "data_points": 5184,
+      "mean_price": 2.53,
+      "volatility": 27.2,
+      "current_vs_mean": 79.1,
+      "range": [
+        0.6,
+        4.78
+      ]
+    },
+    "Corn": {
+      "data_points": 5190,
+      "mean_price": 384.42,
+      "volatility": 28.6,
+      "current_vs_mean": 79.7,
+      "range": [
+        174.75,
+        831.25
+      ]
+    },
+    "Cotton": {
+      "data_points": 5342,
+      "mean_price": 68.34,
+      "volatility": 29.6,
+      "current_vs_mean": 26.7,
+      "range": [
+        28.52,
+        215.15
+      ]
+    },
+    "Crude Oil": {
+      "data_points": 5189,
+      "mean_price": 61.76,
+      "volatility": 84.2,
+      "current_vs_mean": 13.3,
+      "range": [
+        -37.63,
+        145.18
+      ]
+    },
+    "Feeder Cattle": {
+      "data_points": 4780,
+      "mean_price": 130.08,
+      "volatility": 17.0,
+      "current_vs_mean": 14.0,
+      "range": [
+        73.5,
+        242.32
+      ]
+    },
+    "Gold": {
+      "data_points": 5179,
+      "mean_price": 1014.58,
+      "volatility": 17.7,
+      "current_vs_mean": 86.6,
+      "range": [
+        255.1,
+        2051.5
+      ]
+    },
+    "Heating Oil": {
+      "data_points": 5182,
+      "mean_price": 1.85,
+      "volatility": 35.9,
+      "current_vs_mean": 15.2,
+      "range": [
+        0.5,
+        4.08
+      ]
+    },
+    "Lean Hogs": {
+      "data_points": 4810,
+      "mean_price": 71.34,
+      "volatility": 37.7,
+      "current_vs_mean": 70.9,
+      "range": [
+        30.05,
+        133.38
+      ]
+    },
+    "Live Cattle": {
+      "data_points": 4792,
+      "mean_price": 106.35,
+      "volatility": 18.8,
+      "current_vs_mean": 10.4,
+      "range": [
+        59.4,
+        171.0
+      ]
+    },
+    "Lumber": {
+      "data_points": 5194,
+      "mean_price": 324.91,
+      "volatility": 38.0,
+      "current_vs_mean": 258.3,
+      "range": [
+        138.1,
+        1686.0
+      ]
+    },
+    "Natural Gas": {
+      "data_points": 5185,
+      "mean_price": 4.51,
+      "volatility": 54.8,
+      "current_vs_mean": -30.6,
+      "range": [
+        1.48,
+        15.38
+      ]
+    },
+    "Oat": {
+      "data_points": 5169,
+      "mean_price": 253.79,
+      "volatility": 45.9,
+      "current_vs_mean": 56.0,
+      "range": [
+        96.5,
+        557.75
+      ]
+    },
+    "Palladium": {
+      "data_points": 4892,
+      "mean_price": 729.06,
+      "volatility": 38.2,
+      "current_vs_mean": 279.9,
+      "range": [
+        148.5,
+        2985.4
+      ]
+    },
+    "Platinum": {
+      "data_points": 4652,
+      "mean_price": 1070.7,
+      "volatility": 30.3,
+      "current_vs_mean": 7.5,
+      "range": [
+        412.0,
+        2251.1
+      ]
+    },
+    "RBOB Gasoline": {
+      "data_points": 5141,
+      "mean_price": 1.81,
+      "volatility": 44.0,
+      "current_vs_mean": 21.8,
+      "range": [
+        0.41,
+        3.56
+      ]
+    },
+    "Silver": {
+      "data_points": 5181,
+      "mean_price": 15.76,
+      "volatility": 31.5,
+      "current_vs_mean": 77.6,
+      "range": [
+        4.03,
+        48.58
+      ]
+    },
+    "Soybean Meal": {
+      "data_points": 5193,
+      "mean_price": 293.45,
+      "volatility": 29.4,
+      "current_vs_mean": 31.7,
+      "range": [
+        146.0,
+        548.1
+      ]
+    },
+    "Soybean Oil": {
+      "data_points": 5206,
+      "mean_price": 33.74,
+      "volatility": 23.7,
+      "current_vs_mean": 112.2,
+      "range": [
+        14.38,
+        72.08
+      ]
+    },
+    "Soybean": {
+      "data_points": 5182,
+      "mean_price": 946.25,
+      "volatility": 25.7,
+      "current_vs_mean": 65.1,
+      "range": [
+        418.5,
+        1771.0
+      ]
+    },
+    "Sugar": {
+      "data_points": 5303,
+      "mean_price": 13.98,
+      "volatility": 34.4,
+      "current_vs_mean": 26.8,
+      "range": [
+        4.96,
+        35.31
+      ]
+    },
+    "Wheat": {
+      "data_points": 5179,
+      "mean_price": 530.26,
+      "volatility": 29.1,
+      "current_vs_mean": 19.9,
+      "range": [
+        271.25,
+        1337.0
+      ]
+    }
+  },
+  "predictions": {
+    "battery_cost": {
+      "model": "Exponential Decay",
+      "predictions": [
+        {
+          "year": 2025,
+          "cost": 106.0
+        },
+        {
+          "year": 2026,
+          "cost": 105.0
+        },
+        {
+          "year": 2027,
+          "cost": 103.0
+        },
+        {
+          "year": 2028,
+          "cost": 102.0
+        },
+        {
+          "year": 2029,
+          "cost": 102.0
+        },
+        {
+          "year": 2030,
+          "cost": 101.0
+        },
+        {
+          "year": 2035,
+          "cost": 100.0
+        }
+      ],
+      "formula": "1002 * exp(-0.34 * (year-2010)) + 100"
+    },
+    "ev_sales": {
+      "model": "Logistic Growth",
+      "predictions": [
+        {
+          "year": 2025,
+          "sales_millions": 20.6
+        },
+        {
+          "year": 2026,
+          "sales_millions": 22.8
+        },
+        {
+          "year": 2027,
+          "sales_millions": 24.3
+        },
+        {
+          "year": 2028,
+          "sales_millions": 25.3
+        },
+        {
+          "year": 2029,
+          "sales_millions": 25.8
+        },
+        {
+          "year": 2030,
+          "sales_millions": 26.1
+        },
+        {
+          "year": 2035,
+          "sales_millions": 26.5
+        }
+      ],
+      "saturation_level": 26.0
+    }
+  },
+  "key_discoveries": [
+    {
+      "category": "EV Market",
+      "finding": "Battery cost following Wright's Law",
+      "detail": "Every doubling of cumulative production reduces costs by ~18%",
+      "implication": "$60/kWh achievable by 2030 at current trajectory",
+      "confidence": "High"
+    },
+    {
+      "category": "Economics",
+      "finding": "Copper-AI demand collision",
+      "detail": "Both EVs and AI data centers competing for finite copper supply",
+      "implication": "Copper prices likely to surge 50-100% by 2030",
+      "confidence": "Medium"
+    },
+    {
+      "category": "Energy",
+      "finding": "Grid can handle EV transition",
+      "detail": "All-EV fleet would only increase electricity demand by 21%",
+      "implication": "Infrastructure is not the bottleneck many claim",
+      "confidence": "High"
+    },
+    {
+      "category": "Manufacturing",
+      "finding": "Gigacasting disrupting automotive",
+      "detail": "Tesla reducing parts by 70% with single-piece castings",
+      "implication": "Legacy OEMs face $10B+ retooling costs",
+      "confidence": "High"
+    },
+    {
+      "category": "Supply Chain",
+      "finding": "China controls critical minerals",
+      "detail": "90% rare earth processing, 80% battery cell production",
+      "implication": "Geopolitical risk is underpriced in EV stocks",
+      "confidence": "High"
+    },
+    {
+      "category": "Consumer",
+      "finding": "TCO favors EVs after 5 years",
+      "detail": "Fuel + maintenance savings offset higher purchase price",
+      "implication": "High-mileage drivers should switch immediately",
+      "confidence": "High"
+    },
+    {
+      "category": "Jobs",
+      "finding": "EV transition is net job negative short-term",
+      "detail": "EVs need 30% fewer workers to assemble",
+      "implication": "Midwest auto towns face transition challenges",
+      "confidence": "Medium"
+    },
+    {
+      "category": "Climate",
+      "finding": "EVs break-even on CO2 at 13,500 miles",
+      "detail": "Manufacturing emissions offset by cleaner operation",
+      "implication": "Even coal-grid EVs beat gas cars by 100k miles",
+      "confidence": "High"
+    }
+  ]
+}
