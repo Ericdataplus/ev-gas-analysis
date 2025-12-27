@@ -1,0 +1,1414 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-27T13:58:06.878110",
+    "data_points": 312,
+    "features": [
+      "copper_price",
+      "aluminum_price",
+      "nickel_price",
+      "zinc_price",
+      "tin_price",
+      "lead_price",
+      "iron_ore_price",
+      "fed_funds_rate",
+      "treasury_10yr",
+      "treasury_2yr",
+      "cpi_all_items",
+      "cpi_energy",
+      "industrial_production",
+      "manufacturing_production",
+      "energy_index",
+      "us_unemployment",
+      "consumer_sentiment",
+      "gas_price_regular",
+      "natural_gas_eu",
+      "vehicle_sales"
+    ],
+    "date_range": {
+      "start": "2000-01-31",
+      "end": "2025-12-31"
+    }
+  },
+  "correlations": [
+    {
+      "var1": "fed_funds_rate",
+      "var2": "treasury_2yr",
+      "correlation": 0.959,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "gas_price_regular",
+      "correlation": 0.933,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "cpi_energy",
+      "var2": "gas_price_regular",
+      "correlation": 0.928,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "cpi_energy",
+      "correlation": 0.918,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "tin_price",
+      "correlation": 0.902,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "industrial_production",
+      "var2": "manufacturing_production",
+      "correlation": 0.892,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "tin_price",
+      "var2": "cpi_energy",
+      "correlation": 0.881,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "gas_price_regular",
+      "correlation": 0.876,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "lead_price",
+      "correlation": 0.857,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "tin_price",
+      "var2": "cpi_all_items",
+      "correlation": 0.847,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "cpi_all_items",
+      "var2": "cpi_energy",
+      "correlation": 0.847,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "cpi_energy",
+      "var2": "energy_index",
+      "correlation": 0.847,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "treasury_10yr",
+      "var2": "treasury_2yr",
+      "correlation": 0.842,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "aluminum_price",
+      "correlation": 0.81,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "tin_price",
+      "var2": "iron_ore_price",
+      "correlation": 0.805,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "zinc_price",
+      "correlation": 0.803,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "iron_ore_price",
+      "correlation": 0.801,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "tin_price",
+      "var2": "gas_price_regular",
+      "correlation": 0.797,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "zinc_price",
+      "correlation": 0.786,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "nickel_price",
+      "correlation": 0.783,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "energy_index",
+      "correlation": 0.781,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "lead_price",
+      "var2": "cpi_energy",
+      "correlation": 0.779,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "tin_price",
+      "var2": "lead_price",
+      "correlation": 0.774,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "cpi_all_items",
+      "correlation": 0.77,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "fed_funds_rate",
+      "var2": "treasury_10yr",
+      "correlation": 0.764,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "lead_price",
+      "var2": "gas_price_regular",
+      "correlation": 0.759,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "natural_gas_eu",
+      "correlation": 0.759,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "zinc_price",
+      "var2": "lead_price",
+      "correlation": 0.748,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "iron_ore_price",
+      "var2": "cpi_energy",
+      "correlation": 0.738,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    },
+    {
+      "var1": "iron_ore_price",
+      "var2": "gas_price_regular",
+      "correlation": 0.728,
+      "p_value": 0.0,
+      "significant": true,
+      "strength": "Strong"
+    }
+  ],
+  "predictive_models": {
+    "random_forest": {
+      "r2": -1.0094843336943056,
+      "rmse": 1151.6998785004785,
+      "mae": 918.1458850385854,
+      "feature_importance": {
+        "aluminum_price": 0.01058322856921463,
+        "nickel_price": 0.005153420478492594,
+        "zinc_price": 0.7467718482102031,
+        "tin_price": 0.02781093488497462,
+        "lead_price": 0.04270439448423164,
+        "iron_ore_price": 0.007143634761907948,
+        "fed_funds_rate": 0.0007734172802090895,
+        "treasury_10yr": 0.0007654201669054191,
+        "treasury_2yr": 0.0005706473985318084,
+        "cpi_all_items": 0.015589714257966458,
+        "cpi_energy": 0.022978308477374355,
+        "industrial_production": 0.0032223089201816324,
+        "manufacturing_production": 0.0010210935604359679,
+        "energy_index": 0.08262547364333465,
+        "us_unemployment": 0.001195900428311264,
+        "consumer_sentiment": 0.002212048555397886,
+        "gas_price_regular": 0.022887067341946097,
+        "natural_gas_eu": 0.0036940100580881152,
+        "vehicle_sales": 0.002297128522292757
+      },
+      "predictions": [
+        5962.999945857445,
+        6205.582408829546,
+        6209.903722946085,
+        6318.919893963721,
+        6395.5914485662615,
+        6743.314464282554,
+        6765.1835426755015,
+        7251.231411051526,
+        8684.668805582513,
+        8800.36118592073,
+        8865.989427728226,
+        8552.808516446825,
+        8616.402172131851,
+        8624.958507005005,
+        8625.991274923857,
+        8648.185904087697,
+        8648.477450930586,
+        8690.817267397004,
+        8714.3098449512,
+        8662.694916850016,
+        8626.323389612124,
+        8559.614114104133,
+        8452.59902422267,
+        7763.357635646064,
+        7731.989201479838,
+        7790.439865173589,
+        8412.60766948164,
+        8564.773828199619,
+        8595.569226021677,
+        8288.991042906146,
+        8512.382517359343,
+        8451.119969469908,
+        8455.337705188118,
+        8499.261606616697,
+        8482.991657070354,
+        8444.899101782597,
+        8266.748295322504,
+        8217.76868984165,
+        8200.988552047158,
+        8390.160160222396,
+        8329.420035515232,
+        8391.065167086512,
+        8405.578107421808,
+        8414.388024440976,
+        8444.545575780778,
+        8404.545860574528,
+        8449.962325351944,
+        8433.953611732255,
+        8493.751294226704,
+        8444.470928846413,
+        8397.415905535197,
+        8481.94447491831,
+        8423.845255426477,
+        8379.627122182601,
+        8184.172556623845,
+        6750.67851259322,
+        8373.586829545715,
+        8314.023125217389,
+        8341.571820844916,
+        8370.436348091087,
+        8410.101746340013,
+        8397.183722349939,
+        8174.183588017791
+      ]
+    },
+    "gradient_boosting": {
+      "r2": -1.5224072529465373,
+      "rmse": 1290.341341452685,
+      "mae": 1063.4749358159784,
+      "feature_importance": {
+        "aluminum_price": 0.00686733217597324,
+        "nickel_price": 0.004613220973586422,
+        "zinc_price": 0.7853736690391849,
+        "tin_price": 0.021352864136672044,
+        "lead_price": 0.012854155560690833,
+        "iron_ore_price": 0.004384889190303495,
+        "fed_funds_rate": 0.0006810579088869699,
+        "treasury_10yr": 0.0009194679224200633,
+        "treasury_2yr": 0.0007730073129435084,
+        "cpi_all_items": 0.04676324976657196,
+        "cpi_energy": 0.0025098290242329567,
+        "industrial_production": 0.0046852351730804695,
+        "manufacturing_production": 0.0007628237788751199,
+        "energy_index": 0.08848703377354698,
+        "us_unemployment": 0.000607106426110415,
+        "consumer_sentiment": 0.003033780690875876,
+        "gas_price_regular": 0.009444989909985251,
+        "natural_gas_eu": 0.0009411381103096377,
+        "vehicle_sales": 0.0049451491257496965
+      },
+      "predictions": [
+        6310.224052340036,
+        6613.896152202663,
+        6506.215845063681,
+        6696.7022873633105,
+        6734.335475885291,
+        6834.998673488421,
+        6427.347048735423,
+        7290.4499753812115,
+        8537.009012058077,
+        9087.588478122008,
+        9106.44616138082,
+        8630.386763787252,
+        8666.288327927186,
+        8653.839990226092,
+        8657.305954642148,
+        8680.98674006469,
+        8681.252698309596,
+        8630.785352709181,
+        8639.057174915315,
+        8628.78574598411,
+        8583.6993002668,
+        8492.93229120795,
+        8514.517353412812,
+        7798.575441242721,
+        7667.608142048347,
+        7967.216152864484,
+        8553.049143886295,
+        8318.834353636805,
+        8500.557913140785,
+        8234.709975157115,
+        8181.722389622395,
+        7964.581462735819,
+        7938.704708451472,
+        8025.55726864025,
+        8010.996080551026,
+        8154.50397193193,
+        8237.328043734105,
+        8209.875886341972,
+        7991.0436207529,
+        7975.631954744024,
+        7909.02346475919,
+        7974.795869215637,
+        8162.140279492894,
+        8175.920515032467,
+        8178.442280453529,
+        8003.578765475088,
+        8030.727247125235,
+        7923.727100044213,
+        8171.012155566236,
+        7999.369299048662,
+        8103.48556305714,
+        8197.58693370957,
+        8061.503304030912,
+        7912.209441467173,
+        7789.638864909596,
+        6725.907419874887,
+        7890.736998637898,
+        7720.6854642422095,
+        7825.1895518321235,
+        7896.3085647441185,
+        7915.038011899758,
+        7896.3085647441185,
+        7778.546898385006
+      ]
+    },
+    "xgboost": {
+      "r2": -1.3591953161155965,
+      "rmse": 1247.897622579427,
+      "mae": 985.6427373424161,
+      "feature_importance": {
+        "aluminum_price": 0.004824166651815176,
+        "nickel_price": 0.006653315387666225,
+        "zinc_price": 0.6128727197647095,
+        "tin_price": 0.01545378565788269,
+        "lead_price": 0.007577016018331051,
+        "iron_ore_price": 0.022628020495176315,
+        "fed_funds_rate": 0.001340335700660944,
+        "treasury_10yr": 0.0005492494674399495,
+        "treasury_2yr": 0.001572201494127512,
+        "cpi_all_items": 0.1047927737236023,
+        "cpi_energy": 0.006937494967132807,
+        "industrial_production": 0.007509549614042044,
+        "manufacturing_production": 0.000609391659963876,
+        "energy_index": 0.17368347942829132,
+        "us_unemployment": 0.0014370470307767391,
+        "consumer_sentiment": 0.006749250926077366,
+        "gas_price_regular": 0.01152659859508276,
+        "natural_gas_eu": 0.003464811947196722,
+        "vehicle_sales": 0.009818914346396923
+      },
+      "predictions": [
+        6474.75146484375,
+        6442.1943359375,
+        6296.60400390625,
+        6497.09521484375,
+        6597.56201171875,
+        6278.28564453125,
+        6103.99072265625,
+        6991.84228515625,
+        8692.2412109375,
+        8893.3935546875,
+        8745.97265625,
+        8589.8388671875,
+        8690.5791015625,
+        8814.8330078125,
+        8844.0654296875,
+        8757.2421875,
+        8844.2197265625,
+        8795.1630859375,
+        8828.0302734375,
+        8789.9658203125,
+        8789.970703125,
+        8651.8212890625,
+        8670.201171875,
+        7793.24853515625,
+        7701.42236328125,
+        7811.0810546875,
+        8587.7294921875,
+        8584.0244140625,
+        8569.1796875,
+        8336.6572265625,
+        8472.701171875,
+        8385.8701171875,
+        8351.67578125,
+        8322.546875,
+        8298.6845703125,
+        8372.96875,
+        8135.55908203125,
+        8154.42626953125,
+        7986.7900390625,
+        8014.08544921875,
+        8030.16259765625,
+        8260.57421875,
+        8311.8681640625,
+        8352.8388671875,
+        8317.228515625,
+        8284.3154296875,
+        8310.76171875,
+        8297.86328125,
+        8350.216796875,
+        8027.09912109375,
+        8028.15869140625,
+        8275.521484375,
+        8271.845703125,
+        8056.83447265625,
+        7960.17236328125,
+        6555.78125,
+        8226.6689453125,
+        7976.357421875,
+        7940.24755859375,
+        8185.03369140625,
+        8204.9873046875,
+        8175.6083984375,
+        8111.50244140625
+      ]
+    },
+    "ridge": {
+      "r2": -1.0620824645426263,
+      "rmse": 1166.6753532805435,
+      "mae": 1029.9762969057927,
+      "coefficients": {
+        "aluminum_price": 535.768395027791,
+        "nickel_price": -37.52004330953772,
+        "zinc_price": 575.037585088136,
+        "tin_price": 140.86759497240587,
+        "lead_price": 276.3916211006125,
+        "iron_ore_price": 454.6228146142672,
+        "fed_funds_rate": 27.968004042500148,
+        "treasury_10yr": -46.084007362517035,
+        "treasury_2yr": -45.31497500484102,
+        "cpi_all_items": -135.7020198824513,
+        "cpi_energy": 304.7862169955432,
+        "industrial_production": 120.81313713410451,
+        "manufacturing_production": 69.410090984992,
+        "energy_index": -136.32719008065314,
+        "us_unemployment": 330.26997022573875,
+        "consumer_sentiment": -48.507158398339826,
+        "gas_price_regular": 556.1885522835204,
+        "natural_gas_eu": -1.4375920213942404,
+        "vehicle_sales": 16.28897362181876
+      },
+      "predictions": [
+        6161.711835757026,
+        6546.175008179448,
+        7173.956986929835,
+        7333.925701190303,
+        7529.808702290625,
+        7980.988694268062,
+        8312.95401323698,
+        8994.595772294884,
+        9158.621365393996,
+        9259.351871466624,
+        8957.671050932258,
+        8592.99599893463,
+        9148.875396219857,
+        8632.015137291804,
+        8792.657050514286,
+        9616.483795877992,
+        10143.872377653075,
+        11132.554857478113,
+        11019.730398794534,
+        10229.574690308455,
+        10025.453221607317,
+        8605.09271572881,
+        8415.843841671123,
+        7573.789580081913,
+        7685.740166275215,
+        7683.807429217546,
+        7608.423182574761,
+        8464.367699991679,
+        8150.036861107452,
+        7959.14162649468,
+        7971.2006063075,
+        7535.290818432592,
+        7433.240309078583,
+        7534.713180150685,
+        7557.08422339157,
+        7831.639233125719,
+        7429.9636776522375,
+        7492.050123951687,
+        7409.077872809308,
+        7318.939156058619,
+        7298.915284047513,
+        7476.509433374849,
+        8143.670303370595,
+        8511.003179984958,
+        8083.496147582565,
+        7903.165511624169,
+        7655.246503517398,
+        7693.607473178355,
+        8020.922366338297,
+        7837.023475047403,
+        7808.976185573254,
+        7699.204448102309,
+        8007.063252937162,
+        8158.973014426056,
+        7570.761213033867,
+        7675.869052505064,
+        7729.210740388669,
+        7704.379649199247,
+        7765.1991484546525,
+        7794.102740278055,
+        7723.503585599017,
+        7816.007909694339,
+        7649.670741623529
+      ]
+    },
+    "lasso": {
+      "r2": -1.552427111361835,
+      "rmse": 1297.9969834123851,
+      "mae": 1151.1949025685642,
+      "coefficients": {
+        "aluminum_price": 565.3659442410694,
+        "nickel_price": -69.4732086310623,
+        "zinc_price": 587.7698459717326,
+        "tin_price": 151.34938433985337,
+        "lead_price": 297.6968018585539,
+        "iron_ore_price": 463.37034938604,
+        "fed_funds_rate": -0.0,
+        "treasury_10yr": -70.93284399736375,
+        "treasury_2yr": -13.538093933430943,
+        "cpi_all_items": -372.9693758678297,
+        "cpi_energy": 437.4432316113987,
+        "industrial_production": 222.87138722343897,
+        "manufacturing_production": 2.518282237416228,
+        "energy_index": -319.42828692550904,
+        "us_unemployment": 339.9118453852078,
+        "consumer_sentiment": -63.80123719866439,
+        "gas_price_regular": 634.6510491207142,
+        "natural_gas_eu": 0.0,
+        "vehicle_sales": 9.902055732574864
+      },
+      "predictions": [
+        6109.339084802939,
+        6495.445510187359,
+        7121.794198378838,
+        7244.48640576456,
+        7477.434928884617,
+        7964.184702720241,
+        8296.252515049782,
+        8988.61798136077,
+        9125.871042054878,
+        9211.586946255116,
+        8927.878516629278,
+        8476.931788236192,
+        8966.501684764624,
+        8503.462940276571,
+        8643.9819163606,
+        9496.86500328856,
+        10025.114491892185,
+        10913.483917968913,
+        10843.419148847275,
+        10080.1549040826,
+        9866.518112445023,
+        8285.250019154963,
+        7908.261704046668,
+        7126.196628024492,
+        7439.489018589888,
+        7417.533989449162,
+        7250.527730356867,
+        8256.510034847808,
+        7970.585047141729,
+        7823.628937340194,
+        7822.899176587079,
+        7420.471441872862,
+        7321.713701693591,
+        7407.374799340114,
+        7418.450414507383,
+        7667.471003149447,
+        7212.337401079163,
+        7291.411946831602,
+        7213.0791932059055,
+        7105.609052723681,
+        7107.22742535243,
+        7288.704227311868,
+        7975.246506186198,
+        8363.716178346727,
+        7904.346081348309,
+        7706.344033366745,
+        7436.865901838336,
+        7486.628546305272,
+        7795.743800588333,
+        7593.319285367283,
+        7580.533443311109,
+        7450.948138055941,
+        7798.4525884494215,
+        7962.803180650488,
+        7391.586092116769,
+        7515.552453394956,
+        7536.957966360887,
+        7497.702103979544,
+        7553.829977704501,
+        7595.480092419437,
+        7529.32670312328,
+        7634.1594479594605,
+        7445.470991978128
+      ]
+    },
+    "elasticnet": {
+      "r2": -0.7938766675346938,
+      "rmse": 1088.1613573867544,
+      "mae": 952.7363403625537,
+      "predictions": [
+        6164.23539482759,
+        6537.582661477069,
+        7147.5786005365535,
+        7374.433851447277,
+        7548.00916570333,
+        7859.585822990845,
+        8163.942283501576,
+        8831.04042533269,
+        9053.908680889283,
+        9214.636180795955,
+        8965.341968317674,
+        8753.286084065578,
+        9404.838248098638,
+        8911.814369070615,
+        9094.871091413434,
+        9836.034891370602,
+        10363.059588988297,
+        11543.959827138393,
+        11352.692195247144,
+        10504.666009325243,
+        10323.6060245331,
+        9137.979285546295,
+        9208.354555260383,
+        8300.159604903503,
+        8092.411617871096,
+        8175.368041565367,
+        8271.817388945148,
+        8827.06227973104,
+        8464.803519846158,
+        8150.678535728485,
+        8170.741497008008,
+        7692.350294299178,
+        7604.932879634402,
+        7712.05338725181,
+        7747.646234646139,
+        8028.2694227071715,
+        7699.225304501148,
+        7727.002561422973,
+        7613.755311931128,
+        7552.848987478955,
+        7512.107309673831,
+        7675.753580905924,
+        8292.46930706109,
+        8628.629176537068,
+        8259.14793139843,
+        8090.096920224321,
+        7877.471636614773,
+        7885.2282262910485,
+        8218.08305115264,
+        8041.845815466859,
+        8004.075610085361,
+        7946.530933395032,
+        8190.690471230096,
+        8299.870526365099,
+        7722.663774364249,
+        7793.1716648426955,
+        7890.849711187875,
+        7877.063766827585,
+        7928.759067484583,
+        7960.689574096954,
+        7916.342952957439,
+        7987.047879243308,
+        7875.280179991755
+      ]
+    }
+  },
+  "best_model": {
+    "name": "elasticnet",
+    "r2": -0.7938766675346938,
+    "rmse": 1088.1613573867544
+  },
+  "year_forecasts": {
+    "copper_price": [
+      {
+        "year": 2025,
+        "prediction": 9837.13,
+        "lower_bound": 9050.16,
+        "upper_bound": 10624.1
+      },
+      {
+        "year": 2026,
+        "prediction": 9840.38,
+        "lower_bound": 8265.92,
+        "upper_bound": 11414.84
+      },
+      {
+        "year": 2027,
+        "prediction": 9766.08,
+        "lower_bound": 7422.22,
+        "upper_bound": 12109.94
+      },
+      {
+        "year": 2028,
+        "prediction": 9747.76,
+        "lower_bound": 6628.48,
+        "upper_bound": 12867.04
+      },
+      {
+        "year": 2029,
+        "prediction": 9747.76,
+        "lower_bound": 5848.65,
+        "upper_bound": 13646.86
+      },
+      {
+        "year": 2030,
+        "prediction": 9748.84,
+        "lower_bound": 5069.4,
+        "upper_bound": 14428.28
+      }
+    ],
+    "energy_index": [
+      {
+        "year": 2025,
+        "prediction": 166.69,
+        "lower_bound": 153.36,
+        "upper_bound": 180.03
+      },
+      {
+        "year": 2026,
+        "prediction": 166.83,
+        "lower_bound": 140.14,
+        "upper_bound": 193.53
+      },
+      {
+        "year": 2027,
+        "prediction": 166.83,
+        "lower_bound": 126.79,
+        "upper_bound": 206.87
+      },
+      {
+        "year": 2028,
+        "prediction": 169.0,
+        "lower_bound": 114.92,
+        "upper_bound": 223.07
+      },
+      {
+        "year": 2029,
+        "prediction": 170.12,
+        "lower_bound": 102.07,
+        "upper_bound": 238.17
+      },
+      {
+        "year": 2030,
+        "prediction": 172.06,
+        "lower_bound": 89.47,
+        "upper_bound": 254.64
+      }
+    ],
+    "industrial_production": [
+      {
+        "year": 2025,
+        "prediction": 101.79,
+        "lower_bound": 93.65,
+        "upper_bound": 109.93
+      },
+      {
+        "year": 2026,
+        "prediction": 101.78,
+        "lower_bound": 85.5,
+        "upper_bound": 118.07
+      },
+      {
+        "year": 2027,
+        "prediction": 101.79,
+        "lower_bound": 77.36,
+        "upper_bound": 126.21
+      },
+      {
+        "year": 2028,
+        "prediction": 101.79,
+        "lower_bound": 69.21,
+        "upper_bound": 134.36
+      },
+      {
+        "year": 2029,
+        "prediction": 101.79,
+        "lower_bound": 61.07,
+        "upper_bound": 142.5
+      },
+      {
+        "year": 2030,
+        "prediction": 101.8,
+        "lower_bound": 52.93,
+        "upper_bound": 150.66
+      }
+    ]
+  },
+  "lstm_forecasts": {
+    "copper_price": {
+      "validation_r2": -9.9971,
+      "validation_rmse": 0.2651,
+      "forecasts": [
+        {
+          "year": 2025,
+          "prediction": 6240.87,
+          "lower_bound": 5616.79,
+          "upper_bound": 6864.96
+        },
+        {
+          "year": 2026,
+          "prediction": 6123.22,
+          "lower_bound": 4898.58,
+          "upper_bound": 7347.87
+        },
+        {
+          "year": 2027,
+          "prediction": 6122.67,
+          "lower_bound": 4285.87,
+          "upper_bound": 7959.48
+        },
+        {
+          "year": 2028,
+          "prediction": 6122.67,
+          "lower_bound": 3673.6,
+          "upper_bound": 8571.73
+        },
+        {
+          "year": 2029,
+          "prediction": 6122.67,
+          "lower_bound": 3061.33,
+          "upper_bound": 9184.0
+        },
+        {
+          "year": 2030,
+          "prediction": 6122.67,
+          "lower_bound": 2449.07,
+          "upper_bound": 9796.26
+        }
+      ]
+    },
+    "energy_index": {
+      "validation_r2": 0.4673,
+      "validation_rmse": 0.123,
+      "forecasts": [
+        {
+          "year": 2025,
+          "prediction": 138.4,
+          "lower_bound": 124.56,
+          "upper_bound": 152.24
+        },
+        {
+          "year": 2026,
+          "prediction": 132.89,
+          "lower_bound": 106.32,
+          "upper_bound": 159.47
+        },
+        {
+          "year": 2027,
+          "prediction": 132.05,
+          "lower_bound": 92.44,
+          "upper_bound": 171.67
+        },
+        {
+          "year": 2028,
+          "prediction": 131.95,
+          "lower_bound": 79.17,
+          "upper_bound": 184.72
+        },
+        {
+          "year": 2029,
+          "prediction": 131.93,
+          "lower_bound": 65.97,
+          "upper_bound": 197.9
+        },
+        {
+          "year": 2030,
+          "prediction": 131.93,
+          "lower_bound": 52.77,
+          "upper_bound": 211.09
+        }
+      ]
+    }
+  },
+  "clustering": {
+    "kmeans": {
+      "n_clusters": 4,
+      "inertias": [
+        {
+          "k": 2,
+          "inertia": 4009.3864734937074
+        },
+        {
+          "k": 3,
+          "inertia": 3093.436696190697
+        },
+        {
+          "k": 4,
+          "inertia": 2429.5428877686036
+        },
+        {
+          "k": 5,
+          "inertia": 1990.2072471160789
+        },
+        {
+          "k": 6,
+          "inertia": 1650.008109816093
+        },
+        {
+          "k": 7,
+          "inertia": 1412.5972312110437
+        }
+      ],
+      "silhouette_scores": []
+    },
+    "pca": {
+      "explained_variance": [
+        0.4888,
+        0.2002,
+        0.1143,
+        0.0621,
+        0.0406
+      ],
+      "cumulative_variance": [
+        0.4888,
+        0.689,
+        0.8034,
+        0.8655,
+        0.9061
+      ],
+      "n_components_95_var": 1,
+      "loadings": {
+        "PC1": {
+          "copper_price": 0.309,
+          "aluminum_price": 0.255,
+          "nickel_price": 0.204,
+          "zinc_price": 0.256,
+          "tin_price": 0.29,
+          "lead_price": 0.278,
+          "iron_ore_price": 0.251,
+          "fed_funds_rate": -0.043,
+          "treasury_10yr": -0.137,
+          "treasury_2yr": -0.067,
+          "cpi_all_items": 0.246,
+          "cpi_energy": 0.305,
+          "industrial_production": 0.209,
+          "manufacturing_production": 0.159,
+          "energy_index": 0.278,
+          "us_unemployment": -0.001,
+          "consumer_sentiment": -0.2,
+          "gas_price_regular": 0.295,
+          "natural_gas_eu": 0.21,
+          "vehicle_sales": -0.107
+        },
+        "PC2": {
+          "copper_price": -0.003,
+          "aluminum_price": -0.163,
+          "nickel_price": -0.112,
+          "zinc_price": -0.163,
+          "tin_price": 0.035,
+          "lead_price": 0.04,
+          "iron_ore_price": 0.211,
+          "fed_funds_rate": -0.417,
+          "treasury_10yr": -0.287,
+          "treasury_2yr": -0.416,
+          "cpi_all_items": -0.056,
+          "cpi_energy": -0.025,
+          "industrial_production": -0.259,
+          "manufacturing_production": -0.275,
+          "energy_index": 0.024,
+          "us_unemployment": 0.432,
+          "consumer_sentiment": -0.148,
+          "gas_price_regular": 0.006,
+          "natural_gas_eu": -0.021,
+          "vehicle_sales": -0.317
+        },
+        "PC3": {
+          "copper_price": 0.01,
+          "aluminum_price": 0.172,
+          "nickel_price": 0.196,
+          "zinc_price": -0.075,
+          "tin_price": -0.048,
+          "lead_price": -0.15,
+          "iron_ore_price": -0.024,
+          "fed_funds_rate": 0.272,
+          "treasury_10yr": 0.409,
+          "treasury_2yr": 0.303,
+          "cpi_all_items": -0.071,
+          "cpi_energy": 0.031,
+          "industrial_production": -0.334,
+          "manufacturing_production": -0.31,
+          "energy_index": 0.139,
+          "us_unemployment": 0.143,
+          "consumer_sentiment": -0.361,
+          "gas_price_regular": 0.051,
+          "natural_gas_eu": 0.207,
+          "vehicle_sales": -0.372
+        }
+      }
+    },
+    "anomaly_detection": {
+      "method": "Isolation Forest",
+      "n_anomalies": 16,
+      "anomaly_rate": 0.0513,
+      "anomaly_dates": [
+        "2000-01-31",
+        "2000-02-29",
+        "2000-04-30",
+        "2001-10-31",
+        "2007-05-31",
+        "2009-03-31",
+        "2020-04-30",
+        "2020-05-31",
+        "2022-02-28",
+        "2022-03-31",
+        "2022-04-30",
+        "2022-05-31",
+        "2022-06-30",
+        "2022-07-31",
+        "2022-08-31",
+        "2022-12-31"
+      ],
+      "avg_anomaly_score": -0.0337
+    },
+    "regime_detection": {
+      "target": "copper_price",
+      "regime_changes": [
+        {
+          "date": "2019-02-28",
+          "regime": "Neutral",
+          "value": 6300.49
+        },
+        {
+          "date": "2019-06-30",
+          "regime": "Bear",
+          "value": 5882.23
+        },
+        {
+          "date": "2019-07-31",
+          "regime": "Neutral",
+          "value": 5941.2
+        },
+        {
+          "date": "2019-08-31",
+          "regime": "Bear",
+          "value": 5709.44
+        },
+        {
+          "date": "2019-11-30",
+          "regime": "Neutral",
+          "value": 5859.95
+        },
+        {
+          "date": "2020-02-29",
+          "regime": "Bear",
+          "value": 5687.75
+        },
+        {
+          "date": "2020-06-30",
+          "regime": "Neutral",
+          "value": 5754.6
+        },
+        {
+          "date": "2020-07-31",
+          "regime": "Bull",
+          "value": 6372.46
+        },
+        {
+          "date": "2021-07-31",
+          "regime": "Neutral",
+          "value": 9450.82
+        },
+        {
+          "date": "2022-02-28",
+          "regime": "Bull",
+          "value": 9943.17
+        },
+        {
+          "date": "2022-05-31",
+          "regime": "Bear",
+          "value": 9395.03
+        },
+        {
+          "date": "2022-11-30",
+          "regime": "Neutral",
+          "value": 8049.86
+        },
+        {
+          "date": "2023-10-31",
+          "regime": "Bear",
+          "value": 7941.36
+        },
+        {
+          "date": "2023-11-30",
+          "regime": "Neutral",
+          "value": 8189.59
+        },
+        {
+          "date": "2024-03-31",
+          "regime": "Bull",
+          "value": 8692.82
+        },
+        {
+          "date": "2024-07-31",
+          "regime": "Neutral",
+          "value": 9385.31
+        },
+        {
+          "date": "2025-03-31",
+          "regime": "Bull",
+          "value": 9735.82
+        },
+        {
+          "date": "2025-04-30",
+          "regime": "Neutral",
+          "value": 9172.7
+        },
+        {
+          "date": "2025-06-30",
+          "regime": "Bull",
+          "value": 9835.07
+        },
+        {
+          "date": "2025-10-31",
+          "regime": "Neutral",
+          "value": 9835.07
+        }
+      ],
+      "regime_distribution": {
+        "Bull": 18,
+        "Bear": 17,
+        "Neutral": 35
+      },
+      "current_regime": "Neutral"
+    }
+  },
+  "cross_correlations": [
+    {
+      "target": "energy_index",
+      "feature": "gas_price_regular",
+      "best_lag": 0,
+      "correlation": 0.933,
+      "direction": "concurrent",
+      "interpretation": "gas_price_regular moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "cpi_energy",
+      "best_lag": -12,
+      "correlation": 0.861,
+      "direction": "lags",
+      "interpretation": "cpi_energy lags energy_index by 12 months"
+    },
+    {
+      "target": "energy_index",
+      "feature": "copper_price",
+      "best_lag": -10,
+      "correlation": 0.786,
+      "direction": "lags",
+      "interpretation": "copper_price lags energy_index by 10 months"
+    },
+    {
+      "target": "energy_index",
+      "feature": "natural_gas_eu",
+      "best_lag": 0,
+      "correlation": 0.759,
+      "direction": "concurrent",
+      "interpretation": "natural_gas_eu moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "aluminum_price",
+      "best_lag": -2,
+      "correlation": 0.717,
+      "direction": "lags",
+      "interpretation": "aluminum_price lags energy_index by 2 months"
+    },
+    {
+      "target": "energy_index",
+      "feature": "tin_price",
+      "best_lag": -10,
+      "correlation": 0.709,
+      "direction": "lags",
+      "interpretation": "tin_price lags energy_index by 10 months"
+    },
+    {
+      "target": "energy_index",
+      "feature": "lead_price",
+      "best_lag": 0,
+      "correlation": 0.676,
+      "direction": "concurrent",
+      "interpretation": "lead_price moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "iron_ore_price",
+      "best_lag": 0,
+      "correlation": 0.649,
+      "direction": "concurrent",
+      "interpretation": "iron_ore_price moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "consumer_sentiment",
+      "best_lag": -10,
+      "correlation": -0.641,
+      "direction": "lags",
+      "interpretation": "consumer_sentiment lags energy_index by 10 months"
+    },
+    {
+      "target": "energy_index",
+      "feature": "nickel_price",
+      "best_lag": 0,
+      "correlation": 0.602,
+      "direction": "concurrent",
+      "interpretation": "nickel_price moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "zinc_price",
+      "best_lag": 0,
+      "correlation": 0.549,
+      "direction": "concurrent",
+      "interpretation": "zinc_price moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "cpi_all_items",
+      "best_lag": 0,
+      "correlation": 0.476,
+      "direction": "concurrent",
+      "interpretation": "cpi_all_items moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "industrial_production",
+      "best_lag": 0,
+      "correlation": 0.473,
+      "direction": "concurrent",
+      "interpretation": "industrial_production moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "manufacturing_production",
+      "best_lag": 0,
+      "correlation": 0.421,
+      "direction": "concurrent",
+      "interpretation": "manufacturing_production moves with energy_index"
+    },
+    {
+      "target": "energy_index",
+      "feature": "vehicle_sales",
+      "best_lag": 0,
+      "correlation": -0.417,
+      "direction": "concurrent",
+      "interpretation": "vehicle_sales moves with energy_index"
+    }
+  ],
+  "key_insights": [
+    {
+      "category": "prediction",
+      "title": "Best Predictor: Elasticnet",
+      "detail": "Achieves R\u00b2=-79.39% accuracy in predicting copper prices",
+      "icon": "\ud83c\udfaf"
+    },
+    {
+      "category": "correlation",
+      "title": "Strongest Link: fed_funds_rate \u2194 treasury_2yr",
+      "detail": "Correlation of 0.959 (strong)",
+      "icon": "\ud83d\udd17"
+    },
+    {
+      "category": "anomaly",
+      "title": "16 Market Anomalies Detected",
+      "detail": "5.1% of data points are statistical outliers",
+      "icon": "\u26a0\ufe0f"
+    },
+    {
+      "category": "regime",
+      "title": "Current Market Regime: Neutral",
+      "detail": "Based on 12-month rolling analysis of copper_price",
+      "icon": "\ud83d\udcca"
+    },
+    {
+      "category": "dimensionality",
+      "title": "1 Factors Explain 95% of Variance",
+      "detail": "First component alone explains 48.9%",
+      "icon": "\ud83c\udf9b\ufe0f"
+    }
+  ]
+}

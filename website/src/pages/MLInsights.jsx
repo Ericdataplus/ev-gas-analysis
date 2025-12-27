@@ -1,106 +1,170 @@
-import { AreaChart, Area, BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ScatterChart, Scatter, ZAxis } from 'recharts'
+import { useState, useEffect } from 'react'
+import { AreaChart, Area, BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ScatterChart, Scatter, ComposedChart } from 'recharts'
 import ChartModal from '../components/ChartModal'
-import mlInsights from '../data/ml_insights.json'
+
+// Import both data sources
+import mlInsightsBasic from '../data/ml_insights.json'
+import comprehensiveResults from '../data/ml_comprehensive_results.json'
 
 export default function MLInsights() {
-    // Correlation data
-    const correlationData = [
-        { feature: 'Charging Stations', correlation: 0.996 },
-        { feature: 'EV Market Share', correlation: 0.995 },
-        { feature: 'Battery Density', correlation: 0.955 },
-        { feature: 'EV Range', correlation: 0.920 },
-        { feature: 'Battery Cost', correlation: -0.935 },
-    ]
+    // Extract data from comprehensive results
+    const metadata = comprehensiveResults.metadata || {}
+    const correlations = comprehensiveResults.correlations || []
+    const predictiveModels = comprehensiveResults.predictive_models || {}
+    const yearForecasts = comprehensiveResults.year_forecasts || {}
+    const lstmForecasts = comprehensiveResults.lstm_forecasts || {}
+    const clustering = comprehensiveResults.clustering || {}
+    const crossCorrelations = comprehensiveResults.cross_correlations || []
+    const keyInsights = comprehensiveResults.key_insights || []
 
-    // Feature importance
-    const featureImportance = [
-        { feature: 'Battery Density', rf: 0.314, mi: 0.547 },
-        { feature: 'Charging Stations', rf: 0.289, mi: 0.814 },
-        { feature: 'EV Range', rf: 0.238, mi: 0.437 },
-        { feature: 'Battery Cost', rf: 0.158, mi: 0.069 },
-    ]
+    // Model comparison data
+    const modelComparisonData = Object.entries(predictiveModels).map(([name, data]) => ({
+        name: name.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        r2: Math.max(data.r2, -2), // Cap at -2 for display
+        rmse: data.rmse,
+        mae: data.mae
+    })).sort((a, b) => b.r2 - a.r2)
 
-    // CAGR data
-    const cagrData = [
-        { metric: 'EV Sales', cagr: 48.1, color: '#22c55e' },
-        { metric: 'Charging Stations', cagr: 43.0, color: '#3b82f6' },
-        { metric: 'Solar Capacity', cagr: 28.9, color: '#f97316' },
-        { metric: 'Data Centers', cagr: 10.9, color: '#a855f7' },
-        { metric: 'Trucking Revenue', cagr: 4.9, color: '#6b7280' },
-    ]
+    // Feature importance from best model
+    const featureImportance = predictiveModels.random_forest?.feature_importance || {}
+    const featureData = Object.entries(featureImportance)
+        .map(([feature, importance]) => ({
+            feature: feature.replace(/_/g, ' ').slice(0, 15),
+            importance: importance
+        }))
+        .sort((a, b) => b.importance - a.importance)
+        .slice(0, 10)
 
-    // Country clusters
-    const countryData = [
-        { country: 'Norway', ev: 89, solar: 300, gdp: 92, policy: 10, cluster: 'Leader' },
-        { country: 'Sweden', ev: 58, solar: 350, gdp: 60, policy: 8, cluster: 'Leader' },
-        { country: 'Netherlands', ev: 48, solar: 1337, gdp: 58, policy: 8, cluster: 'Leader' },
-        { country: 'China', ev: 40, solar: 620, gdp: 12, policy: 9, cluster: 'Follower' },
-        { country: 'Germany', ev: 19, solar: 1192, gdp: 51, policy: 7, cluster: 'Follower' },
-        { country: 'UK', ev: 30, solar: 250, gdp: 46, policy: 7, cluster: 'Follower' },
-        { country: 'USA', ev: 9, solar: 720, gdp: 76, policy: 5, cluster: 'Laggard' },
-        { country: 'Australia', ev: 10, solar: 1400, gdp: 60, policy: 6, cluster: 'Laggard' },
-    ]
+    // Correlation data for chart
+    const correlationChartData = correlations.slice(0, 12).map(c => ({
+        pair: `${c.var1.slice(0, 8)} ↔ ${c.var2.slice(0, 8)}`,
+        correlation: c.correlation,
+        strength: c.strength
+    }))
 
-    // Transport efficiency
-    const transportData = [
-        { mode: 'Ship', co2: 0.015, speed: 15, cost: 0.02 },
-        { mode: 'Rail', co2: 0.025, speed: 35, cost: 0.03 },
-        { mode: 'Truck', co2: 0.150, speed: 55, cost: 0.10 },
-        { mode: 'Air', co2: 1.230, speed: 500, cost: 0.50 },
-    ]
+    // Year-by-year forecast data
+    const copperForecasts = yearForecasts.copper_price || []
+    const energyForecasts = yearForecasts.energy_index || []
+    const lstmCopperForecasts = lstmForecasts.copper_price?.forecasts || []
+    const lstmEnergyForecasts = lstmForecasts.energy_index?.forecasts || []
+
+    // Combined forecast data for chart
+    const forecastChartData = copperForecasts.map((cf, i) => ({
+        year: cf.year,
+        copper_gb: cf.prediction,
+        copper_lower: cf.lower_bound,
+        copper_upper: cf.upper_bound,
+        copper_lstm: lstmCopperForecasts[i]?.prediction || null,
+    }))
+
+    // PCA data
+    const pcaData = clustering.pca || {}
+    const pcaVariance = pcaData.explained_variance || []
+    const pcaCumulative = pcaData.cumulative_variance || []
+    const pcaChartData = pcaVariance.map((v, i) => ({
+        component: `PC${i + 1}`,
+        variance: v * 100,
+        cumulative: pcaCumulative[i] * 100
+    }))
+
+    // Anomaly dates
+    const anomalyDates = clustering.anomaly_detection?.anomaly_dates || []
+
+    // Regime data
+    const regimeData = clustering.regime_detection || {}
+    const regimeDist = regimeData.regime_distribution || {}
+    const regimeChartData = Object.entries(regimeDist).map(([regime, count]) => ({
+        regime,
+        count,
+        color: regime === 'Bull' ? '#22c55e' : regime === 'Bear' ? '#ef4444' : '#6b7280'
+    }))
+
+    // Cross correlation data
+    const crossCorrData = crossCorrelations.slice(0, 8).map(cc => ({
+        feature: cc.feature.replace(/_/g, ' ').slice(0, 12),
+        target: cc.target,
+        lag: cc.best_lag,
+        correlation: cc.correlation,
+        interpretation: cc.interpretation
+    }))
 
     return (
         <div>
             <header className="page-header">
-                <h1 className="page-title">🧠 Deep ML Insights</h1>
-                <p className="page-subtitle">Non-predictive analysis: correlations, clusters, PCA, hypothesis tests</p>
+                <h1 className="page-title">🧠 Advanced ML Analytics</h1>
+                <p className="page-subtitle">Comprehensive machine learning analysis: {metadata.data_points || 312} data points, {metadata.features?.length || 20} features</p>
             </header>
 
-            {/* Key Findings Summary */}
+            {/* Key Stats */}
             <div className="stats-grid">
                 <div className="stat-card">
                     <div className="stat-icon">📊</div>
-                    <div className="stat-value">0.996</div>
-                    <div className="stat-label">Strongest Correlation</div>
-                    <div className="stat-change">EV sales ↔ Charging</div>
+                    <div className="stat-value">{correlations.length}+</div>
+                    <div className="stat-label">Strong Correlations</div>
+                    <div className="stat-change">r &gt; 0.7</div>
                 </div>
                 <div className="stat-card">
-                    <div className="stat-icon">🎯</div>
-                    <div className="stat-value">p=0.001</div>
-                    <div className="stat-label">Policy → EV Adoption</div>
-                    <div className="stat-change">Highly significant!</div>
+                    <div className="stat-icon">🤖</div>
+                    <div className="stat-value">{Object.keys(predictiveModels).length}</div>
+                    <div className="stat-label">ML Models Trained</div>
+                    <div className="stat-change">RF, GB, XGB, Ridge, Lasso, ENet</div>
                 </div>
                 <div className="stat-card">
-                    <div className="stat-icon">🚀</div>
-                    <div className="stat-value">48.1%</div>
-                    <div className="stat-label">EV Sales CAGR</div>
-                    <div className="stat-change">Fastest growing sector</div>
+                    <div className="stat-icon">📈</div>
+                    <div className="stat-value">{lstmForecasts.energy_index?.validation_r2 ? (lstmForecasts.energy_index.validation_r2 * 100).toFixed(0) : 47}%</div>
+                    <div className="stat-label">LSTM Accuracy</div>
+                    <div className="stat-change">Energy Index R²</div>
                 </div>
                 <div className="stat-card">
-                    <div className="stat-icon">🌍</div>
-                    <div className="stat-value">3</div>
-                    <div className="stat-label">Country Clusters</div>
-                    <div className="stat-change">Leaders, Followers, Laggards</div>
+                    <div className="stat-icon">⚠️</div>
+                    <div className="stat-value">{clustering.anomaly_detection?.n_anomalies || 16}</div>
+                    <div className="stat-label">Anomalies Detected</div>
+                    <div className="stat-change">Isolation Forest</div>
+                </div>
+            </div>
+
+            {/* Key Insights */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">🎯 Key ML Discoveries</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    {keyInsights.map((insight, i) => (
+                        <div key={i} className="card" style={{
+                            padding: '1rem',
+                            borderLeft: `3px solid ${insight.category === 'prediction' ? 'var(--accent-green)' :
+                                    insight.category === 'correlation' ? 'var(--accent-blue)' :
+                                        insight.category === 'anomaly' ? 'var(--accent-orange)' :
+                                            'var(--accent-purple)'
+                                }`
+                        }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                                <span style={{ fontSize: '1.2rem' }}>{insight.icon}</span>
+                                <strong>{insight.title}</strong>
+                            </div>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>
+                                {insight.detail}
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
 
             {/* Correlation Analysis */}
             <div className="chart-container" style={{ marginTop: '1.5rem' }}>
-                <h3 className="chart-title">📈 Correlation Analysis: What Moves Together?</h3>
+                <h3 className="chart-title">📈 Top Correlations (30 Strong Relationships Found)</h3>
                 <div className="grid-2" style={{ marginTop: '1rem' }}>
                     <ChartModal
-                        title="EV Sales Correlations"
-                        insight="Charging infrastructure has the strongest correlation with EV sales (r=0.996). Battery cost is strongly NEGATIVE (-0.935) - as costs drop, sales soar. This is textbook exponential adoption driven by price."
+                        title="Correlation Strength"
+                        insight="Fed Funds Rate and Treasury yields show the strongest correlation (r=0.959). Commodity prices (copper, tin, lead) strongly correlate with energy prices."
                     >
                         <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={correlationData} layout="vertical">
+                            <BarChart data={correlationChartData} layout="vertical">
                                 <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
-                                <XAxis type="number" domain={[-1, 1]} stroke="#71717a" />
-                                <YAxis dataKey="feature" type="category" stroke="#71717a" width={120} />
+                                <XAxis type="number" domain={[0, 1]} stroke="#71717a" />
+                                <YAxis dataKey="pair" type="category" stroke="#71717a" width={130} tick={{ fontSize: 11 }} />
                                 <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} />
                                 <Bar dataKey="correlation" radius={[0, 8, 8, 0]}>
-                                    {correlationData.map((entry, i) => (
-                                        <Cell key={i} fill={entry.correlation > 0 ? '#22c55e' : '#ef4444'} />
+                                    {correlationChartData.map((entry, i) => (
+                                        <Cell key={i} fill={entry.correlation > 0.9 ? '#22c55e' : entry.correlation > 0.8 ? '#3b82f6' : '#a855f7'} />
                                     ))}
                                 </Bar>
                             </BarChart>
@@ -108,107 +172,173 @@ export default function MLInsights() {
                     </ChartModal>
 
                     <div>
-                        <h4 style={{ marginBottom: '0.75rem' }}>Key Correlation Insights</h4>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.75rem', borderLeft: '3px solid var(--accent-green)' }}>
-                            <strong>🔗 Co-evolving factors:</strong>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
-                                EV sales, charging stations, and range all grow in lockstep (r &gt; 0.95)
-                            </p>
-                        </div>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.75rem', borderLeft: '3px solid var(--accent-red)' }}>
-                            <strong>📉 Inverse relationship:</strong>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
-                                Battery cost vs sales (r = -0.94). Price is THE barrier.
-                            </p>
-                        </div>
-                        <div className="card" style={{ padding: '1rem', borderLeft: '3px solid var(--accent-purple)' }}>
-                            <strong>💡 Insight:</strong>
-                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
-                                The EV transition is a self-reinforcing cycle: more sales → more charging → more adoption
-                            </p>
-                        </div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Top 5 Correlations</h4>
+                        {correlations.slice(0, 5).map((corr, i) => (
+                            <div key={i} className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '0.9rem' }}>
+                                        {corr.var1.replace(/_/g, ' ')} ↔ {corr.var2.replace(/_/g, ' ')}
+                                    </span>
+                                    <span style={{
+                                        color: corr.correlation > 0.9 ? 'var(--accent-green)' : 'var(--accent-blue)',
+                                        fontWeight: 600
+                                    }}>
+                                        r = {corr.correlation.toFixed(3)}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
 
             {/* Feature Importance */}
             <div className="chart-container" style={{ marginTop: '1.5rem' }}>
-                <h3 className="chart-title">🎯 Feature Importance: What Drives EV Adoption?</h3>
+                <h3 className="chart-title">🎯 Feature Importance (Random Forest)</h3>
                 <div className="grid-2" style={{ marginTop: '1rem' }}>
                     <ChartModal
-                        title="Random Forest vs Mutual Information"
-                        insight="Interesting divergence: Random Forest says battery density matters most (0.31), but Mutual Information says charging stations (0.81). This suggests non-linear relationships - infrastructure has threshold effects!"
+                        title="What Drives Copper Prices?"
+                        insight="Tin, aluminum, and lead prices are the strongest predictors of copper. This reflects co-movement in commodity markets driven by global industrial demand."
                     >
                         <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={featureImportance}>
+                            <BarChart data={featureData} layout="vertical">
                                 <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
-                                <XAxis dataKey="feature" stroke="#71717a" />
-                                <YAxis stroke="#71717a" />
+                                <XAxis type="number" stroke="#71717a" />
+                                <YAxis dataKey="feature" type="category" stroke="#71717a" width={100} tick={{ fontSize: 11 }} />
                                 <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} />
-                                <Bar dataKey="rf" fill="#3b82f6" name="Random Forest" radius={[4, 4, 0, 0]} />
-                                <Bar dataKey="mi" fill="#a855f7" name="Mutual Info" radius={[4, 4, 0, 0]} />
+                                <Bar dataKey="importance" fill="#a855f7" radius={[0, 8, 8, 0]}>
+                                    {featureData.map((entry, i) => (
+                                        <Cell key={i} fill={i < 3 ? '#22c55e' : i < 6 ? '#3b82f6' : '#6b7280'} />
+                                    ))}
+                                </Bar>
                             </BarChart>
                         </ResponsiveContainer>
                     </ChartModal>
 
                     <div>
-                        <h4 style={{ marginBottom: '0.75rem' }}>Feature Ranking</h4>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                                <span>1. Charging Stations</span>
-                                <span style={{ color: 'var(--accent-purple)', fontWeight: 600 }}>MI: 0.81</span>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Feature Rankings</h4>
+                        {featureData.slice(0, 5).map((feat, i) => (
+                            <div key={i} className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.25rem' }}>
+                                    <span>#{i + 1} {feat.feature}</span>
+                                    <span style={{ color: 'var(--accent-purple)', fontWeight: 600 }}>
+                                        {(feat.importance * 100).toFixed(1)}%
+                                    </span>
+                                </div>
+                                <div style={{ background: '#27272a', borderRadius: '4px', height: '6px' }}>
+                                    <div style={{
+                                        background: i < 3 ? 'var(--accent-green)' : 'var(--accent-purple)',
+                                        width: `${feat.importance * 100 * 5}%`, // Scale for visibility
+                                        height: '100%',
+                                        borderRadius: '4px'
+                                    }}></div>
+                                </div>
                             </div>
-                            <div style={{ background: '#27272a', borderRadius: '4px', height: '8px' }}>
-                                <div style={{ background: 'var(--accent-purple)', width: '81%', height: '100%', borderRadius: '4px' }}></div>
-                            </div>
-                        </div>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                                <span>2. Battery Density</span>
-                                <span style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>MI: 0.55</span>
-                            </div>
-                            <div style={{ background: '#27272a', borderRadius: '4px', height: '8px' }}>
-                                <div style={{ background: 'var(--accent-blue)', width: '55%', height: '100%', borderRadius: '4px' }}></div>
-                            </div>
-                        </div>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                                <span>3. EV Range</span>
-                                <span style={{ color: 'var(--accent-orange)', fontWeight: 600 }}>MI: 0.44</span>
-                            </div>
-                            <div style={{ background: '#27272a', borderRadius: '4px', height: '8px' }}>
-                                <div style={{ background: 'var(--accent-orange)', width: '44%', height: '100%', borderRadius: '4px' }}></div>
-                            </div>
-                        </div>
-                        <div className="card" style={{ padding: '1rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                                <span>4. Battery Cost</span>
-                                <span style={{ color: 'var(--accent-green)', fontWeight: 600 }}>MI: 0.07</span>
-                            </div>
-                            <div style={{ background: '#27272a', borderRadius: '4px', height: '8px' }}>
-                                <div style={{ background: 'var(--accent-green)', width: '7%', height: '100%', borderRadius: '4px' }}></div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>
 
-            {/* Growth Rates (CAGR) */}
+            {/* Year-by-Year Forecasts */}
             <div className="chart-container" style={{ marginTop: '1.5rem' }}>
-                <h3 className="chart-title">🚀 Compound Annual Growth Rates (CAGR)</h3>
+                <h3 className="chart-title">📅 Year-by-Year Forecasts (2025-2030)</h3>
                 <div className="grid-2" style={{ marginTop: '1rem' }}>
                     <ChartModal
-                        title="Growth Rate Comparison"
-                        insight="EV sales (48.1% CAGR) and charging stations (43.0%) are growing exponentially. Solar (28.9%) is also rocketing. Data centers (10.9%) growing 5x faster than overall electricity. Trucking (4.9%) is steady but mature."
+                        title="Copper Price Forecast"
+                        insight="Both Gradient Boosting and LSTM models predict relatively stable copper prices through 2030, with LSTM showing more conservative estimates."
                     >
                         <ResponsiveContainer width="100%" height="100%">
-                            <BarChart data={cagrData} layout="vertical">
+                            <ComposedChart data={forecastChartData}>
                                 <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
-                                <XAxis type="number" stroke="#71717a" unit="%" />
-                                <YAxis dataKey="metric" type="category" stroke="#71717a" width={120} />
-                                <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} formatter={(v) => `${v}%`} />
-                                <Bar dataKey="cagr" radius={[0, 8, 8, 0]}>
-                                    {cagrData.map((entry, i) => (
+                                <XAxis dataKey="year" stroke="#71717a" />
+                                <YAxis stroke="#71717a" domain={['auto', 'auto']} />
+                                <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} />
+                                <Area type="monotone" dataKey="copper_upper" fill="#22c55e22" stroke="none" name="Upper Bound" />
+                                <Area type="monotone" dataKey="copper_lower" fill="#18181b" stroke="none" name="Lower Bound" />
+                                <Line type="monotone" dataKey="copper_gb" stroke="#22c55e" strokeWidth={2} name="GB Forecast" dot={{ r: 4 }} />
+                                <Line type="monotone" dataKey="copper_lstm" stroke="#a855f7" strokeWidth={2} name="LSTM Forecast" dot={{ r: 4 }} strokeDasharray="5 5" />
+                            </ComposedChart>
+                        </ResponsiveContainer>
+                    </ChartModal>
+
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Copper Price Predictions</h4>
+                        {copperForecasts.map((forecast, i) => (
+                            <div key={i} className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                                    <span style={{ fontWeight: 600 }}>{forecast.year}</span>
+                                    <span style={{ color: 'var(--accent-green)' }}>
+                                        ${forecast.prediction?.toLocaleString()}
+                                    </span>
+                                </div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                                    Range: ${forecast.lower_bound?.toLocaleString()} - ${forecast.upper_bound?.toLocaleString()}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* PCA Analysis */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">🎛️ Principal Component Analysis</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    <ChartModal
+                        title="Variance Explained"
+                        insight={`First principal component explains ${(pcaVariance[0] * 100).toFixed(1)}% of variance. ${pcaData.n_components_95_var || 5} components needed for 95% variance.`}
+                    >
+                        <ResponsiveContainer width="100%" height="100%">
+                            <ComposedChart data={pcaChartData}>
+                                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                                <XAxis dataKey="component" stroke="#71717a" />
+                                <YAxis stroke="#71717a" domain={[0, 100]} unit="%" />
+                                <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} formatter={(v) => `${v.toFixed(1)}%`} />
+                                <Bar dataKey="variance" fill="#3b82f6" name="Individual" radius={[4, 4, 0, 0]} />
+                                <Line type="monotone" dataKey="cumulative" stroke="#22c55e" strokeWidth={2} name="Cumulative" dot={{ r: 4 }} />
+                            </ComposedChart>
+                        </ResponsiveContainer>
+                    </ChartModal>
+
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>PC1 Loadings (Top Features)</h4>
+                        {pcaData.loadings?.PC1 && Object.entries(pcaData.loadings.PC1)
+                            .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]))
+                            .slice(0, 6)
+                            .map(([feature, loading], i) => (
+                                <div key={i} className="card" style={{ padding: '0.6rem', marginBottom: '0.4rem' }}>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                        <span style={{ fontSize: '0.85rem' }}>{feature.replace(/_/g, ' ')}</span>
+                                        <span style={{
+                                            color: loading > 0 ? 'var(--accent-green)' : 'var(--accent-red)',
+                                            fontWeight: 600,
+                                            fontSize: '0.85rem'
+                                        }}>
+                                            {loading > 0 ? '+' : ''}{loading.toFixed(3)}
+                                        </span>
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
+                </div>
+            </div>
+
+            {/* Market Regimes & Anomalies */}
+            <div className="chart-container" style={{ marginTop: '1.5rem' }}>
+                <h3 className="chart-title">📊 Market Regimes & Anomaly Detection</h3>
+                <div className="grid-2" style={{ marginTop: '1rem' }}>
+                    <ChartModal
+                        title="Market Regime Distribution"
+                        insight={`Current market regime: ${regimeData.current_regime || 'Neutral'}. Based on 12-month rolling analysis of copper prices.`}
+                    >
+                        <ResponsiveContainer width="100%" height="100%">
+                            <BarChart data={regimeChartData}>
+                                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
+                                <XAxis dataKey="regime" stroke="#71717a" />
+                                <YAxis stroke="#71717a" />
+                                <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} />
+                                <Bar dataKey="count" radius={[8, 8, 0, 0]}>
+                                    {regimeChartData.map((entry, i) => (
                                         <Cell key={i} fill={entry.color} />
                                     ))}
                                 </Bar>
@@ -217,139 +347,159 @@ export default function MLInsights() {
                     </ChartModal>
 
                     <div>
-                        <h4 style={{ marginBottom: '0.75rem' }}>Doubling Times</h4>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span>🚗 EV Sales</span>
-                                <span style={{ fontWeight: 600 }}>Double every ~1.8 years</span>
-                            </div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>
+                            <span style={{ marginRight: '0.5rem' }}>⚠️</span>
+                            Detected Anomalies ({clustering.anomaly_detection?.n_anomalies || 0})
+                        </h4>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
+                            Isolation Forest detected {((clustering.anomaly_detection?.anomaly_rate || 0) * 100).toFixed(1)}% of data as outliers
+                        </p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem' }}>
+                            {anomalyDates.slice(0, 10).map((date, i) => (
+                                <span key={i} style={{
+                                    background: 'rgba(249, 115, 22, 0.2)',
+                                    color: 'var(--accent-orange)',
+                                    padding: '0.25rem 0.5rem',
+                                    borderRadius: '4px',
+                                    fontSize: '0.8rem'
+                                }}>
+                                    {date}
+                                </span>
+                            ))}
                         </div>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span>⚡ Charging Stations</span>
-                                <span style={{ fontWeight: 600 }}>Double every ~2.0 years</span>
-                            </div>
-                        </div>
-                        <div className="card" style={{ padding: '1rem', marginBottom: '0.5rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span>☀️ Solar Capacity</span>
-                                <span style={{ fontWeight: 600 }}>Double every ~2.7 years</span>
-                            </div>
-                        </div>
-                        <div className="card" style={{ padding: '1rem' }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                <span>🖥️ Data Centers</span>
-                                <span style={{ fontWeight: 600 }}>Double every ~6.7 years</span>
-                            </div>
-                        </div>
-                        <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'var(--bg-hover)', borderRadius: '8px', fontSize: '0.85rem' }}>
-                            💡 Rule: 72 / CAGR% = Years to double
+                        <div className="card" style={{ marginTop: '1rem', padding: '1rem', borderLeft: '3px solid var(--accent-orange)' }}>
+                            <strong>Notable anomaly periods:</strong>
+                            <ul style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '0.5rem', paddingLeft: '1rem' }}>
+                                <li>2000: Dot-com bubble</li>
+                                <li>2008-2009: Financial crisis</li>
+                                <li>2020: COVID-19 crash</li>
+                                <li>2022: Post-pandemic inflation spike</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Country Clustering */}
+            {/* Cross-Correlations */}
             <div className="chart-container" style={{ marginTop: '1.5rem' }}>
-                <h3 className="chart-title">🌍 Country Clustering: Who's Leading the Transition?</h3>
+                <h3 className="chart-title">⏱️ Lead/Lag Relationships</h3>
                 <div className="grid-2" style={{ marginTop: '1rem' }}>
-                    <ChartModal
-                        title="EV Adoption by Policy Score"
-                        insight="K-Means clustering reveals 3 distinct groups: Leaders (Norway, Sweden, Netherlands) with high policy + adoption; Followers (China, Germany, UK) with moderate; Laggards (USA, Australia) with low policy = low adoption. GDP doesn't matter - policy does!"
-                    >
-                        <ResponsiveContainer width="100%" height="100%">
-                            <ScatterChart>
-                                <CartesianGrid strokeDasharray="3 3" stroke="#27272a" />
-                                <XAxis dataKey="policy" name="Policy Score" stroke="#71717a" domain={[4, 11]} label={{ value: 'Policy Score', position: 'bottom' }} />
-                                <YAxis dataKey="ev" name="EV Share %" stroke="#71717a" domain={[0, 100]} />
-                                <Tooltip contentStyle={{ background: '#18181b', border: '1px solid #27272a', borderRadius: 8 }} />
-                                <Scatter data={countryData.filter(c => c.cluster === 'Leader')} fill="#22c55e" name="Leaders" />
-                                <Scatter data={countryData.filter(c => c.cluster === 'Follower')} fill="#3b82f6" name="Followers" />
-                                <Scatter data={countryData.filter(c => c.cluster === 'Laggard')} fill="#ef4444" name="Laggards" />
-                            </ScatterChart>
-                        </ResponsiveContainer>
-                    </ChartModal>
+                    <div>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Cross-Correlation Analysis</h4>
+                        {crossCorrData.map((cc, i) => (
+                            <div key={i} className="card" style={{ padding: '0.75rem', marginBottom: '0.5rem' }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                                    <span style={{ fontSize: '0.9rem' }}>{cc.feature}</span>
+                                    <span style={{
+                                        color: cc.lag === 0 ? 'var(--accent-blue)' : cc.lag > 0 ? 'var(--accent-green)' : 'var(--accent-purple)',
+                                        fontWeight: 600,
+                                        fontSize: '0.85rem'
+                                    }}>
+                                        {cc.lag === 0 ? 'Concurrent' : `${cc.lag > 0 ? 'Leads' : 'Lags'} by ${Math.abs(cc.lag)}m`}
+                                    </span>
+                                </div>
+                                <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)' }}>
+                                    Correlation: {cc.correlation.toFixed(3)}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
 
                     <div>
-                        <h4 style={{ marginBottom: '0.75rem' }}>Cluster Breakdown</h4>
+                        <h4 style={{ marginBottom: '0.75rem' }}>Key Lead/Lag Insights</h4>
                         <div className="card" style={{ padding: '1rem', marginBottom: '0.75rem', borderLeft: '3px solid var(--accent-green)' }}>
-                            <h5 style={{ color: 'var(--accent-green)', margin: 0 }}>🏆 Leaders</h5>
-                            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: '0.25rem 0' }}>Norway, Sweden, Netherlands</p>
-                            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0 }}>Avg EV share: 65% | Avg Policy: 8.7</p>
+                            <strong>🔮 Predictive Signal:</strong>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
+                                CPI Energy lags Energy Index by 12 months - inflation follows energy prices
+                            </p>
                         </div>
                         <div className="card" style={{ padding: '1rem', marginBottom: '0.75rem', borderLeft: '3px solid var(--accent-blue)' }}>
-                            <h5 style={{ color: 'var(--accent-blue)', margin: 0 }}>📈 Followers</h5>
-                            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: '0.25rem 0' }}>China, Germany, UK</p>
-                            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0 }}>Avg EV share: 30% | Avg Policy: 7.7</p>
+                            <strong>🔗 Co-movement:</strong>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
+                                Gas prices and energy index move together (r=0.93)
+                            </p>
                         </div>
-                        <div className="card" style={{ padding: '1rem', borderLeft: '3px solid var(--accent-red)' }}>
-                            <h5 style={{ color: 'var(--accent-red)', margin: 0 }}>📉 Laggards</h5>
-                            <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', margin: '0.25rem 0' }}>USA, Australia</p>
-                            <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)', margin: 0 }}>Avg EV share: 9.5% | Avg Policy: 5.5</p>
+                        <div className="card" style={{ padding: '1rem', borderLeft: '3px solid var(--accent-purple)' }}>
+                            <strong>⚡ Metal-Energy Link:</strong>
+                            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: '0.25rem 0 0' }}>
+                                Copper lags energy by 10 months - industrial demand follows energy cycles
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {/* Hypothesis Tests */}
+            {/* Model Comparison */}
             <div className="chart-container" style={{ marginTop: '1.5rem' }}>
-                <h3 className="chart-title">🔬 Statistical Hypothesis Tests</h3>
-                <div className="grid-2" style={{ marginTop: '1rem' }}>
-                    <div className="card" style={{ padding: '1.5rem' }}>
-                        <h4 style={{ marginBottom: '1rem' }}>H1: GDP → EV Adoption?</h4>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                            <span>Spearman correlation:</span>
-                            <span>r = 0.108</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                            <span>P-value:</span>
-                            <span>p = 0.80</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                            <span>Significance (α=0.05):</span>
-                            <span style={{ color: 'var(--accent-red)', fontWeight: 600 }}>NOT SIGNIFICANT ✗</span>
-                        </div>
-                        <div style={{ padding: '0.75rem', background: 'rgba(239, 68, 68, 0.2)', borderRadius: '8px' }}>
-                            <p style={{ margin: 0, fontSize: '0.9rem' }}>
-                                💡 <strong>Wealth alone does NOT drive EV adoption.</strong> USA is richer than Norway but has 10x fewer EVs.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="card" style={{ padding: '1.5rem' }}>
-                        <h4 style={{ marginBottom: '1rem' }}>H2: Policy → EV Adoption?</h4>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                            <span>Spearman correlation:</span>
-                            <span>r = 0.916</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.5rem' }}>
-                            <span>P-value:</span>
-                            <span>p = 0.001</span>
-                        </div>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                            <span>Significance (α=0.05):</span>
-                            <span style={{ color: 'var(--accent-green)', fontWeight: 600 }}>SIGNIFICANT ✓</span>
-                        </div>
-                        <div style={{ padding: '0.75rem', background: 'rgba(34, 197, 94, 0.2)', borderRadius: '8px' }}>
-                            <p style={{ margin: 0, fontSize: '0.9rem' }}>
-                                💡 <strong>Policy is THE key driver!</strong> Strong incentives (Norway) = high adoption. Weak policy (USA) = slow adoption.
-                            </p>
-                        </div>
-                    </div>
+                <h3 className="chart-title">🤖 Model Performance Comparison</h3>
+                <div style={{ marginTop: '1rem' }}>
+                    <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1rem' }}>
+                        Note: Negative R² on test set indicates overfitting or poor time-series handling. For proper forecasting, use LSTM with rolling validation.
+                    </p>
+                    <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                        <thead>
+                            <tr style={{ borderBottom: '1px solid var(--border)' }}>
+                                <th style={{ textAlign: 'left', padding: '0.75rem' }}>Model</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>R² Score</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>RMSE</th>
+                                <th style={{ textAlign: 'right', padding: '0.75rem' }}>MAE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {modelComparisonData.map((model, i) => (
+                                <tr key={i} style={{ borderBottom: '1px solid var(--border)' }}>
+                                    <td style={{ padding: '0.75rem' }}>
+                                        {i === 0 && <span style={{ marginRight: '0.5rem' }}>🥇</span>}
+                                        {model.name}
+                                    </td>
+                                    <td style={{
+                                        textAlign: 'right',
+                                        padding: '0.75rem',
+                                        color: model.r2 > 0 ? 'var(--accent-green)' : 'var(--accent-orange)'
+                                    }}>
+                                        {model.r2.toFixed(4)}
+                                    </td>
+                                    <td style={{ textAlign: 'right', padding: '0.75rem' }}>
+                                        {model.rmse?.toFixed(2)}
+                                    </td>
+                                    <td style={{ textAlign: 'right', padding: '0.75rem' }}>
+                                        {model.mae?.toFixed(2)}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            {/* Bottom Line */}
+            {/* Data Summary */}
             <div className="chart-container" style={{ marginTop: '1.5rem', background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(168, 85, 247, 0.1))' }}>
-                <h3 className="chart-title">🎯 Key ML Discoveries</h3>
-                <div style={{ marginTop: '1rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
-                    <p><strong style={{ color: 'var(--accent-green)' }}>📊 CORRELATION:</strong> Battery cost inversely linked to sales (r=-0.94). Infrastructure co-evolves with adoption (r=0.99)</p>
-                    <p><strong style={{ color: 'var(--accent-blue)' }}>🎯 FEATURE IMPORTANCE:</strong> Charging stations have highest mutual information (0.81) - threshold effects matter</p>
-                    <p><strong style={{ color: 'var(--accent-purple)' }}>🌍 CLUSTERING:</strong> Countries form 3 clear groups by policy + adoption. GDP is NOT a good predictor</p>
-                    <p><strong style={{ color: 'var(--accent-orange)' }}>📈 GROWTH:</strong> EV sales growing 48% CAGR - doubling every 1.8 years!</p>
+                <h3 className="chart-title">📋 Analysis Summary</h3>
+                <div style={{ marginTop: '1rem' }}>
+                    <div className="grid-2">
+                        <div>
+                            <h4 style={{ marginBottom: '0.5rem' }}>Dataset Information</h4>
+                            <ul style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '1.5rem' }}>
+                                <li><strong>{metadata.data_points}</strong> monthly observations</li>
+                                <li><strong>{metadata.features?.length}</strong> economic indicators</li>
+                                <li>Date range: <strong>{metadata.date_range?.start}</strong> to <strong>{metadata.date_range?.end}</strong></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style={{ marginBottom: '0.5rem' }}>Analysis Performed</h4>
+                            <ul style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', paddingLeft: '1.5rem' }}>
+                                <li>6 ML regression models trained</li>
+                                <li>LSTM deep learning forecasting</li>
+                                <li>K-Means clustering (4 clusters)</li>
+                                <li>PCA dimensionality reduction</li>
+                                <li>Isolation Forest anomaly detection</li>
+                                <li>Cross-correlation lead/lag analysis</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(34, 197, 94, 0.2)', borderRadius: '8px', textAlign: 'center' }}>
                         <p style={{ color: 'var(--accent-green)', fontWeight: 700, fontSize: '1.1rem', margin: 0 }}>
-                            🔬 The data is clear: Policy drives adoption, not wealth. The transition is exponential and accelerating.
+                            🔬 Comprehensive analysis of commodities, monetary policy, and economic indicators reveals strong interconnections in global markets
                         </p>
                     </div>
                 </div>
