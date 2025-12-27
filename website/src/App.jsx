@@ -11,6 +11,7 @@ import UsedEVs from './pages/UsedEVs'
 import HomeEnergy from './pages/HomeEnergy'
 import Solar from './pages/Solar'
 import Semis from './pages/Semis'
+import DeepAnalysis from './pages/DeepAnalysis'
 import './index.css'
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
             <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '0.5rem' }}>OVERVIEW</div>
             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📊</span> Dashboard
+            </NavLink>
+            <NavLink to="/deep-analysis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🔬</span> Deep Analysis
             </NavLink>
 
             <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
@@ -79,6 +83,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/deep-analysis" element={<DeepAnalysis />} />
             <Route path="/market" element={<MarketInsights />} />
             <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/semis" element={<Semis />} />
