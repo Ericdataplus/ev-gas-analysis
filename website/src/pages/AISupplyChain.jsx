@@ -492,6 +492,151 @@ export default function AISupplyChain() {
                 </div>
             </div>
 
+            {/* AI Impact Scorecard - Positive vs Negative */}
+            <div className="chart-card">
+                <h3 className="chart-title">⚖️ AI Supply Chain Impact Scorecard</h3>
+                <p style={{ color: 'rgba(255,255,255,0.6)', marginBottom: '20px', textAlign: 'center' }}>
+                    A balanced view: How AI is both disrupting and improving global supply chains
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '20px' }}>
+                    {/* Positive Impacts */}
+                    <div style={{
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        border: '2px solid rgba(16, 185, 129, 0.4)',
+                        borderRadius: '16px',
+                        padding: '24px'
+                    }}>
+                        <h4 style={{ color: '#10b981', marginBottom: '16px', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span>✅</span> Efficiency Gains (The Good)
+                        </h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Forecast Accuracy Improvement</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>+30-40%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Inventory Reduction</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>-35%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Logistics Cost Savings</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>-15%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Warehouse Picking Efficiency</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>+70%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Order Accuracy (AI Warehouses)</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>99.5%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Disruption Detection (Days Ahead)</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>+9 days</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Fuel Reduction (Route Optimization)</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>-15%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(16, 185, 129, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Equipment Downtime Reduction</span>
+                                <span style={{ color: '#10b981', fontWeight: '700', fontSize: '1.1rem' }}>-30%</span>
+                            </div>
+                        </div>
+                        <div style={{ marginTop: '16px', padding: '12px', backgroundColor: 'rgba(16, 185, 129, 0.2)', borderRadius: '8px' }}>
+                            <p style={{ color: '#10b981', fontSize: '0.85rem', margin: 0, textAlign: 'center' }}>
+                                <strong>Bottom Line:</strong> 67% of supply chain execs report AI has automated key processes by 2025
+                            </p>
+                        </div>
+                    </div>
+
+                    {/* Negative Impacts */}
+                    <div style={{
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        border: '2px solid rgba(239, 68, 68, 0.4)',
+                        borderRadius: '16px',
+                        padding: '24px'
+                    }}>
+                        <h4 style={{ color: '#ef4444', marginBottom: '16px', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                            <span>❌</span> Disruption Costs (The Bad)
+                        </h4>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Consumer RAM Price Surge</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>+300%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>PC/Laptop Price Increase</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>+15-20%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>AI Carbon Footprint 2025</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>80M tons CO2</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>AI Water Use (2025)</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>765B liters</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Jobs Impacted (US 2020-2025)</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>~3.5M</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Admin/Data Entry Hiring</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>-45%</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>ChatGPT vs Google Search Energy</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>10x more</span>
+                            </div>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '8px 12px', backgroundColor: 'rgba(239, 68, 68, 0.15)', borderRadius: '8px' }}>
+                                <span style={{ color: 'rgba(255,255,255,0.8)' }}>Jobs at High Automation Risk</span>
+                                <span style={{ color: '#ef4444', fontWeight: '700', fontSize: '1.1rem' }}>27%</span>
+                            </div>
+                        </div>
+                        <div style={{ marginTop: '16px', padding: '12px', backgroundColor: 'rgba(239, 68, 68, 0.2)', borderRadius: '8px' }}>
+                            <p style={{ color: '#ef4444', fontSize: '0.85rem', margin: 0, textAlign: 'center' }}>
+                                <strong>Warning:</strong> Memory shortage could last until 2027-2028 per industry analysts
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* AI Net Impact Analysis */}
+            <div className="chart-card" onClick={() => openModal(
+                'The AI Efficiency Paradox',
+                'AI creates a paradox: it makes supply chains MORE efficient while simultaneously straining them. Companies using AI see 34% lower ops costs and 40% better forecasting. But this efficiency requires memory, energy, and compute that AI itself is consuming. The net effect? Winners (AI-adopting companies) thrive while those dependent on commodity hardware pay the price through 300% memory increases.'
+            )}>
+                <h3 className="chart-title">📊 Net Impact: AI Making vs Breaking Supply Chains</h3>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', padding: '20px' }}>
+                    <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'rgba(16, 185, 129, 0.1)', borderRadius: '12px' }}>
+                        <div style={{ fontSize: '2rem', color: '#10b981', fontWeight: '700' }}>$20.8B</div>
+                        <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>AI Logistics Market 2025</div>
+                        <div style={{ color: '#10b981', fontSize: '0.8rem' }}>+45.6% CAGR</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'rgba(139, 92, 246, 0.1)', borderRadius: '12px' }}>
+                        <div style={{ fontSize: '2rem', color: '#8b5cf6', fontWeight: '700' }}>90%+</div>
+                        <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Plan to Use AI for Forecasting</div>
+                        <div style={{ color: '#8b5cf6', fontSize: '0.8rem' }}>By 2025</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'rgba(59, 130, 246, 0.1)', borderRadius: '12px' }}>
+                        <div style={{ fontSize: '2rem', color: '#3b82f6', fontWeight: '700' }}>97M</div>
+                        <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>New Jobs Created by AI</div>
+                        <div style={{ color: '#3b82f6', fontSize: '0.8rem' }}>WEF Projection</div>
+                    </div>
+                    <div style={{ textAlign: 'center', padding: '16px', backgroundColor: 'rgba(245, 158, 11, 0.1)', borderRadius: '12px' }}>
+                        <div style={{ fontSize: '2rem', color: '#f59e0b', fontWeight: '700' }}>85M</div>
+                        <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>Jobs Displaced by AI</div>
+                        <div style={{ color: '#f59e0b', fontSize: '0.8rem' }}>Net: +12M Jobs</div>
+                    </div>
+                </div>
+                <div className="chart-insight">
+                    <strong>🎯 The Paradox:</strong> AI simultaneously creates record supply chain efficiencies (+34% cost reduction) while causing record component shortages (+300% RAM prices). The winners adopt AI; the losers pay for its infrastructure.
+                </div>
+            </div>
+
             {/* Cross-Domain Insights */}
             <div className="chart-card">
                 <h3 className="chart-title">🔗 How This Connects to Our EV Analysis</h3>
