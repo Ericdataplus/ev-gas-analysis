@@ -491,5 +491,134 @@
       "Longer repair times (15.6 vs 12.7 days)"
     ],
     "trend": "Narrowing as EV adoption increases"
+  },
+  "homeEnergy": {
+    "heatingFuel2024": {
+      "naturalGas": 47,
+      "electric": 42,
+      "propane": 5,
+      "oil": 4,
+      "other": 2
+    },
+    "electricityBreakdown": {
+      "heatingCooling": 51,
+      "waterHeating": 19,
+      "appliances": 14,
+      "lighting": 9,
+      "refrigeration": 7
+    },
+    "annualConsumption": {
+      "totalKwh": 10500,
+      "coolingCost2024": 719,
+      "coolingIncrease": 7.9
+    },
+    "trends": {
+      "electricHeatingGrowth": "42% now vs 38% in 2010",
+      "gasHeatingDecline": "47% now vs 49% in 2010",
+      "recordCooling2024": "Hottest summer on record"
+    }
+  },
+  "residentialSolar": {
+    "adoption2024": {
+      "percentOfHomes": 7,
+      "totalHouseholds": 4700000,
+      "eligibleHomes": 84690000,
+      "growth2016To2024": 262
+    },
+    "economics": {
+      "paybackPeriodYears": {
+        "min": 6,
+        "max": 10,
+        "average": 8
+      },
+      "roi": {
+        "min": 10,
+        "max": 30,
+        "typical": 20
+      },
+      "federalTaxCredit": 30,
+      "taxCreditExpiry": 2032,
+      "avgSystemCost": 26000,
+      "costPerWatt": 2.50,
+      "homeValueIncrease": 4.1
+    },
+    "savings": {
+      "annualSavings": 1500,
+      "electricityOffset": {
+        "min": 70,
+        "max": 100
+      },
+      "systemLifespanYears": 25,
+      "totalLifetimeSavings": 37500
+    },
+    "projections": {
+      "by2030Adoption": 15,
+      "installationDecline2024": 31,
+      "capacityGrowth2024": 11
+    },
+    "topStates": [
+      "California",
+      "Texas",
+      "Florida",
+      "Arizona",
+      "Nevada"
+    ]
+  },
+  "semiTrucks": {
+    "market2024": {
+      "valueMillion": 852.5,
+      "projection2033": 6652.6,
+      "cagr": 25.6,
+      "usMarket2024": 210,
+      "usProjection2033": 6500,
+      "electricShareOfNewSales": 0.1
+    },
+    "teslaSemi": {
+      "delivered": 200,
+      "highVolumeProductionStart": "Late 2025",
+      "factoryCapacity": 50000,
+      "range": 500,
+      "chargingTime": "30 min to 70%",
+      "mainCustomer": "PepsiCo"
+    },
+    "nikola": {
+      "fcevsSold2024": 235,
+      "q3Sales": 88,
+      "q2Sales": 72,
+      "guidance2024": {
+        "min": 300,
+        "max": 350
+      },
+      "fleetAdoptionGrowth": 78,
+      "fuelType": "Hydrogen Fuel Cell"
+    },
+    "challenges": [
+      "Higher upfront costs",
+      "Charging infrastructure gaps",
+      "Range limitations for long-haul",
+      "Weight penalty from batteries"
+    ],
+    "benefits": [
+      "80% lower fuel costs",
+      "50% lower maintenance",
+      "Zero tailpipe emissions",
+      "Quieter operation"
+    ]
+  },
+  "solarPlusEV": {
+    "scenario": {
+      "systemSize": 8,
+      "annualProduction": 12000,
+      "evAnnualMiles": 12000,
+      "evEfficiency": 3.5,
+      "evAnnualKwh": 3428
+    },
+    "economics": {
+      "solarCoverage": 100,
+      "annualFuelSavings": 1284,
+      "10yearSavings": 12840,
+      "paybackWithEV": 7
+    },
+    "insight": "A solar home with EV can be 100% energy independent for driving"
   }
 }

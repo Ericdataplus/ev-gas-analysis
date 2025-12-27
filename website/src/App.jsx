@@ -8,6 +8,9 @@ import Environment from './pages/Environment'
 import Sources from './pages/Sources'
 import MarketInsights from './pages/MarketInsights'
 import UsedEVs from './pages/UsedEVs'
+import HomeEnergy from './pages/HomeEnergy'
+import Solar from './pages/Solar'
+import Semis from './pages/Semis'
 import './index.css'
 
 function App() {
@@ -16,23 +19,39 @@ function App() {
       <div className="app">
         <aside className="sidebar">
           <div className="sidebar-logo">
-            <span>🚗⚡</span>
-            <span>EV Analysis</span>
+            <span>⚡</span>
+            <span>Energy Analysis</span>
           </div>
 
           <nav className="sidebar-nav">
+            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '0.5rem' }}>OVERVIEW</div>
             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📊</span> Dashboard
             </NavLink>
+
+            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
             <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🏆</span> 2024 Market
             </NavLink>
             <NavLink to="/used-evs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🚗</span> Used EVs
             </NavLink>
+            <NavLink to="/semis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🚛</span> Semi Trucks
+            </NavLink>
             <NavLink to="/predictions" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📈</span> ML Predictions
             </NavLink>
+
+            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>HOME ENERGY</div>
+            <NavLink to="/home-energy" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🏠</span> Home Energy
+            </NavLink>
+            <NavLink to="/solar" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>☀️</span> Solar
+            </NavLink>
+
+            <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>ANALYSIS</div>
             <NavLink to="/safety" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🔒</span> Safety
             </NavLink>
@@ -50,7 +69,7 @@ function App() {
             </NavLink>
           </nav>
 
-          <div style={{ marginTop: 'auto', paddingTop: '2rem', borderTop: '1px solid var(--border-color)', marginTop: '2rem' }}>
+          <div style={{ paddingTop: '1rem', borderTop: '1px solid var(--border-color)', marginTop: 'auto' }}>
             <a href="https://github.com/Ericdataplus/ev-gas-analysis" target="_blank" className="nav-link">
               <span>💻</span> GitHub
             </a>
@@ -62,6 +81,9 @@ function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/market" element={<MarketInsights />} />
             <Route path="/used-evs" element={<UsedEVs />} />
+            <Route path="/semis" element={<Semis />} />
+            <Route path="/home-energy" element={<HomeEnergy />} />
+            <Route path="/solar" element={<Solar />} />
             <Route path="/predictions" element={<Predictions />} />
             <Route path="/safety" element={<Safety />} />
             <Route path="/costs" element={<Costs />} />
