@@ -1,0 +1,101 @@
+{
+  "gridCapacity": {
+    "canHandleAllEV": true,
+    "evDemand2030": 120,
+    "evDemand2050": 120,
+    "pctOfTotal2050": 2.4,
+    "investmentRequired": "$2-4 trillion",
+    "keyStrategies": [
+      "Smart charging",
+      "V2G integration",
+      "Grid modernization",
+      "Renewable expansion"
+    ]
+  },
+  "homeBatteries": {
+    "payback2024Years": 8.3,
+    "payback2030Years": 4.1,
+    "marketCAGR": 20,
+    "worthIt": true,
+    "bestWith": "Solar + Time-of-Use rates",
+    "cost2024": 15000,
+    "cost2030Projected": 9000
+  },
+  "electricAviation": {
+    "shortHaulYear": 2030,
+    "mediumHaulYear": 2039,
+    "longHaulFeasible": "Post-2050",
+    "batteryDensity2030": 518,
+    "batteryDensity2040": 743,
+    "requiredForLongHaul": 1000,
+    "verdict": "Regional by 2030, intercontinental post-2050"
+  },
+  "industrialDecarb": {
+    "steelReductionPotential": 90,
+    "cementReductionPotential": 44,
+    "shippingReductionPotential": 100,
+    "greenH2CostCompetitive": 2030,
+    "investmentNeeded": "$100B+",
+    "verdict": "Achievable with green hydrogen + CCS"
+  },
+  "countryRankings": {
+    "evShare": [
+      {
+        "country": "Norway",
+        "share": 89
+      },
+      {
+        "country": "Sweden",
+        "share": 58
+      },
+      {
+        "country": "Netherlands",
+        "share": 48
+      },
+      {
+        "country": "China",
+        "share": 40
+      },
+      {
+        "country": "UK",
+        "share": 30
+      },
+      {
+        "country": "Germany",
+        "share": 19
+      },
+      {
+        "country": "Australia",
+        "share": 10
+      },
+      {
+        "country": "USA",
+        "share": 9
+      }
+    ],
+    "solarPerCapita": [
+      {
+        "country": "Australia",
+        "watts": 1400
+      },
+      {
+        "country": "Netherlands",
+        "watts": 1337
+      },
+      {
+        "country": "Germany",
+        "watts": 1192
+      },
+      {
+        "country": "USA",
+        "watts": 720
+      },
+      {
+        "country": "China",
+        "watts": 620
+      }
+    ],
+    "overallLeader": "Norway",
+    "fastestGrowing": "China"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "correlations": {
+    "battery_cost_vs_ev_sales": -0.6346664633620338,
+    "strongest_ev_correlation": "ev_sales_millions vs ev_market_share_pct"
+  },
+  "clustering": {
+    "n_clusters": 3,
+    "cluster_0": [
+      "Netherlands",
+      "Germany",
+      "USA",
+      "Australia"
+    ],
+    "cluster_1": [
+      "Sweden",
+      "China",
+      "UK"
+    ],
+    "cluster_2": [
+      "Norway"
+    ]
+  },
+  "pca": {
+    "pc1_variance": 0.9002226288499977,
+    "pc2_variance": 0.0922381577505572,
+    "total_3_components": 0.9987377762678592
+  },
+  "feature_importance": {
+    "battery_density_whkg": 0.31443029627354885,
+    "charging_stations_k": 0.2894967020670551,
+    "avg_ev_range_miles": 0.23838358590890932,
+    "battery_cost_kwh": 0.15768941575048684
+  },
+  "cagr": {
+    "EV Sales": 48.0632728996244,
+    "Charging Stations": 42.99691483087287,
+    "Solar Capacity (Global)": 28.9111772755134,
+    "Data Center TWh": 10.907296982607594,
+    "Trucking Revenue": 4.867958731402844
+  },
+  "hypothesis_tests": {
+    "gdp_vs_ev_p_value": 0.7994604266184202,
+    "policy_vs_ev_p_value": 0.0014031743248924412
+  }
+}

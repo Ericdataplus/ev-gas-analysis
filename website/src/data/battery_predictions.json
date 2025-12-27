@@ -1,0 +1,294 @@
+{
+  "costTrajectory": {
+    "historical": [
+      {
+        "year": 2010,
+        "cost": 1100
+      },
+      {
+        "year": 2011,
+        "cost": 900
+      },
+      {
+        "year": 2012,
+        "cost": 650
+      },
+      {
+        "year": 2013,
+        "cost": 550
+      },
+      {
+        "year": 2014,
+        "cost": 450
+      },
+      {
+        "year": 2015,
+        "cost": 380
+      },
+      {
+        "year": 2016,
+        "cost": 290
+      },
+      {
+        "year": 2017,
+        "cost": 215
+      },
+      {
+        "year": 2018,
+        "cost": 185
+      },
+      {
+        "year": 2019,
+        "cost": 156
+      },
+      {
+        "year": 2020,
+        "cost": 137
+      },
+      {
+        "year": 2021,
+        "cost": 141
+      },
+      {
+        "year": 2022,
+        "cost": 150
+      },
+      {
+        "year": 2023,
+        "cost": 130
+      },
+      {
+        "year": 2024,
+        "cost": 115
+      }
+    ],
+    "predictions": [
+      {
+        "year": 2025,
+        "cost": 100
+      },
+      {
+        "year": 2026,
+        "cost": 90
+      },
+      {
+        "year": 2027,
+        "cost": 82
+      },
+      {
+        "year": 2028,
+        "cost": 75
+      },
+      {
+        "year": 2030,
+        "cost": 65
+      },
+      {
+        "year": 2035,
+        "cost": 50
+      },
+      {
+        "year": 2040,
+        "cost": 45
+      }
+    ],
+    "annualDeclineRate": 14.9,
+    "halfingPeriodYears": 4.7
+  },
+  "densityTrajectory": {
+    "liIon": {
+      "historical": [
+        {
+          "year": 1991,
+          "whKg": 80
+        },
+        {
+          "year": 1995,
+          "whKg": 110
+        },
+        {
+          "year": 2000,
+          "whKg": 150
+        },
+        {
+          "year": 2005,
+          "whKg": 180
+        },
+        {
+          "year": 2010,
+          "whKg": 200
+        },
+        {
+          "year": 2015,
+          "whKg": 250
+        },
+        {
+          "year": 2020,
+          "whKg": 280
+        },
+        {
+          "year": 2022,
+          "whKg": 300
+        },
+        {
+          "year": 2024,
+          "whKg": 350
+        }
+      ],
+      "predictions": [
+        {
+          "year": 2025,
+          "whKg": 370
+        },
+        {
+          "year": 2027,
+          "whKg": 400
+        },
+        {
+          "year": 2030,
+          "whKg": 450
+        },
+        {
+          "year": 2035,
+          "whKg": 480
+        },
+        {
+          "year": 2040,
+          "whKg": 500
+        }
+      ],
+      "theoreticalMax": 500,
+      "annualGrowth": 4.6
+    },
+    "solidState": {
+      "predictions": [
+        {
+          "year": 2025,
+          "whKg": 400
+        },
+        {
+          "year": 2026,
+          "whKg": 450
+        },
+        {
+          "year": 2027,
+          "whKg": 500
+        },
+        {
+          "year": 2028,
+          "whKg": 550
+        },
+        {
+          "year": 2030,
+          "whKg": 600
+        },
+        {
+          "year": 2035,
+          "whKg": 800
+        },
+        {
+          "year": 2040,
+          "whKg": 900
+        }
+      ],
+      "theoreticalMax": 1000
+    }
+  },
+  "evRangeProjections": {
+    "2024": {
+      "range": 260,
+      "packKwh": 75,
+      "density": 350,
+      "tech": "Li-Ion NMC"
+    },
+    "2027": {
+      "range": 350,
+      "packKwh": 90,
+      "density": 500,
+      "tech": "Solid-State"
+    },
+    "2030": {
+      "range": 450,
+      "packKwh": 100,
+      "density": 600,
+      "tech": "Solid-State"
+    },
+    "2035": {
+      "range": 600,
+      "packKwh": 120,
+      "density": 800,
+      "tech": "Solid-State"
+    }
+  },
+  "keyMilestones": [
+    {
+      "year": 2010,
+      "event": "Battery cost $1,100/kWh"
+    },
+    {
+      "year": 2020,
+      "event": "Cost drops to $137/kWh (88% reduction)"
+    },
+    {
+      "year": 2024,
+      "event": "BEV packs fall below $100/kWh for first time"
+    },
+    {
+      "year": 2025,
+      "event": "Solid-state pilot production begins"
+    },
+    {
+      "year": 2027,
+      "event": "Toyota, BYD mass produce solid-state EVs"
+    },
+    {
+      "year": 2028,
+      "event": "EVs reach cost parity with ICE"
+    },
+    {
+      "year": 2030,
+      "event": "500-mile EVs become standard"
+    },
+    {
+      "year": 2035,
+      "event": "800 Wh/kg solid-state enables 1000-mile EVs"
+    }
+  ],
+  "chemistryComparison": [
+    {
+      "type": "LFP (Iron Phosphate)",
+      "whKg": 160,
+      "cycles": 3000,
+      "cost": "Low",
+      "safety": "Excellent"
+    },
+    {
+      "type": "NMC 811",
+      "whKg": 300,
+      "cycles": 1000,
+      "cost": "Medium",
+      "safety": "Good"
+    },
+    {
+      "type": "NCA (Tesla)",
+      "whKg": 320,
+      "cycles": 1500,
+      "cost": "High",
+      "safety": "Good"
+    },
+    {
+      "type": "Solid-State (2027)",
+      "whKg": 500,
+      "cycles": 5000,
+      "cost": "High",
+      "safety": "Excellent"
+    },
+    {
+      "type": "Solid-State (2035)",
+      "whKg": 800,
+      "cycles": 10000,
+      "cost": "Medium",
+      "safety": "Excellent"
+    }
+  ]
+}
