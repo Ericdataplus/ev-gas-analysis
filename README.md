@@ -1,6 +1,8 @@
 # 🚗⚡ EV vs Gas Analysis
 
-> Comprehensive ML-powered analysis of electric vs gas vehicles
+## 🌐 [**VIEW LIVE SITE →**](https://ericdataplus.github.io/ev-gas-analysis/)
+
+> Comprehensive ML-powered analysis of electric vs gas vehicles, energy storage, trucking, AI energy consumption, and the global energy transition
 
 ## 🚀 Quick Start
 
