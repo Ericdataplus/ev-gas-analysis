@@ -1,0 +1,94 @@
+{
+  "generated_at": "2025-12-27T13:17:00.606219",
+  "questions": [
+    {
+      "id": "Q1",
+      "question": "Can energy infrastructure scale fast enough for AI?",
+      "results": {
+        "long_term_growth": 7.44,
+        "volatility": 103.51,
+        "ai_era_growth": 4.83,
+        "finding": "\u2705 Energy prices stable at 4.8%/year - no immediate constraint"
+      }
+    },
+    {
+      "id": "Q2",
+      "question": "Are semiconductor materials constraining AI hardware production?",
+      "results": {
+        "copper": {
+          "pre_ai_avg": 5818.0,
+          "ai_era_avg": 8580.0,
+          "price_increase_pct": 47.5,
+          "current_percentile": 92.0,
+          "finding": "\u26a0\ufe0f CONSTRAINT: Copper +47% since AI boom - infrastructure demand outpacing supply"
+        },
+        "nickel_change": 11.1
+      }
+    },
+    {
+      "id": "Q3",
+      "question": "Is manufacturing capacity sufficient for AI hardware demand?",
+      "results": {}
+    },
+    {
+      "id": "Q4",
+      "question": "Does monetary policy favor or hinder AI investment?",
+      "results": {
+        "current_fed_rate": 3.88,
+        "current_10yr": 4.09,
+        "capital_cost_increase": 3.04,
+        "finding": "\u26a0\ufe0f HEADWIND: Capital costs up 3.0pp - slows AI infrastructure investment"
+      }
+    },
+    {
+      "id": "Q5",
+      "question": "Which constraints bind together?",
+      "results": {
+        "correlations": [
+          {
+            "pair": "copper_price \u2194 energy_index",
+            "correlation": 0.674
+          },
+          {
+            "pair": "copper_price \u2194 capacity_util",
+            "correlation": 0.203
+          },
+          {
+            "pair": "copper_price \u2194 fed_rate",
+            "correlation": 0.51
+          },
+          {
+            "pair": "energy_index \u2194 capacity_util",
+            "correlation": 0.502
+          },
+          {
+            "pair": "energy_index \u2194 fed_rate",
+            "correlation": 0.32
+          },
+          {
+            "pair": "capacity_util \u2194 fed_rate",
+            "correlation": 0.16
+          }
+        ],
+        "finding": "\ud83d\udfe1 SINGLE CONSTRAINT: One key resource at elevated levels",
+        "copper_percentile": 92.0,
+        "energy_percentile": 60.0
+      }
+    }
+  ],
+  "findings": [],
+  "ai_timeline_signals": {
+    "constraints_count": 1,
+    "tailwinds_count": 1,
+    "constraints": [
+      "\u26a0\ufe0f HEADWIND: Capital costs up 3.0pp - slows AI infrastructure investment"
+    ],
+    "tailwinds": [
+      "\u2705 Energy prices stable at 4.8%/year - no immediate constraint"
+    ]
+  },
+  "key_insights": [
+    "\ud83d\udfe2 SINGLE CONSTRAINT: Mostly clear path for AI scaling",
+    "\ud83d\udcb0 High interest rates (+3.0pp) may delay data center construction by 12-24 months"
+  ]
+}

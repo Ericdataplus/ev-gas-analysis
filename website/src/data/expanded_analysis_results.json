@@ -1,0 +1,287 @@
+{
+  "generated_at": "2025-12-27T13:10:50.859532",
+  "data_sources": {
+    "fred_series": 17,
+    "datasets_loaded": 20,
+    "sources": [
+      "FRED",
+      "Kaggle",
+      "OWID",
+      "World Bank"
+    ]
+  },
+  "time_series": {
+    "months": 132,
+    "variables": [
+      "copper_price",
+      "aluminum_price",
+      "natgas_price",
+      "coal_price",
+      "energy_index",
+      "vehicle_sales",
+      "industrial_production",
+      "cpi_energy",
+      "oil_wti",
+      "oil_brent",
+      "unemployment",
+      "nickel_price",
+      "zinc_price",
+      "lead_price",
+      "tin_price",
+      "fed_rate",
+      "treasury_10yr"
+    ],
+    "date_range": "2015-01-01 00:00:00 to 2025-12-01 00:00:00"
+  },
+  "correlations": [
+    {
+      "var1": "oil_wti",
+      "var2": "oil_brent",
+      "correlation": 0.993,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "tin_price",
+      "correlation": 0.934,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "oil_wti",
+      "correlation": 0.926,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "oil_brent",
+      "correlation": 0.919,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "natgas_price",
+      "var2": "energy_index",
+      "correlation": 0.917,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "aluminum_price",
+      "correlation": 0.916,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "coal_price",
+      "var2": "energy_index",
+      "correlation": 0.916,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "tin_price",
+      "correlation": 0.914,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "fed_rate",
+      "var2": "treasury_10yr",
+      "correlation": 0.898,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "cpi_energy",
+      "var2": "oil_wti",
+      "correlation": 0.885,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "natgas_price",
+      "var2": "coal_price",
+      "correlation": 0.877,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "cpi_energy",
+      "var2": "oil_brent",
+      "correlation": 0.873,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "industrial_production",
+      "var2": "unemployment",
+      "correlation": -0.868,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "cpi_energy",
+      "correlation": 0.839,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "copper_price",
+      "var2": "cpi_energy",
+      "correlation": 0.838,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "energy_index",
+      "var2": "nickel_price",
+      "correlation": 0.818,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "oil_wti",
+      "correlation": 0.81,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "cpi_energy",
+      "correlation": 0.809,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "coal_price",
+      "var2": "nickel_price",
+      "correlation": 0.808,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "zinc_price",
+      "correlation": 0.807,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "oil_wti",
+      "var2": "nickel_price",
+      "correlation": 0.802,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "energy_index",
+      "correlation": 0.793,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "oil_brent",
+      "var2": "nickel_price",
+      "correlation": 0.788,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "aluminum_price",
+      "var2": "oil_brent",
+      "correlation": 0.787,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    },
+    {
+      "var1": "coal_price",
+      "var2": "oil_wti",
+      "correlation": 0.787,
+      "p_value": 0.0,
+      "significant": "True",
+      "strength": "Strong"
+    }
+  ],
+  "ml_models": {
+    "copper_price": {
+      "r2_score": 0.9437,
+      "mae": 261.06,
+      "features_used": 12,
+      "feature_importance": {
+        "aluminum_price": 0.906,
+        "industrial_production_lag1": 0.021,
+        "energy_index_lag3": 0.014,
+        "industrial_production": 0.012,
+        "nickel_price": 0.011,
+        "industrial_production_lag3": 0.009,
+        "zinc_price": 0.008,
+        "aluminum_price_lag3": 0.007
+      }
+    },
+    "energy_index": {
+      "r2_score": 0.9866,
+      "mae": 4.01
+    }
+  },
+  "clustering": {},
+  "deep_learning": {
+    "lstm": {
+      "r2": -0.9896,
+      "mae": 651.27,
+      "sequences": 100
+    },
+    "autoencoder": {
+      "anomaly_count": 7,
+      "anomaly_dates": [
+        "2021-05",
+        "2022-02",
+        "2022-03",
+        "2022-04",
+        "2022-07",
+        "2022-08",
+        "2022-09"
+      ]
+    }
+  },
+  "insights": [
+    "\ud83d\udcc8 Copper price: $5831 \u2192 $9835 (+68.7%) since 2015",
+    "\u26a1 Energy price volatility: 8.6% monthly",
+    "\ud83d\udee2\ufe0f Average WTI oil price: $62.43/barrel",
+    "\ud83d\udd17 Strongest correlation: oil_wti \u2194 oil_brent (r=0.99)",
+    "\ud83e\udd16 Copper price prediction accuracy: 94.4% R\u00b2",
+    "\ud83c\udf0d World energy data covers 306 countries"
+  ]
+}

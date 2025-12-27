@@ -1,0 +1,76 @@
+{
+  "generated_at": "2025-12-27T13:21:30.682359",
+  "deep_analysis": {
+    "dd1_ai_boom_timing": {
+      "pre_chatgpt_avg": 3698.0,
+      "post_chatgpt_avg": 9021.0,
+      "chatgpt_era_change_pct": 144.0,
+      "regime_changes": 18
+    },
+    "dd2_lead_lag": {
+      "energy_idx_vs_copper": {
+        "best_correlation": 0.911,
+        "optimal_lag": 3,
+        "interpretation": "copper leads by 3.0 months"
+      },
+      "fed_rate_vs_copper": {
+        "best_correlation": -0.561,
+        "optimal_lag": -12,
+        "interpretation": "fed_rate leads by 12.0 months"
+      },
+      "oil_wti_vs_energy_idx": {
+        "best_correlation": 0.979,
+        "optimal_lag": 0,
+        "interpretation": "Simultaneous"
+      },
+      "industrial_vs_copper": {
+        "best_correlation": 0.692,
+        "optimal_lag": 0,
+        "interpretation": "Simultaneous"
+      }
+    },
+    "dd3_constraint_acceleration": {
+      "copper": {
+        "recent_avg_growth_pct": 3.4,
+        "trend": "decelerating"
+      },
+      "energy_idx": {
+        "recent_avg_growth_pct": -15.4,
+        "trend": "decelerating"
+      },
+      "nickel": {
+        "recent_avg_growth_pct": -15.1,
+        "trend": "accelerating"
+      }
+    },
+    "dd4_breaking_points": {
+      "current_price": 9835.0,
+      "all_time_high": 10231.0,
+      "ath_date": "2022-03",
+      "pct_from_ath": -3.9,
+      "num_peaks": 19
+    },
+    "dd5_infrastructure_rate": {
+      "pre_2020_ratio": 48.71,
+      "2023_plus_ratio": 90.02,
+      "trend_slope_annual": 0.189,
+      "interpretation": "\ud83d\udfe1 Infrastructure demand slightly elevated - moderate AI build-out"
+    },
+    "dd6_forecasting": {
+      "current_price": 9835.0,
+      "forecast_12m": "8170.0",
+      "forecast_change_pct": -16.9,
+      "all_time_high": 10231.0,
+      "constraint_timing": "\u2705 FORECAST: Copper remains within historical range"
+    }
+  },
+  "forecasts": {},
+  "breakpoints": {},
+  "key_findings": [
+    "\ud83d\udcca ChatGPT era impact on copper: +144.0% average price increase since Nov 2022",
+    "\ud83d\udcc8 Energy prices LEAD copper prices by several months - energy constraints will show up first",
+    "\ud83d\udd34 Copper only 4% below all-time high - near historical stress levels",
+    "\ud83d\udfe1 Infrastructure demand slightly elevated - moderate AI build-out",
+    "\u2705 FORECAST: Copper remains within historical range"
+  ]
+}

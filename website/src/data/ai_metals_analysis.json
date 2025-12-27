@@ -1,0 +1,258 @@
+{
+  "generated_at": "2025-12-27T13:30:17.731182",
+  "data_coverage": {
+    "copper": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 9835.0,
+      "use_case": "Wiring, power, data cables",
+      "critical_for_ai": true
+    },
+    "aluminum": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 2526.0,
+      "use_case": "Heat sinks, cooling, chassis",
+      "critical_for_ai": true
+    },
+    "nickel": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 15003.0,
+      "use_case": "Batteries, electronics",
+      "critical_for_ai": true
+    },
+    "zinc": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 2655.0,
+      "use_case": "Galvanizing, protection",
+      "critical_for_ai": false
+    },
+    "tin": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 32544.0,
+      "use_case": "Soldering, circuit boards",
+      "critical_for_ai": true
+    },
+    "lead": {
+      "records": 426,
+      "latest_date": "2025-06",
+      "latest_price": 1974.0,
+      "use_case": "Backup batteries (UPS)",
+      "critical_for_ai": false
+    }
+  },
+  "metals_analysis": {
+    "copper": {
+      "pre_chatgpt_avg": 4631.0,
+      "post_chatgpt_avg": 8894.0,
+      "chatgpt_era_change_pct": 92.0,
+      "current_price": 9835.0,
+      "all_time_high": 10231.0,
+      "ath_date": "2022-03",
+      "pct_from_ath": -3.9,
+      "recent_12m_trend": "rising",
+      "recent_12m_change_pct": 4.8,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Wiring, power, data cables"
+    },
+    "aluminum": {
+      "pre_chatgpt_avg": 1804.0,
+      "post_chatgpt_avg": 2378.0,
+      "chatgpt_era_change_pct": 31.8,
+      "current_price": 2526.0,
+      "all_time_high": 3498.0,
+      "ath_date": "2022-03",
+      "pct_from_ath": -27.8,
+      "recent_12m_trend": "rising",
+      "recent_12m_change_pct": 7.5,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Heat sinks, cooling, chassis"
+    },
+    "nickel": {
+      "pre_chatgpt_avg": 13167.0,
+      "post_chatgpt_avg": 18965.0,
+      "chatgpt_era_change_pct": 44.0,
+      "current_price": 15003.0,
+      "all_time_high": 51783.0,
+      "ath_date": "2007-05",
+      "pct_from_ath": -71.0,
+      "recent_12m_trend": "falling",
+      "recent_12m_change_pct": -8.2,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Batteries, electronics"
+    },
+    "zinc": {
+      "pre_chatgpt_avg": 1780.0,
+      "post_chatgpt_avg": 2738.0,
+      "chatgpt_era_change_pct": 53.9,
+      "current_price": 2655.0,
+      "all_time_high": 4381.0,
+      "ath_date": "2006-12",
+      "pct_from_ath": -39.4,
+      "recent_12m_trend": "falling",
+      "recent_12m_change_pct": -4.4,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Galvanizing, protection"
+    },
+    "tin": {
+      "pre_chatgpt_avg": 13069.0,
+      "post_chatgpt_avg": 28419.0,
+      "chatgpt_era_change_pct": 117.5,
+      "current_price": 32544.0,
+      "all_time_high": 43983.0,
+      "ath_date": "2022-02",
+      "pct_from_ath": -26.0,
+      "recent_12m_trend": "rising",
+      "recent_12m_change_pct": 2.1,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Soldering, circuit boards"
+    },
+    "lead": {
+      "pre_chatgpt_avg": 1347.0,
+      "post_chatgpt_avg": 2079.0,
+      "chatgpt_era_change_pct": 54.4,
+      "current_price": 1974.0,
+      "all_time_high": 3723.0,
+      "ath_date": "2007-10",
+      "pct_from_ath": -47.0,
+      "recent_12m_trend": "falling",
+      "recent_12m_change_pct": -6.3,
+      "status": "\ud83d\udd34 HIGH DEMAND",
+      "use_case": "Backup batteries (UPS)"
+    }
+  },
+  "cross_metal_correlations": [
+    {
+      "metal1": "copper",
+      "metal2": "tin",
+      "correlation": 0.894,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    {
+      "metal1": "copper",
+      "metal2": "aluminum",
+      "correlation": 0.794,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    {
+      "metal1": "aluminum",
+      "metal2": "zinc",
+      "correlation": 0.728,
+      "p_value": 2e-06,
+      "significant": "True"
+    },
+    {
+      "metal1": "aluminum",
+      "metal2": "tin",
+      "correlation": 0.683,
+      "p_value": 1.6e-05,
+      "significant": "True"
+    },
+    {
+      "metal1": "nickel",
+      "metal2": "lead",
+      "correlation": 0.643,
+      "p_value": 7.2e-05,
+      "significant": "True"
+    },
+    {
+      "metal1": "nickel",
+      "metal2": "tin",
+      "correlation": -0.551,
+      "p_value": 0.001083,
+      "significant": "True"
+    },
+    {
+      "metal1": "tin",
+      "metal2": "lead",
+      "correlation": -0.464,
+      "p_value": 0.007521,
+      "significant": "True"
+    },
+    {
+      "metal1": "copper",
+      "metal2": "zinc",
+      "correlation": 0.452,
+      "p_value": 0.00934,
+      "significant": "True"
+    },
+    {
+      "metal1": "aluminum",
+      "metal2": "lead",
+      "correlation": -0.394,
+      "p_value": 0.025534,
+      "significant": "True"
+    },
+    {
+      "metal1": "nickel",
+      "metal2": "zinc",
+      "correlation": 0.367,
+      "p_value": 0.039018,
+      "significant": "True"
+    },
+    {
+      "metal1": "copper",
+      "metal2": "nickel",
+      "correlation": -0.35,
+      "p_value": 0.049552,
+      "significant": "True"
+    },
+    {
+      "metal1": "copper",
+      "metal2": "lead",
+      "correlation": -0.324,
+      "p_value": 0.070736,
+      "significant": "False"
+    },
+    {
+      "metal1": "zinc",
+      "metal2": "tin",
+      "correlation": 0.204,
+      "p_value": 0.262648,
+      "significant": "False"
+    },
+    {
+      "metal1": "aluminum",
+      "metal2": "nickel",
+      "correlation": -0.192,
+      "p_value": 0.291727,
+      "significant": "False"
+    },
+    {
+      "metal1": "zinc",
+      "metal2": "lead",
+      "correlation": 0.01,
+      "p_value": 0.955822,
+      "significant": "False"
+    }
+  ],
+  "ai_infrastructure_index": {
+    "pre_chatgpt_avg": -0.1,
+    "post_chatgpt_avg": 1.24,
+    "current_value": 1.44,
+    "peak_value": 2.68,
+    "peak_date": "2022-03",
+    "status": "\ud83d\udfe1 ELEVATED - Above historical norms",
+    "weights": {
+      "copper": 0.35,
+      "aluminum": 0.25,
+      "tin": 0.2,
+      "nickel": 0.15,
+      "zinc": 0.03,
+      "lead": 0.02
+    }
+  },
+  "key_findings": [
+    "\ud83d\udd34 TIN most impacted by AI boom: +118% since ChatGPT launch",
+    "\u26a0\ufe0f Metals near all-time highs: copper (-4%)",
+    "\ud83d\udcc8 Rising in last 12 months: aluminum (+8%)",
+    "\ud83d\udcc9 Easing in last 12 months: nickel (-8%), zinc (-4%), lead (-6%)",
+    "\ud83d\udd17 Strongest linkage: copper \u2194 tin (r=0.89)",
+    "\ud83d\udcca AI Infrastructure Index: \ud83d\udfe1 ELEVATED - Above historical norms"
+  ]
+}

@@ -3,6 +3,7 @@ data/
 *.csv
 *.json
 !requirements.txt
+!website/src/data/*.json
 
 # Python
 __pycache__/
