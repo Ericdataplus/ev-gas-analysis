@@ -7,6 +7,7 @@ import {
 // Import both analysis files
 import signalsData from '../data/ai_timeline_signals.json';
 import deepDiveData from '../data/ai_timeline_deep_dive.json';
+import metalsData from '../data/ai_metals_analysis.json';
 
 const COLORS = {
     green: '#10b981',
@@ -337,6 +338,105 @@ export default function AITimeline() {
                         LSTM model forecasts copper prices to ease over the next 12 months,
                         remaining within historical range. AI infrastructure can continue scaling without material bottlenecks.
                     </div>
+                </div>
+            </div>
+
+            {/* Multi-Metal Analysis Section */}
+            <div className="card" style={{ background: 'var(--card-bg)', borderRadius: '16px', padding: '1.5rem', marginBottom: '2rem' }}>
+                <h2 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem' }}>🔩 AI Infrastructure Metals Analysis</h2>
+                <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '0.85rem' }}>
+                    All critical metals for AI data centers: wiring, cooling, circuit boards, batteries
+                </p>
+
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+                    {Object.entries(metalsData.metals_analysis || {}).map(([metal, data]) => {
+                        const changePct = data.chatgpt_era_change_pct;
+                        const color = changePct > 80 ? COLORS.red : changePct > 40 ? COLORS.yellow : COLORS.green;
+                        const trend = data.recent_12m_trend;
+                        const trendColor = trend === 'rising' ? COLORS.red : COLORS.green;
+
+                        return (
+                            <div key={metal} style={{
+                                background: 'rgba(255,255,255,0.05)',
+                                borderRadius: '12px',
+                                padding: '1.25rem',
+                                borderLeft: `4px solid ${color}`
+                            }}>
+                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '0.75rem' }}>
+                                    <div>
+                                        <div style={{ fontWeight: '600', fontSize: '1.1rem', textTransform: 'capitalize' }}>{metal}</div>
+                                        <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>{data.use_case}</div>
+                                    </div>
+                                    <div style={{
+                                        background: `${color}20`,
+                                        color: color,
+                                        padding: '0.25rem 0.5rem',
+                                        borderRadius: '6px',
+                                        fontSize: '0.85rem',
+                                        fontWeight: '700'
+                                    }}>
+                                        +{changePct}%
+                                    </div>
+                                </div>
+
+                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', fontSize: '0.85rem' }}>
+                                    <div>
+                                        <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>Current</div>
+                                        <div style={{ fontWeight: '600' }}>${data.current_price?.toLocaleString()}</div>
+                                    </div>
+                                    <div>
+                                        <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>vs ATH</div>
+                                        <div style={{ fontWeight: '600' }}>{data.pct_from_ath}%</div>
+                                    </div>
+                                    <div style={{ gridColumn: 'span 2' }}>
+                                        <div style={{ color: 'var(--text-muted)', fontSize: '0.75rem' }}>12-month trend</div>
+                                        <div style={{ fontWeight: '600', color: trendColor, textTransform: 'capitalize' }}>
+                                            {trend} ({data.recent_12m_change_pct > 0 ? '+' : ''}{data.recent_12m_change_pct}%)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* AI Infrastructure Index */}
+                <div style={{
+                    marginTop: '1.5rem',
+                    padding: '1.25rem',
+                    background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.1) 100%)',
+                    borderRadius: '12px'
+                }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                        <div>
+                            <div style={{ fontWeight: '600', marginBottom: '0.25rem' }}>🔧 AI Infrastructure Metals Index</div>
+                            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                                Weighted composite of critical AI metals (Copper 35%, Aluminum 25%, Tin 20%, Nickel 15%)
+                            </div>
+                        </div>
+                        <div style={{ textAlign: 'center' }}>
+                            <div style={{ fontSize: '2rem', fontWeight: '700', color: COLORS.yellow }}>
+                                +{metalsData.ai_infrastructure_index?.current_value?.toFixed(1)}σ
+                            </div>
+                            <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                                {metalsData.ai_infrastructure_index?.status?.replace(/[🔴🟡🟢✅]/g, '')}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Key metals findings */}
+                <div style={{ marginTop: '1rem', display: 'grid', gap: '0.5rem' }}>
+                    {(metalsData.key_findings || []).slice(0, 4).map((finding, i) => (
+                        <div key={i} style={{
+                            background: 'rgba(255,255,255,0.03)',
+                            padding: '0.75rem 1rem',
+                            borderRadius: '8px',
+                            fontSize: '0.9rem'
+                        }}>
+                            {finding}
+                        </div>
+                    ))}
                 </div>
             </div>
 
