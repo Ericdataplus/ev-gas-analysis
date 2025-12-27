@@ -481,7 +481,7 @@
   "ev_market": {
     "ev_growth_metrics": {
       "sales_cagr_pct": 57.0,
-      "stock_cagr_pct": Infinity,
+      "stock_cagr_pct": null,
       "battery_cost_decline_pct": -14.8,
       "range_improvement_pct": 10.4,
       "years_of_data": 15,

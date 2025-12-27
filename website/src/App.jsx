@@ -20,6 +20,7 @@ import ExpandedAnalysis from './pages/ExpandedAnalysis'
 import AITimeline from './pages/AITimeline'
 import PartComplexity from './pages/PartComplexity'
 import PartComplexityDeepDive from './pages/PartComplexityDeepDive'
+import AdvancedAnalytics from './pages/AdvancedAnalytics'
 import './index.css'
 
 function App() {
@@ -57,6 +58,9 @@ function App() {
             </NavLink>
             <NavLink to="/ai-timeline" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🤖</span> AI Timeline
+            </NavLink>
+            <NavLink to="/advanced-analytics" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🔬</span> Advanced Analytics
             </NavLink>
 
             <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
@@ -122,6 +126,7 @@ function App() {
             <Route path="/ai-supply-chain" element={<AISupplyChain />} />
             <Route path="/expanded-analysis" element={<ExpandedAnalysis />} />
             <Route path="/ai-timeline" element={<AITimeline />} />
+            <Route path="/advanced-analytics" element={<AdvancedAnalytics />} />
             <Route path="/market" element={<MarketInsights />} />
             <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/semis" element={<Semis />} />
