@@ -6,7 +6,8 @@ import {
 } from 'recharts';
 import ChartModal from '../components/ChartModal';
 
-// RAM/DRAM Price Data - Historical and 2024-2025 surge
+// RAM/DRAM Price Data - Historical and 2024-2025 surge (Updated Dec 2025)
+// Source: TrendForce, IDC, TechInsights - Dec 2025 data shows ~300% increase in DDR5 contract prices
 const dramPriceData = [
     { year: '2020', price: 3.20, label: 'Pre-COVID baseline' },
     { year: '2021', price: 4.10, label: 'Chip shortage begins' },
@@ -14,49 +15,55 @@ const dramPriceData = [
     { year: '2023', price: 2.20, label: 'Market bottom' },
     { year: 'Q1 2024', price: 2.60, label: 'Recovery starts' },
     { year: 'Q3 2024', price: 4.20, label: 'AI demand surge' },
-    { year: 'Q1 2025', price: 5.80, label: 'HBM priority shift' },
-    { year: 'Q3 2025', price: 6.60, label: 'Sam Altman deal' },
-    { year: 'Q4 2025', price: 7.20, label: '3x from 2024' },
+    { year: 'Sep 2025', price: 6.84, label: '16Gb DDR5 contract' },
+    { year: 'Nov 2025', price: 13.00, label: 'Spot market spike' },
+    { year: 'Dec 2025', price: 27.20, label: '~300% from Sep' },
 ];
 
-// HBM Market Data
+// HBM Market Data (Updated Dec 2025)
+// Source: Micron earnings, TrendForce - $18B 2024, $35B 2025 projected
 const hbmMarketData = [
     { year: '2022', revenue: 2.8, demandGrowth: 0, share: 5 },
     { year: '2023', revenue: 7.0, demandGrowth: 150, share: 10 },
-    { year: '2024', revenue: 14.0, demandGrowth: 200, share: 22 },
-    { year: '2025', revenue: 24.0, demandGrowth: 70, share: 32 },
-    { year: '2026P', revenue: 35.0, demandGrowth: 45, share: 38 },
+    { year: '2024', revenue: 18.0, demandGrowth: 157, share: 22 },
+    { year: '2025', revenue: 35.0, demandGrowth: 94, share: 32 },
+    { year: '2026P', revenue: 50.0, demandGrowth: 43, share: 40 },
 ];
 
-// Copper Price & AI Demand
+// Copper Price & AI Demand (Updated Dec 2025)
+// Source: LME, TradingEconomics - $12,133/ton on Dec 24, 2025
 const copperAIData = [
     { year: '2020', price: 6200, aiDemand: 50, evDemand: 180 },
     { year: '2021', price: 9500, aiDemand: 80, evDemand: 250 },
     { year: '2022', price: 8800, aiDemand: 120, evDemand: 320 },
     { year: '2023', price: 8400, aiDemand: 180, evDemand: 400 },
     { year: '2024', price: 9800, aiDemand: 300, evDemand: 500 },
-    { year: '2025', price: 11900, aiDemand: 450, evDemand: 580 },
+    { year: 'Jul 2025', price: 13137, aiDemand: 450, evDemand: 560 },
+    { year: 'Dec 2025', price: 12133, aiDemand: 520, evDemand: 600 },
     { year: '2026P', price: 13000, aiDemand: 572, evDemand: 680 },
 ];
 
-// Housing Market Seller-Buyer Gap
+// Housing Market Seller-Buyer Gap (Updated Dec 2025)
+// Source: Redfin, Zillow - 37% more sellers than buyers persists through Nov 2025
 const housingGapData = [
-    { month: 'Jan 2024', gap: 180000, buyerCount: 1.72, sellerCount: 1.90 },
-    { month: 'Mar 2024', gap: 250000, buyerCount: 1.65, sellerCount: 1.90 },
-    { month: 'May 2024', gap: 350000, buyerCount: 1.55, sellerCount: 1.90 },
-    { month: 'Jul 2024', gap: 420000, buyerCount: 1.50, sellerCount: 1.92 },
-    { month: 'Sep 2024', gap: 480000, buyerCount: 1.46, sellerCount: 1.94 },
-    { month: 'Nov 2024', gap: 530000, buyerCount: 1.43, sellerCount: 1.96 },
+    { month: 'Jan 2024', gap: 180000, buyerCount: 1.72, sellerCount: 1.90, mortgageRate: 6.69 },
+    { month: 'May 2024', gap: 350000, buyerCount: 1.55, sellerCount: 1.90, mortgageRate: 7.06 },
+    { month: 'Sep 2024', gap: 480000, buyerCount: 1.46, sellerCount: 1.94, mortgageRate: 6.35 },
+    { month: 'Nov 2024', gap: 530000, buyerCount: 1.43, sellerCount: 1.96, mortgageRate: 6.81 },
+    { month: 'Mar 2025', gap: 510000, buyerCount: 1.45, sellerCount: 1.96, mortgageRate: 6.65 },
+    { month: 'Nov 2025', gap: 540000, buyerCount: 1.40, sellerCount: 1.94, mortgageRate: 6.18 },
 ];
 
-// Data Center Energy Demand
+// Data Center Energy Demand (Updated Dec 2025)
+// Source: Gartner, IEA, Deloitte - 448 TWh in 2025, AI = 21% of DC power
 const dataCenterEnergyData = [
     { year: '2020', totalTWh: 260, aiShare: 15, gridPct: 1.0 },
     { year: '2022', totalTWh: 340, aiShare: 22, gridPct: 1.2 },
     { year: '2024', totalTWh: 415, aiShare: 35, gridPct: 1.5 },
-    { year: '2025P', totalTWh: 448, aiShare: 49, gridPct: 1.7 },
+    { year: '2025', totalTWh: 448, aiShare: 49, gridPct: 1.7 },
     { year: '2027P', totalTWh: 620, aiShare: 55, gridPct: 2.1 },
     { year: '2030P', totalTWh: 945, aiShare: 65, gridPct: 2.8 },
+    { year: '2035P', totalTWh: 1200, aiShare: 70, gridPct: 3.5 },
 ];
 
 // Memory Oligopoly - Market Share
@@ -67,25 +74,31 @@ const memoryMarketShare = [
     { name: 'Others', share: 2, hbmShare: 0 },
 ];
 
-// AI vs Traditional Supply Competition
+// AI vs Traditional Supply Competition (Updated Dec 2025)
+// Source: IDC, Framework laptop pricing, industry reports
 const supplyCompetition = [
-    { sector: 'Consumer RAM', priceIncrease: 187, waitTime: '8-12 weeks', priority: 'Low' },
-    { sector: 'Enterprise Servers', priceIncrease: 145, waitTime: '6-10 weeks', priority: 'Medium' },
+    { sector: 'Consumer RAM', priceIncrease: 300, waitTime: '8-12 weeks', priority: 'Low' },
+    { sector: 'Enterprise Servers', priceIncrease: 200, waitTime: '6-10 weeks', priority: 'Medium' },
     { sector: 'AI Data Centers', priceIncrease: 55, waitTime: '2-4 weeks', priority: 'High' },
-    { sector: 'Gaming GPUs', priceIncrease: 120, waitTime: '10-16 weeks', priority: 'Low' },
-    { sector: 'Automotive', priceIncrease: 85, waitTime: '12-20 weeks', priority: 'Medium' },
+    { sector: 'Gaming GPUs', priceIncrease: 180, waitTime: '10-16 weeks', priority: 'Low' },
+    { sector: 'Automotive', priceIncrease: 120, waitTime: '12-20 weeks', priority: 'Medium' },
+    { sector: 'Laptops/PCs', priceIncrease: 287, waitTime: '4-8 weeks', priority: 'Low' },
 ];
 
-// Timeline of Key Events
+// Timeline of Key Events (Extended through Dec 2025)
 const keyEvents = [
-    { date: 'Mar 2024', event: 'Micron announces HBM3E sold out for 2024-2025', impact: 'High' },
+    { date: 'Mar 2024', event: 'Micron announces HBM3E sold out through 2025', impact: 'High' },
     { date: 'May 2024', event: 'SK Hynix confirms HBM completely sold out', impact: 'High' },
     { date: 'Jul 2024', event: 'Google exec fired over failed TPU memory deal', impact: 'Medium' },
     { date: 'Sep 2024', event: 'Microsoft walks out of SK Hynix negotiation', impact: 'High' },
-    { date: 'Oct 2024', event: 'OpenAI secures 40% DRAM capacity - Stargate deal', impact: 'Critical' },
-    { date: 'Q4 2024', event: 'Consumer RAM prices begin 3x surge', impact: 'High' },
+    { date: 'Oct 2024', event: 'OpenAI secures 40% DRAM via Stargate deal', impact: 'Critical' },
     { date: 'Nov 2024', event: 'Housing seller-buyer gap hits record 530k', impact: 'Medium' },
-    { date: 'Dec 2024', event: 'Copper hits $12,000/ton record on AI demand', impact: 'High' },
+    { date: 'Q4 2024', event: 'DRAM contract prices surge 45-50% QoQ', impact: 'High' },
+    { date: 'Jul 2025', event: 'Copper hits all-time high: $13,137/ton', impact: 'High' },
+    { date: 'Sep 2025', event: 'SK Hynix 12-layer HBM3E mass production', impact: 'Medium' },
+    { date: 'Nov 2025', event: 'DDR5 16GB retail hits $225+ (was $60)', impact: 'Critical' },
+    { date: 'Dec 2025', event: 'DDR5 contract prices 300% higher than Sep', impact: 'Critical' },
+    { date: 'Dec 2025', event: 'SK Hynix/Samsung HBM4 production Feb 2026', impact: 'High' },
 ];
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#ec4899'];
@@ -122,32 +135,32 @@ export default function AISupplyChain() {
                 How AI is reshaping global supply chains, commodity prices, and economic markets
             </p>
 
-            {/* Key Stats Banner */}
+            {/* Key Stats Banner - Updated Dec 2025 */}
             <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))' }}>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)' }}>
-                    <div className="stat-value">3x</div>
-                    <div className="stat-label">RAM Price Surge</div>
-                    <div className="stat-detail">2024 → 2025</div>
+                    <div className="stat-value">~300%</div>
+                    <div className="stat-label">DDR5 Price Surge</div>
+                    <div className="stat-detail">Sep→Dec 2025</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)' }}>
                     <div className="stat-value">40%</div>
                     <div className="stat-label">DRAM Locked</div>
-                    <div className="stat-detail">OpenAI/Stargate</div>
+                    <div className="stat-detail">OpenAI Stargate</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)' }}>
-                    <div className="stat-value">530K</div>
-                    <div className="stat-label">Seller-Buyer Gap</div>
-                    <div className="stat-detail">Largest Ever</div>
+                    <div className="stat-value">$35B</div>
+                    <div className="stat-label">HBM Market 2025</div>
+                    <div className="stat-detail">2x from 2024</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)' }}>
-                    <div className="stat-value">$12K</div>
+                    <div className="stat-value">$12.1K</div>
                     <div className="stat-label">Copper/Ton</div>
-                    <div className="stat-detail">Record High</div>
+                    <div className="stat-detail">Dec 24, 2025</div>
                 </div>
                 <div className="stat-card" style={{ background: 'linear-gradient(135deg, #3b82f6 0%, #2563eb 100%)' }}>
-                    <div className="stat-value">945 TWh</div>
-                    <div className="stat-label">DC Energy 2030</div>
-                    <div className="stat-detail">2.3x Current</div>
+                    <div className="stat-value">123 GW</div>
+                    <div className="stat-label">AI DC Demand</div>
+                    <div className="stat-detail">2035 (30x 2024)</div>
                 </div>
             </div>
 
@@ -233,7 +246,7 @@ export default function AISupplyChain() {
                         </defs>
                         <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" />
                         <XAxis dataKey="year" stroke="rgba(255,255,255,0.5)" />
-                        <YAxis stroke="rgba(255,255,255,0.5)" domain={[0, 8]} />
+                        <YAxis stroke="rgba(255,255,255,0.5)" domain={[0, 30]} />
                         <Tooltip
                             contentStyle={{ backgroundColor: '#1a1a2e', border: '1px solid #8b5cf6' }}
                             formatter={(value, name) => [`$${value.toFixed(2)}/GB`, 'Price']}
@@ -247,7 +260,7 @@ export default function AISupplyChain() {
                     </AreaChart>
                 </ResponsiveContainer>
                 <div className="chart-insight">
-                    <strong>⚠️ Key Finding:</strong> RAM prices increased 187% YoY by Q3 2025. Consumer DDR5 kits that cost $60 in early 2025 now exceed $150.
+                    <strong>⚠️ Dec 2025 Update:</strong> 16Gb DDR5 contract prices jumped from $6.84 (Sep) to $27.20 (Dec) - nearly 300% in 3 months. 64GB laptop RAM now costs $580+ (was $150).
                 </div>
             </div>
 
