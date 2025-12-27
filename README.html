@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV vs Gas Vehicle Analysis | README</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-primary: #0f0f11;
+            --bg-secondary: #18181b;
+            --bg-card: #1f1f23;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --accent-green: #22c55e;
+            --accent-blue: #3b82f6;
+            --accent-purple: #a855f7;
+            --accent-orange: #f97316;
+            --accent-red: #ef4444;
+            --border-color: #27272a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #22c55e 0%, #3b82f6 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: var(--bg-card);
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .badge.green {
+            border-color: var(--accent-green);
+        }
+
+        .badge.blue {
+            border-color: var(--accent-blue);
+        }
+
+        .badge.purple {
+            border-color: var(--accent-purple);
+        }
+
+        /* Cards */
+        section {
+            margin: 3rem 0;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(34, 197, 94, 0.1);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            padding: 0.35rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .card li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent-green);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #22c55e, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Code blocks */
+        pre {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.875rem;
+            margin: 1rem 0;
+        }
+
+        code {
+            background: var(--bg-secondary);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+        }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: var(--bg-secondary);
+            font-weight: 600;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Charts */
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .chart-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Buttons */
+        .cta-row {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: var(--accent-green);
+            color: #000;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+            text-decoration: none;
+        }
+
+        .cta-btn.secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            body {
+                padding: 1rem;
+            }
+
+            .chart-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Hero -->
+        <header class="hero">
+            <h1>EV vs Gas Analysis 🚗⚡</h1>
+            <p>Comprehensive environmental, economic, and infrastructure analysis powered by machine learning and 35+
+                real-world datasets.</p>
+            <div class="badge-row">
+                <span class="badge green">📊 12 Analysis Scripts</span>
+                <span class="badge blue">🤖 7 ML Models (GPU)</span>
+                <span class="badge purple">📈 33 CSV Reports</span>
+            </div>
+            <div class="cta-row" style="justify-content: center; margin-top: 2rem;">
+                <a href="RESEARCH_QUESTIONS.html" class="cta-btn">📖 View Research Findings</a>
+                <a href="https://github.com" class="cta-btn secondary">⭐ Star on GitHub</a>
+            </div>
+        </header>
+
+        <!-- Key Stats -->
+        <section>
+            <h2>🎯 Key Findings</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">74-96%</div>
+                    <div class="stat-label">CO2 Reduction with EVs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">60%</div>
+                    <div class="stat-label">Lower Maintenance Costs</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">95%</div>
+                    <div class="stat-label">EV Fleet by 2050</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">100x</div>
+                    <div class="stat-label">Fewer Powertrain Parts</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Analysis Areas -->
+        <section>
+            <h2>📊 Analysis Areas</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🗑️ Waste & Toxicity</h3>
+                    <ul>
+                        <li>Battery disposal vs oil/gas waste</li>
+                        <li>Groundwater contamination risks</li>
+                        <li>Landfill danger rankings</li>
+                        <li>Recycling rates comparison</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>⚡ Infrastructure</h3>
+                    <ul>
+                        <li>146K gas stations vs 75K EV chargers</li>
+                        <li>Tesla Supercharger network analysis</li>
+                        <li>Hydrogen infrastructure viability</li>
+                        <li>Charging source CO2 impact</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>💰 Total Cost of Ownership</h3>
+                    <ul>
+                        <li>5 & 10 year cost comparisons</li>
+                        <li>Maintenance cost breakdown</li>
+                        <li>Fuel vs electricity costs</li>
+                        <li>Depreciation analysis</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🚛 Commercial Vehicles</h3>
+                    <ul>
+                        <li>Electric semi truck analysis</li>
+                        <li>1 semi = 30 cars in fuel use</li>
+                        <li>Fleet electrification ROI</li>
+                        <li>Shipping vs trucking vs air</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🔒 Safety Statistics</h3>
+                    <ul>
+                        <li>EVs: 98% fewer fires than gas</li>
+                        <li>40% fewer injury claims</li>
+                        <li>Tesla Autopilot data analysis</li>
+                        <li>Self-driving crash statistics</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>🌍 Global Energy</h3>
+                    <ul>
+                        <li>Transportation = 46% of oil use</li>
+                        <li>Nuclear provides 47% clean energy</li>
+                        <li>Aviation, shipping, rail comparison</li>
+                        <li>Road infrastructure costs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ML Models Chart -->
+        <section>
+            <h2>🤖 Machine Learning Predictions</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                Trained on RTX 3060 (12GB VRAM) using XGBoost, LightGBM, CatBoost, and PyTorch neural networks.
+            </p>
+            <div class="chart-row">
+                <div class="chart-container">
+                    <h3 style="margin-bottom: 1rem;">EV Fleet Share Projection</h3>
+                    <canvas id="evChart" height="250"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3 style="margin-bottom: 1rem;">Infrastructure Trends</h3>
+                    <canvas id="infraChart" height="250"></canvas>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>2024</th>
+                        <th>2030</th>
+                        <th>2040</th>
+                        <th>2050</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>EV Fleet Share (%)</td>
+                        <td>2.0%</td>
+                        <td>8.5%</td>
+                        <td>69%</td>
+                        <td>95%</td>
+                    </tr>
+                    <tr>
+                        <td>EVs on Road (M)</td>
+                        <td>5.5M</td>
+                        <td>30M</td>
+                        <td>193M</td>
+                        <td>266M</td>
+                    </tr>
+                    <tr>
+                        <td>Charging Stations</td>
+                        <td>75K</td>
+                        <td>111K</td>
+                        <td>123K</td>
+                        <td>124K</td>
+                    </tr>
+                    <tr>
+                        <td>Gas Stations</td>
+                        <td>146K</td>
+                        <td>135K</td>
+                        <td>116K</td>
+                        <td>97K</td>
+                    </tr>
+                    <tr>
+                        <td>Battery Cost ($/kWh)</td>
+                        <td>$115</td>
+                        <td>$40</td>
+                        <td>$40</td>
+                        <td>$40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Getting Started -->
+        <section>
+            <h2>🚀 Getting Started</h2>
+            <pre><code># Clone and setup
+git clone https://github.com/yourusername/ev-gas-analysis.git
+cd ev-gas-analysis
+
+# Create virtual environment
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
+
+# Install dependencies (includes GPU support)
+pip install -r requirements.txt
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+
+# Run all analysis
+python run_all.py
+
+# Train ML models (GPU accelerated)
+python scripts/ml/train_all_models.py</code></pre>
+        </section>
+
+        <!-- Project Structure -->
+        <section>
+            <h2>📁 Project Structure</h2>
+            <pre><code>├── scripts/
+│   ├── analysis/           # 12 analysis scripts
+│   │   ├── waste_toxicity_analysis.py
+│   │   ├── charging_source_analysis.py
+│   │   ├── hypothetical_fleet_scenarios.py
+│   │   ├── commercial_vehicle_analysis.py
+│   │   ├── expanded_global_analysis.py
+│   │   └── ... (7 more)
+│   ├── ml/                 # 7 ML training scripts
+│   │   ├── train_ev_adoption_models.py
+│   │   ├── train_infrastructure_models.py
+│   │   ├── train_production_models.py
+│   │   └── ...
+│   └── visualization/      # Chart generation
+├── outputs/
+│   ├── reports/            # 33 CSV analysis reports
+│   └── models/             # Trained ML models
+├── data/
+│   └── raw/kaggle/         # 63MB of real-world data
+├── RESEARCH_QUESTIONS.html # Interactive findings
+└── run_all.py              # Master runner script</code></pre>
+        </section>
+
+        <!-- Data Sources -->
+        <section>
+            <h2>📊 Data Sources</h2>
+            <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card">
+                    <h3>🌐 Official Sources</h3>
+                    <ul>
+                        <li>IEA (International Energy Agency)</li>
+                        <li>EIA (US Energy Information)</li>
+                        <li>EPA (Environmental Protection)</li>
+                        <li>NHTSA (Highway Traffic Safety)</li>
+                        <li>DOT (Dept. of Transportation)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>📦 Kaggle Datasets</h3>
+                    <ul>
+                        <li>EV Charging Stations (23MB)</li>
+                        <li>Vehicle CO2 Emissions</li>
+                        <li>EV Population Data (40MB)</li>
+                        <li>US Gas Station Pricing</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>📈 Industry Reports</h3>
+                    <ul>
+                        <li>BloombergNEF</li>
+                        <li>AFDC (Alternative Fuels)</li>
+                        <li>Tesla Safety Reports</li>
+                        <li>ACT Research (Trucking)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Built with 🔋 using Python, PyTorch, XGBoost, LightGBM, CatBoost</p>
+            <p style="margin-top: 0.5rem;">GPU Accelerated · RTX 3060 12GB VRAM</p>
+            <p style="margin-top: 1rem;">© 2025 EV vs Gas Analysis Project · MIT License</p>
+        </footer>
+    </div>
+
+    <script>
+        Chart.defaults.color = '#a1a1aa';
+        Chart.defaults.borderColor = '#27272a';
+
+        // EV Fleet Chart
+        new Chart(document.getElementById('evChart'), {
+            type: 'line',
+            data: {
+                labels: ['2024', '2025', '2030', '2035', '2040', '2045', '2050'],
+                datasets: [{
+                    label: 'EV %',
+                    data: [2, 2.5, 8.5, 30, 69, 88, 95],
+                    borderColor: '#22c55e',
+                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Hybrid %',
+                    data: [4.5, 5, 8.5, 15, 19, 22, 30],
+                    borderColor: '#3b82f6',
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'ICE %',
+                    data: [93.5, 92.5, 83, 55, 12, 0, 0],
+                    borderColor: '#ef4444',
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } },
+                scales: { y: { max: 100, title: { display: true, text: 'Fleet Share (%)' } } }
+            }
+        });
+
+        // Infrastructure Chart
+        new Chart(document.getElementById('infraChart'), {
+            type: 'bar',
+            data: {
+                labels: ['2024', '2030', '2040', '2050'],
+                datasets: [{
+                    label: 'Gas Stations (K)',
+                    data: [146, 135, 116, 97],
+                    backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                }, {
+                    label: 'EV Stations (K)',
+                    data: [75, 111, 123, 124],
+                    backgroundColor: 'rgba(34, 197, 94, 0.7)',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+# Data files (large datasets)
+data/
+*.csv
+*.json
+!requirements.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model outputs (can be regenerated)
+outputs/models/
+catboost_info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Secrets
+*.env
+.env
+kaggle.json
+
+# Keep these folders but ignore contents
+!outputs/
+!outputs/ml_graphs/
+!outputs/reports/
+outputs/reports/*.csv
+outputs/embeddings/
+
+# Keep HTML files for GitHub Pages
+!*.html
+!*.md
+!outputs/ml_graphs/*.png

@@ -1,0 +1,34 @@
+# Core dependencies
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# Machine Learning - Classic
+scikit-learn>=1.3.0
+
+# Machine Learning - Boosting (GPU accelerated)
+xgboost>=2.0.0
+lightgbm>=4.0.0
+catboost>=1.2.0
+
+# Deep Learning (GPU accelerated)
+# Install separately: pip install torch --index-url https://download.pytorch.org/whl/cu118
+# torch>=2.0.0
+
+# Hyperparameter Optimization
+optuna>=3.0.0
+
+# Model Persistence
+joblib>=1.3.0
+
+# Data Collection
+requests>=2.31.0
+kaggle>=1.5.0
+
+# Geospatial (optional)
+folium>=0.14.0
+geopy>=2.3.0
