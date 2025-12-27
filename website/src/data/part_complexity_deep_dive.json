@@ -1,0 +1,2499 @@
+{
+  "metadata": {
+    "generated_at": "2025-12-27T14:29:49.145181",
+    "title": "Part Complexity Deep Dive Analysis",
+    "version": "2.0",
+    "sections": 9
+  },
+  "time_evolution": {
+    "battery_cost_history": [
+      {
+        "year": 2010,
+        "cost": 1183,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2011,
+        "cost": 899,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2012,
+        "cost": 707,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2013,
+        "cost": 599,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2014,
+        "cost": 540,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2015,
+        "cost": 373,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2016,
+        "cost": 295,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2017,
+        "cost": 219,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2018,
+        "cost": 185,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2019,
+        "cost": 156,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2020,
+        "cost": 140,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2021,
+        "cost": 132,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2022,
+        "cost": 151,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2023,
+        "cost": 139,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2024,
+        "cost": 115,
+        "source": "BloombergNEF estimate"
+      },
+      {
+        "year": 2025,
+        "cost": 100,
+        "source": "Projection"
+      },
+      {
+        "year": 2026,
+        "cost": 90,
+        "source": "Projection"
+      },
+      {
+        "year": 2027,
+        "cost": 80,
+        "source": "Projection"
+      },
+      {
+        "year": 2028,
+        "cost": 72,
+        "source": "Projection"
+      },
+      {
+        "year": 2029,
+        "cost": 65,
+        "source": "Projection"
+      },
+      {
+        "year": 2030,
+        "cost": 58,
+        "source": "Projection"
+      }
+    ],
+    "cost_parity_analysis": {
+      "current_battery_cost_75kwh": 8625,
+      "target_for_parity": 3000,
+      "required_kwh_price": 40,
+      "projected_parity_year": 2028,
+      "annual_decline_rate": 0.12,
+      "total_decline_2010_2024": 90.3
+    },
+    "part_count_evolution": {
+      "tesla_model_s_2012": {
+        "total_parts": 18000,
+        "unique_parts": 4000,
+        "notes": "First generation, many carry-over parts"
+      },
+      "tesla_model_3_2017": {
+        "total_parts": 10000,
+        "unique_parts": 2500,
+        "notes": "Ground-up design for manufacturing"
+      },
+      "tesla_model_y_2020": {
+        "total_parts": 8500,
+        "unique_parts": 2000,
+        "notes": "Gigacasting front and rear"
+      },
+      "tesla_cybertruck_2023": {
+        "total_parts": 6000,
+        "unique_parts": 1500,
+        "notes": "Exoskeleton, mega castings, 48V architecture"
+      },
+      "industry_average_ice_2024": {
+        "total_parts": 30000,
+        "unique_parts": 6000,
+        "notes": "Traditional manufacturing"
+      },
+      "industry_average_ev_2024": {
+        "total_parts": 15000,
+        "unique_parts": 3500,
+        "notes": "Most OEMs still learning"
+      }
+    },
+    "manufacturing_cost_projection": [
+      {
+        "year": 2020,
+        "ice": 25000,
+        "ev": 35000,
+        "hybrid": 32000,
+        "parity_gap": 10000
+      },
+      {
+        "year": 2021,
+        "ice": 25500,
+        "ev": 33000,
+        "hybrid": 32500,
+        "parity_gap": 7500
+      },
+      {
+        "year": 2022,
+        "ice": 26000,
+        "ev": 32500,
+        "hybrid": 33000,
+        "parity_gap": 6500
+      },
+      {
+        "year": 2023,
+        "ice": 26500,
+        "ev": 31000,
+        "hybrid": 33500,
+        "parity_gap": 4500
+      },
+      {
+        "year": 2024,
+        "ice": 27000,
+        "ev": 29500,
+        "hybrid": 34000,
+        "parity_gap": 2500
+      },
+      {
+        "year": 2025,
+        "ice": 27500,
+        "ev": 28500,
+        "hybrid": 34500,
+        "parity_gap": 1000
+      },
+      {
+        "year": 2026,
+        "ice": 28000,
+        "ev": 27500,
+        "hybrid": 35000,
+        "parity_gap": -500
+      },
+      {
+        "year": 2027,
+        "ice": 28500,
+        "ev": 26500,
+        "hybrid": 35500,
+        "parity_gap": -2000
+      },
+      {
+        "year": 2028,
+        "ice": 29000,
+        "ev": 25500,
+        "hybrid": 36000,
+        "parity_gap": -3500
+      },
+      {
+        "year": 2030,
+        "ice": 30000,
+        "ev": 24000,
+        "hybrid": 37000,
+        "parity_gap": -6000
+      }
+    ]
+  },
+  "repair_analysis": {
+    "repairability": {
+      "gas": {
+        "diy_score": 7.5,
+        "independent_mechanic_capable": 95,
+        "oem_only_repairs": 5,
+        "average_repair_time_hours": 3.5,
+        "specialty_tools_required": "Low",
+        "diagnostic_software_access": "Widely available",
+        "aftermarket_parts_availability": "Excellent",
+        "aftermarket_price_vs_oem": 0.4,
+        "common_diy_repairs": [
+          "Oil change",
+          "Air filter",
+          "Spark plugs",
+          "Brake pads",
+          "Battery replacement",
+          "Belts",
+          "Coolant flush"
+        ],
+        "requires_dealer": [
+          "Transmission rebuild",
+          "ECU programming",
+          "Airbag work"
+        ]
+      },
+      "electric": {
+        "diy_score": 4.0,
+        "independent_mechanic_capable": 35,
+        "oem_only_repairs": 40,
+        "average_repair_time_hours": 2.0,
+        "specialty_tools_required": "High (HV safety)",
+        "diagnostic_software_access": "Restricted (Tesla proprietary)",
+        "aftermarket_parts_availability": "Limited",
+        "aftermarket_price_vs_oem": 0.75,
+        "common_diy_repairs": [
+          "12V battery",
+          "Cabin filter",
+          "Wiper blades",
+          "Tire rotation",
+          "Brake fluid"
+        ],
+        "requires_dealer": [
+          "Battery pack work",
+          "Motor service",
+          "HV system",
+          "Software updates",
+          "ADAS calibration"
+        ]
+      },
+      "hybrid": {
+        "diy_score": 5.0,
+        "independent_mechanic_capable": 50,
+        "oem_only_repairs": 30,
+        "average_repair_time_hours": 4.0,
+        "specialty_tools_required": "Medium-High",
+        "diagnostic_software_access": "Limited",
+        "aftermarket_parts_availability": "Moderate",
+        "aftermarket_price_vs_oem": 0.55,
+        "common_diy_repairs": [
+          "Oil change",
+          "Air filter",
+          "Brake pads",
+          "Wiper blades"
+        ],
+        "requires_dealer": [
+          "Hybrid battery",
+          "Inverter",
+          "eCVT",
+          "System diagnostics"
+        ]
+      },
+      "hydrogen": {
+        "diy_score": 2.0,
+        "independent_mechanic_capable": 5,
+        "oem_only_repairs": 85,
+        "average_repair_time_hours": 3.0,
+        "specialty_tools_required": "Very High (H2 certified)",
+        "diagnostic_software_access": "OEM only",
+        "aftermarket_parts_availability": "Very Limited",
+        "aftermarket_price_vs_oem": 0.95,
+        "common_diy_repairs": [
+          "Cabin filter",
+          "Wiper blades",
+          "Tire rotation"
+        ],
+        "requires_dealer": [
+          "Fuel cell stack",
+          "H2 tanks",
+          "Compressor",
+          "Sensors",
+          "Power electronics",
+          "Everything else"
+        ]
+      }
+    },
+    "right_to_repair": {
+      "tesla": {
+        "diagnostic_access": "Proprietary (improving)",
+        "parts_availability": "Improving via parts.tesla.com",
+        "service_manual_access": "Subscription available",
+        "independent_repair_network": "Growing",
+        "battery_replacement_policy": "OEM only",
+        "right_to_repair_score": 4.0
+      },
+      "legacy_ice": {
+        "diagnostic_access": "OBD-II standard + brand tools",
+        "parts_availability": "Excellent aftermarket",
+        "service_manual_access": "Widely available",
+        "independent_repair_network": "Extensive",
+        "right_to_repair_score": 8.5
+      },
+      "legacy_ev": {
+        "diagnostic_access": "Varies by brand",
+        "parts_availability": "Limited",
+        "service_manual_access": "Subscription usually",
+        "independent_repair_network": "Limited",
+        "right_to_repair_score": 5.0
+      }
+    },
+    "training_requirements": {
+      "ice_mechanic": {
+        "certification": "ASE (8 categories)",
+        "training_hours": 400,
+        "avg_hourly_rate": 75
+      },
+      "ev_technician": {
+        "certification": "ASE + HV Safety + Brand specific",
+        "training_hours": 600,
+        "avg_hourly_rate": 95
+      },
+      "hydrogen_technician": {
+        "certification": "ASE + HV + H2 Safety (SAE J2578)",
+        "training_hours": 800,
+        "avg_hourly_rate": 120
+      }
+    }
+  },
+  "manufacturing_innovations": {
+    "gigacasting": {
+      "definition": "Single-piece aluminum casting replacing 70-100+ stamped parts",
+      "pioneers": [
+        "Tesla",
+        "Volvo",
+        "Toyota (learning)"
+      ],
+      "machines": {
+        "giga_press_6000t": {
+          "manufacturer": "IDRA",
+          "clamping_force_tons": 6000,
+          "use_case": "Model Y rear underbody"
+        },
+        "giga_press_9000t": {
+          "manufacturer": "IDRA",
+          "clamping_force_tons": 9000,
+          "use_case": "Cybertruck, Model Y front"
+        },
+        "giga_press_16000t": {
+          "manufacturer": "IDRA (in development)",
+          "clamping_force_tons": 16000,
+          "use_case": "Full underbody in one piece"
+        }
+      },
+      "benefits": {
+        "part_reduction": "70-100 parts \u2192 1-2 parts",
+        "weld_reduction": "700-900 welds \u2192 50 welds",
+        "weight_reduction_percent": 10,
+        "cost_reduction_percent": 40,
+        "assembly_time_reduction_percent": 30,
+        "tooling_cost_reduction": "$2M \u2192 $200k per change"
+      },
+      "challenges": [
+        "Repair cost (whole section replacement)",
+        "Alloy development for crash performance",
+        "Quality control at scale",
+        "Capital expenditure ($3-5M per press)"
+      ],
+      "adopters_timeline": [
+        {
+          "company": "Tesla",
+          "year": 2020,
+          "model": "Model Y rear"
+        },
+        {
+          "company": "Tesla",
+          "year": 2022,
+          "model": "Model Y front + rear"
+        },
+        {
+          "company": "Volvo",
+          "year": 2024,
+          "model": "EX90"
+        },
+        {
+          "company": "Toyota",
+          "year": 2025,
+          "model": "Next-gen BEV"
+        },
+        {
+          "company": "Hyundai",
+          "year": 2025,
+          "model": "Ioniq 7"
+        }
+      ]
+    },
+    "unboxed_process": {
+      "definition": "Building car from separate subassemblies that dock together at end",
+      "pioneer": "Tesla (announced 2023)",
+      "traditional_vs_unboxed": {
+        "traditional": {
+          "steps": "Body-in-white \u2192 Paint \u2192 GA \u2192 Trim",
+          "floor_space_needed": "100%",
+          "parallel_work": "Limited",
+          "labor_per_car": 100
+        },
+        "unboxed": {
+          "steps": "Parallel subassemblies \u2192 Final dock",
+          "floor_space_needed": "40%",
+          "parallel_work": "Extensive",
+          "labor_per_car": 50
+        }
+      },
+      "projected_savings": {
+        "capex_reduction": 50,
+        "footprint_reduction": 40,
+        "labor_reduction": 30,
+        "cycle_time_reduction": 25
+      }
+    },
+    "architecture_48v": {
+      "definition": "Higher voltage electrical system replacing 12V for accessories",
+      "benefit": "Smaller wires, less copper, more headroom for accessories",
+      "pioneers": [
+        "Tesla Cybertruck",
+        "Porsche (mild hybrid)"
+      ],
+      "wire_reduction": {
+        "typical_ev_12v_wire_length_meters": 2000,
+        "with_48v_meters": 800,
+        "copper_savings_kg": 15,
+        "cost_savings": 300
+      },
+      "enables": [
+        "More powerful accessories",
+        "Smaller fuse boxes",
+        "Thinner wire harness",
+        "Better efficiency"
+      ]
+    },
+    "structural_battery": {
+      "definition": "Battery pack as load-bearing chassis element",
+      "pioneers": [
+        "Tesla",
+        "BYD Blade"
+      ],
+      "benefits": {
+        "weight_reduction_percent": 10,
+        "range_increase_percent": 6,
+        "cost_reduction_percent": 8,
+        "stiffness_increase_percent": 20
+      },
+      "challenges": [
+        "Repairability concerns",
+        "Different crash energy management",
+        "Cell replacement difficulty"
+      ]
+    }
+  },
+  "geopolitical_risks": {
+    "material_concentration": {
+      "cobalt": {
+        "top_producer": "DRC",
+        "concentration_percent": 70,
+        "stability_risk": "High",
+        "child_labor_concerns": true,
+        "alternatives": [
+          "LFP batteries (cobalt-free)",
+          "High-nickel NMC"
+        ],
+        "price_volatility_2yr": 65,
+        "used_in": [
+          "EV batteries (NMC, NCA)"
+        ]
+      },
+      "lithium": {
+        "top_producers": [
+          "Australia",
+          "Chile",
+          "China"
+        ],
+        "concentration_top3_percent": 90,
+        "stability_risk": "Medium",
+        "water_usage_concerns": true,
+        "alternatives": [
+          "Sodium-ion batteries"
+        ],
+        "price_volatility_2yr": 120,
+        "used_in": [
+          "All lithium batteries"
+        ]
+      },
+      "nickel": {
+        "top_producers": [
+          "Indonesia",
+          "Philippines",
+          "Russia"
+        ],
+        "concentration_top3_percent": 65,
+        "stability_risk": "Medium-High",
+        "environmental_concerns": true,
+        "alternatives": [
+          "LFP (no nickel)",
+          "Manganese-rich"
+        ],
+        "price_volatility_2yr": 45,
+        "used_in": [
+          "NMC, NCA batteries"
+        ]
+      },
+      "graphite": {
+        "top_producer": "China",
+        "concentration_percent": 65,
+        "natural_vs_synthetic": "65% natural, 35% synthetic",
+        "stability_risk": "Medium",
+        "alternatives": [
+          "Silicon anodes (partial)"
+        ],
+        "used_in": [
+          "Battery anodes"
+        ]
+      },
+      "rare_earths": {
+        "top_producer": "China",
+        "concentration_percent": 60,
+        "processing_concentration": {
+          "China": 90
+        },
+        "stability_risk": "High",
+        "used_in": [
+          "EV motors (permanent magnets)",
+          "Wind turbines"
+        ],
+        "alternatives": [
+          "Induction motors (no magnets)",
+          "Switched reluctance"
+        ],
+        "critical_elements": [
+          "Neodymium",
+          "Dysprosium",
+          "Praseodymium"
+        ]
+      },
+      "platinum": {
+        "top_producer": "South Africa",
+        "concentration_percent": 70,
+        "stability_risk": "Medium",
+        "price_per_oz": 950,
+        "used_in": [
+          "Hydrogen fuel cells",
+          "ICE catalytic converters"
+        ],
+        "alternatives": [
+          "PGM reduction research",
+          "Non-PGM catalysts (early)"
+        ]
+      },
+      "copper": {
+        "top_producers": [
+          "Chile",
+          "Peru",
+          "China"
+        ],
+        "concentration_top3_percent": 45,
+        "stability_risk": "Low-Medium",
+        "demand_increase_evs": "3x vs ICE per vehicle",
+        "alternatives": [
+          "Aluminum (partial)"
+        ],
+        "supply_concern": "Major shortfall projected by 2030"
+      }
+    },
+    "disruption_scenarios": {
+      "china_rare_earth_embargo": {
+        "probability": "Low-Medium",
+        "impact_ev": "Severe (motor production halts)",
+        "impact_ice": "Low",
+        "mitigation": "Build non-China processing, use induction motors",
+        "recovery_time_years": 3
+      },
+      "drc_cobalt_disruption": {
+        "probability": "Medium",
+        "impact_ev": "High (battery shortage)",
+        "impact_ice": "None",
+        "mitigation": "Accelerate LFP adoption, recycling",
+        "recovery_time_years": 2
+      },
+      "indonesia_nickel_ban": {
+        "probability": "Low",
+        "impact_ev": "Medium",
+        "impact_ice": "Low",
+        "mitigation": "Diversify to Philippines, Canada",
+        "recovery_time_years": 1
+      },
+      "south_africa_platinum_disruption": {
+        "probability": "Low",
+        "impact_ev": "None",
+        "impact_ice": "Medium (catalytic converters)",
+        "impact_hydrogen": "Severe",
+        "mitigation": "Recycling, reduce catalyst loading",
+        "recovery_time_years": 2
+      }
+    },
+    "reshoring": {
+      "battery_cells": {
+        "current_us_share": 7,
+        "projected_2030_us_share": 40,
+        "ira_impact": "Major - $45/kWh incentive",
+        "announced_capacity_gwh": 1000,
+        "companies": [
+          "Panasonic",
+          "LG",
+          "Samsung SDI",
+          "SK On",
+          "CATL",
+          "Tesla"
+        ]
+      },
+      "rare_earth_processing": {
+        "current_us_share": 1,
+        "projected_2030_us_share": 15,
+        "challenges": [
+          "Environmental permits",
+          "Technical expertise"
+        ],
+        "companies": [
+          "MP Materials",
+          "Ucore"
+        ]
+      },
+      "ev_motors": {
+        "current_us_share": 25,
+        "projected_2030_us_share": 60,
+        "challenges": [
+          "Magnet supply still foreign"
+        ],
+        "companies": [
+          "Tesla",
+          "GE",
+          "Nidec"
+        ]
+      }
+    },
+    "risk_scores": {
+      "ev": {
+        "supply_chain_risk": 7.5,
+        "concentration_risk": 8.0,
+        "geopolitical_risk": 7.0
+      },
+      "ice": {
+        "supply_chain_risk": 4.0,
+        "concentration_risk": 3.5,
+        "geopolitical_risk": 3.5
+      },
+      "hybrid": {
+        "supply_chain_risk": 5.5,
+        "concentration_risk": 5.0,
+        "geopolitical_risk": 5.0
+      },
+      "hydrogen": {
+        "supply_chain_risk": 8.0,
+        "concentration_risk": 8.5,
+        "geopolitical_risk": 6.5
+      }
+    }
+  },
+  "lifecycle": {
+    "recyclability": {
+      "ice": {
+        "overall_recyclability_percent": 85,
+        "steel_recovery": 95,
+        "aluminum_recovery": 90,
+        "plastic_recovery": 30,
+        "end_of_life_value": 500,
+        "disassembly_time_hours": 4
+      },
+      "ev": {
+        "overall_recyclability_percent": 90,
+        "battery_recovery": 95,
+        "steel_recovery": 95,
+        "aluminum_recovery": 92,
+        "copper_recovery": 98,
+        "end_of_life_value": 3000,
+        "disassembly_time_hours": 6
+      },
+      "hybrid": {
+        "overall_recyclability_percent": 85,
+        "battery_recovery": 90,
+        "steel_recovery": 95,
+        "end_of_life_value": 800,
+        "disassembly_time_hours": 5
+      },
+      "hydrogen": {
+        "overall_recyclability_percent": 88,
+        "platinum_recovery": 95,
+        "carbon_fiber_recovery": 50,
+        "end_of_life_value": 2500,
+        "disassembly_time_hours": 5
+      }
+    },
+    "second_life": {
+      "ev_battery": {
+        "usable_capacity_at_retirement": 80,
+        "grid_storage_applications": true,
+        "second_life_duration_years": 10,
+        "value_capture": 1500,
+        "examples": [
+          "Nissan xStorage",
+          "BMW i3 grid",
+          "Tesla Megapack refurb"
+        ]
+      },
+      "hybrid_battery": {
+        "second_life_potential": "Limited (smaller capacity)",
+        "typical_use": "Recycling preferred"
+      },
+      "ice_components": {
+        "second_life_potential": "Engines: rebuilt/sold",
+        "remanufactured_engine_market": true
+      }
+    },
+    "carbon_footprint": {
+      "ice": {
+        "manufacturing_co2_tons": 8,
+        "lifetime_co2_tons_150k_mi": 57,
+        "total_co2_tons": 65
+      },
+      "ev": {
+        "manufacturing_co2_tons": 12,
+        "lifetime_co2_tons_150k_mi": 28,
+        "total_co2_tons": 40,
+        "with_clean_grid": 20
+      },
+      "hybrid": {
+        "manufacturing_co2_tons": 9,
+        "lifetime_co2_tons_150k_mi": 42,
+        "total_co2_tons": 51
+      },
+      "hydrogen": {
+        "manufacturing_co2_tons": 10,
+        "lifetime_co2_tons_gray_h2": 55,
+        "lifetime_co2_tons_green_h2": 12,
+        "note": "Highly dependent on hydrogen source"
+      }
+    },
+    "circular_economy_score": {
+      "ev": 8.5,
+      "ice": 6.0,
+      "hybrid": 6.5,
+      "hydrogen": 7.0
+    }
+  },
+  "component_deep_dives": {
+    "battery_chemistry": {
+      "nmc_811": {
+        "name": "Nickel Manganese Cobalt (8:1:1)",
+        "energy_density_wh_kg": 270,
+        "cycle_life": 1000,
+        "cost_per_kwh": 130,
+        "thermal_stability": "Moderate",
+        "cobalt_content_percent": 5,
+        "used_by": [
+          "Tesla Model 3 LR",
+          "BMW",
+          "VW ID.4"
+        ],
+        "pros": [
+          "High energy density",
+          "Good power"
+        ],
+        "cons": [
+          "Thermal runaway risk",
+          "Some cobalt needed",
+          "Higher cost"
+        ]
+      },
+      "nca": {
+        "name": "Nickel Cobalt Aluminum",
+        "energy_density_wh_kg": 260,
+        "cycle_life": 800,
+        "cost_per_kwh": 140,
+        "thermal_stability": "Lower",
+        "cobalt_content_percent": 9,
+        "used_by": [
+          "Tesla Model S/X",
+          "Lucid"
+        ],
+        "pros": [
+          "Highest energy density",
+          "Proven tech"
+        ],
+        "cons": [
+          "More cobalt",
+          "Thermal management critical"
+        ]
+      },
+      "lfp": {
+        "name": "Lithium Iron Phosphate",
+        "energy_density_wh_kg": 160,
+        "cycle_life": 3000,
+        "cost_per_kwh": 90,
+        "thermal_stability": "Excellent",
+        "cobalt_content_percent": 0,
+        "used_by": [
+          "Tesla SR",
+          "BYD",
+          "Rivian",
+          "Ford"
+        ],
+        "pros": [
+          "No cobalt",
+          "Very safe",
+          "Long life",
+          "Cheap"
+        ],
+        "cons": [
+          "Lower energy density",
+          "Cold weather performance"
+        ]
+      },
+      "sodium_ion": {
+        "name": "Sodium-Ion",
+        "energy_density_wh_kg": 140,
+        "cycle_life": 2000,
+        "cost_per_kwh": 70,
+        "thermal_stability": "Excellent",
+        "cobalt_content_percent": 0,
+        "lithium_content_percent": 0,
+        "used_by": [
+          "CATL Qilin (announced)",
+          "BYD Seagull"
+        ],
+        "pros": [
+          "No lithium",
+          "Abundant materials",
+          "Cheapest"
+        ],
+        "cons": [
+          "Lower energy density",
+          "Early stage"
+        ]
+      },
+      "solid_state": {
+        "name": "Solid-State (Future)",
+        "energy_density_wh_kg": 400,
+        "cycle_life": 1500,
+        "cost_per_kwh": 200,
+        "thermal_stability": "Excellent",
+        "timeline": "2027-2030 for mass production",
+        "leaders": [
+          "Toyota",
+          "QuantumScape",
+          "Solid Power"
+        ],
+        "pros": [
+          "2x energy density",
+          "No fire risk",
+          "Fast charging"
+        ],
+        "cons": [
+          "Manufacturing challenges",
+          "Cost",
+          "Not proven at scale"
+        ]
+      }
+    },
+    "motor_technology": {
+      "permanent_magnet_sync": {
+        "name": "Permanent Magnet Synchronous Motor (PMSM)",
+        "efficiency_percent": 97,
+        "power_density": "Very High",
+        "rare_earth_required": true,
+        "cost": "Medium-High",
+        "used_by": [
+          "Tesla",
+          "Most EVs"
+        ],
+        "pros": [
+          "Highest efficiency",
+          "Compact",
+          "High torque"
+        ],
+        "cons": [
+          "Rare earth dependency",
+          "Demagnetization risk at high temp"
+        ]
+      },
+      "induction": {
+        "name": "AC Induction Motor",
+        "efficiency_percent": 94,
+        "power_density": "Medium",
+        "rare_earth_required": false,
+        "cost": "Low",
+        "used_by": [
+          "Tesla Model S/X (front)",
+          "Audi"
+        ],
+        "pros": [
+          "No rare earths",
+          "Robust",
+          "Cheaper"
+        ],
+        "cons": [
+          "Lower efficiency",
+          "Heavier",
+          "Heat generation"
+        ]
+      },
+      "switched_reluctance": {
+        "name": "Switched Reluctance Motor (SRM)",
+        "efficiency_percent": 92,
+        "power_density": "Medium",
+        "rare_earth_required": false,
+        "cost": "Low",
+        "used_by": [
+          "Some commercial vehicles"
+        ],
+        "pros": [
+          "No magnets",
+          "Very robust",
+          "High temp capable"
+        ],
+        "cons": [
+          "Noise/vibration",
+          "Lower efficiency",
+          "Complex control"
+        ]
+      },
+      "axial_flux": {
+        "name": "Axial Flux Motor",
+        "efficiency_percent": 96,
+        "power_density": "Extremely High",
+        "rare_earth_required": true,
+        "cost": "High",
+        "used_by": [
+          "Mercedes AMG",
+          "Ferrari",
+          "Lucid"
+        ],
+        "pros": [
+          "Incredibly compact",
+          "Lightweight",
+          "Great for performance"
+        ],
+        "cons": [
+          "Manufacturing complexity",
+          "Cost",
+          "Thermal management"
+        ]
+      }
+    },
+    "power_electronics": {
+      "igbt": {
+        "name": "Insulated-Gate Bipolar Transistor",
+        "efficiency_percent": 96,
+        "switching_speed": "Medium",
+        "cost": "Low",
+        "max_voltage": 1200,
+        "market_share_2023": 70,
+        "pros": [
+          "Proven",
+          "Cheap",
+          "Easy to manufacture"
+        ],
+        "cons": [
+          "Lower efficiency",
+          "Slower switching"
+        ]
+      },
+      "sic_mosfet": {
+        "name": "Silicon Carbide MOSFET",
+        "efficiency_percent": 99,
+        "switching_speed": "Very High",
+        "cost": "High (2-3x IGBT)",
+        "max_voltage": 1700,
+        "market_share_2023": 25,
+        "range_improvement_percent": 10,
+        "used_by": [
+          "Tesla Model 3/Y",
+          "Lucid",
+          "Porsche Taycan"
+        ],
+        "pros": [
+          "Higher efficiency",
+          "10% more range",
+          "Smaller/lighter"
+        ],
+        "cons": [
+          "Cost",
+          "Limited wafer supply"
+        ]
+      },
+      "gan": {
+        "name": "Gallium Nitride",
+        "efficiency_percent": 99,
+        "switching_speed": "Extremely High",
+        "cost": "Very High",
+        "current_use": "Onboard chargers, DC-DC",
+        "future_potential": "Main inverter (in development)",
+        "pros": [
+          "Highest efficiency",
+          "Smallest size"
+        ],
+        "cons": [
+          "Very expensive",
+          "Voltage limitations",
+          "Immature"
+        ]
+      }
+    }
+  },
+  "reliability_data": {
+    "consumer_reports_2024": {
+      "most_reliable_evs": [
+        {
+          "model": "Tesla Model 3",
+          "score": 82
+        },
+        {
+          "model": "Hyundai Ioniq 6",
+          "score": 80
+        },
+        {
+          "model": "Kia EV6",
+          "score": 78
+        }
+      ],
+      "least_reliable_evs": [
+        {
+          "model": "Rivian R1T",
+          "score": 35
+        },
+        {
+          "model": "Mercedes EQS",
+          "score": 40
+        },
+        {
+          "model": "BMW iX",
+          "score": 45
+        }
+      ],
+      "ev_vs_ice_avg": {
+        "ev_average_score": 58,
+        "ice_average_score": 65,
+        "gap_reason": "New technology teething issues"
+      }
+    },
+    "common_ev_failures": [
+      {
+        "issue": "12V battery",
+        "frequency": "Very common",
+        "cost": 200,
+        "cause": "Parasitic drain"
+      },
+      {
+        "issue": "Infotainment",
+        "frequency": "Common",
+        "cost": 0,
+        "cause": "Software (OTA fix)"
+      },
+      {
+        "issue": "Door handles (Tesla)",
+        "frequency": "Common",
+        "cost": 300,
+        "cause": "Mechanical design"
+      },
+      {
+        "issue": "Suspension",
+        "frequency": "Moderate",
+        "cost": 1500,
+        "cause": "Weight, air suspension"
+      },
+      {
+        "issue": "HVAC heat pump",
+        "frequency": "Moderate",
+        "cost": 1800,
+        "cause": "Complexity"
+      },
+      {
+        "issue": "Charge port",
+        "frequency": "Rare",
+        "cost": 500,
+        "cause": "Wear, damage"
+      },
+      {
+        "issue": "Battery pack",
+        "frequency": "Very rare",
+        "cost": 15000,
+        "cause": "Manufacturing defect"
+      }
+    ],
+    "common_ice_failures": [
+      {
+        "issue": "Transmission",
+        "frequency": "Moderate",
+        "cost": 4000,
+        "cause": "Wear"
+      },
+      {
+        "issue": "Alternator",
+        "frequency": "Common",
+        "cost": 500,
+        "cause": "Bearing wear"
+      },
+      {
+        "issue": "Starter",
+        "frequency": "Common",
+        "cost": 400,
+        "cause": "Solenoid, bendix"
+      },
+      {
+        "issue": "Water pump",
+        "frequency": "Common",
+        "cost": 600,
+        "cause": "Bearing, seal"
+      },
+      {
+        "issue": "AC compressor",
+        "frequency": "Common",
+        "cost": 800,
+        "cause": "Clutch, seals"
+      },
+      {
+        "issue": "Catalytic converter",
+        "frequency": "Moderate",
+        "cost": 1500,
+        "cause": "Age, theft"
+      },
+      {
+        "issue": "Head gasket",
+        "frequency": "Moderate",
+        "cost": 2000,
+        "cause": "Overheating"
+      }
+    ],
+    "high_mileage_durability": {
+      "tesla_model_s_300k": {
+        "battery_degradation": 12,
+        "major_repairs": [
+          "Drive unit (warranty)",
+          "12V batteries (3)"
+        ],
+        "maintenance_cost": 3000,
+        "verdict": "Drivetrain excellent, minor issues"
+      },
+      "toyota_camry_300k": {
+        "major_repairs": [
+          "Transmission fluid x5",
+          "Water pump",
+          "Alternator x2"
+        ],
+        "maintenance_cost": 8000,
+        "verdict": "Reliable but more upkeep"
+      }
+    }
+  },
+  "business_impact": {
+    "dealer_service_revenue": {
+      "ice_annual_per_vehicle": 1200,
+      "ev_annual_per_vehicle": 400,
+      "revenue_drop_percent": 67,
+      "dealer_margin_service": 45,
+      "parts_margin": 30,
+      "impact": "Dealers losing major profit center"
+    },
+    "oem_margins": {
+      "tesla": {
+        "gross_margin_percent": 18,
+        "automotive_margin": 20,
+        "profit_per_vehicle": 9000,
+        "vertical_integration": "Very high"
+      },
+      "legacy_ev": {
+        "gross_margin_percent": -5,
+        "automotive_margin": -5,
+        "profit_per_vehicle": -3000,
+        "reason": "Manufacturing not optimized, battery costs"
+      },
+      "legacy_ice": {
+        "gross_margin_percent": 10,
+        "automotive_margin": 8,
+        "profit_per_vehicle": 3500
+      },
+      "byd": {
+        "gross_margin_percent": 20,
+        "profit_per_vehicle": 4500,
+        "note": "Vertical integration, scale"
+      }
+    },
+    "subscription_potential": {
+      "ev_suitability": "High",
+      "reason": "Lower maintenance, software updates",
+      "examples": [
+        "Tesla FSD subscription",
+        "Volvo Care",
+        "BMW heated seats (failed)"
+      ],
+      "ice_suitability": "Lower",
+      "reason_ice": "Harder to extract recurring revenue"
+    },
+    "direct_sales_model": {
+      "ev_adoption": "High (Tesla, Rivian, Lucid)",
+      "reason": "Simpler product, no dealer education needed",
+      "savings_per_vehicle": 2000,
+      "dealer_pushback": "Significant (franchise laws)"
+    }
+  },
+  "future_tech": {
+    "solid_state_batteries": {
+      "timeline": "2027-2030 mass production",
+      "impact_on_parts": "Potential 30% reduction in thermal management",
+      "leaders": [
+        "Toyota",
+        "QuantumScape",
+        "BMW/Solid Power"
+      ],
+      "benefits": {
+        "energy_density_increase": "2x",
+        "charging_speed": "10-80% in 10 min",
+        "fire_risk": "Near zero",
+        "cycle_life": "1.5-2x improvement",
+        "cold_weather": "Better retention"
+      },
+      "part_count_impact": {
+        "thermal_management_reduction": 40,
+        "safety_systems_reduction": 30,
+        "pack_complexity_reduction": 20
+      }
+    },
+    "wheel_hub_motors": {
+      "concept": "Motor inside each wheel, no drivetrain",
+      "current_status": "Prototypes, some commercial",
+      "companies": [
+        "Protean",
+        "Elaphe",
+        "Lordstown (failed)"
+      ],
+      "impact": {
+        "parts_eliminated": [
+          "Driveshafts",
+          "CV joints",
+          "Differential",
+          "Gearbox"
+        ],
+        "part_reduction": 500,
+        "weight_reduction_potential": 50
+      },
+      "challenges": [
+        "Unsprung mass (ride quality)",
+        "Heat management in wheel",
+        "Durability concerns",
+        "High per-unit cost"
+      ],
+      "adoption_timeline": "Niche applications 2025+, mainstream unlikely before 2030"
+    },
+    "vehicle_to_grid": {
+      "concept": "Bidirectional charging - car powers home/grid",
+      "part_impact": "Adds bidirectional inverter, smart charging ECU",
+      "additional_parts": 50,
+      "additional_cost": 500,
+      "potential_value": {
+        "grid_services_annual": 500,
+        "home_backup_value": 2000
+      },
+      "current_vehicles": [
+        "Ford F-150 Lightning",
+        "Hyundai Ioniq 5",
+        "Nissan Leaf"
+      ]
+    },
+    "autonomous_driving": {
+      "part_addition": {
+        "sensors": {
+          "cameras": 8,
+          "radar": 4,
+          "ultrasonic": 12,
+          "lidar": 1
+        },
+        "compute": "50+ TOPS computer",
+        "wiring": "500+ meters additional",
+        "total_part_addition": 200,
+        "cost_addition": 8000
+      },
+      "complexity_impact": "Significantly increases vehicle complexity",
+      "repairability_impact": "Requires specialized calibration equipment"
+    }
+  },
+  "detailed_parts_breakdown": {
+    "gas": {
+      "total_parts_cost": 23000,
+      "top_20_parts": [
+        {
+          "rank": 1,
+          "part": "Engine (4-cyl turbo)",
+          "cost": 3500,
+          "category": "Powertrain",
+          "percent": 15.2
+        },
+        {
+          "rank": 2,
+          "part": "Transmission (8-speed auto)",
+          "cost": 2800,
+          "category": "Powertrain",
+          "percent": 12.2
+        },
+        {
+          "rank": 3,
+          "part": "Body-in-White (stamped)",
+          "cost": 2500,
+          "category": "Body",
+          "percent": 10.9
+        },
+        {
+          "rank": 4,
+          "part": "Doors (4)",
+          "cost": 1600,
+          "category": "Body",
+          "percent": 7.0
+        },
+        {
+          "rank": 5,
+          "part": "Interior Trim Package",
+          "cost": 1500,
+          "category": "Interior",
+          "percent": 6.5
+        },
+        {
+          "rank": 6,
+          "part": "Catalytic Converter",
+          "cost": 1200,
+          "category": "Emissions",
+          "percent": 5.2
+        },
+        {
+          "rank": 7,
+          "part": "Turbocharger",
+          "cost": 1200,
+          "category": "Powertrain",
+          "percent": 5.2
+        },
+        {
+          "rank": 8,
+          "part": "Suspension System",
+          "cost": 1200,
+          "category": "Chassis",
+          "percent": 5.2
+        },
+        {
+          "rank": 9,
+          "part": "Seats (front + rear)",
+          "cost": 1200,
+          "category": "Interior",
+          "percent": 5.2
+        },
+        {
+          "rank": 10,
+          "part": "Wheels & Tires",
+          "cost": 1000,
+          "category": "Chassis",
+          "percent": 4.3
+        },
+        {
+          "rank": 11,
+          "part": "ECU & Sensors",
+          "cost": 800,
+          "category": "Electronics",
+          "percent": 3.5
+        },
+        {
+          "rank": 12,
+          "part": "Exhaust System",
+          "cost": 800,
+          "category": "Emissions",
+          "percent": 3.5
+        },
+        {
+          "rank": 13,
+          "part": "Brake System",
+          "cost": 800,
+          "category": "Chassis",
+          "percent": 3.5
+        },
+        {
+          "rank": 14,
+          "part": "Paint & Coating",
+          "cost": 800,
+          "category": "Body",
+          "percent": 3.5
+        },
+        {
+          "rank": 15,
+          "part": "Axles & Driveshafts",
+          "cost": 700,
+          "category": "Powertrain",
+          "percent": 3.0
+        },
+        {
+          "rank": 16,
+          "part": "HVAC System",
+          "cost": 700,
+          "category": "Climate",
+          "percent": 3.0
+        },
+        {
+          "rank": 17,
+          "part": "Infotainment",
+          "cost": 600,
+          "category": "Electronics",
+          "percent": 2.6
+        },
+        {
+          "rank": 18,
+          "part": "Glass (all windows)",
+          "cost": 600,
+          "category": "Body",
+          "percent": 2.6
+        },
+        {
+          "rank": 19,
+          "part": "Airbag System",
+          "cost": 600,
+          "category": "Safety",
+          "percent": 2.6
+        },
+        {
+          "rank": 20,
+          "part": "Steering System",
+          "cost": 600,
+          "category": "Chassis",
+          "percent": 2.6
+        }
+      ],
+      "category_summary": {
+        "Powertrain": {
+          "total": 9200,
+          "percent": 40.0
+        },
+        "Body": {
+          "total": 5500,
+          "percent": 23.9
+        },
+        "Chassis": {
+          "total": 3600,
+          "percent": 15.6
+        },
+        "Interior": {
+          "total": 2700,
+          "percent": 11.7
+        },
+        "Electronics": {
+          "total": 1400,
+          "percent": 6.1
+        },
+        "Climate": {
+          "total": 700,
+          "percent": 3.0
+        },
+        "Safety": {
+          "total": 600,
+          "percent": 2.6
+        },
+        "Emissions": {
+          "total": 2000,
+          "percent": 8.7
+        }
+      },
+      "expensive_part_insight": "Engine + Transmission = 27% of parts cost"
+    },
+    "electric": {
+      "total_parts_cost": 28000,
+      "top_20_parts": [
+        {
+          "rank": 1,
+          "part": "Battery Pack (75 kWh)",
+          "cost": 9000,
+          "category": "Battery",
+          "percent": 32.1
+        },
+        {
+          "rank": 2,
+          "part": "Skateboard Platform",
+          "cost": 3000,
+          "category": "Chassis",
+          "percent": 10.7
+        },
+        {
+          "rank": 3,
+          "part": "Body Panels (Al/Steel)",
+          "cost": 2200,
+          "category": "Body",
+          "percent": 7.9
+        },
+        {
+          "rank": 4,
+          "part": "Doors (4)",
+          "cost": 1600,
+          "category": "Body",
+          "percent": 5.7
+        },
+        {
+          "rank": 5,
+          "part": "Interior Trim Package",
+          "cost": 1500,
+          "category": "Interior",
+          "percent": 5.4
+        },
+        {
+          "rank": 6,
+          "part": "Electric Motor",
+          "cost": 1500,
+          "category": "Powertrain",
+          "percent": 5.4
+        },
+        {
+          "rank": 7,
+          "part": "Inverter/Power Electronics",
+          "cost": 1200,
+          "category": "Electronics",
+          "percent": 4.3
+        },
+        {
+          "rank": 8,
+          "part": "Seats (front + rear)",
+          "cost": 1200,
+          "category": "Interior",
+          "percent": 4.3
+        },
+        {
+          "rank": 9,
+          "part": "Suspension System",
+          "cost": 1200,
+          "category": "Chassis",
+          "percent": 4.3
+        },
+        {
+          "rank": 10,
+          "part": "Wheels & Tires",
+          "cost": 1000,
+          "category": "Chassis",
+          "percent": 3.6
+        },
+        {
+          "rank": 11,
+          "part": "HVAC Heat Pump",
+          "cost": 900,
+          "category": "Climate",
+          "percent": 3.2
+        },
+        {
+          "rank": 12,
+          "part": "Regen Brake System",
+          "cost": 900,
+          "category": "Chassis",
+          "percent": 3.2
+        },
+        {
+          "rank": 13,
+          "part": "Battery Management System",
+          "cost": 800,
+          "category": "Battery",
+          "percent": 2.9
+        },
+        {
+          "rank": 14,
+          "part": "Paint & Coating",
+          "cost": 800,
+          "category": "Body",
+          "percent": 2.9
+        },
+        {
+          "rank": 15,
+          "part": "Wiring Harness (HV+LV)",
+          "cost": 800,
+          "category": "Electronics",
+          "percent": 2.9
+        },
+        {
+          "rank": 16,
+          "part": "ADAS Sensors",
+          "cost": 800,
+          "category": "Safety",
+          "percent": 2.9
+        },
+        {
+          "rank": 17,
+          "part": "Infotainment",
+          "cost": 700,
+          "category": "Electronics",
+          "percent": 2.5
+        },
+        {
+          "rank": 18,
+          "part": "Thermal Management",
+          "cost": 600,
+          "category": "Battery",
+          "percent": 2.1
+        },
+        {
+          "rank": 19,
+          "part": "Glass (all windows)",
+          "cost": 600,
+          "category": "Body",
+          "percent": 2.1
+        },
+        {
+          "rank": 20,
+          "part": "Airbag System",
+          "cost": 600,
+          "category": "Safety",
+          "percent": 2.1
+        }
+      ],
+      "category_summary": {
+        "Battery": {
+          "total": 10400,
+          "percent": 37.1
+        },
+        "Powertrain": {
+          "total": 1500,
+          "percent": 5.4
+        },
+        "Body": {
+          "total": 5200,
+          "percent": 18.6
+        },
+        "Chassis": {
+          "total": 6100,
+          "percent": 21.8
+        },
+        "Interior": {
+          "total": 2700,
+          "percent": 9.6
+        },
+        "Electronics": {
+          "total": 2700,
+          "percent": 9.6
+        },
+        "Climate": {
+          "total": 900,
+          "percent": 3.2
+        },
+        "Safety": {
+          "total": 1400,
+          "percent": 5.0
+        }
+      },
+      "expensive_part_insight": "Battery = 32% of total cost, but dropping 12%/year"
+    },
+    "hybrid": {
+      "total_parts_cost": 28500,
+      "top_20_parts": [
+        {
+          "rank": 1,
+          "part": "Engine (4-cyl Atkinson)",
+          "cost": 3500,
+          "category": "ICE",
+          "percent": 12.3
+        },
+        {
+          "rank": 2,
+          "part": "Body-in-White",
+          "cost": 2500,
+          "category": "Body",
+          "percent": 8.8
+        },
+        {
+          "rank": 3,
+          "part": "eCVT Transmission",
+          "cost": 2200,
+          "category": "Transmission",
+          "percent": 7.7
+        },
+        {
+          "rank": 4,
+          "part": "Electric Motor(s)",
+          "cost": 1800,
+          "category": "Electric",
+          "percent": 6.3
+        },
+        {
+          "rank": 5,
+          "part": "Doors (4)",
+          "cost": 1600,
+          "category": "Body",
+          "percent": 5.6
+        },
+        {
+          "rank": 6,
+          "part": "Battery Pack (1.5 kWh)",
+          "cost": 1500,
+          "category": "Electric",
+          "percent": 5.3
+        },
+        {
+          "rank": 7,
+          "part": "Interior Trim Package",
+          "cost": 1500,
+          "category": "Interior",
+          "percent": 5.3
+        },
+        {
+          "rank": 8,
+          "part": "Seats (front + rear)",
+          "cost": 1200,
+          "category": "Interior",
+          "percent": 4.2
+        },
+        {
+          "rank": 9,
+          "part": "Suspension System",
+          "cost": 1200,
+          "category": "Chassis",
+          "percent": 4.2
+        },
+        {
+          "rank": 10,
+          "part": "Emission System",
+          "cost": 1000,
+          "category": "Emissions",
+          "percent": 3.5
+        },
+        {
+          "rank": 11,
+          "part": "Wheels & Tires",
+          "cost": 1000,
+          "category": "Chassis",
+          "percent": 3.5
+        },
+        {
+          "rank": 12,
+          "part": "Regen Brake System",
+          "cost": 900,
+          "category": "Chassis",
+          "percent": 3.2
+        },
+        {
+          "rank": 13,
+          "part": "Inverter",
+          "cost": 800,
+          "category": "Electric",
+          "percent": 2.8
+        },
+        {
+          "rank": 14,
+          "part": "Exhaust System",
+          "cost": 800,
+          "category": "Emissions",
+          "percent": 2.8
+        },
+        {
+          "rank": 15,
+          "part": "Paint & Coating",
+          "cost": 800,
+          "category": "Body",
+          "percent": 2.8
+        },
+        {
+          "rank": 16,
+          "part": "HVAC System",
+          "cost": 750,
+          "category": "Climate",
+          "percent": 2.6
+        },
+        {
+          "rank": 17,
+          "part": "Dual Cooling Systems",
+          "cost": 700,
+          "category": "Thermal",
+          "percent": 2.5
+        },
+        {
+          "rank": 18,
+          "part": "Wiring Harness (HV+LV)",
+          "cost": 700,
+          "category": "Electronics",
+          "percent": 2.5
+        },
+        {
+          "rank": 19,
+          "part": "Generator",
+          "cost": 600,
+          "category": "Electric",
+          "percent": 2.1
+        },
+        {
+          "rank": 20,
+          "part": "Infotainment",
+          "cost": 600,
+          "category": "Electronics",
+          "percent": 2.1
+        }
+      ],
+      "category_summary": {
+        "ICE": {
+          "total": 3500,
+          "percent": 12.3
+        },
+        "Electric": {
+          "total": 4700,
+          "percent": 16.5
+        },
+        "Transmission": {
+          "total": 2200,
+          "percent": 7.7
+        },
+        "Body": {
+          "total": 4900,
+          "percent": 17.2
+        },
+        "Chassis": {
+          "total": 3100,
+          "percent": 10.9
+        },
+        "Interior": {
+          "total": 2700,
+          "percent": 9.5
+        },
+        "Electronics": {
+          "total": 1300,
+          "percent": 4.6
+        },
+        "Emissions": {
+          "total": 1800,
+          "percent": 6.3
+        },
+        "Climate": {
+          "total": 750,
+          "percent": 2.6
+        },
+        "Thermal": {
+          "total": 700,
+          "percent": 2.5
+        }
+      },
+      "expensive_part_insight": "Dual powertrains (ICE + Electric) = 36% of cost"
+    },
+    "hydrogen": {
+      "total_parts_cost": 34000,
+      "top_20_parts": [
+        {
+          "rank": 1,
+          "part": "Fuel Cell Stack",
+          "cost": 8000,
+          "category": "Fuel Cell",
+          "percent": 23.5
+        },
+        {
+          "rank": 2,
+          "part": "Hydrogen Tanks (Type IV)",
+          "cost": 3500,
+          "category": "Fuel Storage",
+          "percent": 10.3
+        },
+        {
+          "rank": 3,
+          "part": "Platform (reinforced)",
+          "cost": 3200,
+          "category": "Chassis",
+          "percent": 9.4
+        },
+        {
+          "rank": 4,
+          "part": "Body Panels",
+          "cost": 2200,
+          "category": "Body",
+          "percent": 6.5
+        },
+        {
+          "rank": 5,
+          "part": "Doors (4)",
+          "cost": 1600,
+          "category": "Body",
+          "percent": 4.7
+        },
+        {
+          "rank": 6,
+          "part": "Electric Motor",
+          "cost": 1500,
+          "category": "Powertrain",
+          "percent": 4.4
+        },
+        {
+          "rank": 7,
+          "part": "Interior Trim Package",
+          "cost": 1500,
+          "category": "Interior",
+          "percent": 4.4
+        },
+        {
+          "rank": 8,
+          "part": "Air Compressor",
+          "cost": 1200,
+          "category": "Fuel Cell",
+          "percent": 3.5
+        },
+        {
+          "rank": 9,
+          "part": "Seats (front + rear)",
+          "cost": 1200,
+          "category": "Interior",
+          "percent": 3.5
+        },
+        {
+          "rank": 10,
+          "part": "Suspension System",
+          "cost": 1200,
+          "category": "Chassis",
+          "percent": 3.5
+        },
+        {
+          "rank": 11,
+          "part": "Wheels & Tires",
+          "cost": 1000,
+          "category": "Chassis",
+          "percent": 2.9
+        },
+        {
+          "rank": 12,
+          "part": "Battery Buffer (1.5 kWh)",
+          "cost": 1000,
+          "category": "Electric",
+          "percent": 2.9
+        },
+        {
+          "rank": 13,
+          "part": "Regen Brake System",
+          "cost": 900,
+          "category": "Chassis",
+          "percent": 2.6
+        },
+        {
+          "rank": 14,
+          "part": "HVAC System",
+          "cost": 800,
+          "category": "Climate",
+          "percent": 2.4
+        },
+        {
+          "rank": 15,
+          "part": "Power Electronics",
+          "cost": 800,
+          "category": "Electronics",
+          "percent": 2.4
+        },
+        {
+          "rank": 16,
+          "part": "Paint & Coating",
+          "cost": 800,
+          "category": "Body",
+          "percent": 2.4
+        },
+        {
+          "rank": 17,
+          "part": "Thermal Management",
+          "cost": 700,
+          "category": "Fuel Cell",
+          "percent": 2.1
+        },
+        {
+          "rank": 18,
+          "part": "Wiring Harness",
+          "cost": 700,
+          "category": "Electronics",
+          "percent": 2.1
+        },
+        {
+          "rank": 19,
+          "part": "Glass (all windows)",
+          "cost": 600,
+          "category": "Body",
+          "percent": 1.8
+        },
+        {
+          "rank": 20,
+          "part": "Infotainment",
+          "cost": 600,
+          "category": "Electronics",
+          "percent": 1.8
+        }
+      ],
+      "category_summary": {
+        "Fuel Cell": {
+          "total": 9900,
+          "percent": 29.1
+        },
+        "Fuel Storage": {
+          "total": 3500,
+          "percent": 10.3
+        },
+        "Powertrain": {
+          "total": 1500,
+          "percent": 4.4
+        },
+        "Electric": {
+          "total": 1000,
+          "percent": 2.9
+        },
+        "Body": {
+          "total": 5200,
+          "percent": 15.3
+        },
+        "Chassis": {
+          "total": 6300,
+          "percent": 18.5
+        },
+        "Interior": {
+          "total": 2700,
+          "percent": 7.9
+        },
+        "Electronics": {
+          "total": 2100,
+          "percent": 6.2
+        },
+        "Climate": {
+          "total": 800,
+          "percent": 2.4
+        }
+      },
+      "expensive_part_insight": "Fuel Cell Stack + H2 Tanks = 34% of cost (platinum + carbon fiber)"
+    }
+  },
+  "parts_comparison_chart": {
+    "most_expensive_component": [
+      {
+        "type": "Gas",
+        "component": "Engine",
+        "cost": 3500,
+        "percent": 15.2,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Electric",
+        "component": "Battery Pack",
+        "cost": 9000,
+        "percent": 32.1,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hybrid",
+        "component": "Engine",
+        "cost": 3500,
+        "percent": 12.3,
+        "color": "#f97316"
+      },
+      {
+        "type": "Hydrogen",
+        "component": "Fuel Cell",
+        "cost": 8000,
+        "percent": 23.5,
+        "color": "#3b82f6"
+      }
+    ],
+    "category_breakdown": [
+      {
+        "category": "Powertrain/Battery/FC",
+        "Gas": 9200,
+        "Electric": 10400,
+        "Hybrid": 10400,
+        "Hydrogen": 14400
+      },
+      {
+        "category": "Body",
+        "Gas": 5500,
+        "Electric": 5200,
+        "Hybrid": 4900,
+        "Hydrogen": 5200
+      },
+      {
+        "category": "Chassis",
+        "Gas": 3600,
+        "Electric": 6100,
+        "Hybrid": 3100,
+        "Hydrogen": 6300
+      },
+      {
+        "category": "Interior",
+        "Gas": 2700,
+        "Electric": 2700,
+        "Hybrid": 2700,
+        "Hydrogen": 2700
+      },
+      {
+        "category": "Electronics",
+        "Gas": 1400,
+        "Electric": 2700,
+        "Hybrid": 1300,
+        "Hydrogen": 2100
+      }
+    ]
+  },
+  "key_insights": [
+    {
+      "category": "battery",
+      "title": "Battery costs dropped 90% since 2010",
+      "detail": "$1,183/kWh \u2192 $115/kWh, targeting $58/kWh by 2030",
+      "icon": "\ud83d\udcc9"
+    },
+    {
+      "category": "parity",
+      "title": "Manufacturing cost parity in 2026",
+      "detail": "EVs will cost less to manufacture than ICE by 2026-2027",
+      "icon": "\u2696\ufe0f"
+    },
+    {
+      "category": "gigacasting",
+      "title": "Gigacasting eliminates 100+ parts",
+      "detail": "Single aluminum casting replaces 70-100 stamped & welded parts",
+      "icon": "\ud83c\udfed"
+    },
+    {
+      "category": "repair",
+      "title": "EV repairability is a challenge",
+      "detail": "Only 35% of mechanics can service EVs vs 95% for ICE",
+      "icon": "\ud83d\udd27"
+    },
+    {
+      "category": "supply",
+      "title": "China dominates critical minerals",
+      "detail": "90% of rare earth processing, 65% of graphite, 60% of refining",
+      "icon": "\ud83c\udf0d"
+    },
+    {
+      "category": "lifecycle",
+      "title": "EV batteries have valuable second life",
+      "detail": "80% capacity at retirement \u2192 10 more years in grid storage",
+      "icon": "\u267b\ufe0f"
+    },
+    {
+      "category": "lfp",
+      "title": "LFP batteries are game-changing",
+      "detail": "No cobalt, 3000 cycles, $90/kWh - dominating standard range",
+      "icon": "\ud83d\udd0b"
+    },
+    {
+      "category": "dealer",
+      "title": "EVs disrupting dealer business model",
+      "detail": "67% drop in service revenue per vehicle",
+      "icon": "\ud83d\udcbc"
+    },
+    {
+      "category": "margin",
+      "title": "Tesla profits $9,000 per vehicle",
+      "detail": "Legacy OEMs losing money on EVs due to manufacturing inefficiency",
+      "icon": "\ud83d\udcb0"
+    },
+    {
+      "category": "future",
+      "title": "Solid-state batteries by 2027-2030",
+      "detail": "2x energy density, 10-min charging, near-zero fire risk",
+      "icon": "\ud83d\ude80"
+    }
+  ],
+  "charts": {
+    "battery_cost_timeline": [
+      {
+        "year": 2010,
+        "cost": 1183,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2011,
+        "cost": 899,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2012,
+        "cost": 707,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2013,
+        "cost": 599,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2014,
+        "cost": 540,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2015,
+        "cost": 373,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2016,
+        "cost": 295,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2017,
+        "cost": 219,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2018,
+        "cost": 185,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2019,
+        "cost": 156,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2020,
+        "cost": 140,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2021,
+        "cost": 132,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2022,
+        "cost": 151,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2023,
+        "cost": 139,
+        "source": "BloombergNEF"
+      },
+      {
+        "year": 2024,
+        "cost": 115,
+        "source": "BloombergNEF estimate"
+      },
+      {
+        "year": 2025,
+        "cost": 100,
+        "source": "Projection"
+      },
+      {
+        "year": 2026,
+        "cost": 90,
+        "source": "Projection"
+      },
+      {
+        "year": 2027,
+        "cost": 80,
+        "source": "Projection"
+      },
+      {
+        "year": 2028,
+        "cost": 72,
+        "source": "Projection"
+      },
+      {
+        "year": 2029,
+        "cost": 65,
+        "source": "Projection"
+      },
+      {
+        "year": 2030,
+        "cost": 58,
+        "source": "Projection"
+      }
+    ],
+    "manufacturing_parity": [
+      {
+        "year": 2020,
+        "ice": 25000,
+        "ev": 35000,
+        "hybrid": 32000,
+        "parity_gap": 10000
+      },
+      {
+        "year": 2021,
+        "ice": 25500,
+        "ev": 33000,
+        "hybrid": 32500,
+        "parity_gap": 7500
+      },
+      {
+        "year": 2022,
+        "ice": 26000,
+        "ev": 32500,
+        "hybrid": 33000,
+        "parity_gap": 6500
+      },
+      {
+        "year": 2023,
+        "ice": 26500,
+        "ev": 31000,
+        "hybrid": 33500,
+        "parity_gap": 4500
+      },
+      {
+        "year": 2024,
+        "ice": 27000,
+        "ev": 29500,
+        "hybrid": 34000,
+        "parity_gap": 2500
+      },
+      {
+        "year": 2025,
+        "ice": 27500,
+        "ev": 28500,
+        "hybrid": 34500,
+        "parity_gap": 1000
+      },
+      {
+        "year": 2026,
+        "ice": 28000,
+        "ev": 27500,
+        "hybrid": 35000,
+        "parity_gap": -500
+      },
+      {
+        "year": 2027,
+        "ice": 28500,
+        "ev": 26500,
+        "hybrid": 35500,
+        "parity_gap": -2000
+      },
+      {
+        "year": 2028,
+        "ice": 29000,
+        "ev": 25500,
+        "hybrid": 36000,
+        "parity_gap": -3500
+      },
+      {
+        "year": 2030,
+        "ice": 30000,
+        "ev": 24000,
+        "hybrid": 37000,
+        "parity_gap": -6000
+      }
+    ],
+    "repairability_scores": [
+      {
+        "type": "Gas",
+        "diy": 7.5,
+        "indie": 95,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Hybrid",
+        "diy": 5.0,
+        "indie": 50,
+        "color": "#f97316"
+      },
+      {
+        "type": "Electric",
+        "diy": 4.0,
+        "indie": 35,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hydrogen",
+        "diy": 2.0,
+        "indie": 5,
+        "color": "#3b82f6"
+      }
+    ],
+    "supply_chain_risk": [
+      {
+        "type": "Gas",
+        "risk": 4.0,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Hybrid",
+        "risk": 5.5,
+        "color": "#f97316"
+      },
+      {
+        "type": "Electric",
+        "risk": 7.5,
+        "color": "#22c55e"
+      },
+      {
+        "type": "Hydrogen",
+        "risk": 8.0,
+        "color": "#3b82f6"
+      }
+    ],
+    "carbon_footprint": [
+      {
+        "type": "Gas",
+        "manufacturing": 8,
+        "lifetime": 57,
+        "total": 65
+      },
+      {
+        "type": "Hybrid",
+        "manufacturing": 9,
+        "lifetime": 42,
+        "total": 51
+      },
+      {
+        "type": "EV",
+        "manufacturing": 12,
+        "lifetime": 28,
+        "total": 40
+      },
+      {
+        "type": "EV (clean grid)",
+        "manufacturing": 12,
+        "lifetime": 8,
+        "total": 20
+      }
+    ],
+    "chemistry_comparison": [
+      {
+        "name": "NCA",
+        "density": 260,
+        "cycles": 800,
+        "cost": 140
+      },
+      {
+        "name": "NMC 811",
+        "density": 270,
+        "cycles": 1000,
+        "cost": 130
+      },
+      {
+        "name": "LFP",
+        "density": 160,
+        "cycles": 3000,
+        "cost": 90
+      },
+      {
+        "name": "Sodium-ion",
+        "density": 140,
+        "cycles": 2000,
+        "cost": 70
+      },
+      {
+        "name": "Solid-state",
+        "density": 400,
+        "cycles": 1500,
+        "cost": 200
+      }
+    ],
+    "oem_margins": [
+      {
+        "company": "Tesla",
+        "margin": 9000,
+        "color": "#22c55e"
+      },
+      {
+        "company": "BYD",
+        "margin": 4500,
+        "color": "#22c55e"
+      },
+      {
+        "company": "Legacy ICE",
+        "margin": 3500,
+        "color": "#ef4444"
+      },
+      {
+        "company": "Legacy EV",
+        "margin": -3000,
+        "color": "#ef4444"
+      }
+    ]
+  }
+}

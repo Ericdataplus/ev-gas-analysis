@@ -19,6 +19,7 @@ import AISupplyChain from './pages/AISupplyChain'
 import ExpandedAnalysis from './pages/ExpandedAnalysis'
 import AITimeline from './pages/AITimeline'
 import PartComplexity from './pages/PartComplexity'
+import PartComplexityDeepDive from './pages/PartComplexityDeepDive'
 import './index.css'
 
 function App() {
@@ -71,6 +72,9 @@ function App() {
             <NavLink to="/part-complexity" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>🔧</span> Part Complexity
             </NavLink>
+            <NavLink to="/part-complexity-deep" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🔬</span> Parts Deep Dive
+            </NavLink>
             <NavLink to="/predictions" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📈</span> ML Predictions
             </NavLink>
@@ -122,6 +126,7 @@ function App() {
             <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/semis" element={<Semis />} />
             <Route path="/part-complexity" element={<PartComplexity />} />
+            <Route path="/part-complexity-deep" element={<PartComplexityDeepDive />} />
             <Route path="/home-energy" element={<HomeEnergy />} />
             <Route path="/solar" element={<Solar />} />
             <Route path="/predictions" element={<Predictions />} />
