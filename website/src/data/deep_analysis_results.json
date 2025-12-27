@@ -1,0 +1,618 @@
+{
+  "generated_at": "2025-12-27T12:17:51.500882",
+  "analysis_version": "2.0",
+  "dataset_info": {
+    "time_points": 82,
+    "date_range": "2020-01-31 00:00:00 to 2035-12-31 00:00:00",
+    "variables": 29
+  },
+  "copper_collision": {
+    "ev_copper_2025": 0.137,
+    "dc_copper_2025": 0.725,
+    "combined_peak_2035": 2.881,
+    "ev_ai_correlation": 0.9974,
+    "price_deficit_correlation": 0.9539,
+    "critical_deficit_year": 2040,
+    "price_prediction_r2": 0.9698,
+    "price_forecast_2030": 28500.0
+  },
+  "energy_net_effect": {
+    "ai_power_2025_gw": 36.4,
+    "ai_power_2035_gw": 172.5,
+    "ai_carbon_2025_mt": 82.5,
+    "ai_savings_2025_mt": 226.1,
+    "net_carbon_2025_mt": -143.6,
+    "carbon_breakeven_year": 2020,
+    "efficiency_growth_2025_2035": "4.8% \u2192 15.0%"
+  },
+  "job_market": {
+    "tech_employment_2025": 13.35,
+    "tech_employment_2035": 12.0,
+    "ai_jobs_2025_k": 700.0,
+    "at_risk_jobs_2025_m": 1.46,
+    "job_categories": {
+      "AI/ML Engineers": {
+        "demand_change": 80,
+        "risk_level": "Very Low",
+        "salary_trend": "+25%"
+      },
+      "Data Engineers": {
+        "demand_change": 70,
+        "risk_level": "Low",
+        "salary_trend": "+20%"
+      },
+      "Full-Stack Engineers": {
+        "demand_change": 40,
+        "risk_level": "Low",
+        "salary_trend": "+15%"
+      },
+      "Cloud Architects": {
+        "demand_change": 55,
+        "risk_level": "Low",
+        "salary_trend": "+18%"
+      },
+      "DevOps Engineers": {
+        "demand_change": 35,
+        "risk_level": "Medium",
+        "salary_trend": "+12%"
+      },
+      "Software Engineers (General)": {
+        "demand_change": -15,
+        "risk_level": "Medium",
+        "salary_trend": "+5%"
+      },
+      "Frontend Developers": {
+        "demand_change": -25,
+        "risk_level": "High",
+        "salary_trend": "-5%"
+      },
+      "Data Analysts (Dashboard)": {
+        "demand_change": -45,
+        "risk_level": "Very High",
+        "salary_trend": "-15%"
+      },
+      "QA/Test Engineers": {
+        "demand_change": -50,
+        "risk_level": "Very High",
+        "salary_trend": "-20%"
+      },
+      "IT Support": {
+        "demand_change": -55,
+        "risk_level": "Very High",
+        "salary_trend": "-25%"
+      },
+      "Admin/Data Entry": {
+        "demand_change": -65,
+        "risk_level": "Critical",
+        "salary_trend": "-35%"
+      }
+    },
+    "key_insight": "AI-skilled roles growing 80%+ while entry-level/generalist roles declining 25-65%"
+  },
+  "geographic_risk": {
+    "geographic_risks": {
+      "Advanced Semiconductors": {
+        "primary_location": "Taiwan",
+        "concentration": 92,
+        "secondary": "South Korea (5%)",
+        "risk_factors": [
+          "China tensions",
+          "Earthquake risk",
+          "Single company (TSMC)"
+        ],
+        "economic_impact_if_disrupted": "$10T global GDP loss"
+      },
+      "HBM Memory": {
+        "primary_location": "South Korea",
+        "concentration": 95,
+        "secondary": "None significant",
+        "risk_factors": [
+          "3-company oligopoly",
+          "North Korea risk"
+        ],
+        "economic_impact_if_disrupted": "AI development halted 12-18 months"
+      },
+      "Rare Earths": {
+        "primary_location": "China",
+        "concentration": 60,
+        "secondary": "Australia (10%), US (5%)",
+        "risk_factors": [
+          "Export restrictions",
+          "Environmental damage"
+        ],
+        "economic_impact_if_disrupted": "EV/Electronics +30% cost"
+      },
+      "Cobalt": {
+        "primary_location": "DR Congo",
+        "concentration": 70,
+        "secondary": "Australia (5%), Russia (4%)",
+        "risk_factors": [
+          "Political instability",
+          "Child labor concerns",
+          "Supply chain opacity"
+        ],
+        "economic_impact_if_disrupted": "Battery costs +40%"
+      },
+      "Copper Mining": {
+        "primary_location": "Chile",
+        "concentration": 28,
+        "secondary": "Peru (11%), China (9%)",
+        "risk_factors": [
+          "Water scarcity",
+          "Nationalization risk",
+          "Declining ore grades"
+        ],
+        "economic_impact_if_disrupted": "Global construction/EV slowdown"
+      },
+      "Chip Packaging": {
+        "primary_location": "China",
+        "concentration": 30,
+        "secondary": "Taiwan (25%), Malaysia (15%)",
+        "risk_factors": [
+          "Tariffs",
+          "IP concerns"
+        ],
+        "economic_impact_if_disrupted": "Consumer electronics +15%"
+      }
+    },
+    "risk_scores": {
+      "Advanced Semiconductors": 92.0,
+      "HBM Memory": 63.3,
+      "Rare Earths": 40.0,
+      "Cobalt": 70.0,
+      "Copper Mining": 28.0,
+      "Chip Packaging": 20.0
+    },
+    "highest_risk": "Advanced Semiconductors",
+    "taiwan_disruption_gdp_loss": "$10T",
+    "diversification_timeline": "2030-2035 for meaningful reduction"
+  },
+  "price_transmission": {
+    "optimal_lag_months": 6,
+    "lag_correlation": 0.968,
+    "price_elasticity": 0.298,
+    "memory_increase_2020_2025": "775%",
+    "laptop_increase_2020_2025": "47%",
+    "lag_analysis": [
+      {
+        "lag": 0,
+        "correlation": 0.952521625132814
+      },
+      {
+        "lag": 1,
+        "correlation": 0.9554975150871379
+      },
+      {
+        "lag": 2,
+        "correlation": 0.9585775457975997
+      },
+      {
+        "lag": 3,
+        "correlation": 0.9615880442473554
+      },
+      {
+        "lag": 4,
+        "correlation": 0.9643342713291925
+      },
+      {
+        "lag": 5,
+        "correlation": 0.9665995286739548
+      },
+      {
+        "lag": 6,
+        "correlation": 0.968145836312801
+      }
+    ]
+  },
+  "deep_learning": {
+    "lstm": {
+      "r2_score": -1.3648,
+      "mae": 7630.76,
+      "epochs": 100,
+      "features": [
+        "copper_deficit_mmt",
+        "dc_power_gw",
+        "ev_sales_monthly_m",
+        "memory_price",
+        "ai_power_gw"
+      ]
+    },
+    "vae_anomaly": {
+      "anomaly_count": 5,
+      "threshold": 6.0042,
+      "anomaly_dates": [
+        "2031-12-31",
+        "2032-12-31",
+        "2033-12-31",
+        "2034-12-31",
+        "2035-12-31"
+      ]
+    },
+    "attention": {
+      "feature_importance": {
+        "copper_deficit_mmt": 0.0163,
+        "dc_power_gw": 0.011,
+        "ev_sales_monthly_m": 0.0018,
+        "memory_price": 0.0286,
+        "ai_power_gw": 0.9423
+      }
+    }
+  },
+  "cross_domain_correlations": [
+    {
+      "variables": "copper_price \u2194 ai_power_gw",
+      "correlation": 0.986,
+      "strength": "Strong"
+    },
+    {
+      "variables": "memory_price \u2194 laptop_price",
+      "correlation": 0.953,
+      "strength": "Strong"
+    },
+    {
+      "variables": "dc_power_gw \u2194 tech_employment_m",
+      "correlation": -0.678,
+      "strength": "Moderate"
+    },
+    {
+      "variables": "ev_sales_monthly_m \u2194 supply_chain_risk_idx",
+      "correlation": -0.944,
+      "strength": "Strong"
+    },
+    {
+      "variables": "copper_deficit_mmt \u2194 dc_power_gw",
+      "correlation": 0.962,
+      "strength": "Strong"
+    }
+  ],
+  "key_insights": [
+    "\ud83d\udd34 Copper deficit exceeds 5 MMT by 2040, driven by combined EV + AI demand",
+    "\ud83d\udfe1 AI is a net carbon EMITTER until ~2020 (Currently +-144 MT/year)",
+    "\ud83d\udfe2 AI jobs (+700K) don't offset traditional job losses (1.46M at risk)",
+    "\ud83d\udd34 Taiwan + South Korea control 97% of advanced chips = single point of failure risk",
+    "\ud83d\udfe1 Memory price changes take 6 months to hit consumer products",
+    "\ud83d\udd34 Combined EV + AI copper demand reaches 2.881 MMT by 2035 (vs 18.0 MMT supply)"
+  ],
+  "trajectory_data": {
+    "copper_deficit": {
+      "dates": [
+        "2020-01-31",
+        "2020-02-29",
+        "2020-03-31",
+        "2020-04-30",
+        "2020-05-31",
+        "2020-06-30",
+        "2020-07-31",
+        "2020-08-31",
+        "2020-09-30",
+        "2020-10-31",
+        "2020-11-30",
+        "2020-12-31",
+        "2021-01-31",
+        "2021-02-28",
+        "2021-03-31",
+        "2021-04-30",
+        "2021-05-31",
+        "2021-06-30",
+        "2021-07-31",
+        "2021-08-31",
+        "2021-09-30",
+        "2021-10-31",
+        "2021-11-30",
+        "2021-12-31",
+        "2022-01-31",
+        "2022-02-28",
+        "2022-03-31",
+        "2022-04-30",
+        "2022-05-31",
+        "2022-06-30",
+        "2022-07-31",
+        "2022-08-31",
+        "2022-09-30",
+        "2022-10-31",
+        "2022-11-30",
+        "2022-12-31",
+        "2023-01-31",
+        "2023-02-28",
+        "2023-03-31",
+        "2023-04-30",
+        "2023-05-31",
+        "2023-06-30",
+        "2023-07-31",
+        "2023-08-31",
+        "2023-09-30",
+        "2023-10-31",
+        "2023-11-30",
+        "2023-12-31",
+        "2024-01-31",
+        "2024-02-29",
+        "2024-03-31",
+        "2024-04-30",
+        "2024-05-31",
+        "2024-06-30",
+        "2024-07-31",
+        "2024-08-31",
+        "2024-09-30",
+        "2024-10-31",
+        "2024-11-30",
+        "2024-12-31",
+        "2025-01-31",
+        "2025-02-28",
+        "2025-03-31",
+        "2025-04-30",
+        "2025-05-31",
+        "2025-06-30",
+        "2025-07-31",
+        "2025-08-31",
+        "2025-09-30",
+        "2025-10-31",
+        "2025-11-30",
+        "2025-12-31",
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31",
+        "2032-12-31",
+        "2033-12-31",
+        "2034-12-31",
+        "2035-12-31"
+      ],
+      "values": [
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.5,
+        3.55,
+        3.59,
+        3.64,
+        3.68,
+        3.73,
+        3.77,
+        3.82,
+        3.86,
+        3.91,
+        3.95,
+        4.0,
+        4.0,
+        4.03,
+        4.05,
+        4.08,
+        4.11,
+        4.14,
+        4.16,
+        4.19,
+        4.22,
+        4.25,
+        4.27,
+        4.3,
+        4.3,
+        4.28,
+        4.26,
+        4.25,
+        4.23,
+        4.21,
+        4.19,
+        4.17,
+        4.15,
+        4.14,
+        4.12,
+        4.1,
+        4.1,
+        4.15,
+        4.19,
+        4.24,
+        4.28,
+        4.33,
+        4.37,
+        4.42,
+        4.46,
+        4.51,
+        4.55,
+        4.6,
+        4.6,
+        4.73,
+        4.85,
+        4.98,
+        5.11,
+        5.24,
+        5.36,
+        5.49,
+        5.62,
+        5.75,
+        5.87,
+        6.0,
+        6.5,
+        7.5,
+        8.7,
+        10.5,
+        13.0,
+        16.5,
+        19.5,
+        23.0,
+        25.5,
+        28.0
+      ]
+    },
+    "net_carbon": {
+      "dates": [
+        "2020-01-31",
+        "2020-02-29",
+        "2020-03-31",
+        "2020-04-30",
+        "2020-05-31",
+        "2020-06-30",
+        "2020-07-31",
+        "2020-08-31",
+        "2020-09-30",
+        "2020-10-31",
+        "2020-11-30",
+        "2020-12-31",
+        "2021-01-31",
+        "2021-02-28",
+        "2021-03-31",
+        "2021-04-30",
+        "2021-05-31",
+        "2021-06-30",
+        "2021-07-31",
+        "2021-08-31",
+        "2021-09-30",
+        "2021-10-31",
+        "2021-11-30",
+        "2021-12-31",
+        "2022-01-31",
+        "2022-02-28",
+        "2022-03-31",
+        "2022-04-30",
+        "2022-05-31",
+        "2022-06-30",
+        "2022-07-31",
+        "2022-08-31",
+        "2022-09-30",
+        "2022-10-31",
+        "2022-11-30",
+        "2022-12-31",
+        "2023-01-31",
+        "2023-02-28",
+        "2023-03-31",
+        "2023-04-30",
+        "2023-05-31",
+        "2023-06-30",
+        "2023-07-31",
+        "2023-08-31",
+        "2023-09-30",
+        "2023-10-31",
+        "2023-11-30",
+        "2023-12-31",
+        "2024-01-31",
+        "2024-02-29",
+        "2024-03-31",
+        "2024-04-30",
+        "2024-05-31",
+        "2024-06-30",
+        "2024-07-31",
+        "2024-08-31",
+        "2024-09-30",
+        "2024-10-31",
+        "2024-11-30",
+        "2024-12-31",
+        "2025-01-31",
+        "2025-02-28",
+        "2025-03-31",
+        "2025-04-30",
+        "2025-05-31",
+        "2025-06-30",
+        "2025-07-31",
+        "2025-08-31",
+        "2025-09-30",
+        "2025-10-31",
+        "2025-11-30",
+        "2025-12-31",
+        "2026-12-31",
+        "2027-12-31",
+        "2028-12-31",
+        "2029-12-31",
+        "2030-12-31",
+        "2031-12-31",
+        "2032-12-31",
+        "2033-12-31",
+        "2034-12-31",
+        "2035-12-31"
+      ],
+      "values": [
+        -40.0,
+        -40.72,
+        -41.43,
+        -42.15,
+        -42.87,
+        -43.59,
+        -44.3,
+        -45.02,
+        -45.74,
+        -46.45,
+        -47.17,
+        -47.89,
+        -50.42,
+        -51.59,
+        -52.77,
+        -53.94,
+        -55.11,
+        -56.28,
+        -57.45,
+        -58.62,
+        -59.8,
+        -60.97,
+        -62.14,
+        -63.31,
+        -65.85,
+        -67.47,
+        -69.1,
+        -70.72,
+        -72.35,
+        -73.98,
+        -75.6,
+        -77.23,
+        -78.85,
+        -80.48,
+        -82.11,
+        -83.73,
+        -86.27,
+        -87.89,
+        -89.52,
+        -91.15,
+        -92.77,
+        -94.4,
+        -96.02,
+        -97.65,
+        -99.28,
+        -100.9,
+        -102.53,
+        -104.15,
+        -106.69,
+        -108.77,
+        -110.85,
+        -112.93,
+        -115.01,
+        -117.09,
+        -119.17,
+        -121.25,
+        -123.34,
+        -125.42,
+        -127.5,
+        -129.58,
+        -132.11,
+        -134.19,
+        -136.27,
+        -138.35,
+        -140.44,
+        -142.52,
+        -144.6,
+        -146.68,
+        -148.76,
+        -150.84,
+        -152.92,
+        -155.0,
+        -155.0,
+        -207.78,
+        -260.56,
+        -313.33,
+        -366.11,
+        -418.89,
+        -471.67,
+        -524.44,
+        -577.22,
+        -630.0
+      ]
+    }
+  }
+}
