@@ -1,66 +1,495 @@
 {
   "evAdoption": {
     "historical": [
-      { "year": 2010, "sales": 0.02, "stock": 0.00, "batteryCost": 1100, "range": 73 },
-      { "year": 2011, "sales": 0.05, "stock": 0.02, "batteryCost": 800, "range": 94 },
-      { "year": 2012, "sales": 0.13, "stock": 0.07, "batteryCost": 650, "range": 89 },
-      { "year": 2013, "sales": 0.20, "stock": 0.17, "batteryCost": 450, "range": 84 },
-      { "year": 2014, "sales": 0.32, "stock": 0.30, "batteryCost": 373, "range": 84 },
-      { "year": 2015, "sales": 0.55, "stock": 0.42, "batteryCost": 293, "range": 107 },
-      { "year": 2016, "sales": 0.75, "stock": 0.57, "batteryCost": 214, "range": 114 },
-      { "year": 2017, "sales": 1.20, "stock": 0.76, "batteryCost": 176, "range": 151 },
-      { "year": 2018, "sales": 2.10, "stock": 1.12, "batteryCost": 156, "range": 200 },
-      { "year": 2019, "sales": 2.26, "stock": 1.45, "batteryCost": 137, "range": 250 },
-      { "year": 2020, "sales": 3.10, "stock": 1.75, "batteryCost": 132, "range": 260 },
-      { "year": 2021, "sales": 6.60, "stock": 2.00, "batteryCost": 151, "range": 280 },
-      { "year": 2022, "sales": 10.20, "stock": 3.00, "batteryCost": 139, "range": 290 },
-      { "year": 2023, "sales": 13.80, "stock": 4.00, "batteryCost": 115, "range": 300 },
-      { "year": 2024, "sales": 17.30, "stock": 5.50, "batteryCost": 100, "range": 320 }
+      {
+        "year": 2010,
+        "sales": 0.02,
+        "stock": 0.00,
+        "batteryCost": 1100,
+        "range": 73
+      },
+      {
+        "year": 2011,
+        "sales": 0.05,
+        "stock": 0.02,
+        "batteryCost": 800,
+        "range": 94
+      },
+      {
+        "year": 2012,
+        "sales": 0.13,
+        "stock": 0.07,
+        "batteryCost": 650,
+        "range": 89
+      },
+      {
+        "year": 2013,
+        "sales": 0.20,
+        "stock": 0.17,
+        "batteryCost": 450,
+        "range": 84
+      },
+      {
+        "year": 2014,
+        "sales": 0.32,
+        "stock": 0.30,
+        "batteryCost": 373,
+        "range": 84
+      },
+      {
+        "year": 2015,
+        "sales": 0.55,
+        "stock": 0.42,
+        "batteryCost": 293,
+        "range": 107
+      },
+      {
+        "year": 2016,
+        "sales": 0.75,
+        "stock": 0.57,
+        "batteryCost": 214,
+        "range": 114
+      },
+      {
+        "year": 2017,
+        "sales": 1.20,
+        "stock": 0.76,
+        "batteryCost": 176,
+        "range": 151
+      },
+      {
+        "year": 2018,
+        "sales": 2.10,
+        "stock": 1.12,
+        "batteryCost": 156,
+        "range": 200
+      },
+      {
+        "year": 2019,
+        "sales": 2.26,
+        "stock": 1.45,
+        "batteryCost": 137,
+        "range": 250
+      },
+      {
+        "year": 2020,
+        "sales": 3.10,
+        "stock": 1.75,
+        "batteryCost": 132,
+        "range": 260
+      },
+      {
+        "year": 2021,
+        "sales": 6.60,
+        "stock": 2.00,
+        "batteryCost": 151,
+        "range": 280
+      },
+      {
+        "year": 2022,
+        "sales": 10.20,
+        "stock": 3.00,
+        "batteryCost": 139,
+        "range": 290
+      },
+      {
+        "year": 2023,
+        "sales": 13.80,
+        "stock": 4.00,
+        "batteryCost": 115,
+        "range": 300
+      },
+      {
+        "year": 2024,
+        "sales": 17.30,
+        "stock": 5.50,
+        "batteryCost": 100,
+        "range": 320
+      }
     ],
     "predictions": [
-      { "year": 2025, "evPct": 2.5, "hybridPct": 5.0, "evStock": 7.2, "batteryCost": 90, "chargingStations": 82427, "gasStations": 144133 },
-      { "year": 2030, "evPct": 8.5, "hybridPct": 10.0, "evStock": 30, "batteryCost": 45, "chargingStations": 111240, "gasStations": 134800 },
-      { "year": 2035, "evPct": 40, "hybridPct": 15.0, "evStock": 100, "batteryCost": 41, "chargingStations": 120000, "gasStations": 120000 },
-      { "year": 2040, "evPct": 69, "hybridPct": 19.0, "evStock": 193, "batteryCost": 40, "chargingStations": 123000, "gasStations": 105000 },
-      { "year": 2045, "evPct": 89, "hybridPct": 28.0, "evStock": 248, "batteryCost": 40, "chargingStations": 123700, "gasStations": 98000 },
-      { "year": 2050, "evPct": 95, "hybridPct": 30.0, "evStock": 266, "batteryCost": 40, "chargingStations": 123975, "gasStations": 97467 }
+      {
+        "year": 2025,
+        "evPct": 2.5,
+        "hybridPct": 5.0,
+        "evStock": 7.2,
+        "batteryCost": 90,
+        "chargingStations": 82427,
+        "gasStations": 144133
+      },
+      {
+        "year": 2030,
+        "evPct": 8.5,
+        "hybridPct": 10.0,
+        "evStock": 30,
+        "batteryCost": 45,
+        "chargingStations": 111240,
+        "gasStations": 134800
+      },
+      {
+        "year": 2035,
+        "evPct": 40,
+        "hybridPct": 15.0,
+        "evStock": 100,
+        "batteryCost": 41,
+        "chargingStations": 120000,
+        "gasStations": 120000
+      },
+      {
+        "year": 2040,
+        "evPct": 69,
+        "hybridPct": 19.0,
+        "evStock": 193,
+        "batteryCost": 40,
+        "chargingStations": 123000,
+        "gasStations": 105000
+      },
+      {
+        "year": 2045,
+        "evPct": 89,
+        "hybridPct": 28.0,
+        "evStock": 248,
+        "batteryCost": 40,
+        "chargingStations": 123700,
+        "gasStations": 98000
+      },
+      {
+        "year": 2050,
+        "evPct": 95,
+        "hybridPct": 30.0,
+        "evStock": 266,
+        "batteryCost": 40,
+        "chargingStations": 123975,
+        "gasStations": 97467
+      }
     ]
   },
   "keyStats": [
-    { "label": "EV Fleet by 2050", "value": "95%", "change": "+93% from today", "icon": "🚗" },
-    { "label": "Lifetime CO2 Reduction", "value": "57-73%", "change": "vs gas cars", "icon": "🌍" },
-    { "label": "Fire Risk Reduction", "value": "98%", "change": "EVs safer", "icon": "🔥" },
-    { "label": "Maintenance Savings", "value": "60%", "change": "lower costs", "icon": "🔧" },
-    { "label": "10-Year TCO Savings", "value": "$10K+", "change": "cheaper than gas", "icon": "💰" },
-    { "label": "Battery Life", "value": "280K mi", "change": "outlasts vehicle", "icon": "🔋" }
+    {
+      "label": "EV Fleet by 2050",
+      "value": "95%",
+      "change": "+93% from today",
+      "icon": "🚗"
+    },
+    {
+      "label": "Lifetime CO2 Reduction",
+      "value": "57-73%",
+      "change": "vs gas cars",
+      "icon": "🌍"
+    },
+    {
+      "label": "Fire Risk Reduction",
+      "value": "98%",
+      "change": "EVs safer",
+      "icon": "🔥"
+    },
+    {
+      "label": "Maintenance Savings",
+      "value": "60%",
+      "change": "lower costs",
+      "icon": "🔧"
+    },
+    {
+      "label": "10-Year TCO Savings",
+      "value": "$10K+",
+      "change": "cheaper than gas",
+      "icon": "💰"
+    },
+    {
+      "label": "Battery Life",
+      "value": "280K mi",
+      "change": "outlasts vehicle",
+      "icon": "🔋"
+    }
   ],
   "safety": {
     "fireRates": [
-      { "type": "Gas Cars", "rate": 1530, "color": "#ef4444" },
-      { "type": "Hybrids", "rate": 500, "color": "#f97316" },
-      { "type": "EVs", "rate": 25, "color": "#22c55e" }
+      {
+        "type": "Gas Cars",
+        "rate": 1530,
+        "color": "#ef4444"
+      },
+      {
+        "type": "Hybrids",
+        "rate": 500,
+        "color": "#f97316"
+      },
+      {
+        "type": "EVs",
+        "rate": 25,
+        "color": "#22c55e"
+      }
     ]
   },
   "costs": {
     "perMile": [
-      { "type": "Gas Car", "cost": 0.107, "color": "#ef4444" },
-      { "type": "EV (Home)", "cost": 0.038, "color": "#22c55e" },
-      { "type": "EV (Fast)", "cost": 0.105, "color": "#3b82f6" }
+      {
+        "type": "Gas Car",
+        "cost": 0.107,
+        "color": "#ef4444"
+      },
+      {
+        "type": "EV (Home)",
+        "cost": 0.038,
+        "color": "#22c55e"
+      },
+      {
+        "type": "EV (Fast)",
+        "cost": 0.105,
+        "color": "#3b82f6"
+      }
     ]
   },
   "supplyChain": [
-    { "material": "Lithium", "kgPerEV": 10, "risk": 8, "topProducer": "Australia", "recycling": 5 },
-    { "material": "Cobalt", "kgPerEV": 8, "risk": 9, "topProducer": "DRC Congo", "recycling": 80 },
-    { "material": "Nickel", "kgPerEV": 25, "risk": 6, "topProducer": "Indonesia", "recycling": 70 },
-    { "material": "Copper", "kgPerEV": 85, "risk": 3, "topProducer": "Chile", "recycling": 90 },
-    { "material": "Rare Earths", "kgPerEV": 1, "risk": 9, "topProducer": "China", "recycling": 1 }
+    {
+      "material": "Lithium",
+      "kgPerEV": 10,
+      "risk": 8,
+      "topProducer": "Australia",
+      "recycling": 5
+    },
+    {
+      "material": "Cobalt",
+      "kgPerEV": 8,
+      "risk": 9,
+      "topProducer": "DRC Congo",
+      "recycling": 80
+    },
+    {
+      "material": "Nickel",
+      "kgPerEV": 25,
+      "risk": 6,
+      "topProducer": "Indonesia",
+      "recycling": 70
+    },
+    {
+      "material": "Copper",
+      "kgPerEV": 85,
+      "risk": 3,
+      "topProducer": "Chile",
+      "recycling": 90
+    },
+    {
+      "material": "Rare Earths",
+      "kgPerEV": 1,
+      "risk": 9,
+      "topProducer": "China",
+      "recycling": 1
+    }
   ],
   "transport": {
     "efficiency": [
-      { "mode": "Ship", "co2PerTonMile": 0.015 },
-      { "mode": "Rail", "co2PerTonMile": 0.025 },
-      { "mode": "Truck", "co2PerTonMile": 0.150 },
-      { "mode": "Air", "co2PerTonMile": 1.230 }
+      {
+        "mode": "Ship",
+        "co2PerTonMile": 0.015
+      },
+      {
+        "mode": "Rail",
+        "co2PerTonMile": 0.025
+      },
+      {
+        "mode": "Truck",
+        "co2PerTonMile": 0.150
+      },
+      {
+        "mode": "Air",
+        "co2PerTonMile": 1.230
+      }
     ]
+  },
+  "marketShare2024": {
+    "manufacturers": [
+      {
+        "name": "BYD",
+        "sales": 3.84,
+        "share": 22.2,
+        "change": 33.6
+      },
+      {
+        "name": "Tesla",
+        "sales": 1.79,
+        "share": 10.3,
+        "change": -1.1
+      },
+      {
+        "name": "VW Group",
+        "sales": 0.74,
+        "share": 4.3,
+        "change": -3.4
+      },
+      {
+        "name": "SGMW",
+        "sales": 0.60,
+        "share": 3.5,
+        "change": 5.2
+      },
+      {
+        "name": "Geely",
+        "sales": 0.50,
+        "share": 2.9,
+        "change": 12.0
+      }
+    ],
+    "keyInsight": "BYD passed Tesla as #1 EV seller in 2024 with $107B revenue vs Tesla's $97B"
+  },
+  "solidStateBattery": {
+    "timeline": [
+      {
+        "year": 2025,
+        "milestone": "Nissan pilot factory, Hyundai trials",
+        "status": "pilot"
+      },
+      {
+        "year": 2026,
+        "milestone": "Samsung supplies BMW, Chery EVs, mass production begins",
+        "status": "early"
+      },
+      {
+        "year": 2027,
+        "milestone": "BYD starts production, Toyota EV launch, CATL production",
+        "status": "early"
+      },
+      {
+        "year": 2028,
+        "milestone": "VW integration, 1000-mile range EVs possible",
+        "status": "growth"
+      },
+      {
+        "year": 2030,
+        "milestone": "Price parity with ICE, $150-200/kWh, widespread adoption",
+        "status": "mature"
+      }
+    ],
+    "benefits": {
+      "energyDensity": "2x current (900 Wh/L)",
+      "chargingTime": "10 min to 80%",
+      "lifespan": "20+ years",
+      "safetyImprovement": "No fire risk, no thermal runaway"
+    }
+  },
+  "winterRange": {
+    "averageLoss": {
+      "at32F": 20,
+      "at20F": 30,
+      "at0F": 41,
+      "extreme": 59
+    },
+    "modelPerformance": [
+      {
+        "model": "Tesla Model X",
+        "retention": 89,
+        "tier": "best"
+      },
+      {
+        "model": "Tesla Model S",
+        "retention": 88,
+        "tier": "best"
+      },
+      {
+        "model": "Audi e-tron",
+        "retention": 87,
+        "tier": "best"
+      },
+      {
+        "model": "Tesla Model 3",
+        "retention": 82,
+        "tier": "good"
+      },
+      {
+        "model": "Tesla Model Y",
+        "retention": 80,
+        "tier": "good"
+      },
+      {
+        "model": "VW ID.4",
+        "retention": 63,
+        "tier": "poor"
+      },
+      {
+        "model": "Nissan Leaf",
+        "retention": 62,
+        "tier": "poor"
+      }
+    ],
+    "mitigation": {
+      "heatPump": "10% range extension",
+      "preconditioning": "15% improvement",
+      "seatHeaters": "5x more efficient than cabin heat"
+    }
+  },
+  "usedEVMarket": {
+    "priceDrops2024": {
+      "average": 29.5,
+      "teslaModel3": 24.8,
+      "kiaNiroEV": 21.0,
+      "nissanLeaf": 20.2,
+      "hyundaiKona": 18.5,
+      "chevyBolt": 18.3
+    },
+    "marketGrowth": {
+      "salesGrowth": 62.6,
+      "averagePrice": 36976,
+      "vsGasCars": -8,
+      "daysToSell": 38.6
+    },
+    "taxCredit": {
+      "amount": 4000,
+      "priceLimit": 25000,
+      "availability": "Point of sale"
+    }
+  },
+  "v2g": {
+    "marketSize2024": 11.42,
+    "marketSize2034": 129.83,
+    "cagr": 27.51,
+    "regionShare": {
+      "europe": 40.6,
+      "asiaPacific": 35.2,
+      "northAmerica": 24.2
+    },
+    "leaders": [
+      {
+        "country": "Germany",
+        "status": "Active pilots"
+      },
+      {
+        "country": "UK",
+        "status": "2025 rollout"
+      },
+      {
+        "country": "Netherlands",
+        "status": "Multiple city pilots"
+      },
+      {
+        "country": "France",
+        "status": "Renault 5 program launched"
+      },
+      {
+        "country": "Japan",
+        "status": "Nissan Energy Share"
+      },
+      {
+        "country": "China",
+        "status": "9-city pilot 2024"
+      },
+      {
+        "country": "USA",
+        "status": "74 school buses Oakland"
+      }
+    ]
+  },
+  "insurance": {
+    "premiumDifference": {
+      "us": 49,
+      "australia": 43,
+      "uk": -5
+    },
+    "reasons": [
+      "Higher repair costs ($4,474 avg vs $3,945 gas)",
+      "Specialized technician shortage",
+      "Battery damage diagnosis difficulty",
+      "Longer repair times (15.6 vs 12.7 days)"
+    ],
+    "trend": "Narrowing as EV adoption increases"
   }
 }

@@ -6,6 +6,8 @@ import Costs from './pages/Costs'
 import SupplyChain from './pages/SupplyChain'
 import Environment from './pages/Environment'
 import Sources from './pages/Sources'
+import MarketInsights from './pages/MarketInsights'
+import UsedEVs from './pages/UsedEVs'
 import './index.css'
 
 function App() {
@@ -21,6 +23,12 @@ function App() {
           <nav className="sidebar-nav">
             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📊</span> Dashboard
+            </NavLink>
+            <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🏆</span> 2024 Market
+            </NavLink>
+            <NavLink to="/used-evs" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+              <span>🚗</span> Used EVs
             </NavLink>
             <NavLink to="/predictions" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
               <span>📈</span> ML Predictions
@@ -52,6 +60,8 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/market" element={<MarketInsights />} />
+            <Route path="/used-evs" element={<UsedEVs />} />
             <Route path="/predictions" element={<Predictions />} />
             <Route path="/safety" element={<Safety />} />
             <Route path="/costs" element={<Costs />} />
