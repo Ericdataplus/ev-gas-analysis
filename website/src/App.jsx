@@ -20,6 +20,7 @@ import PartComplexity from './pages/PartComplexity'
 import AdvancedAnalytics from './pages/AdvancedAnalytics'
 import BreakthroughInsights from './pages/BreakthroughInsights'
 import GranularInsights from './pages/GranularInsights'
+import ProfessionalAnalysis from './pages/ProfessionalAnalysis'
 import './index.css'
 
 function AppContent() {
@@ -89,6 +90,9 @@ function AppContent() {
           <NavLink to="/granular" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🔬</span> 56 Questions
           </NavLink>
+          <NavLink to="/professional" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🏆</span> Pro Analysis
+          </NavLink>
 
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
           <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
@@ -150,6 +154,7 @@ function AppContent() {
           <Route path="/ai-timeline" element={<AITimeline />} />
           <Route path="/breakthrough" element={<BreakthroughInsights />} />
           <Route path="/granular" element={<GranularInsights />} />
+          <Route path="/professional" element={<ProfessionalAnalysis />} />
           <Route path="/market" element={<MarketInsights />} />
           <Route path="/used-evs" element={<UsedEVs />} />
           <Route path="/semis" element={<Semis />} />
