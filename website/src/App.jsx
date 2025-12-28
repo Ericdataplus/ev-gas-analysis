@@ -24,6 +24,7 @@ import ProfessionalAnalysis from './pages/ProfessionalAnalysis'
 import EnterpriseAnalysis from './pages/EnterpriseAnalysis'
 import CuttingEdgeML from './pages/CuttingEdgeML'
 import DecadeAnalysis from './pages/DecadeAnalysis'
+import GlobalInfrastructure from './pages/GlobalInfrastructure'
 import './index.css'
 
 function AppContent() {
@@ -62,8 +63,8 @@ function AppContent() {
 
       <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         <div className="sidebar-logo">
-          <span>⚡</span>
-          <span>Energy Analysis</span>
+          <span>🌍</span>
+          <span>Energy & Infrastructure</span>
         </div>
 
 
@@ -71,6 +72,9 @@ function AppContent() {
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '0.5rem' }}>OVERVIEW</div>
           <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>📊</span> Dashboard
+          </NavLink>
+          <NavLink to="/global" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🌍</span> Global Intel
           </NavLink>
           <NavLink to="/deep-analysis" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🔬</span> Deep Analysis
@@ -170,6 +174,7 @@ function AppContent() {
           <Route path="/enterprise" element={<EnterpriseAnalysis />} />
           <Route path="/cutting-edge" element={<CuttingEdgeML />} />
           <Route path="/decade" element={<DecadeAnalysis />} />
+          <Route path="/global" element={<GlobalInfrastructure />} />
           <Route path="/market" element={<MarketInsights />} />
           <Route path="/used-evs" element={<UsedEVs />} />
           <Route path="/semis" element={<Semis />} />
