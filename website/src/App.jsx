@@ -22,6 +22,7 @@ import BreakthroughInsights from './pages/BreakthroughInsights'
 import GranularInsights from './pages/GranularInsights'
 import ProfessionalAnalysis from './pages/ProfessionalAnalysis'
 import EnterpriseAnalysis from './pages/EnterpriseAnalysis'
+import CuttingEdgeML from './pages/CuttingEdgeML'
 import './index.css'
 
 function AppContent() {
@@ -97,6 +98,9 @@ function AppContent() {
           <NavLink to="/enterprise" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
             <span>🏢</span> 1-Month Suite
           </NavLink>
+          <NavLink to="/cutting-edge" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
+            <span>🧠</span> Cutting Edge
+          </NavLink>
 
           <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', padding: '0.5rem 1rem', marginTop: '1rem' }}>VEHICLES</div>
           <NavLink to="/market" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>
@@ -160,6 +164,7 @@ function AppContent() {
           <Route path="/granular" element={<GranularInsights />} />
           <Route path="/professional" element={<ProfessionalAnalysis />} />
           <Route path="/enterprise" element={<EnterpriseAnalysis />} />
+          <Route path="/cutting-edge" element={<CuttingEdgeML />} />
           <Route path="/market" element={<MarketInsights />} />
           <Route path="/used-evs" element={<UsedEVs />} />
           <Route path="/semis" element={<Semis />} />
