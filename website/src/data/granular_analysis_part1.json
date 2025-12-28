@@ -1,0 +1,1484 @@
+{
+  "generated_at": "2025-12-27T16:00:14.143339",
+  "total_questions": 36,
+  "categories": {
+    "energy_grid": {
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which hour does EV charging peak?",
+          "answer": "21:00 (7-9 PM)",
+          "data": [
+            {
+              "hour": 0,
+              "load_pct": 4.0
+            },
+            {
+              "hour": 1,
+              "load_pct": 5.3
+            },
+            {
+              "hour": 2,
+              "load_pct": 5.7
+            },
+            {
+              "hour": 3,
+              "load_pct": 5.5
+            },
+            {
+              "hour": 4,
+              "load_pct": 5.3
+            },
+            {
+              "hour": 5,
+              "load_pct": 4.4
+            },
+            {
+              "hour": 6,
+              "load_pct": 13.6
+            },
+            {
+              "hour": 7,
+              "load_pct": 13.1
+            },
+            {
+              "hour": 8,
+              "load_pct": 16.8
+            },
+            {
+              "hour": 9,
+              "load_pct": 9.5
+            },
+            {
+              "hour": 10,
+              "load_pct": 7.1
+            },
+            {
+              "hour": 11,
+              "load_pct": 8.9
+            },
+            {
+              "hour": 12,
+              "load_pct": 6.3
+            },
+            {
+              "hour": 13,
+              "load_pct": 6.8
+            },
+            {
+              "hour": 14,
+              "load_pct": 8.3
+            },
+            {
+              "hour": 15,
+              "load_pct": 8.0
+            },
+            {
+              "hour": 16,
+              "load_pct": 6.5
+            },
+            {
+              "hour": 17,
+              "load_pct": 35.8
+            },
+            {
+              "hour": 18,
+              "load_pct": 41.8
+            },
+            {
+              "hour": 19,
+              "load_pct": 51.6
+            },
+            {
+              "hour": 20,
+              "load_pct": 61.4
+            },
+            {
+              "hour": 21,
+              "load_pct": 66.8
+            },
+            {
+              "hour": 22,
+              "load_pct": 5.5
+            },
+            {
+              "hour": 23,
+              "load_pct": 4.7
+            }
+          ],
+          "insight": "Evening peak (6-9 PM) coincides with residential AC peak - worst case for grid"
+        },
+        {
+          "id": 2,
+          "question": "Solar capacity needed to offset EV charging?",
+          "answer": "36% of a typical rooftop system",
+          "detail": "10 kWh EV / 28 kWh solar = 0.36",
+          "insight": "A 6kW rooftop solar system easily covers typical EV usage with surplus"
+        },
+        {
+          "id": 3,
+          "question": "When do diesel vehicles become stranded assets?",
+          "answer": "2032",
+          "data": [
+            {
+              "year": 2024,
+              "resale_value_pct": 100.0,
+              "status": "Normal"
+            },
+            {
+              "year": 2025,
+              "resale_value_pct": 91.0,
+              "status": "Normal"
+            },
+            {
+              "year": 2026,
+              "resale_value_pct": 81.2,
+              "status": "Normal"
+            },
+            {
+              "year": 2027,
+              "resale_value_pct": 70.8,
+              "status": "Normal"
+            },
+            {
+              "year": 2028,
+              "resale_value_pct": 60.0,
+              "status": "Normal"
+            },
+            {
+              "year": 2029,
+              "resale_value_pct": 48.8,
+              "status": "Declining"
+            },
+            {
+              "year": 2030,
+              "resale_value_pct": 29.8,
+              "status": "Declining"
+            },
+            {
+              "year": 2031,
+              "resale_value_pct": 20.4,
+              "status": "Declining"
+            },
+            {
+              "year": 2032,
+              "resale_value_pct": 10.7,
+              "status": "Stranded"
+            },
+            {
+              "year": 2033,
+              "resale_value_pct": 0.8,
+              "status": "Stranded"
+            },
+            {
+              "year": 2034,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2035,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2036,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2037,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2038,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2039,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            },
+            {
+              "year": 2040,
+              "resale_value_pct": 0.0,
+              "status": "Stranded"
+            }
+          ],
+          "insight": "Urban diesel bans in EU (2030) accelerate stranding"
+        },
+        {
+          "id": 4,
+          "question": "Grid storage for 100% EV adoption?",
+          "answer": "9 GWh",
+          "detail": "Current US grid storage: ~25 GWh, Need: 9 GWh",
+          "multiplier": 0,
+          "insight": "Need 0x current storage capacity"
+        },
+        {
+          "id": 5,
+          "question": "Annual savings from smart charging?",
+          "answer": "$972",
+          "peak_cost_monthly": 105,
+          "offpeak_cost_monthly": 24,
+          "insight": "Smart charging can save 75% on electricity costs"
+        },
+        {
+          "id": 6,
+          "question": "EV adoption % that triggers transformer upgrades?",
+          "answer": "65%",
+          "homes_per_transformer": 10,
+          "evs_before_upgrade": 6,
+          "insight": "Most neighborhoods hit this at 40-60% EV adoption"
+        },
+        {
+          "id": 7,
+          "question": "Annual V2G revenue potential?",
+          "answer": "$450-850/year",
+          "data": [
+            {
+              "utility": "PGE (California)",
+              "annual_revenue": 850,
+              "cycles_year": 50
+            },
+            {
+              "utility": "Eversource (NE)",
+              "annual_revenue": 650,
+              "cycles_year": 40
+            },
+            {
+              "utility": "Duke Energy",
+              "annual_revenue": 450,
+              "cycles_year": 30
+            },
+            {
+              "utility": "National Average",
+              "annual_revenue": 550,
+              "cycles_year": 35
+            }
+          ],
+          "insight": "V2G revenue varies 2x by utility territory"
+        },
+        {
+          "id": 8,
+          "question": "Charging cost per mile by speed?",
+          "answer": "$0.035-0.18/mile",
+          "data": [
+            {
+              "type": "Level 1 (1.4kW)",
+              "install_cost": 0,
+              "cost_per_mile": 0.04,
+              "minutes_per_100mi": 2500
+            },
+            {
+              "type": "Level 2 (7.7kW)",
+              "install_cost": 1500,
+              "cost_per_mile": 0.035,
+              "minutes_per_100mi": 300
+            },
+            {
+              "type": "Level 2 (19kW)",
+              "install_cost": 3500,
+              "cost_per_mile": 0.035,
+              "minutes_per_100mi": 120
+            },
+            {
+              "type": "DC Fast (50kW)",
+              "install_cost": 50000,
+              "cost_per_mile": 0.12,
+              "minutes_per_100mi": 45
+            },
+            {
+              "type": "DC Fast (150kW)",
+              "install_cost": 150000,
+              "cost_per_mile": 0.15,
+              "minutes_per_100mi": 15
+            },
+            {
+              "type": "DC Fast (350kW)",
+              "install_cost": 350000,
+              "cost_per_mile": 0.18,
+              "minutes_per_100mi": 7
+            }
+          ],
+          "insight": "Fast charging costs 4-5x more per mile than home charging"
+        },
+        {
+          "id": 9,
+          "question": "Can EVs absorb California curtailed renewables?",
+          "answer": "0% absorption possible",
+          "curtailment_gwh": 2500,
+          "ev_capacity_gwh": 0,
+          "insight": "Smart charging could eliminate most renewable waste"
+        },
+        {
+          "id": 10,
+          "question": "Cleanest hour for EV charging?",
+          "answer": "14:00 (183 gCO2/kWh)",
+          "data": [
+            {
+              "hour": 0,
+              "g_co2_per_kwh": 359
+            },
+            {
+              "hour": 1,
+              "g_co2_per_kwh": 366
+            },
+            {
+              "hour": 2,
+              "g_co2_per_kwh": 340
+            },
+            {
+              "hour": 3,
+              "g_co2_per_kwh": 338
+            },
+            {
+              "hour": 4,
+              "g_co2_per_kwh": 358
+            },
+            {
+              "hour": 5,
+              "g_co2_per_kwh": 364
+            },
+            {
+              "hour": 6,
+              "g_co2_per_kwh": 427
+            },
+            {
+              "hour": 7,
+              "g_co2_per_kwh": 432
+            },
+            {
+              "hour": 8,
+              "g_co2_per_kwh": 451
+            },
+            {
+              "hour": 9,
+              "g_co2_per_kwh": 459
+            },
+            {
+              "hour": 10,
+              "g_co2_per_kwh": 204
+            },
+            {
+              "hour": 11,
+              "g_co2_per_kwh": 219
+            },
+            {
+              "hour": 12,
+              "g_co2_per_kwh": 220
+            },
+            {
+              "hour": 13,
+              "g_co2_per_kwh": 212
+            },
+            {
+              "hour": 14,
+              "g_co2_per_kwh": 183
+            },
+            {
+              "hour": 15,
+              "g_co2_per_kwh": 213
+            },
+            {
+              "hour": 16,
+              "g_co2_per_kwh": 345
+            },
+            {
+              "hour": 17,
+              "g_co2_per_kwh": 479
+            },
+            {
+              "hour": 18,
+              "g_co2_per_kwh": 477
+            },
+            {
+              "hour": 19,
+              "g_co2_per_kwh": 471
+            },
+            {
+              "hour": 20,
+              "g_co2_per_kwh": 447
+            },
+            {
+              "hour": 21,
+              "g_co2_per_kwh": 460
+            },
+            {
+              "hour": 22,
+              "g_co2_per_kwh": 327
+            },
+            {
+              "hour": 23,
+              "g_co2_per_kwh": 326
+            }
+          ],
+          "insight": "Midday charging (10am-3pm) is 50% cleaner than evening"
+        }
+      ]
+    },
+    "economics": {
+      "questions": [
+        {
+          "id": 11,
+          "question": "Gas price for EV to be rational by income?",
+          "answer": "$2.50-$5.50/gallon depending on income",
+          "data": [
+            {
+              "income": 30000,
+              "max_car_budget": 15000,
+              "gas_breakeven": 5.5
+            },
+            {
+              "income": 50000,
+              "max_car_budget": 25000,
+              "gas_breakeven": 4.2
+            },
+            {
+              "income": 75000,
+              "max_car_budget": 35000,
+              "gas_breakeven": 3.5
+            },
+            {
+              "income": 100000,
+              "max_car_budget": 45000,
+              "gas_breakeven": 3.0
+            },
+            {
+              "income": 150000,
+              "max_car_budget": 60000,
+              "gas_breakeven": 2.5
+            }
+          ],
+          "insight": "Low income needs gas at $5.50+ for EV to make sense"
+        },
+        {
+          "id": 12,
+          "question": "When must Uber/Lyft drivers switch to EV?",
+          "answer": "2024",
+          "data": [
+            {
+              "year": 2024,
+              "gas_price": 3.5,
+              "annual_savings_ev": 3067,
+              "mandatory": true
+            },
+            {
+              "year": 2025,
+              "gas_price": 3.65,
+              "annual_savings_ev": 3267,
+              "mandatory": true
+            },
+            {
+              "year": 2026,
+              "gas_price": 3.8,
+              "annual_savings_ev": 3467,
+              "mandatory": true
+            },
+            {
+              "year": 2027,
+              "gas_price": 3.95,
+              "annual_savings_ev": 3667,
+              "mandatory": true
+            },
+            {
+              "year": 2028,
+              "gas_price": 4.1,
+              "annual_savings_ev": 3867,
+              "mandatory": true
+            },
+            {
+              "year": 2029,
+              "gas_price": 4.25,
+              "annual_savings_ev": 4067,
+              "mandatory": true
+            },
+            {
+              "year": 2030,
+              "gas_price": 4.4,
+              "annual_savings_ev": 4267,
+              "mandatory": true
+            },
+            {
+              "year": 2031,
+              "gas_price": 4.55,
+              "annual_savings_ev": 4467,
+              "mandatory": true
+            }
+          ],
+          "insight": "By 2024, EV saves $3,000+/year for rideshare"
+        },
+        {
+          "id": 13,
+          "question": "Worst areas for EV economics?",
+          "answer": "Rural Alaska & Hawaii",
+          "data": [
+            {
+              "area": "Rural Alaska",
+              "electricity_rate": 0.35,
+              "gas_price": 4.5,
+              "ev_advantage": -15
+            },
+            {
+              "area": "Rural Hawaii",
+              "electricity_rate": 0.42,
+              "gas_price": 5.0,
+              "ev_advantage": -10
+            },
+            {
+              "area": "Rural Appalachia",
+              "electricity_rate": 0.14,
+              "gas_price": 3.2,
+              "ev_advantage": 5
+            },
+            {
+              "area": "California Coast",
+              "electricity_rate": 0.28,
+              "gas_price": 5.5,
+              "ev_advantage": 25
+            },
+            {
+              "area": "Texas Urban",
+              "electricity_rate": 0.12,
+              "gas_price": 2.8,
+              "ev_advantage": 30
+            }
+          ],
+          "insight": "High electricity + low gas = EV makes no sense"
+        },
+        {
+          "id": 14,
+          "question": "Minimum value of any used EV?",
+          "answer": "$3,000",
+          "detail": {
+            "scrap_metal_value": 1500,
+            "battery_recycling_value_per_kwh": 25,
+            "typical_battery_kwh": 60,
+            "total_floor": 3000,
+            "comparison_ice_floor": 800
+          },
+          "insight": "Battery recycling creates $1,500+ higher floor than ICE"
+        },
+        {
+          "id": 15,
+          "question": "When is EV insurance cheaper than ICE?",
+          "answer": "2031",
+          "data": [
+            {
+              "year": 2024,
+              "ev_premium": 2200,
+              "ice_premium": 1400,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2025,
+              "ev_premium": 2100,
+              "ice_premium": 1430,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2026,
+              "ev_premium": 2000,
+              "ice_premium": 1460,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2027,
+              "ev_premium": 1900,
+              "ice_premium": 1490,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2028,
+              "ev_premium": 1800,
+              "ice_premium": 1520,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2029,
+              "ev_premium": 1700,
+              "ice_premium": 1550,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2030,
+              "ev_premium": 1600,
+              "ice_premium": 1580,
+              "ev_cheaper": false
+            },
+            {
+              "year": 2031,
+              "ev_premium": 1500,
+              "ice_premium": 1610,
+              "ev_cheaper": true
+            },
+            {
+              "year": 2032,
+              "ev_premium": 1400,
+              "ice_premium": 1640,
+              "ev_cheaper": true
+            },
+            {
+              "year": 2033,
+              "ev_premium": 1300,
+              "ice_premium": 1670,
+              "ev_cheaper": true
+            },
+            {
+              "year": 2034,
+              "ev_premium": 1200,
+              "ice_premium": 1700,
+              "ev_cheaper": true
+            }
+          ],
+          "insight": "Repair standardization + fewer accidents = lower premiums"
+        },
+        {
+          "id": 16,
+          "question": "Maintenance cost per 100k miles?",
+          "answer": "EV: $4,500-6,000 | Gas: $12,000-18,000",
+          "data": [
+            {
+              "type": "EV (Tesla)",
+              "cost_100k": 4500,
+              "major_items": "Tires, brakes, cabin filter"
+            },
+            {
+              "type": "EV (Others)",
+              "cost_100k": 6000,
+              "major_items": "Tires, brakes, 12V battery"
+            },
+            {
+              "type": "Gas Sedan",
+              "cost_100k": 12000,
+              "major_items": "Oil, brakes, timing belt, transmission"
+            },
+            {
+              "type": "Gas SUV",
+              "cost_100k": 15000,
+              "major_items": "Oil, brakes, transmission, exhaust"
+            },
+            {
+              "type": "Diesel",
+              "cost_100k": 18000,
+              "major_items": "DEF, DPF, turbo, injectors"
+            },
+            {
+              "type": "Hybrid",
+              "cost_100k": 11000,
+              "major_items": "All ICE parts + battery"
+            }
+          ],
+          "insight": "EVs cost 60-70% less to maintain"
+        },
+        {
+          "id": 17,
+          "question": "Impact of loan rate on EV TCO?",
+          "answer": "$2,800 per 1% APR increase (on $45k loan)",
+          "data": [
+            {
+              "apr_pct": 4,
+              "monthly_payment": 829,
+              "total_interest": 4725
+            },
+            {
+              "apr_pct": 5,
+              "monthly_payment": 849,
+              "total_interest": 5952
+            },
+            {
+              "apr_pct": 6,
+              "monthly_payment": 870,
+              "total_interest": 7199
+            },
+            {
+              "apr_pct": 7,
+              "monthly_payment": 891,
+              "total_interest": 8463
+            },
+            {
+              "apr_pct": 8,
+              "monthly_payment": 912,
+              "total_interest": 9746
+            },
+            {
+              "apr_pct": 9,
+              "monthly_payment": 934,
+              "total_interest": 11048
+            },
+            {
+              "apr_pct": 10,
+              "monthly_payment": 956,
+              "total_interest": 12367
+            }
+          ],
+          "insight": "4% vs 10% APR = $8,400 difference in TCO"
+        },
+        {
+          "id": 18,
+          "question": "EV fuel cost sensitivity to electricity?",
+          "answer": "$288/year per $0.08/kWh increase",
+          "data": [
+            {
+              "rate_per_kwh": 0.08,
+              "annual_fuel_cost": 288,
+              "gas_equivalent": 0.72
+            },
+            {
+              "rate_per_kwh": 0.12,
+              "annual_fuel_cost": 432,
+              "gas_equivalent": 1.08
+            },
+            {
+              "rate_per_kwh": 0.16,
+              "annual_fuel_cost": 576,
+              "gas_equivalent": 1.44
+            },
+            {
+              "rate_per_kwh": 0.2,
+              "annual_fuel_cost": 720,
+              "gas_equivalent": 1.8
+            },
+            {
+              "rate_per_kwh": 0.25,
+              "annual_fuel_cost": 900,
+              "gas_equivalent": 2.25
+            },
+            {
+              "rate_per_kwh": 0.3,
+              "annual_fuel_cost": 1080,
+              "gas_equivalent": 2.7
+            },
+            {
+              "rate_per_kwh": 0.35,
+              "annual_fuel_cost": 1260,
+              "gas_equivalent": 3.15
+            },
+            {
+              "rate_per_kwh": 0.4,
+              "annual_fuel_cost": 1440,
+              "gas_equivalent": 3.6
+            }
+          ],
+          "insight": "Even at $0.40/kWh, EV equals $3.60/gal gas"
+        },
+        {
+          "id": 19,
+          "question": "Impact of $7,500 credit expiring?",
+          "answer": "35% sales decline projected",
+          "data": {
+            "with_credit": {
+              "effective_price": 37500,
+              "projected_sales_pct": 100
+            },
+            "without_credit": {
+              "effective_price": 45000,
+              "projected_sales_pct": 65
+            },
+            "sales_drop_pct": 35,
+            "price_increase_pct": 20,
+            "manufacturers_most_affected": [
+              "Rivian",
+              "Lucid",
+              "Fisker"
+            ],
+            "manufacturers_least_affected": [
+              "Tesla",
+              "BYD"
+            ]
+          },
+          "insight": "Premium brands hit hardest, Tesla/Chinese least affected"
+        },
+        {
+          "id": 20,
+          "question": "Fleet vs consumer EV payback?",
+          "answer": "Fleet: 2.5 years, Consumer: 5.5 years",
+          "data": {
+            "fleet": {
+              "annual_miles": 25000,
+              "fuel_savings": 2500,
+              "maintenance_savings": 1200,
+              "downtime_value": 500,
+              "total_annual_benefit": 4200,
+              "payback_years": 2.5
+            },
+            "consumer": {
+              "annual_miles": 12000,
+              "fuel_savings": 1200,
+              "maintenance_savings": 600,
+              "downtime_value": 0,
+              "total_annual_benefit": 1800,
+              "payback_years": 5.5
+            }
+          },
+          "insight": "Fleets see 2x faster payback due to high utilization"
+        }
+      ]
+    },
+    "manufacturing": {
+      "questions": [
+        {
+          "id": 21,
+          "question": "Net job change per million EVs?",
+          "answer": "-1,800 jobs (after new job creation)",
+          "data": {
+            "ice_jobs_per_million": 8500,
+            "ev_jobs_per_million": 5200,
+            "net_job_loss": 3300,
+            "new_jobs_created": {
+              "battery_manufacturing": 2000,
+              "charging_infrastructure": 800,
+              "software_development": 400,
+              "grid_upgrades": 300
+            },
+            "net_after_new_jobs": -1800
+          },
+          "insight": "EV transition is net job negative in manufacturing"
+        },
+        {
+          "id": 22,
+          "question": "Gigafactories for 50% EV market?",
+          "answer": "15 factories (currently have 6)",
+          "data": {
+            "us_vehicle_sales_annual_m": 15,
+            "target_ev_share": 0.5,
+            "evs_needed_m": 7.5,
+            "avg_battery_kwh": 70,
+            "total_gwh_needed": 525,
+            "factory_output_gwh": 35,
+            "factories_needed": 15,
+            "current_factories": 6,
+            "gap": 9
+          },
+          "insight": "Need 9 more gigafactories at $5B each = $45B investment"
+        },
+        {
+          "id": 23,
+          "question": "When recycled lithium > mined lithium?",
+          "answer": "2037",
+          "data": [
+            {
+              "year": 2024,
+              "recycled_pct": 5,
+              "mined_pct": 95,
+              "crossover": false
+            },
+            {
+              "year": 2025,
+              "recycled_pct": 8,
+              "mined_pct": 92,
+              "crossover": false
+            },
+            {
+              "year": 2026,
+              "recycled_pct": 12,
+              "mined_pct": 88,
+              "crossover": false
+            },
+            {
+              "year": 2027,
+              "recycled_pct": 16,
+              "mined_pct": 84,
+              "crossover": false
+            },
+            {
+              "year": 2028,
+              "recycled_pct": 19,
+              "mined_pct": 81,
+              "crossover": false
+            },
+            {
+              "year": 2029,
+              "recycled_pct": 22,
+              "mined_pct": 78,
+              "crossover": false
+            },
+            {
+              "year": 2030,
+              "recycled_pct": 26,
+              "mined_pct": 74,
+              "crossover": false
+            },
+            {
+              "year": 2031,
+              "recycled_pct": 30,
+              "mined_pct": 70,
+              "crossover": false
+            },
+            {
+              "year": 2032,
+              "recycled_pct": 33,
+              "mined_pct": 67,
+              "crossover": false
+            },
+            {
+              "year": 2033,
+              "recycled_pct": 36,
+              "mined_pct": 64,
+              "crossover": false
+            },
+            {
+              "year": 2034,
+              "recycled_pct": 40,
+              "mined_pct": 60,
+              "crossover": false
+            },
+            {
+              "year": 2035,
+              "recycled_pct": 44,
+              "mined_pct": 56,
+              "crossover": false
+            },
+            {
+              "year": 2036,
+              "recycled_pct": 47,
+              "mined_pct": 53,
+              "crossover": false
+            },
+            {
+              "year": 2037,
+              "recycled_pct": 50,
+              "mined_pct": 50,
+              "crossover": true
+            },
+            {
+              "year": 2038,
+              "recycled_pct": 54,
+              "mined_pct": 46,
+              "crossover": true
+            },
+            {
+              "year": 2039,
+              "recycled_pct": 58,
+              "mined_pct": 42,
+              "crossover": true
+            },
+            {
+              "year": 2040,
+              "recycled_pct": 60,
+              "mined_pct": 40,
+              "crossover": true
+            }
+          ],
+          "insight": "Urban mining becomes primary source by late 2030s"
+        },
+        {
+          "id": 24,
+          "question": "US vs China manufacturing cost gap?",
+          "answer": "$23/kWh premium for US",
+          "data": [
+            {
+              "location": "China",
+              "battery_cost_kwh": 95,
+              "labor_pct": 8,
+              "logistics_pct": 3
+            },
+            {
+              "location": "Mexico",
+              "battery_cost_kwh": 108,
+              "labor_pct": 12,
+              "logistics_pct": 2
+            },
+            {
+              "location": "US South",
+              "battery_cost_kwh": 118,
+              "labor_pct": 18,
+              "logistics_pct": 1
+            },
+            {
+              "location": "US Midwest",
+              "battery_cost_kwh": 125,
+              "labor_pct": 20,
+              "logistics_pct": 1
+            },
+            {
+              "location": "Germany",
+              "battery_cost_kwh": 135,
+              "labor_pct": 25,
+              "logistics_pct": 2
+            }
+          ],
+          "insight": "US manufacturing adds $1610 to 70kWh pack cost"
+        },
+        {
+          "id": 25,
+          "question": "Cost to convert ICE factory to EV?",
+          "answer": "$425M",
+          "data": {
+            "paint_shop": 0,
+            "body_shop": 50,
+            "general_assembly": 150,
+            "powertrain": 200,
+            "stamping": 25,
+            "total_million": 425,
+            "jobs_retained_pct": 70,
+            "timeline_months": 18
+          },
+          "insight": "70% of jobs retained, 18 months conversion"
+        },
+        {
+          "id": 26,
+          "question": "Margin impact of vertical integration?",
+          "answer": "~0.5% margin per 1% integration",
+          "data": {
+            "tesla": {
+              "vertical_integration_pct": 85,
+              "gross_margin": 25.0
+            },
+            "rivian": {
+              "vertical_integration_pct": 40,
+              "gross_margin": -15.0
+            },
+            "ford_ev": {
+              "vertical_integration_pct": 35,
+              "gross_margin": -10.0
+            },
+            "gm_ev": {
+              "vertical_integration_pct": 45,
+              "gross_margin": -5.0
+            },
+            "byd": {
+              "vertical_integration_pct": 90,
+              "gross_margin": 22.0
+            }
+          },
+          "insight": "Tesla/BYD profitable due to 85%+ integration"
+        },
+        {
+          "id": 27,
+          "question": "EV components with single-supplier risk?",
+          "answer": "NVIDIA chips (85% share)",
+          "data": [
+            {
+              "component": "NVIDIA Drive chips",
+              "share_pct": 85,
+              "risk": "Critical"
+            },
+            {
+              "component": "Panasonic 2170 cells",
+              "share_pct": 60,
+              "risk": "High"
+            },
+            {
+              "component": "CATL prismatic cells",
+              "share_pct": 35,
+              "risk": "Moderate"
+            },
+            {
+              "component": "Sumitomo wiring harness",
+              "share_pct": 40,
+              "risk": "High"
+            },
+            {
+              "component": "Gentex mirrors",
+              "share_pct": 65,
+              "risk": "High"
+            }
+          ],
+          "insight": "ADAS and battery cells have dangerous concentration"
+        },
+        {
+          "id": 28,
+          "question": "Time to reach 10k/week production?",
+          "answer": "12-48 months depending on manufacturer",
+          "data": [
+            {
+              "manufacturer": "Tesla",
+              "months_to_10k_week": 18,
+              "hell_weeks": 12
+            },
+            {
+              "manufacturer": "Rivian",
+              "months_to_10k_week": 36,
+              "hell_weeks": 24
+            },
+            {
+              "manufacturer": "Lucid",
+              "months_to_10k_week": 48,
+              "hell_weeks": 30
+            },
+            {
+              "manufacturer": "Ford",
+              "months_to_10k_week": 24,
+              "hell_weeks": 16
+            },
+            {
+              "manufacturer": "VW",
+              "months_to_10k_week": 20,
+              "hell_weeks": 14
+            },
+            {
+              "manufacturer": "BYD",
+              "months_to_10k_week": 12,
+              "hell_weeks": 8
+            }
+          ],
+          "insight": "BYD fastest (12mo), startups take 3-4 years"
+        }
+      ]
+    },
+    "battery_tech": {
+      "questions": [
+        {
+          "id": 29,
+          "question": "Optimal battery size for typical use?",
+          "answer": "120 kWh (420 miles)",
+          "data": [
+            {
+              "kwh": 40,
+              "range_miles": 140,
+              "cost_premium": -3000,
+              "utility_score": 184
+            },
+            {
+              "kwh": 50,
+              "range_miles": 175,
+              "cost_premium": -1500,
+              "utility_score": 192
+            },
+            {
+              "kwh": 60,
+              "range_miles": 210,
+              "cost_premium": 0,
+              "utility_score": 200
+            },
+            {
+              "kwh": 70,
+              "range_miles": 245,
+              "cost_premium": 1500,
+              "utility_score": 209
+            },
+            {
+              "kwh": 80,
+              "range_miles": 280,
+              "cost_premium": 3000,
+              "utility_score": 217
+            },
+            {
+              "kwh": 90,
+              "range_miles": 315,
+              "cost_premium": 4500,
+              "utility_score": 226
+            },
+            {
+              "kwh": 100,
+              "range_miles": 350,
+              "cost_premium": 6000,
+              "utility_score": 234
+            },
+            {
+              "kwh": 110,
+              "range_miles": 385,
+              "cost_premium": 7500,
+              "utility_score": 242
+            },
+            {
+              "kwh": 120,
+              "range_miles": 420,
+              "cost_premium": 9000,
+              "utility_score": 251
+            }
+          ],
+          "insight": "Diminishing returns above 70-80 kWh for most drivers"
+        },
+        {
+          "id": 30,
+          "question": "Best age for battery second-life use?",
+          "answer": "Year 8 (70-80% health)",
+          "data": [
+            {
+              "age_years": 0,
+              "health_pct": 100,
+              "ev_value_pct": 100,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 1,
+              "health_pct": 98,
+              "ev_value_pct": 92,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 2,
+              "health_pct": 95,
+              "ev_value_pct": 83,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 3,
+              "health_pct": 92,
+              "ev_value_pct": 75,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 4,
+              "health_pct": 90,
+              "ev_value_pct": 67,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 5,
+              "health_pct": 88,
+              "ev_value_pct": 58,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 6,
+              "health_pct": 85,
+              "ev_value_pct": 50,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 7,
+              "health_pct": 82,
+              "ev_value_pct": 42,
+              "grid_storage_value": 80
+            },
+            {
+              "age_years": 8,
+              "health_pct": 80,
+              "ev_value_pct": 33,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 9,
+              "health_pct": 78,
+              "ev_value_pct": 25,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 10,
+              "health_pct": 75,
+              "ev_value_pct": 17,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 11,
+              "health_pct": 72,
+              "ev_value_pct": 8,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 12,
+              "health_pct": 70,
+              "ev_value_pct": 0,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 13,
+              "health_pct": 68,
+              "ev_value_pct": 0,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 14,
+              "health_pct": 65,
+              "ev_value_pct": 0,
+              "grid_storage_value": 100
+            },
+            {
+              "age_years": 15,
+              "health_pct": 62,
+              "ev_value_pct": 0,
+              "grid_storage_value": 100
+            }
+          ],
+          "insight": "Grid storage value peaks when EV value bottoms"
+        },
+        {
+          "id": 31,
+          "question": "2030 battery chemistry leader?",
+          "answer": "LFP (45% share)",
+          "data": [
+            {
+              "chemistry": "LFP",
+              "cost_2024": 90,
+              "cost_2030": 55,
+              "density_2030": 200,
+              "share_2030": 45
+            },
+            {
+              "chemistry": "NMC 811",
+              "cost_2024": 115,
+              "cost_2030": 75,
+              "density_2030": 280,
+              "share_2030": 25
+            },
+            {
+              "chemistry": "Sodium-ion",
+              "cost_2024": 80,
+              "cost_2030": 45,
+              "density_2030": 160,
+              "share_2030": 15
+            },
+            {
+              "chemistry": "Solid-state",
+              "cost_2024": 400,
+              "cost_2030": 120,
+              "density_2030": 400,
+              "share_2030": 10
+            },
+            {
+              "chemistry": "LFP+Na hybrid",
+              "cost_2024": 85,
+              "cost_2030": 50,
+              "density_2030": 180,
+              "share_2030": 5
+            }
+          ],
+          "insight": "LFP dominates standard range, solid-state takes premium"
+        },
+        {
+          "id": 32,
+          "question": "DC fast charging impact on battery life?",
+          "answer": "100% DC = 53% shorter life vs home charging",
+          "data": [
+            {
+              "charging_mix": "100% home",
+              "annual_degradation_pct": 2.0,
+              "life_years": 15
+            },
+            {
+              "charging_mix": "80% home + 20% DC",
+              "annual_degradation_pct": 2.3,
+              "life_years": 13
+            },
+            {
+              "charging_mix": "60% home + 40% DC",
+              "annual_degradation_pct": 2.8,
+              "life_years": 11
+            },
+            {
+              "charging_mix": "50% DC",
+              "annual_degradation_pct": 3.2,
+              "life_years": 10
+            },
+            {
+              "charging_mix": "100% DC",
+              "annual_degradation_pct": 4.5,
+              "life_years": 7
+            }
+          ],
+          "insight": "Home charging is 2x better for battery longevity"
+        },
+        {
+          "id": 33,
+          "question": "EV range loss in extreme cold?",
+          "answer": "300 mile EV \u2192 123 miles at -20\u00b0F",
+          "data": [
+            {
+              "temp_f": 70,
+              "range_pct": 100,
+              "hvac_load_kw": 0
+            },
+            {
+              "temp_f": 50,
+              "range_pct": 95,
+              "hvac_load_kw": 1.0
+            },
+            {
+              "temp_f": 32,
+              "range_pct": 82,
+              "hvac_load_kw": 2.5
+            },
+            {
+              "temp_f": 20,
+              "range_pct": 70,
+              "hvac_load_kw": 4.0
+            },
+            {
+              "temp_f": 0,
+              "range_pct": 58,
+              "hvac_load_kw": 5.5
+            },
+            {
+              "temp_f": -10,
+              "range_pct": 50,
+              "hvac_load_kw": 6.5
+            },
+            {
+              "temp_f": -20,
+              "range_pct": 41,
+              "hvac_load_kw": 7.5
+            }
+          ],
+          "insight": "Heat pump + preconditioning recovers 15-20%"
+        },
+        {
+          "id": 34,
+          "question": "EV vs ICE fire risk?",
+          "answer": "EVs are 60x safer than hybrids, 60x safer than gas",
+          "data": {
+            "ev_fires_per_100k": 25,
+            "hybrid_fires_per_100k": 3475,
+            "ice_fires_per_100k": 1530,
+            "ev_fatalities_per_fire": 0.04,
+            "ice_fatalities_per_fire": 0.12
+          },
+          "insight": "EVs have lowest fire rate of any vehicle type"
+        },
+        {
+          "id": 35,
+          "question": "Battery warranty cost per mile?",
+          "answer": "$0.007-0.017/mile",
+          "data": [
+            {
+              "brand": "Tesla",
+              "warranty_miles": 120000,
+              "est_cost_to_mfr": 800,
+              "cost_per_mile": 0.007
+            },
+            {
+              "brand": "Hyundai",
+              "warranty_miles": 100000,
+              "est_cost_to_mfr": 1200,
+              "cost_per_mile": 0.012
+            },
+            {
+              "brand": "Ford",
+              "warranty_miles": 100000,
+              "est_cost_to_mfr": 1500,
+              "cost_per_mile": 0.015
+            },
+            {
+              "brand": "GM",
+              "warranty_miles": 100000,
+              "est_cost_to_mfr": 1400,
+              "cost_per_mile": 0.014
+            },
+            {
+              "brand": "Rivian",
+              "warranty_miles": 150000,
+              "est_cost_to_mfr": 2500,
+              "cost_per_mile": 0.017
+            }
+          ],
+          "insight": "Tesla has lowest warranty cost due to vertical integration"
+        },
+        {
+          "id": 36,
+          "question": "When is battery swapping economical?",
+          "answer": "Payback: 1.1 years",
+          "data": {
+            "swap_station_cost": 500000,
+            "swaps_per_day": 80,
+            "revenue_per_swap": 15,
+            "annual_revenue": 438000,
+            "payback_years": 1.1,
+            "use_cases": [
+              "Taxis",
+              "Fleet vehicles",
+              "Densely populated Asia"
+            ],
+            "not_viable_for": [
+              "Personal vehicles",
+              "Rural areas"
+            ]
+          },
+          "insight": "Only viable for high-utilization fleets in dense cities"
+        }
+      ]
+    }
+  }
+}

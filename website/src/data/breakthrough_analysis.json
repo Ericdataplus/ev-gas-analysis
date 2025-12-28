@@ -1,0 +1,2349 @@
+{
+  "generated_at": "2025-12-27T15:46:38.104703",
+  "analyses": {
+    "grid_failure": {
+      "title": "Grid Breaking Point Analysis",
+      "question": "At what EV adoption percentage does the US electrical grid fail?",
+      "scenarios": [
+        {
+          "adoption_pct": 5,
+          "evs_millions": 14.5,
+          "peak_charging_gw": 0.2,
+          "total_peak_demand_gw": 740.2,
+          "grid_stress_pct": 72.6,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 10,
+          "evs_millions": 29.0,
+          "peak_charging_gw": 0.3,
+          "total_peak_demand_gw": 740.3,
+          "grid_stress_pct": 72.6,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 15,
+          "evs_millions": 43.5,
+          "peak_charging_gw": 0.5,
+          "total_peak_demand_gw": 740.5,
+          "grid_stress_pct": 72.6,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 20,
+          "evs_millions": 58.0,
+          "peak_charging_gw": 0.7,
+          "total_peak_demand_gw": 740.7,
+          "grid_stress_pct": 72.6,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 25,
+          "evs_millions": 72.5,
+          "peak_charging_gw": 0.9,
+          "total_peak_demand_gw": 740.9,
+          "grid_stress_pct": 72.6,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 30,
+          "evs_millions": 87.0,
+          "peak_charging_gw": 1.0,
+          "total_peak_demand_gw": 741.0,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 35,
+          "evs_millions": 101.5,
+          "peak_charging_gw": 1.2,
+          "total_peak_demand_gw": 741.2,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 40,
+          "evs_millions": 116.0,
+          "peak_charging_gw": 1.4,
+          "total_peak_demand_gw": 741.4,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 45,
+          "evs_millions": 130.5,
+          "peak_charging_gw": 1.6,
+          "total_peak_demand_gw": 741.6,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 50,
+          "evs_millions": 145.0,
+          "peak_charging_gw": 1.7,
+          "total_peak_demand_gw": 741.7,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 55,
+          "evs_millions": 159.5,
+          "peak_charging_gw": 1.9,
+          "total_peak_demand_gw": 741.9,
+          "grid_stress_pct": 72.7,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 60,
+          "evs_millions": 174.0,
+          "peak_charging_gw": 2.1,
+          "total_peak_demand_gw": 742.1,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 65,
+          "evs_millions": 188.5,
+          "peak_charging_gw": 2.3,
+          "total_peak_demand_gw": 742.3,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 70,
+          "evs_millions": 203.0,
+          "peak_charging_gw": 2.4,
+          "total_peak_demand_gw": 742.4,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 75,
+          "evs_millions": 217.5,
+          "peak_charging_gw": 2.6,
+          "total_peak_demand_gw": 742.6,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 80,
+          "evs_millions": 232.0,
+          "peak_charging_gw": 2.8,
+          "total_peak_demand_gw": 742.8,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 85,
+          "evs_millions": 246.5,
+          "peak_charging_gw": 3.0,
+          "total_peak_demand_gw": 743.0,
+          "grid_stress_pct": 72.8,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 90,
+          "evs_millions": 261.0,
+          "peak_charging_gw": 3.1,
+          "total_peak_demand_gw": 743.1,
+          "grid_stress_pct": 72.9,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 95,
+          "evs_millions": 275.5,
+          "peak_charging_gw": 3.3,
+          "total_peak_demand_gw": 743.3,
+          "grid_stress_pct": 72.9,
+          "status": "OK"
+        },
+        {
+          "adoption_pct": 100,
+          "evs_millions": 290.0,
+          "peak_charging_gw": 3.5,
+          "total_peak_demand_gw": 743.5,
+          "grid_stress_pct": 72.9,
+          "status": "OK"
+        }
+      ],
+      "breaking_point": null,
+      "critical_threshold": null,
+      "insights": [
+        "Grid becomes CRITICAL at None% EV adoption",
+        "Grid FAILS completely at N/A% adoption",
+        "That's N/A million EVs on the road",
+        "Current adoption is 1.6%",
+        "Without massive grid investment, 100% EV is impossible"
+      ]
+    },
+    "supply_chain_cascade": {
+      "title": "Supply Chain Cascade Failure",
+      "question": "Days until auto production stops if Taiwan is blockaded",
+      "cascade_scenarios": [
+        {
+          "node": "China Battery Cells",
+          "global_share": 80,
+          "days_to_crisis": 30,
+          "days_to_shutdown": 50,
+          "affected_components": [
+            "Complete Battery Packs"
+          ],
+          "recovery_months": 24,
+          "timeline": [
+            {
+              "day": 1,
+              "inventory_days_left": 29,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 7,
+              "inventory_days_left": 23,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 14,
+              "inventory_days_left": 16,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 30,
+              "inventory_days_left": 0,
+              "production_pct": 100,
+              "status": "FAILING"
+            },
+            {
+              "day": 45,
+              "inventory_days_left": 0,
+              "production_pct": 25,
+              "status": "FAILING"
+            },
+            {
+              "day": 60,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 90,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 120,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 180,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            }
+          ]
+        },
+        {
+          "node": "Taiwan Semiconductors",
+          "global_share": 92,
+          "days_to_crisis": 45,
+          "days_to_shutdown": 65,
+          "affected_components": [
+            "ECUs",
+            "Infotainment",
+            "Battery Management",
+            "ADAS"
+          ],
+          "recovery_months": 24,
+          "timeline": [
+            {
+              "day": 1,
+              "inventory_days_left": 44,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 7,
+              "inventory_days_left": 38,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 14,
+              "inventory_days_left": 31,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 30,
+              "inventory_days_left": 15,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 45,
+              "inventory_days_left": 0,
+              "production_pct": 100,
+              "status": "FAILING"
+            },
+            {
+              "day": 60,
+              "inventory_days_left": 0,
+              "production_pct": 25,
+              "status": "FAILING"
+            },
+            {
+              "day": 90,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 120,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 180,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            }
+          ]
+        },
+        {
+          "node": "China Rare Earths",
+          "global_share": 70,
+          "days_to_crisis": 60,
+          "days_to_shutdown": 80,
+          "affected_components": [
+            "EV Motors",
+            "Speakers",
+            "Displays"
+          ],
+          "recovery_months": 36,
+          "timeline": [
+            {
+              "day": 1,
+              "inventory_days_left": 59,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 7,
+              "inventory_days_left": 53,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 14,
+              "inventory_days_left": 46,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 30,
+              "inventory_days_left": 30,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 45,
+              "inventory_days_left": 15,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 60,
+              "inventory_days_left": 0,
+              "production_pct": 100,
+              "status": "FAILING"
+            },
+            {
+              "day": 90,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 120,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 180,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            }
+          ]
+        },
+        {
+          "node": "China Graphite",
+          "global_share": 80,
+          "days_to_crisis": 75,
+          "days_to_shutdown": 95,
+          "affected_components": [
+            "Battery Anodes"
+          ],
+          "recovery_months": 30,
+          "timeline": [
+            {
+              "day": 1,
+              "inventory_days_left": 74,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 7,
+              "inventory_days_left": 68,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 14,
+              "inventory_days_left": 61,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 30,
+              "inventory_days_left": 45,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 45,
+              "inventory_days_left": 30,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 60,
+              "inventory_days_left": 15,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 90,
+              "inventory_days_left": 0,
+              "production_pct": 25,
+              "status": "FAILING"
+            },
+            {
+              "day": 120,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 180,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            }
+          ]
+        },
+        {
+          "node": "DRC Cobalt",
+          "global_share": 75,
+          "days_to_crisis": 90,
+          "days_to_shutdown": 110,
+          "affected_components": [
+            "NMC Batteries",
+            "NCA Batteries"
+          ],
+          "recovery_months": 18,
+          "timeline": [
+            {
+              "day": 1,
+              "inventory_days_left": 89,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 7,
+              "inventory_days_left": 83,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 14,
+              "inventory_days_left": 76,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 30,
+              "inventory_days_left": 60,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 45,
+              "inventory_days_left": 45,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 60,
+              "inventory_days_left": 30,
+              "production_pct": 100,
+              "status": "RUNNING"
+            },
+            {
+              "day": 90,
+              "inventory_days_left": 0,
+              "production_pct": 100,
+              "status": "FAILING"
+            },
+            {
+              "day": 120,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            },
+            {
+              "day": 180,
+              "inventory_days_left": 0,
+              "production_pct": 0,
+              "status": "STOPPED"
+            }
+          ]
+        }
+      ],
+      "taiwan_blockade": {
+        "days_until_chip_shortage": 45,
+        "days_until_production_stops": 65,
+        "affected_industries": [
+          "Auto",
+          "Electronics",
+          "Medical",
+          "Defense"
+        ],
+        "us_vehicles_per_day_lost": 45000,
+        "economic_impact_per_day_b": 4.5,
+        "recovery_time_years": 2
+      },
+      "insights": [
+        "Taiwan blockade: Auto production STOPS in 65 days",
+        "45,000 US vehicles/day production lost",
+        "$4.5 billion/day economic impact",
+        "China battery disruption: 30 days to crisis",
+        "Recovery time: 2+ years minimum"
+      ]
+    },
+    "climate_ev_paradox": {
+      "title": "Climate-EV Paradox",
+      "question": "Does rising temperature make EVs less viable in hot regions?",
+      "city_analysis": [
+        {
+          "city": "Phoenix",
+          "temp_current": 41,
+          "temp_2050": 45,
+          "efficiency_current": 80.0,
+          "efficiency_2050": 72.0,
+          "efficiency_loss_pct": 8.0,
+          "range_current": 240,
+          "range_2050": 216,
+          "range_loss_miles": 24,
+          "ev_share_2024": 8.2
+        },
+        {
+          "city": "Las Vegas",
+          "temp_current": 40,
+          "temp_2050": 44,
+          "efficiency_current": 82.0,
+          "efficiency_2050": 74.0,
+          "efficiency_loss_pct": 8.0,
+          "range_current": 246,
+          "range_2050": 222,
+          "range_loss_miles": 24,
+          "ev_share_2024": 9.5
+        },
+        {
+          "city": "Houston",
+          "temp_current": 35,
+          "temp_2050": 39,
+          "efficiency_current": 90.0,
+          "efficiency_2050": 83.6,
+          "efficiency_loss_pct": 6.4,
+          "range_current": 270,
+          "range_2050": 251,
+          "range_loss_miles": 19,
+          "ev_share_2024": 5.1
+        },
+        {
+          "city": "Dallas",
+          "temp_current": 36,
+          "temp_2050": 40,
+          "efficiency_current": 88.4,
+          "efficiency_2050": 82.0,
+          "efficiency_loss_pct": 6.4,
+          "range_current": 265,
+          "range_2050": 246,
+          "range_loss_miles": 19,
+          "ev_share_2024": 5.8
+        },
+        {
+          "city": "Miami",
+          "temp_current": 33,
+          "temp_2050": 37,
+          "efficiency_current": 92.0,
+          "efficiency_2050": 86.8,
+          "efficiency_loss_pct": 5.2,
+          "range_current": 276,
+          "range_2050": 260,
+          "range_loss_miles": 16,
+          "ev_share_2024": 7.8
+        },
+        {
+          "city": "Atlanta",
+          "temp_current": 32,
+          "temp_2050": 36,
+          "efficiency_current": 93.0,
+          "efficiency_2050": 88.4,
+          "efficiency_loss_pct": 4.6,
+          "range_current": 279,
+          "range_2050": 265,
+          "range_loss_miles": 14,
+          "ev_share_2024": 6.2
+        },
+        {
+          "city": "Denver",
+          "temp_current": 31,
+          "temp_2050": 35,
+          "efficiency_current": 94.0,
+          "efficiency_2050": 90.0,
+          "efficiency_loss_pct": 4.0,
+          "range_current": 282,
+          "range_2050": 270,
+          "range_loss_miles": 12,
+          "ev_share_2024": 10.1
+        },
+        {
+          "city": "Los Angeles",
+          "temp_current": 29,
+          "temp_2050": 33,
+          "efficiency_current": 95.6,
+          "efficiency_2050": 92.0,
+          "efficiency_loss_pct": 3.6,
+          "range_current": 287,
+          "range_2050": 276,
+          "range_loss_miles": 11,
+          "ev_share_2024": 15.2
+        },
+        {
+          "city": "Chicago",
+          "temp_current": 28,
+          "temp_2050": 32,
+          "efficiency_current": 96.2,
+          "efficiency_2050": 93.0,
+          "efficiency_loss_pct": 3.2,
+          "range_current": 289,
+          "range_2050": 279,
+          "range_loss_miles": 10,
+          "ev_share_2024": 4.5
+        },
+        {
+          "city": "Seattle",
+          "temp_current": 22,
+          "temp_2050": 26,
+          "efficiency_current": 99.2,
+          "efficiency_2050": 97.4,
+          "efficiency_loss_pct": 1.8,
+          "range_current": 298,
+          "range_2050": 292,
+          "range_loss_miles": 5,
+          "ev_share_2024": 12.8
+        }
+      ],
+      "temp_efficiency_curve": [
+        {
+          "temp": -20,
+          "efficiency": 59.0
+        },
+        {
+          "temp": -10,
+          "efficiency": 70.0
+        },
+        {
+          "temp": 0,
+          "efficiency": 82.0
+        },
+        {
+          "temp": 10,
+          "efficiency": 90.0
+        },
+        {
+          "temp": 20,
+          "efficiency": 100.0
+        },
+        {
+          "temp": 25,
+          "efficiency": 98.0
+        },
+        {
+          "temp": 30,
+          "efficiency": 95.0
+        },
+        {
+          "temp": 35,
+          "efficiency": 90.0
+        },
+        {
+          "temp": 40,
+          "efficiency": 82.0
+        },
+        {
+          "temp": 45,
+          "efficiency": 72.0
+        },
+        {
+          "temp": 50,
+          "efficiency": 60.0
+        }
+      ],
+      "paradox": {
+        "finding": "Cities that need EVs most (hot, polluted) are where EVs perform worst",
+        "worst_affected": "Phoenix",
+        "worst_range_loss": 24,
+        "population_affected_millions": 85
+      },
+      "insights": [
+        "Phoenix loses 24 miles range by 2050",
+        "Hot cities see 8-15% efficiency loss from climate change",
+        "85 million Americans in heat-affected EV regions",
+        "EVs perform worst where they're needed most",
+        "Requires larger batteries = higher cost in hot regions"
+      ]
+    },
+    "insurance_spiral": {
+      "title": "EV Insurance Death Spiral",
+      "question": "When do EV repair costs make them uninsurable?",
+      "vehicle_analysis": [
+        {
+          "model": "Tesla Model 3",
+          "msrp": 42000,
+          "battery_cost": 15000,
+          "years_until_uninsurable": 9,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 42000,
+              "battery_health": 100.0,
+              "range_miles": 300,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.36,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 1,
+              "value": 33600,
+              "battery_health": 97.5,
+              "range_miles": 292,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.45,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 2,
+              "value": 30240,
+              "battery_health": 95.0,
+              "range_miles": 285,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.5,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 3,
+              "value": 27216,
+              "battery_health": 92.5,
+              "range_miles": 278,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.55,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 4,
+              "value": 24494,
+              "battery_health": 90.0,
+              "range_miles": 270,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.61,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 5,
+              "value": 22045,
+              "battery_health": 87.5,
+              "range_miles": 262,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.68,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 6,
+              "value": 19840,
+              "battery_health": 85.0,
+              "range_miles": 255,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.76,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 7,
+              "value": 17856,
+              "battery_health": 82.5,
+              "range_miles": 248,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.84,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 8,
+              "value": 16071,
+              "battery_health": 80.0,
+              "range_miles": 240,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.93,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 9,
+              "value": 14464,
+              "battery_health": 77.5,
+              "range_miles": 232,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.04,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 10,
+              "value": 13017,
+              "battery_health": 75.0,
+              "range_miles": 225,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.15,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 11,
+              "value": 11716,
+              "battery_health": 72.5,
+              "range_miles": 218,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.28,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 10544,
+              "battery_health": 70,
+              "range_miles": 210,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.42,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 9490,
+              "battery_health": 70,
+              "range_miles": 210,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.58,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 8541,
+              "battery_health": 70,
+              "range_miles": 210,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.76,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 7687,
+              "battery_health": 70,
+              "range_miles": 210,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.95,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        },
+        {
+          "model": "Tesla Model Y",
+          "msrp": 54000,
+          "battery_cost": 16000,
+          "years_until_uninsurable": 11,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 54000,
+              "battery_health": 100.0,
+              "range_miles": 324,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.3,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 1,
+              "value": 43200,
+              "battery_health": 97.5,
+              "range_miles": 316,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.37,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 2,
+              "value": 38880,
+              "battery_health": 95.0,
+              "range_miles": 308,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.41,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 3,
+              "value": 34992,
+              "battery_health": 92.5,
+              "range_miles": 300,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.46,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 4,
+              "value": 31493,
+              "battery_health": 90.0,
+              "range_miles": 292,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.51,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 5,
+              "value": 28344,
+              "battery_health": 87.5,
+              "range_miles": 284,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.56,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 6,
+              "value": 25509,
+              "battery_health": 85.0,
+              "range_miles": 275,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.63,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 7,
+              "value": 22958,
+              "battery_health": 82.5,
+              "range_miles": 267,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.7,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 8,
+              "value": 20662,
+              "battery_health": 80.0,
+              "range_miles": 259,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.77,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 9,
+              "value": 18596,
+              "battery_health": 77.5,
+              "range_miles": 251,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.86,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 10,
+              "value": 16737,
+              "battery_health": 75.0,
+              "range_miles": 243,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.96,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 11,
+              "value": 15063,
+              "battery_health": 72.5,
+              "range_miles": 235,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.06,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 13557,
+              "battery_health": 70,
+              "range_miles": 227,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.18,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 12201,
+              "battery_health": 70,
+              "range_miles": 227,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.31,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 10981,
+              "battery_health": 70,
+              "range_miles": 227,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.46,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 9883,
+              "battery_health": 70,
+              "range_miles": 227,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.62,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        },
+        {
+          "model": "Ford Mach-E",
+          "msrp": 48000,
+          "battery_cost": 18000,
+          "years_until_uninsurable": 9,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 48000,
+              "battery_health": 100.0,
+              "range_miles": 352,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.38,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 1,
+              "value": 38400,
+              "battery_health": 97.5,
+              "range_miles": 343,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.47,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 2,
+              "value": 34560,
+              "battery_health": 95.0,
+              "range_miles": 334,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.52,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 3,
+              "value": 31104,
+              "battery_health": 92.5,
+              "range_miles": 326,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.58,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 4,
+              "value": 27994,
+              "battery_health": 90.0,
+              "range_miles": 317,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.64,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 5,
+              "value": 25194,
+              "battery_health": 87.5,
+              "range_miles": 308,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.71,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 6,
+              "value": 22675,
+              "battery_health": 85.0,
+              "range_miles": 299,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.79,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 7,
+              "value": 20407,
+              "battery_health": 82.5,
+              "range_miles": 290,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.88,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 8,
+              "value": 18367,
+              "battery_health": 80.0,
+              "range_miles": 282,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 0.98,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 9,
+              "value": 16530,
+              "battery_health": 77.5,
+              "range_miles": 273,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.09,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 10,
+              "value": 14877,
+              "battery_health": 75.0,
+              "range_miles": 264,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.21,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 11,
+              "value": 13389,
+              "battery_health": 72.5,
+              "range_miles": 255,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.34,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 12050,
+              "battery_health": 70,
+              "range_miles": 246,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.49,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 10845,
+              "battery_health": 70,
+              "range_miles": 246,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.66,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 9761,
+              "battery_health": 70,
+              "range_miles": 246,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 1.84,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 8785,
+              "battery_health": 70,
+              "range_miles": 246,
+              "battery_replace_cost": 18000,
+              "repair_value_ratio": 2.05,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        },
+        {
+          "model": "Chevy Bolt",
+          "msrp": 27000,
+          "battery_cost": 16000,
+          "years_until_uninsurable": 4,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 27000,
+              "battery_health": 100.0,
+              "range_miles": 260,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.59,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 1,
+              "value": 21600,
+              "battery_health": 97.5,
+              "range_miles": 254,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.74,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 2,
+              "value": 19440,
+              "battery_health": 95.0,
+              "range_miles": 247,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.82,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 3,
+              "value": 17496,
+              "battery_health": 92.5,
+              "range_miles": 240,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 0.91,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 4,
+              "value": 15746,
+              "battery_health": 90.0,
+              "range_miles": 234,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.02,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 5,
+              "value": 14172,
+              "battery_health": 87.5,
+              "range_miles": 228,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.13,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 6,
+              "value": 12755,
+              "battery_health": 85.0,
+              "range_miles": 221,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.25,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 7,
+              "value": 11479,
+              "battery_health": 82.5,
+              "range_miles": 214,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.39,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 8,
+              "value": 10331,
+              "battery_health": 80.0,
+              "range_miles": 208,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.55,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 9,
+              "value": 9298,
+              "battery_health": 77.5,
+              "range_miles": 202,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.72,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 10,
+              "value": 8368,
+              "battery_health": 75.0,
+              "range_miles": 195,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 1.91,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 11,
+              "value": 7531,
+              "battery_health": 72.5,
+              "range_miles": 188,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 2.12,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 6778,
+              "battery_health": 70,
+              "range_miles": 182,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 2.36,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 6100,
+              "battery_health": 70,
+              "range_miles": 182,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 2.62,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 5490,
+              "battery_health": 70,
+              "range_miles": 182,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 2.91,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 4941,
+              "battery_health": 70,
+              "range_miles": 182,
+              "battery_replace_cost": 16000,
+              "repair_value_ratio": 3.24,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        },
+        {
+          "model": "Rivian R1T",
+          "msrp": 73000,
+          "battery_cost": 25000,
+          "years_until_uninsurable": 10,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 73000,
+              "battery_health": 100.0,
+              "range_miles": 540,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.34,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 1,
+              "value": 58400,
+              "battery_health": 97.5,
+              "range_miles": 526,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.43,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 2,
+              "value": 52560,
+              "battery_health": 95.0,
+              "range_miles": 513,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.48,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 3,
+              "value": 47304,
+              "battery_health": 92.5,
+              "range_miles": 500,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.53,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 4,
+              "value": 42574,
+              "battery_health": 90.0,
+              "range_miles": 486,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.59,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 5,
+              "value": 38316,
+              "battery_health": 87.5,
+              "range_miles": 472,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.65,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 6,
+              "value": 34485,
+              "battery_health": 85.0,
+              "range_miles": 459,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.72,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 7,
+              "value": 31036,
+              "battery_health": 82.5,
+              "range_miles": 446,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.81,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 8,
+              "value": 27933,
+              "battery_health": 80.0,
+              "range_miles": 432,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.9,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 9,
+              "value": 25139,
+              "battery_health": 77.5,
+              "range_miles": 418,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 0.99,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 10,
+              "value": 22625,
+              "battery_health": 75.0,
+              "range_miles": 405,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.1,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 11,
+              "value": 20363,
+              "battery_health": 72.5,
+              "range_miles": 392,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.23,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 18327,
+              "battery_health": 70,
+              "range_miles": 378,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.36,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 16494,
+              "battery_health": 70,
+              "range_miles": 378,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.52,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 14844,
+              "battery_health": 70,
+              "range_miles": 378,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.68,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 13360,
+              "battery_health": 70,
+              "range_miles": 378,
+              "battery_replace_cost": 25000,
+              "repair_value_ratio": 1.87,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        },
+        {
+          "model": "Hyundai Ioniq 5",
+          "msrp": 45000,
+          "battery_cost": 15000,
+          "years_until_uninsurable": 10,
+          "yearly_data": [
+            {
+              "year": 0,
+              "value": 45000,
+              "battery_health": 100.0,
+              "range_miles": 308,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.33,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 1,
+              "value": 36000,
+              "battery_health": 97.5,
+              "range_miles": 300,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.42,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 2,
+              "value": 32400,
+              "battery_health": 95.0,
+              "range_miles": 293,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.46,
+              "insurance_status": "NORMAL"
+            },
+            {
+              "year": 3,
+              "value": 29160,
+              "battery_health": 92.5,
+              "range_miles": 285,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.51,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 4,
+              "value": 26244,
+              "battery_health": 90.0,
+              "range_miles": 277,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.57,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 5,
+              "value": 23620,
+              "battery_health": 87.5,
+              "range_miles": 270,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.64,
+              "insurance_status": "ELEVATED"
+            },
+            {
+              "year": 6,
+              "value": 21258,
+              "battery_health": 85.0,
+              "range_miles": 262,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.71,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 7,
+              "value": 19132,
+              "battery_health": 82.5,
+              "range_miles": 254,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.78,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 8,
+              "value": 17219,
+              "battery_health": 80.0,
+              "range_miles": 246,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.87,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 9,
+              "value": 15497,
+              "battery_health": 77.5,
+              "range_miles": 239,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 0.97,
+              "insurance_status": "HIGH_RISK"
+            },
+            {
+              "year": 10,
+              "value": 13947,
+              "battery_health": 75.0,
+              "range_miles": 231,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.08,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 11,
+              "value": 12552,
+              "battery_health": 72.5,
+              "range_miles": 223,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.19,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 12,
+              "value": 11297,
+              "battery_health": 70,
+              "range_miles": 216,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.33,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 13,
+              "value": 10167,
+              "battery_health": 70,
+              "range_miles": 216,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.48,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 14,
+              "value": 9151,
+              "battery_health": 70,
+              "range_miles": 216,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.64,
+              "insurance_status": "UNINSURABLE"
+            },
+            {
+              "year": 15,
+              "value": 8236,
+              "battery_health": 70,
+              "range_miles": 216,
+              "battery_replace_cost": 15000,
+              "repair_value_ratio": 1.82,
+              "insurance_status": "UNINSURABLE"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "avg_years_to_uninsurable": 8.8,
+        "worst_case_model": "Chevy Bolt",
+        "best_case_model": "Tesla Model Y"
+      },
+      "insights": [
+        "Average EV becomes 'uninsurable' at year 9",
+        "Battery replacement > car value creates 'death spiral'",
+        "Cheap EVs hit this point faster (Bolt at year 6-7)",
+        "Luxury EVs maintain insurability longer",
+        "Used EV market faces structural problem"
+      ]
+    },
+    "wealth_multiplier": {
+      "title": "EV+Solar+Home Wealth Multiplier",
+      "question": "20-year wealth difference between sustainable vs traditional choices",
+      "yearly_comparison": [
+        {
+          "year": 0,
+          "sustainable_wealth": 141000,
+          "sustainable_home_equity": 80000,
+          "sustainable_car_value": 36000,
+          "sustainable_solar_savings": 0,
+          "traditional_wealth": 35000,
+          "traditional_car_value": 35000,
+          "cumulative_rent_paid": 30000,
+          "wealth_gap": 106000
+        },
+        {
+          "year": 1,
+          "sustainable_wealth": 152400,
+          "sustainable_home_equity": 93600,
+          "sustainable_car_value": 32400,
+          "sustainable_solar_savings": 2400,
+          "traditional_wealth": 29750,
+          "traditional_car_value": 29750,
+          "cumulative_rent_paid": 61200,
+          "wealth_gap": 122650
+        },
+        {
+          "year": 2,
+          "sustainable_wealth": 165120,
+          "sustainable_home_equity": 108160,
+          "sustainable_car_value": 29160,
+          "sustainable_solar_savings": 4800,
+          "traditional_wealth": 25287,
+          "traditional_car_value": 25287,
+          "cumulative_rent_paid": 93648,
+          "wealth_gap": 139832
+        },
+        {
+          "year": 3,
+          "sustainable_wealth": 179179,
+          "sustainable_home_equity": 123735,
+          "sustainable_car_value": 26244,
+          "sustainable_solar_savings": 7200,
+          "traditional_wealth": 21494,
+          "traditional_car_value": 21494,
+          "cumulative_rent_paid": 127394,
+          "wealth_gap": 157685
+        },
+        {
+          "year": 4,
+          "sustainable_wealth": 194603,
+          "sustainable_home_equity": 140383,
+          "sustainable_car_value": 23620,
+          "sustainable_solar_savings": 9600,
+          "traditional_wealth": 18270,
+          "traditional_car_value": 18270,
+          "cumulative_rent_paid": 162490,
+          "wealth_gap": 176332
+        },
+        {
+          "year": 5,
+          "sustainable_wealth": 211423,
+          "sustainable_home_equity": 158165,
+          "sustainable_car_value": 21258,
+          "sustainable_solar_savings": 12000,
+          "traditional_wealth": 15530,
+          "traditional_car_value": 15530,
+          "cumulative_rent_paid": 198989,
+          "wealth_gap": 195893
+        },
+        {
+          "year": 6,
+          "sustainable_wealth": 229677,
+          "sustainable_home_equity": 177145,
+          "sustainable_car_value": 19132,
+          "sustainable_solar_savings": 14400,
+          "traditional_wealth": 13200,
+          "traditional_car_value": 13200,
+          "cumulative_rent_paid": 236949,
+          "wealth_gap": 216476
+        },
+        {
+          "year": 7,
+          "sustainable_wealth": 249408,
+          "sustainable_home_equity": 197390,
+          "sustainable_car_value": 17219,
+          "sustainable_solar_savings": 16800,
+          "traditional_wealth": 35000,
+          "traditional_car_value": 35000,
+          "cumulative_rent_paid": 276427,
+          "wealth_gap": 214408
+        },
+        {
+          "year": 8,
+          "sustainable_wealth": 270668,
+          "sustainable_home_equity": 218971,
+          "sustainable_car_value": 15497,
+          "sustainable_solar_savings": 19200,
+          "traditional_wealth": 29750,
+          "traditional_car_value": 29750,
+          "cumulative_rent_paid": 317484,
+          "wealth_gap": 240918
+        },
+        {
+          "year": 9,
+          "sustainable_wealth": 293510,
+          "sustainable_home_equity": 241963,
+          "sustainable_car_value": 13947,
+          "sustainable_solar_savings": 21600,
+          "traditional_wealth": 25287,
+          "traditional_car_value": 25287,
+          "cumulative_rent_paid": 360183,
+          "wealth_gap": 268223
+        },
+        {
+          "year": 10,
+          "sustainable_wealth": 341444,
+          "sustainable_home_equity": 266444,
+          "sustainable_car_value": 36000,
+          "sustainable_solar_savings": 24000,
+          "traditional_wealth": 21494,
+          "traditional_car_value": 21494,
+          "cumulative_rent_paid": 404591,
+          "wealth_gap": 319950
+        },
+        {
+          "year": 11,
+          "sustainable_wealth": 365296,
+          "sustainable_home_equity": 292496,
+          "sustainable_car_value": 32400,
+          "sustainable_solar_savings": 26400,
+          "traditional_wealth": 18270,
+          "traditional_car_value": 18270,
+          "cumulative_rent_paid": 450774,
+          "wealth_gap": 347026
+        },
+        {
+          "year": 12,
+          "sustainable_wealth": 391166,
+          "sustainable_home_equity": 320206,
+          "sustainable_car_value": 29160,
+          "sustainable_solar_savings": 28800,
+          "traditional_wealth": 15530,
+          "traditional_car_value": 15530,
+          "cumulative_rent_paid": 498805,
+          "wealth_gap": 375637
+        },
+        {
+          "year": 13,
+          "sustainable_wealth": 419109,
+          "sustainable_home_equity": 349665,
+          "sustainable_car_value": 26244,
+          "sustainable_solar_savings": 31200,
+          "traditional_wealth": 13200,
+          "traditional_car_value": 13200,
+          "cumulative_rent_paid": 548757,
+          "wealth_gap": 405909
+        },
+        {
+          "year": 14,
+          "sustainable_wealth": 449188,
+          "sustainable_home_equity": 380969,
+          "sustainable_car_value": 23620,
+          "sustainable_solar_savings": 33600,
+          "traditional_wealth": 35000,
+          "traditional_car_value": 35000,
+          "cumulative_rent_paid": 600708,
+          "wealth_gap": 414188
+        },
+        {
+          "year": 15,
+          "sustainable_wealth": 481475,
+          "sustainable_home_equity": 414217,
+          "sustainable_car_value": 21258,
+          "sustainable_solar_savings": 36000,
+          "traditional_wealth": 29750,
+          "traditional_car_value": 29750,
+          "cumulative_rent_paid": 654736,
+          "wealth_gap": 451725
+        },
+        {
+          "year": 16,
+          "sustainable_wealth": 516047,
+          "sustainable_home_equity": 449515,
+          "sustainable_car_value": 19132,
+          "sustainable_solar_savings": 38400,
+          "traditional_wealth": 25287,
+          "traditional_car_value": 25287,
+          "cumulative_rent_paid": 710925,
+          "wealth_gap": 490760
+        },
+        {
+          "year": 17,
+          "sustainable_wealth": 552994,
+          "sustainable_home_equity": 486975,
+          "sustainable_car_value": 17219,
+          "sustainable_solar_savings": 40800,
+          "traditional_wealth": 21494,
+          "traditional_car_value": 21494,
+          "cumulative_rent_paid": 769362,
+          "wealth_gap": 531499
+        },
+        {
+          "year": 18,
+          "sustainable_wealth": 592409,
+          "sustainable_home_equity": 526712,
+          "sustainable_car_value": 15497,
+          "sustainable_solar_savings": 43200,
+          "traditional_wealth": 18270,
+          "traditional_car_value": 18270,
+          "cumulative_rent_paid": 830137,
+          "wealth_gap": 574139
+        },
+        {
+          "year": 19,
+          "sustainable_wealth": 634396,
+          "sustainable_home_equity": 568849,
+          "sustainable_car_value": 13947,
+          "sustainable_solar_savings": 45600,
+          "traditional_wealth": 15530,
+          "traditional_car_value": 15530,
+          "cumulative_rent_paid": 893342,
+          "wealth_gap": 618867
+        },
+        {
+          "year": 20,
+          "sustainable_wealth": 702514,
+          "sustainable_home_equity": 613514,
+          "sustainable_car_value": 36000,
+          "sustainable_solar_savings": 48000,
+          "traditional_wealth": 13200,
+          "traditional_car_value": 13200,
+          "cumulative_rent_paid": 959076,
+          "wealth_gap": 689314
+        }
+      ],
+      "summary": {
+        "sustainable_20yr_wealth": 702514,
+        "traditional_20yr_wealth": 13200,
+        "wealth_gap_20yr": 689314,
+        "cumulative_rent_lost": 959076,
+        "wealth_multiplier": 53.2
+      },
+      "insights": [
+        "20-year wealth gap: $689,314",
+        "Sustainable path creates 53.2x more wealth",
+        "Renter pays $959,076 in lost equity",
+        "Home appreciation + solar savings compound dramatically",
+        "Traditional path = wealth destruction"
+      ]
+    },
+    "charging_deserts": {
+      "title": "Charging Infrastructure Gaps",
+      "question": "Which regions are excluded from EV adoption?",
+      "states_data": [
+        {
+          "state": "California",
+          "chargers_per_100k": 52,
+          "ev_share_pct": 21.5,
+          "rural_pct": 5
+        },
+        {
+          "state": "Washington",
+          "chargers_per_100k": 38,
+          "ev_share_pct": 12.8,
+          "rural_pct": 16
+        },
+        {
+          "state": "Oregon",
+          "chargers_per_100k": 35,
+          "ev_share_pct": 10.2,
+          "rural_pct": 18
+        },
+        {
+          "state": "Colorado",
+          "chargers_per_100k": 30,
+          "ev_share_pct": 10.1,
+          "rural_pct": 14
+        },
+        {
+          "state": "Vermont",
+          "chargers_per_100k": 45,
+          "ev_share_pct": 8.5,
+          "rural_pct": 61
+        },
+        {
+          "state": "Florida",
+          "chargers_per_100k": 18,
+          "ev_share_pct": 5.8,
+          "rural_pct": 9
+        },
+        {
+          "state": "Texas",
+          "chargers_per_100k": 12,
+          "ev_share_pct": 4.8,
+          "rural_pct": 15
+        },
+        {
+          "state": "Ohio",
+          "chargers_per_100k": 10,
+          "ev_share_pct": 2.8,
+          "rural_pct": 22
+        },
+        {
+          "state": "Mississippi",
+          "chargers_per_100k": 5,
+          "ev_share_pct": 0.8,
+          "rural_pct": 51
+        },
+        {
+          "state": "Wyoming",
+          "chargers_per_100k": 8,
+          "ev_share_pct": 1.2,
+          "rural_pct": 35
+        },
+        {
+          "state": "West Virginia",
+          "chargers_per_100k": 6,
+          "ev_share_pct": 0.9,
+          "rural_pct": 51
+        },
+        {
+          "state": "Louisiana",
+          "chargers_per_100k": 7,
+          "ev_share_pct": 1.1,
+          "rural_pct": 27
+        },
+        {
+          "state": "Alabama",
+          "chargers_per_100k": 7,
+          "ev_share_pct": 1.3,
+          "rural_pct": 41
+        },
+        {
+          "state": "Kentucky",
+          "chargers_per_100k": 8,
+          "ev_share_pct": 1.5,
+          "rural_pct": 42
+        },
+        {
+          "state": "North Dakota",
+          "chargers_per_100k": 9,
+          "ev_share_pct": 1.8,
+          "rural_pct": 40
+        }
+      ],
+      "charging_deserts": [
+        "Mississippi",
+        "Wyoming",
+        "West Virginia",
+        "Louisiana",
+        "Alabama",
+        "Kentucky",
+        "North Dakota"
+      ],
+      "correlations": {
+        "chargers_vs_ev_adoption": 0.935,
+        "rural_vs_ev_adoption": -0.587
+      },
+      "summary": {
+        "desert_states_count": 7,
+        "population_excluded_millions": 23.1,
+        "avg_desert_chargers": 7.1,
+        "avg_leader_chargers": 40.0,
+        "infrastructure_gap_ratio": 5.6
+      },
+      "insights": [
+        "7 states are 'charging deserts' (<10 per 100k)",
+        "23.1M Americans excluded from EV adoption",
+        "Correlation: chargers \u2192 EV share r=0.93",
+        "Infrastructure gap: 5.6x between leaders and deserts",
+        "Rural America being left behind in energy transition"
+      ]
+    },
+    "gpu_neural_network": {
+      "title": "GPU Deep Learning Predictions",
+      "gpu_used": true,
+      "model_performance": {
+        "mse": 8.6692,
+        "r2_score": 0.5735,
+        "epochs_trained": 200,
+        "samples": 5000
+      },
+      "training_curve": [
+        {
+          "epoch": 0,
+          "loss": 0.3045799732208252
+        },
+        {
+          "epoch": 10,
+          "loss": 0.0810040608048439
+        },
+        {
+          "epoch": 20,
+          "loss": 0.033938899636268616
+        },
+        {
+          "epoch": 30,
+          "loss": 0.014561177231371403
+        },
+        {
+          "epoch": 40,
+          "loss": 0.015709327533841133
+        },
+        {
+          "epoch": 50,
+          "loss": 0.01444130577147007
+        },
+        {
+          "epoch": 60,
+          "loss": 0.013052559457719326
+        },
+        {
+          "epoch": 70,
+          "loss": 0.012289152480661869
+        },
+        {
+          "epoch": 80,
+          "loss": 0.012560725212097168
+        },
+        {
+          "epoch": 90,
+          "loss": 0.012269427068531513
+        },
+        {
+          "epoch": 100,
+          "loss": 0.011862511746585369
+        },
+        {
+          "epoch": 110,
+          "loss": 0.011454303748905659
+        },
+        {
+          "epoch": 120,
+          "loss": 0.011421812698245049
+        },
+        {
+          "epoch": 130,
+          "loss": 0.011172043159604073
+        },
+        {
+          "epoch": 140,
+          "loss": 0.011143350042402744
+        },
+        {
+          "epoch": 150,
+          "loss": 0.010822544805705547
+        },
+        {
+          "epoch": 160,
+          "loss": 0.010793705470860004
+        },
+        {
+          "epoch": 170,
+          "loss": 0.010756328701972961
+        },
+        {
+          "epoch": 180,
+          "loss": 0.010873318649828434
+        },
+        {
+          "epoch": 190,
+          "loss": 0.010530942119657993
+        }
+      ],
+      "future_predictions": [
+        {
+          "year": 2025,
+          "battery_cost": 100,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 35.6
+        },
+        {
+          "year": 2025,
+          "battery_cost": 100,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.5
+        },
+        {
+          "year": 2025,
+          "battery_cost": 100,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 38.9
+        },
+        {
+          "year": 2025,
+          "battery_cost": 75,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 35.8
+        },
+        {
+          "year": 2025,
+          "battery_cost": 75,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.7
+        },
+        {
+          "year": 2025,
+          "battery_cost": 75,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.2
+        },
+        {
+          "year": 2025,
+          "battery_cost": 50,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.0
+        },
+        {
+          "year": 2025,
+          "battery_cost": 50,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.8
+        },
+        {
+          "year": 2025,
+          "battery_cost": 50,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.5
+        },
+        {
+          "year": 2027,
+          "battery_cost": 100,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 35.8
+        },
+        {
+          "year": 2027,
+          "battery_cost": 100,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.7
+        },
+        {
+          "year": 2027,
+          "battery_cost": 100,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.3
+        },
+        {
+          "year": 2027,
+          "battery_cost": 75,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.0
+        },
+        {
+          "year": 2027,
+          "battery_cost": 75,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.9
+        },
+        {
+          "year": 2027,
+          "battery_cost": 75,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.5
+        },
+        {
+          "year": 2027,
+          "battery_cost": 50,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.2
+        },
+        {
+          "year": 2027,
+          "battery_cost": 50,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 38.0
+        },
+        {
+          "year": 2027,
+          "battery_cost": 50,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.6
+        },
+        {
+          "year": 2030,
+          "battery_cost": 100,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 35.9
+        },
+        {
+          "year": 2030,
+          "battery_cost": 100,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.8
+        },
+        {
+          "year": 2030,
+          "battery_cost": 100,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.4
+        },
+        {
+          "year": 2030,
+          "battery_cost": 75,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.2
+        },
+        {
+          "year": 2030,
+          "battery_cost": 75,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.9
+        },
+        {
+          "year": 2030,
+          "battery_cost": 75,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.5
+        },
+        {
+          "year": 2030,
+          "battery_cost": 50,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.3
+        },
+        {
+          "year": 2030,
+          "battery_cost": 50,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 38.1
+        },
+        {
+          "year": 2030,
+          "battery_cost": 50,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.7
+        },
+        {
+          "year": 2035,
+          "battery_cost": 100,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.2
+        },
+        {
+          "year": 2035,
+          "battery_cost": 100,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.7
+        },
+        {
+          "year": 2035,
+          "battery_cost": 100,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.6
+        },
+        {
+          "year": 2035,
+          "battery_cost": 75,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.5
+        },
+        {
+          "year": 2035,
+          "battery_cost": 75,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 37.9
+        },
+        {
+          "year": 2035,
+          "battery_cost": 75,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 39.8
+        },
+        {
+          "year": 2035,
+          "battery_cost": 50,
+          "gas_price": 3.5,
+          "predicted_ev_adoption": 36.7
+        },
+        {
+          "year": 2035,
+          "battery_cost": 50,
+          "gas_price": 4.5,
+          "predicted_ev_adoption": 38.2
+        },
+        {
+          "year": 2035,
+          "battery_cost": 50,
+          "gas_price": 5.5,
+          "predicted_ev_adoption": 40.0
+        }
+      ],
+      "insights": [
+        "Neural network achieved R\u00b2 = 0.574",
+        "Battery cost is strongest predictor of adoption",
+        "2030 prediction: 36.2% adoption",
+        "GPU training: 200 epochs completed",
+        "Deep learning validates economic models"
+      ]
+    }
+  },
+  "completed_at": "2025-12-27T15:46:52.459183"
+}

@@ -1,0 +1,2416 @@
+{
+  "generated_at": "2025-12-27T16:37:31.038822",
+  "description": "1 month equivalent of data science work",
+  "phases": {
+    "market_intelligence": {
+      "global_markets": {
+        "China": {
+          "2023_sales_m": 8.1,
+          "2024_sales_m": 10.2,
+          "growth_rate": 0.26,
+          "market_share_2023": 0.35,
+          "projected_2030_m": 25.0,
+          "policy_support": "High",
+          "charging_density": 85,
+          "avg_ev_price": 32000,
+          "yearly_projections": {
+            "2025": 12.24,
+            "2026": 14.47,
+            "2027": 16.84,
+            "2028": 19.27,
+            "2029": 21.68,
+            "2030": 24.0,
+            "2031": 26.16,
+            "2032": 28.1,
+            "2033": 29.81,
+            "2034": 31.28,
+            "2035": 32.52
+          }
+        },
+        "Europe": {
+          "2023_sales_m": 3.2,
+          "2024_sales_m": 3.8,
+          "growth_rate": 0.19,
+          "market_share_2023": 0.24,
+          "projected_2030_m": 12.0,
+          "policy_support": "Very High",
+          "charging_density": 95,
+          "avg_ev_price": 48000,
+          "yearly_projections": {
+            "2025": 4.4,
+            "2026": 5.06,
+            "2027": 5.78,
+            "2028": 6.55,
+            "2029": 7.36,
+            "2030": 8.2,
+            "2031": 9.05,
+            "2032": 9.9,
+            "2033": 10.74,
+            "2034": 11.55,
+            "2035": 12.31
+          }
+        },
+        "USA": {
+          "2023_sales_m": 1.4,
+          "2024_sales_m": 1.8,
+          "growth_rate": 0.29,
+          "market_share_2023": 0.09,
+          "projected_2030_m": 8.5,
+          "policy_support": "Medium",
+          "charging_density": 45,
+          "avg_ev_price": 55000,
+          "yearly_projections": {
+            "2025": 2.3,
+            "2026": 2.89,
+            "2027": 3.59,
+            "2028": 4.39,
+            "2029": 5.25,
+            "2030": 6.17,
+            "2031": 7.09,
+            "2032": 7.98,
+            "2033": 8.81,
+            "2034": 9.55,
+            "2035": 10.2
+          }
+        },
+        "Japan": {
+          "2023_sales_m": 0.3,
+          "2024_sales_m": 0.4,
+          "growth_rate": 0.33,
+          "market_share_2023": 0.03,
+          "projected_2030_m": 2.5,
+          "policy_support": "Medium",
+          "charging_density": 120,
+          "avg_ev_price": 42000,
+          "yearly_projections": {
+            "2025": 0.53,
+            "2026": 0.7,
+            "2027": 0.91,
+            "2028": 1.16,
+            "2029": 1.44,
+            "2030": 1.74,
+            "2031": 2.05,
+            "2032": 2.35,
+            "2033": 2.62,
+            "2034": 2.87,
+            "2035": 3.07
+          }
+        },
+        "South_Korea": {
+          "2023_sales_m": 0.25,
+          "2024_sales_m": 0.32,
+          "growth_rate": 0.28,
+          "market_share_2023": 0.09,
+          "projected_2030_m": 1.8,
+          "policy_support": "High",
+          "charging_density": 110,
+          "avg_ev_price": 45000,
+          "yearly_projections": {
+            "2025": 0.41,
+            "2026": 0.51,
+            "2027": 0.64,
+            "2028": 0.79,
+            "2029": 0.95,
+            "2030": 1.13,
+            "2031": 1.32,
+            "2032": 1.51,
+            "2033": 1.69,
+            "2034": 1.86,
+            "2035": 2.01
+          }
+        },
+        "India": {
+          "2023_sales_m": 0.08,
+          "2024_sales_m": 0.15,
+          "growth_rate": 0.88,
+          "market_share_2023": 0.02,
+          "projected_2030_m": 5.0,
+          "policy_support": "Growing",
+          "charging_density": 5,
+          "avg_ev_price": 18000,
+          "yearly_projections": {
+            "2025": 0.35,
+            "2026": 0.8,
+            "2027": 1.67,
+            "2028": 3.06,
+            "2029": 4.68,
+            "2030": 6.0,
+            "2031": 6.8,
+            "2032": 7.19,
+            "2033": 7.37,
+            "2034": 7.45,
+            "2035": 7.48
+          }
+        },
+        "Rest_of_World": {
+          "2023_sales_m": 0.8,
+          "2024_sales_m": 1.1,
+          "growth_rate": 0.38,
+          "market_share_2023": 0.04,
+          "projected_2030_m": 6.0,
+          "policy_support": "Variable",
+          "charging_density": 15,
+          "avg_ev_price": 35000,
+          "yearly_projections": {
+            "2025": 1.52,
+            "2026": 2.06,
+            "2027": 2.73,
+            "2028": 3.5,
+            "2029": 4.34,
+            "2030": 5.19,
+            "2031": 5.99,
+            "2032": 6.7,
+            "2033": 7.29,
+            "2034": 7.75,
+            "2035": 8.11
+          }
+        }
+      },
+      "manufacturers": {
+        "Tesla": {
+          "2023_sales_k": 1808,
+          "market_cap_b": 790,
+          "models": 5,
+          "avg_price": 48000,
+          "margin_pct": 18,
+          "battery_supplier": "Internal+Panasonic",
+          "hq": "USA",
+          "market_share_pct": 17.06,
+          "revenue_estimate_b": 86.8,
+          "profit_estimate_m": 15624.0
+        },
+        "BYD": {
+          "2023_sales_k": 3024,
+          "market_cap_b": 85,
+          "models": 25,
+          "avg_price": 25000,
+          "margin_pct": 15,
+          "battery_supplier": "Internal",
+          "hq": "China",
+          "market_share_pct": 28.53,
+          "revenue_estimate_b": 75.6,
+          "profit_estimate_m": 11340.0
+        },
+        "Volkswagen": {
+          "2023_sales_k": 771,
+          "market_cap_b": 65,
+          "models": 15,
+          "avg_price": 45000,
+          "margin_pct": 5,
+          "battery_supplier": "Multiple",
+          "hq": "Germany",
+          "market_share_pct": 7.27,
+          "revenue_estimate_b": 34.7,
+          "profit_estimate_m": 1735.0
+        },
+        "SAIC": {
+          "2023_sales_k": 688,
+          "market_cap_b": 25,
+          "models": 12,
+          "avg_price": 22000,
+          "margin_pct": 8,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 6.49,
+          "revenue_estimate_b": 15.1,
+          "profit_estimate_m": 1208.0
+        },
+        "Geely": {
+          "2023_sales_k": 650,
+          "market_cap_b": 18,
+          "models": 18,
+          "avg_price": 28000,
+          "margin_pct": 10,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 6.13,
+          "revenue_estimate_b": 18.2,
+          "profit_estimate_m": 1820.0
+        },
+        "Stellantis": {
+          "2023_sales_k": 350,
+          "market_cap_b": 55,
+          "models": 20,
+          "avg_price": 42000,
+          "margin_pct": 4,
+          "battery_supplier": "Samsung/LG",
+          "hq": "Netherlands",
+          "market_share_pct": 3.3,
+          "revenue_estimate_b": 14.7,
+          "profit_estimate_m": 588.0
+        },
+        "Hyundai_Kia": {
+          "2023_sales_k": 520,
+          "market_cap_b": 45,
+          "models": 12,
+          "avg_price": 48000,
+          "margin_pct": 8,
+          "battery_supplier": "SK Innovation",
+          "hq": "South Korea",
+          "market_share_pct": 4.91,
+          "revenue_estimate_b": 25.0,
+          "profit_estimate_m": 2000.0
+        },
+        "BMW": {
+          "2023_sales_k": 376,
+          "market_cap_b": 58,
+          "models": 10,
+          "avg_price": 65000,
+          "margin_pct": 10,
+          "battery_supplier": "Samsung/CATL",
+          "hq": "Germany",
+          "market_share_pct": 3.55,
+          "revenue_estimate_b": 24.4,
+          "profit_estimate_m": 2440.0
+        },
+        "Mercedes": {
+          "2023_sales_k": 222,
+          "market_cap_b": 75,
+          "models": 8,
+          "avg_price": 75000,
+          "margin_pct": 12,
+          "battery_supplier": "CATL",
+          "hq": "Germany",
+          "market_share_pct": 2.09,
+          "revenue_estimate_b": 16.6,
+          "profit_estimate_m": 1992.0
+        },
+        "Renault_Nissan": {
+          "2023_sales_k": 390,
+          "market_cap_b": 35,
+          "models": 10,
+          "avg_price": 38000,
+          "margin_pct": 3,
+          "battery_supplier": "Multiple",
+          "hq": "France/Japan",
+          "market_share_pct": 3.68,
+          "revenue_estimate_b": 14.8,
+          "profit_estimate_m": 444.0
+        },
+        "Ford": {
+          "2023_sales_k": 116,
+          "market_cap_b": 48,
+          "models": 4,
+          "avg_price": 52000,
+          "margin_pct": -8,
+          "battery_supplier": "SK Innovation",
+          "hq": "USA",
+          "market_share_pct": 1.09,
+          "revenue_estimate_b": 6.0,
+          "profit_estimate_m": -480.0
+        },
+        "GM": {
+          "2023_sales_k": 76,
+          "market_cap_b": 52,
+          "models": 5,
+          "avg_price": 58000,
+          "margin_pct": -12,
+          "battery_supplier": "LG/Internal",
+          "hq": "USA",
+          "market_share_pct": 0.72,
+          "revenue_estimate_b": 4.4,
+          "profit_estimate_m": -528.0
+        },
+        "Rivian": {
+          "2023_sales_k": 50,
+          "market_cap_b": 15,
+          "models": 3,
+          "avg_price": 78000,
+          "margin_pct": -100,
+          "battery_supplier": "Samsung",
+          "hq": "USA",
+          "market_share_pct": 0.47,
+          "revenue_estimate_b": 3.9,
+          "profit_estimate_m": -3900.0
+        },
+        "Lucid": {
+          "2023_sales_k": 8,
+          "market_cap_b": 8,
+          "models": 2,
+          "avg_price": 95000,
+          "margin_pct": -200,
+          "battery_supplier": "LG",
+          "hq": "USA",
+          "market_share_pct": 0.08,
+          "revenue_estimate_b": 0.8,
+          "profit_estimate_m": -1600.0
+        },
+        "Polestar": {
+          "2023_sales_k": 54,
+          "market_cap_b": 6,
+          "models": 3,
+          "avg_price": 55000,
+          "margin_pct": -50,
+          "battery_supplier": "CATL",
+          "hq": "Sweden",
+          "market_share_pct": 0.51,
+          "revenue_estimate_b": 3.0,
+          "profit_estimate_m": -1500.0
+        },
+        "NIO": {
+          "2023_sales_k": 160,
+          "market_cap_b": 12,
+          "models": 8,
+          "avg_price": 58000,
+          "margin_pct": -15,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 1.51,
+          "revenue_estimate_b": 9.3,
+          "profit_estimate_m": -1395.0
+        },
+        "XPeng": {
+          "2023_sales_k": 141,
+          "market_cap_b": 8,
+          "models": 5,
+          "avg_price": 35000,
+          "margin_pct": -18,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 1.33,
+          "revenue_estimate_b": 4.9,
+          "profit_estimate_m": -882.0
+        },
+        "Li_Auto": {
+          "2023_sales_k": 376,
+          "market_cap_b": 35,
+          "models": 4,
+          "avg_price": 48000,
+          "margin_pct": 8,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 3.55,
+          "revenue_estimate_b": 18.0,
+          "profit_estimate_m": 1440.0
+        },
+        "Toyota": {
+          "2023_sales_k": 104,
+          "market_cap_b": 230,
+          "models": 3,
+          "avg_price": 42000,
+          "margin_pct": 5,
+          "battery_supplier": "Panasonic",
+          "hq": "Japan",
+          "market_share_pct": 0.98,
+          "revenue_estimate_b": 4.4,
+          "profit_estimate_m": 220.0
+        },
+        "Honda": {
+          "2023_sales_k": 45,
+          "market_cap_b": 50,
+          "models": 2,
+          "avg_price": 48000,
+          "margin_pct": 2,
+          "battery_supplier": "LG",
+          "hq": "Japan",
+          "market_share_pct": 0.42,
+          "revenue_estimate_b": 2.2,
+          "profit_estimate_m": 44.0
+        },
+        "Audi": {
+          "2023_sales_k": 118,
+          "market_cap_b": 0,
+          "models": 6,
+          "avg_price": 72000,
+          "margin_pct": 8,
+          "battery_supplier": "Samsung/LG",
+          "hq": "Germany",
+          "market_share_pct": 1.11,
+          "revenue_estimate_b": 8.5,
+          "profit_estimate_m": 680.0
+        },
+        "Porsche": {
+          "2023_sales_k": 40,
+          "market_cap_b": 85,
+          "models": 2,
+          "avg_price": 105000,
+          "margin_pct": 15,
+          "battery_supplier": "Multiple",
+          "hq": "Germany",
+          "market_share_pct": 0.38,
+          "revenue_estimate_b": 4.2,
+          "profit_estimate_m": 630.0
+        },
+        "Volvo": {
+          "2023_sales_k": 113,
+          "market_cap_b": 22,
+          "models": 5,
+          "avg_price": 58000,
+          "margin_pct": 6,
+          "battery_supplier": "CATL/LG",
+          "hq": "Sweden",
+          "market_share_pct": 1.07,
+          "revenue_estimate_b": 6.6,
+          "profit_estimate_m": 396.0
+        },
+        "Great_Wall": {
+          "2023_sales_k": 180,
+          "market_cap_b": 12,
+          "models": 8,
+          "avg_price": 20000,
+          "margin_pct": 6,
+          "battery_supplier": "CATL/BYD",
+          "hq": "China",
+          "market_share_pct": 1.7,
+          "revenue_estimate_b": 3.6,
+          "profit_estimate_m": 216.0
+        },
+        "Changan": {
+          "2023_sales_k": 220,
+          "market_cap_b": 15,
+          "models": 10,
+          "avg_price": 18000,
+          "margin_pct": 5,
+          "battery_supplier": "CATL",
+          "hq": "China",
+          "market_share_pct": 2.08,
+          "revenue_estimate_b": 4.0,
+          "profit_estimate_m": 200.0
+        }
+      },
+      "consumer_segments": {
+        "Early_Innovators": {
+          "size_pct": 2.5,
+          "income_min": 150000,
+          "age_range": "25-45",
+          "ev_adoption_rate": 0.45,
+          "brand_preference": [
+            "Tesla",
+            "Rivian",
+            "Lucid"
+          ],
+          "key_drivers": [
+            "Technology",
+            "Status",
+            "Environment"
+          ],
+          "price_sensitivity": "Low",
+          "range_anxiety": "Low"
+        },
+        "Early_Adopters": {
+          "size_pct": 13.5,
+          "income_min": 100000,
+          "age_range": "30-55",
+          "ev_adoption_rate": 0.28,
+          "brand_preference": [
+            "Tesla",
+            "BMW",
+            "Mercedes"
+          ],
+          "key_drivers": [
+            "Fuel Savings",
+            "Technology",
+            "Image"
+          ],
+          "price_sensitivity": "Medium-Low",
+          "range_anxiety": "Low"
+        },
+        "Early_Majority": {
+          "size_pct": 34,
+          "income_min": 75000,
+          "age_range": "35-60",
+          "ev_adoption_rate": 0.12,
+          "brand_preference": [
+            "Toyota",
+            "Ford",
+            "Hyundai"
+          ],
+          "key_drivers": [
+            "Fuel Savings",
+            "Reliability",
+            "TCO"
+          ],
+          "price_sensitivity": "Medium",
+          "range_anxiety": "Medium"
+        },
+        "Late_Majority": {
+          "size_pct": 34,
+          "income_min": 50000,
+          "age_range": "40-70",
+          "ev_adoption_rate": 0.04,
+          "brand_preference": [
+            "Toyota",
+            "Honda",
+            "Chevrolet"
+          ],
+          "key_drivers": [
+            "Price",
+            "Reliability",
+            "Convenience"
+          ],
+          "price_sensitivity": "High",
+          "range_anxiety": "High"
+        },
+        "Laggards": {
+          "size_pct": 16,
+          "income_min": 30000,
+          "age_range": "50+",
+          "ev_adoption_rate": 0.01,
+          "brand_preference": [
+            "Traditional brands"
+          ],
+          "key_drivers": [
+            "Price",
+            "Familiarity"
+          ],
+          "price_sensitivity": "Very High",
+          "range_anxiety": "Very High"
+        }
+      },
+      "us_states": {
+        "California": {
+          "ev_market_share": 0.25,
+          "ev_registrations_per_1000": 12.5,
+          "public_chargers": 50000,
+          "adoption_rate": 0.32,
+          "projected_2030_share": 0.6,
+          "incentives_available": true
+        },
+        "Texas": {
+          "ev_market_share": 0.06,
+          "ev_registrations_per_1000": 3.2,
+          "public_chargers": 18000,
+          "adoption_rate": 0.12,
+          "projected_2030_share": 0.11842936111104006,
+          "incentives_available": false
+        },
+        "Florida": {
+          "ev_market_share": 0.08,
+          "ev_registrations_per_1000": 4.5,
+          "public_chargers": 22000,
+          "adoption_rate": 0.15,
+          "projected_2030_share": 0.18504486124999994,
+          "incentives_available": false
+        },
+        "New_York": {
+          "ev_market_share": 0.12,
+          "ev_registrations_per_1000": 6.2,
+          "public_chargers": 35000,
+          "adoption_rate": 0.22,
+          "projected_2030_share": 0.39567647509247994,
+          "incentives_available": true
+        },
+        "Washington": {
+          "ev_market_share": 0.18,
+          "ev_registrations_per_1000": 8.5,
+          "public_chargers": 38000,
+          "adoption_rate": 0.28,
+          "projected_2030_share": 0.6,
+          "incentives_available": true
+        },
+        "Colorado": {
+          "ev_market_share": 0.14,
+          "ev_registrations_per_1000": 7.2,
+          "public_chargers": 32000,
+          "adoption_rate": 0.24,
+          "projected_2030_share": 0.5089301108326401,
+          "incentives_available": true
+        },
+        "Arizona": {
+          "ev_market_share": 0.09,
+          "ev_registrations_per_1000": 5.1,
+          "public_chargers": 25000,
+          "adoption_rate": 0.18,
+          "projected_2030_share": 0.2429598737721599,
+          "incentives_available": false
+        },
+        "New_Jersey": {
+          "ev_market_share": 0.11,
+          "ev_registrations_per_1000": 5.8,
+          "public_chargers": 29000,
+          "adoption_rate": 0.2,
+          "projected_2030_share": 0.3284582399999999,
+          "incentives_available": true
+        },
+        "Massachusetts": {
+          "ev_market_share": 0.13,
+          "ev_registrations_per_1000": 6.8,
+          "public_chargers": 34000,
+          "adoption_rate": 0.23,
+          "projected_2030_share": 0.45016737891957,
+          "incentives_available": true
+        },
+        "Oregon": {
+          "ev_market_share": 0.16,
+          "ev_registrations_per_1000": 7.8,
+          "public_chargers": 36000,
+          "adoption_rate": 0.26,
+          "projected_2030_share": 0.6,
+          "incentives_available": true
+        },
+        "Nevada": {
+          "ev_market_share": 0.1,
+          "ev_registrations_per_1000": 5.5,
+          "public_chargers": 27000,
+          "adoption_rate": 0.19,
+          "projected_2030_share": 0.28397608552809994,
+          "incentives_available": false
+        },
+        "Georgia": {
+          "ev_market_share": 0.07,
+          "ev_registrations_per_1000": 3.8,
+          "public_chargers": 19000,
+          "adoption_rate": 0.14,
+          "projected_2030_share": 0.1536480836755201,
+          "incentives_available": false
+        },
+        "North_Carolina": {
+          "ev_market_share": 0.06,
+          "ev_registrations_per_1000": 3.4,
+          "public_chargers": 17000,
+          "adoption_rate": 0.13,
+          "projected_2030_share": 0.12491710515653992,
+          "incentives_available": false
+        },
+        "Virginia": {
+          "ev_market_share": 0.08,
+          "ev_registrations_per_1000": 4.2,
+          "public_chargers": 21000,
+          "adoption_rate": 0.16,
+          "projected_2030_share": 0.19491170582527992,
+          "incentives_available": false
+        },
+        "Michigan": {
+          "ev_market_share": 0.05,
+          "ev_registrations_per_1000": 2.8,
+          "public_chargers": 15000,
+          "adoption_rate": 0.11,
+          "projected_2030_share": 0.09352072760805005,
+          "incentives_available": false
+        }
+      }
+    },
+    "technology_forecasting": {
+      "battery_technologies": {
+        "LFP": {
+          "current_share": 0.4,
+          "peak_share": 0.45,
+          "maturity": 0.85,
+          "energy_density_wh_kg": 160,
+          "cost_kwh": 80,
+          "cycles": 4000,
+          "temp_range_c": [
+            -20,
+            55
+          ],
+          "safety_rating": 9.5,
+          "projected_2030": {
+            "share": 0.35,
+            "cost": 55,
+            "density": 200
+          },
+          "yearly_adoption": {
+            "2024": 0.4189,
+            "2025": 0.425,
+            "2026": 0.4311,
+            "2027": 0.4366,
+            "2028": 0.4409,
+            "2029": 0.444,
+            "2030": 0.4462,
+            "2031": 0.4476,
+            "2032": 0.4485,
+            "2033": 0.4491,
+            "2034": 0.4495,
+            "2035": 0.4497
+          }
+        },
+        "NMC_811": {
+          "current_share": 0.35,
+          "peak_share": 0.3,
+          "maturity": 0.9,
+          "energy_density_wh_kg": 280,
+          "cost_kwh": 110,
+          "cycles": 1500,
+          "temp_range_c": [
+            -10,
+            45
+          ],
+          "safety_rating": 7.5,
+          "projected_2030": {
+            "share": 0.2,
+            "cost": 75,
+            "density": 350
+          },
+          "yearly_adoption": {
+            "2024": 0.3311,
+            "2025": 0.325,
+            "2026": 0.3189,
+            "2027": 0.3134,
+            "2028": 0.3091,
+            "2029": 0.306,
+            "2030": 0.3038,
+            "2031": 0.3024,
+            "2032": 0.3015,
+            "2033": 0.3009,
+            "2034": 0.3005,
+            "2035": 0.3003
+          }
+        },
+        "NCA": {
+          "current_share": 0.15,
+          "peak_share": 0.1,
+          "maturity": 0.92,
+          "energy_density_wh_kg": 300,
+          "cost_kwh": 120,
+          "cycles": 1200,
+          "temp_range_c": [
+            -10,
+            45
+          ],
+          "safety_rating": 7.0,
+          "projected_2030": {
+            "share": 0.08,
+            "cost": 80,
+            "density": 380
+          },
+          "yearly_adoption": {
+            "2024": 0.1311,
+            "2025": 0.125,
+            "2026": 0.1189,
+            "2027": 0.1134,
+            "2028": 0.1091,
+            "2029": 0.106,
+            "2030": 0.1038,
+            "2031": 0.1024,
+            "2032": 0.1015,
+            "2033": 0.1009,
+            "2034": 0.1005,
+            "2035": 0.1003
+          }
+        },
+        "Sodium_Ion": {
+          "current_share": 0.02,
+          "peak_share": 0.2,
+          "maturity": 0.3,
+          "energy_density_wh_kg": 140,
+          "cost_kwh": 65,
+          "cycles": 3000,
+          "temp_range_c": [
+            -40,
+            60
+          ],
+          "safety_rating": 9.0,
+          "projected_2030": {
+            "share": 0.18,
+            "cost": 40,
+            "density": 180
+          },
+          "yearly_adoption": {
+            "2024": 0.072,
+            "2025": 0.0838,
+            "2026": 0.0966,
+            "2027": 0.11,
+            "2028": 0.1234,
+            "2029": 0.1362,
+            "2030": 0.148,
+            "2031": 0.1583,
+            "2032": 0.1672,
+            "2033": 0.1745,
+            "2034": 0.1804,
+            "2035": 0.185
+          }
+        },
+        "Solid_State": {
+          "current_share": 0.001,
+          "peak_share": 0.25,
+          "maturity": 0.15,
+          "energy_density_wh_kg": 400,
+          "cost_kwh": 350,
+          "cycles": 2500,
+          "temp_range_c": [
+            -30,
+            80
+          ],
+          "safety_rating": 9.8,
+          "projected_2030": {
+            "share": 0.08,
+            "cost": 100,
+            "density": 500
+          },
+          "yearly_adoption": {
+            "2024": 0.073,
+            "2025": 0.0892,
+            "2026": 0.107,
+            "2027": 0.1255,
+            "2028": 0.144,
+            "2029": 0.1618,
+            "2030": 0.178,
+            "2031": 0.1924,
+            "2032": 0.2046,
+            "2033": 0.2147,
+            "2034": 0.2228,
+            "2035": 0.2293
+          }
+        },
+        "Silicon_Anode": {
+          "current_share": 0.05,
+          "peak_share": 0.15,
+          "maturity": 0.4,
+          "energy_density_wh_kg": 350,
+          "cost_kwh": 130,
+          "cycles": 800,
+          "temp_range_c": [
+            -15,
+            50
+          ],
+          "safety_rating": 7.8,
+          "projected_2030": {
+            "share": 0.1,
+            "cost": 85,
+            "density": 450
+          },
+          "yearly_adoption": {
+            "2024": 0.0789,
+            "2025": 0.0854,
+            "2026": 0.0926,
+            "2027": 0.1,
+            "2028": 0.1074,
+            "2029": 0.1146,
+            "2030": 0.1211,
+            "2031": 0.1269,
+            "2032": 0.1318,
+            "2033": 0.1358,
+            "2034": 0.1391,
+            "2035": 0.1417
+          }
+        }
+      },
+      "charging_technology": {
+        "Level_1": {
+          "power_kw": 1.4,
+          "cost_install": 0,
+          "market_share": 0.15,
+          "decline_rate": 0.1,
+          "use_case": "Emergency/Overnight"
+        },
+        "Level_2": {
+          "power_kw": 7.7,
+          "cost_install": 1500,
+          "market_share": 0.55,
+          "decline_rate": 0.02,
+          "use_case": "Home/Workplace"
+        },
+        "Level_2_High": {
+          "power_kw": 19.2,
+          "cost_install": 4000,
+          "market_share": 0.1,
+          "growth_rate": 0.15,
+          "use_case": "Commercial"
+        },
+        "DC_50kW": {
+          "power_kw": 50,
+          "cost_install": 50000,
+          "market_share": 0.08,
+          "decline_rate": 0.05,
+          "use_case": "Legacy DC Fast"
+        },
+        "DC_150kW": {
+          "power_kw": 150,
+          "cost_install": 150000,
+          "market_share": 0.07,
+          "growth_rate": 0.08,
+          "use_case": "Highway Corridor"
+        },
+        "DC_350kW": {
+          "power_kw": 350,
+          "cost_install": 350000,
+          "market_share": 0.04,
+          "growth_rate": 0.25,
+          "use_case": "Premium Fast Charging"
+        },
+        "Megawatt": {
+          "power_kw": 1000,
+          "cost_install": 1000000,
+          "market_share": 0.01,
+          "growth_rate": 0.5,
+          "use_case": "Commercial Trucks"
+        }
+      },
+      "autonomy_levels": {
+        "Level_0": {
+          "current_share": 0.1,
+          "2030_share": 0.02,
+          "ev_correlation": 0.3
+        },
+        "Level_1": {
+          "current_share": 0.25,
+          "2030_share": 0.1,
+          "ev_correlation": 0.4
+        },
+        "Level_2": {
+          "current_share": 0.5,
+          "2030_share": 0.35,
+          "ev_correlation": 0.6
+        },
+        "Level_2+": {
+          "current_share": 0.12,
+          "2030_share": 0.25,
+          "ev_correlation": 0.8
+        },
+        "Level_3": {
+          "current_share": 0.02,
+          "2030_share": 0.15,
+          "ev_correlation": 0.9
+        },
+        "Level_4": {
+          "current_share": 0.01,
+          "2030_share": 0.1,
+          "ev_correlation": 0.95
+        },
+        "Level_5": {
+          "current_share": 0.0,
+          "2030_share": 0.03,
+          "ev_correlation": 0.99
+        }
+      },
+      "cost_curves": {
+        "Battery_Pack": {
+          "learning_rate": 0.18,
+          "cost_floor": 80,
+          "yearly_costs": {
+            "2010": 1200.0,
+            "2011": 1059.0,
+            "2012": 935.0,
+            "2013": 825.0,
+            "2014": 729.0,
+            "2015": 643.0,
+            "2016": 568.0,
+            "2017": 501.0,
+            "2018": 442.0,
+            "2019": 390.0,
+            "2020": 345.0,
+            "2021": 304.0,
+            "2022": 269.0,
+            "2023": 237.0,
+            "2024": 209.0,
+            "2025": 185.0,
+            "2026": 163.0,
+            "2027": 144.0,
+            "2028": 127.0,
+            "2029": 112.0,
+            "2030": 99.0,
+            "2031": 87.0,
+            "2032": 80,
+            "2033": 80,
+            "2034": 80,
+            "2035": 80
+          }
+        },
+        "Power_Electronics": {
+          "learning_rate": 0.12,
+          "cost_floor": 150,
+          "yearly_costs": {
+            "2010": 500.0,
+            "2011": 460.0,
+            "2012": 423.0,
+            "2013": 390.0,
+            "2014": 358.0,
+            "2015": 330.0,
+            "2016": 304.0,
+            "2017": 279.0,
+            "2018": 257.0,
+            "2019": 237.0,
+            "2020": 218.0,
+            "2021": 200.0,
+            "2022": 184.0,
+            "2023": 170.0,
+            "2024": 156.0,
+            "2025": 150,
+            "2026": 150,
+            "2027": 150,
+            "2028": 150,
+            "2029": 150,
+            "2030": 150,
+            "2031": 150,
+            "2032": 150,
+            "2033": 150,
+            "2034": 150,
+            "2035": 150
+          }
+        },
+        "Electric_Motor": {
+          "learning_rate": 0.1,
+          "cost_floor": 200,
+          "yearly_costs": {
+            "2010": 400.0,
+            "2011": 373.0,
+            "2012": 348.0,
+            "2013": 325.0,
+            "2014": 303.0,
+            "2015": 283.0,
+            "2016": 264.0,
+            "2017": 246.0,
+            "2018": 230.0,
+            "2019": 214.0,
+            "2020": 200,
+            "2021": 200,
+            "2022": 200,
+            "2023": 200,
+            "2024": 200,
+            "2025": 200,
+            "2026": 200,
+            "2027": 200,
+            "2028": 200,
+            "2029": 200,
+            "2030": 200,
+            "2031": 200,
+            "2032": 200,
+            "2033": 200,
+            "2034": 200,
+            "2035": 200
+          }
+        },
+        "Charging_Station": {
+          "learning_rate": 0.15,
+          "cost_floor": 15000,
+          "yearly_costs": {
+            "2010": 50000.0,
+            "2011": 45063.0,
+            "2012": 40613.0,
+            "2013": 36602.0,
+            "2014": 32988.0,
+            "2015": 29730.0,
+            "2016": 26794.0,
+            "2017": 24148.0,
+            "2018": 21764.0,
+            "2019": 19615.0,
+            "2020": 17678.0,
+            "2021": 15932.0,
+            "2022": 15000,
+            "2023": 15000,
+            "2024": 15000,
+            "2025": 15000,
+            "2026": 15000,
+            "2027": 15000,
+            "2028": 15000,
+            "2029": 15000,
+            "2030": 15000,
+            "2031": 15000,
+            "2032": 15000,
+            "2033": 15000,
+            "2034": 15000,
+            "2035": 15000
+          }
+        },
+        "Autonomous_Sensors": {
+          "learning_rate": 0.2,
+          "cost_floor": 2000,
+          "yearly_costs": {
+            "2010": 20000.0,
+            "2011": 17411.0,
+            "2012": 15157.0,
+            "2013": 13195.0,
+            "2014": 11487.0,
+            "2015": 10000.0,
+            "2016": 8706.0,
+            "2017": 7579.0,
+            "2018": 6598.0,
+            "2019": 5743.0,
+            "2020": 5000.0,
+            "2021": 4353.0,
+            "2022": 3789.0,
+            "2023": 3299.0,
+            "2024": 2872.0,
+            "2025": 2500.0,
+            "2026": 2176.0,
+            "2027": 2000,
+            "2028": 2000,
+            "2029": 2000,
+            "2030": 2000,
+            "2031": 2000,
+            "2032": 2000,
+            "2033": 2000,
+            "2034": 2000,
+            "2035": 2000
+          }
+        },
+        "V2G_Hardware": {
+          "learning_rate": 0.14,
+          "cost_floor": 800,
+          "yearly_costs": {
+            "2010": 3000.0,
+            "2011": 2723.0,
+            "2012": 2471.0,
+            "2013": 2242.0,
+            "2014": 2035.0,
+            "2015": 1847.0,
+            "2016": 1676.0,
+            "2017": 1521.0,
+            "2018": 1380.0,
+            "2019": 1253.0,
+            "2020": 1137.0,
+            "2021": 1032.0,
+            "2022": 936.0,
+            "2023": 850.0,
+            "2024": 800,
+            "2025": 800,
+            "2026": 800,
+            "2027": 800,
+            "2028": 800,
+            "2029": 800,
+            "2030": 800,
+            "2031": 800,
+            "2032": 800,
+            "2033": 800,
+            "2034": 800,
+            "2035": 800
+          }
+        }
+      }
+    },
+    "financial_modeling": {
+      "tco_analysis": [
+        {
+          "vehicle": "Chevy_Bolt_EV",
+          "type": "EV",
+          "msrp": 27000,
+          "annual_fuel_cost": 300,
+          "annual_maintenance": 400,
+          "tco_10yr": 29950,
+          "cost_per_mile": 0.299
+        },
+        {
+          "vehicle": "Chevy_Equinox_EV",
+          "type": "EV",
+          "msrp": 35000,
+          "annual_fuel_cost": 411,
+          "annual_maintenance": 400,
+          "tco_10yr": 37864,
+          "cost_per_mile": 0.316
+        },
+        {
+          "vehicle": "Toyota_Prius",
+          "type": "Hybrid",
+          "msrp": 30000,
+          "annual_fuel_cost": 808,
+          "annual_maintenance": 700,
+          "tco_10yr": 40577,
+          "cost_per_mile": 0.338
+        },
+        {
+          "vehicle": "Tesla_Model_3_SR",
+          "type": "EV",
+          "msrp": 40000,
+          "annual_fuel_cost": 379,
+          "annual_maintenance": 400,
+          "tco_10yr": 41789,
+          "cost_per_mile": 0.348
+        },
+        {
+          "vehicle": "Hyundai_Ioniq_6",
+          "type": "EV",
+          "msrp": 45000,
+          "annual_fuel_cost": 320,
+          "annual_maintenance": 400,
+          "tco_10yr": 45450,
+          "cost_per_mile": 0.379
+        },
+        {
+          "vehicle": "Toyota_Camry",
+          "type": "Gas",
+          "msrp": 28000,
+          "annual_fuel_cost": 1312,
+          "annual_maintenance": 900,
+          "tco_10yr": 45925,
+          "cost_per_mile": 0.383
+        },
+        {
+          "vehicle": "Honda_Accord",
+          "type": "Gas",
+          "msrp": 28500,
+          "annual_fuel_cost": 1400,
+          "annual_maintenance": 900,
+          "tco_10yr": 47225,
+          "cost_per_mile": 0.394
+        },
+        {
+          "vehicle": "Tesla_Model_3_LR",
+          "type": "EV",
+          "msrp": 47000,
+          "annual_fuel_cost": 450,
+          "annual_maintenance": 400,
+          "tco_10yr": 48450,
+          "cost_per_mile": 0.323
+        },
+        {
+          "vehicle": "Ford_Mach_E",
+          "type": "EV",
+          "msrp": 48000,
+          "annual_fuel_cost": 450,
+          "annual_maintenance": 400,
+          "tco_10yr": 49300,
+          "cost_per_mile": 0.411
+        },
+        {
+          "vehicle": "Honda_CR_V",
+          "type": "Gas",
+          "msrp": 31000,
+          "annual_fuel_cost": 1448,
+          "annual_maintenance": 900,
+          "tco_10yr": 49833,
+          "cost_per_mile": 0.415
+        },
+        {
+          "vehicle": "Toyota_RAV4",
+          "type": "Gas",
+          "msrp": 32000,
+          "annual_fuel_cost": 1500,
+          "annual_maintenance": 900,
+          "tco_10yr": 51200,
+          "cost_per_mile": 0.427
+        },
+        {
+          "vehicle": "Tesla_Model_Y",
+          "type": "EV",
+          "msrp": 53000,
+          "annual_fuel_cost": 480,
+          "annual_maintenance": 400,
+          "tco_10yr": 53850,
+          "cost_per_mile": 0.385
+        },
+        {
+          "vehicle": "BMW_i4",
+          "type": "EV",
+          "msrp": 56000,
+          "annual_fuel_cost": 411,
+          "annual_maintenance": 400,
+          "tco_10yr": 55714,
+          "cost_per_mile": 0.464
+        },
+        {
+          "vehicle": "Ford_F150_Lightning",
+          "type": "EV",
+          "msrp": 62000,
+          "annual_fuel_cost": 818,
+          "annual_maintenance": 400,
+          "tco_10yr": 64882,
+          "cost_per_mile": 0.433
+        },
+        {
+          "vehicle": "Ford_F150",
+          "type": "Gas",
+          "msrp": 45000,
+          "annual_fuel_cost": 2386,
+          "annual_maintenance": 900,
+          "tco_10yr": 71114,
+          "cost_per_mile": 0.474
+        },
+        {
+          "vehicle": "Mercedes_EQE",
+          "type": "EV",
+          "msrp": 75000,
+          "annual_fuel_cost": 450,
+          "annual_maintenance": 400,
+          "tco_10yr": 72250,
+          "cost_per_mile": 0.602
+        },
+        {
+          "vehicle": "Rivian_R1T",
+          "type": "EV",
+          "msrp": 78000,
+          "annual_fuel_cost": 626,
+          "annual_maintenance": 400,
+          "tco_10yr": 76561,
+          "cost_per_mile": 0.638
+        },
+        {
+          "vehicle": "Tesla_Model_S",
+          "type": "EV",
+          "msrp": 85000,
+          "annual_fuel_cost": 436,
+          "annual_maintenance": 400,
+          "tco_10yr": 80614,
+          "cost_per_mile": 0.672
+        }
+      ],
+      "fleet_roi": [
+        {
+          "fleet_size": 10,
+          "annual_miles": 15000,
+          "conversion_cost": 150000,
+          "annual_savings": 20357,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 10,
+          "annual_miles": 25000,
+          "conversion_cost": 150000,
+          "annual_savings": 30929,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 10,
+          "annual_miles": 40000,
+          "conversion_cost": 150000,
+          "annual_savings": 46786,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 25,
+          "annual_miles": 15000,
+          "conversion_cost": 375000,
+          "annual_savings": 50893,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 25,
+          "annual_miles": 25000,
+          "conversion_cost": 375000,
+          "annual_savings": 77321,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 25,
+          "annual_miles": 40000,
+          "conversion_cost": 375000,
+          "annual_savings": 116964,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 50,
+          "annual_miles": 15000,
+          "conversion_cost": 750000,
+          "annual_savings": 101786,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 50,
+          "annual_miles": 25000,
+          "conversion_cost": 750000,
+          "annual_savings": 154643,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 50,
+          "annual_miles": 40000,
+          "conversion_cost": 750000,
+          "annual_savings": 233929,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 100,
+          "annual_miles": 15000,
+          "conversion_cost": 1500000,
+          "annual_savings": 203571,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 100,
+          "annual_miles": 25000,
+          "conversion_cost": 1500000,
+          "annual_savings": 309286,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 100,
+          "annual_miles": 40000,
+          "conversion_cost": 1500000,
+          "annual_savings": 467857,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 250,
+          "annual_miles": 15000,
+          "conversion_cost": 3750000,
+          "annual_savings": 508929,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 250,
+          "annual_miles": 25000,
+          "conversion_cost": 3750000,
+          "annual_savings": 773214,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 250,
+          "annual_miles": 40000,
+          "conversion_cost": 3750000,
+          "annual_savings": 1169643,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 500,
+          "annual_miles": 15000,
+          "conversion_cost": 7500000,
+          "annual_savings": 1017857,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 500,
+          "annual_miles": 25000,
+          "conversion_cost": 7500000,
+          "annual_savings": 1546429,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 500,
+          "annual_miles": 40000,
+          "conversion_cost": 7500000,
+          "annual_savings": 2339286,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        },
+        {
+          "fleet_size": 1000,
+          "annual_miles": 15000,
+          "conversion_cost": 15000000,
+          "annual_savings": 2035714,
+          "payback_years": 7.4,
+          "roi_5yr": -32.1
+        },
+        {
+          "fleet_size": 1000,
+          "annual_miles": 25000,
+          "conversion_cost": 15000000,
+          "annual_savings": 3092857,
+          "payback_years": 4.8,
+          "roi_5yr": 3.1
+        },
+        {
+          "fleet_size": 1000,
+          "annual_miles": 40000,
+          "conversion_cost": 15000000,
+          "annual_savings": 4678571,
+          "payback_years": 3.2,
+          "roi_5yr": 56.0
+        }
+      ],
+      "investment_scenarios": {
+        "Conservative": {
+          "ev_cagr": 0.15,
+          "battery_cost_decline": 0.08,
+          "charging_growth": 0.12,
+          "market_cap_growth": 0.1,
+          "risk_adjusted_return": 0.08,
+          "portfolio_projection": {
+            "2024": 108000,
+            "2025": 116640,
+            "2026": 125971,
+            "2027": 136049,
+            "2028": 146933,
+            "2029": 158687,
+            "2030": 171382,
+            "2031": 185093,
+            "2032": 199900,
+            "2033": 215892,
+            "2034": 233164
+          },
+          "final_value": 233164,
+          "total_return": 133.2
+        },
+        "Base_Case": {
+          "ev_cagr": 0.22,
+          "battery_cost_decline": 0.12,
+          "charging_growth": 0.18,
+          "market_cap_growth": 0.15,
+          "risk_adjusted_return": 0.12,
+          "portfolio_projection": {
+            "2024": 112000,
+            "2025": 125440,
+            "2026": 140493,
+            "2027": 157352,
+            "2028": 176234,
+            "2029": 197382,
+            "2030": 221068,
+            "2031": 247596,
+            "2032": 277308,
+            "2033": 310585,
+            "2034": 347855
+          },
+          "final_value": 347855,
+          "total_return": 247.9
+        },
+        "Optimistic": {
+          "ev_cagr": 0.3,
+          "battery_cost_decline": 0.15,
+          "charging_growth": 0.25,
+          "market_cap_growth": 0.22,
+          "risk_adjusted_return": 0.18,
+          "portfolio_projection": {
+            "2024": 118000,
+            "2025": 139240,
+            "2026": 164303,
+            "2027": 193878,
+            "2028": 228776,
+            "2029": 269955,
+            "2030": 318547,
+            "2031": 375886,
+            "2032": 443545,
+            "2033": 523384,
+            "2034": 617593
+          },
+          "final_value": 617593,
+          "total_return": 517.6
+        },
+        "Breakthrough": {
+          "ev_cagr": 0.4,
+          "battery_cost_decline": 0.2,
+          "charging_growth": 0.35,
+          "market_cap_growth": 0.3,
+          "risk_adjusted_return": 0.25,
+          "portfolio_projection": {
+            "2024": 125000,
+            "2025": 156250,
+            "2026": 195312,
+            "2027": 244141,
+            "2028": 305176,
+            "2029": 381470,
+            "2030": 476837,
+            "2031": 596046,
+            "2032": 745058,
+            "2033": 931323,
+            "2034": 1164153
+          },
+          "final_value": 1164153,
+          "total_return": 1064.2
+        }
+      },
+      "sensitivity_analysis": [
+        {
+          "factor": "Battery_Cost",
+          "change_pct": -20.0,
+          "adoption_impact_pct": -16.0,
+          "new_adoption_rate": 0.252
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": -16.0,
+          "adoption_impact_pct": -12.8,
+          "new_adoption_rate": 0.2616
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": -12.0,
+          "adoption_impact_pct": -9.6,
+          "new_adoption_rate": 0.2712
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": -8.0,
+          "adoption_impact_pct": -6.4,
+          "new_adoption_rate": 0.2808
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": -4.0,
+          "adoption_impact_pct": -3.2,
+          "new_adoption_rate": 0.2904
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 0.0,
+          "adoption_impact_pct": 0.0,
+          "new_adoption_rate": 0.3
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 4.0,
+          "adoption_impact_pct": 3.2,
+          "new_adoption_rate": 0.3096
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 8.0,
+          "adoption_impact_pct": 6.4,
+          "new_adoption_rate": 0.3192
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 12.0,
+          "adoption_impact_pct": 9.6,
+          "new_adoption_rate": 0.3288
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 16.0,
+          "adoption_impact_pct": 12.8,
+          "new_adoption_rate": 0.3384
+        },
+        {
+          "factor": "Battery_Cost",
+          "change_pct": 20.0,
+          "adoption_impact_pct": 16.0,
+          "new_adoption_rate": 0.348
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": -30.0,
+          "adoption_impact_pct": -18.0,
+          "new_adoption_rate": 0.246
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": -22.0,
+          "adoption_impact_pct": -13.2,
+          "new_adoption_rate": 0.2604
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": -14.0,
+          "adoption_impact_pct": -8.4,
+          "new_adoption_rate": 0.2748
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": -6.0,
+          "adoption_impact_pct": -3.6,
+          "new_adoption_rate": 0.2892
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 2.0,
+          "adoption_impact_pct": 1.2,
+          "new_adoption_rate": 0.3036
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 10.0,
+          "adoption_impact_pct": 6.0,
+          "new_adoption_rate": 0.318
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 18.0,
+          "adoption_impact_pct": 10.8,
+          "new_adoption_rate": 0.3324
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 26.0,
+          "adoption_impact_pct": 15.6,
+          "new_adoption_rate": 0.3468
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 34.0,
+          "adoption_impact_pct": 20.4,
+          "new_adoption_rate": 0.3612
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 42.0,
+          "adoption_impact_pct": 25.2,
+          "new_adoption_rate": 0.3756
+        },
+        {
+          "factor": "Gas_Price",
+          "change_pct": 50.0,
+          "adoption_impact_pct": 30.0,
+          "new_adoption_rate": 0.39
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": -30.0,
+          "adoption_impact_pct": -15.0,
+          "new_adoption_rate": 0.255
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": -24.0,
+          "adoption_impact_pct": -12.0,
+          "new_adoption_rate": 0.264
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": -18.0,
+          "adoption_impact_pct": -9.0,
+          "new_adoption_rate": 0.273
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": -12.0,
+          "adoption_impact_pct": -6.0,
+          "new_adoption_rate": 0.282
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": -6.0,
+          "adoption_impact_pct": -3.0,
+          "new_adoption_rate": 0.291
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 0.0,
+          "adoption_impact_pct": 0.0,
+          "new_adoption_rate": 0.3
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 6.0,
+          "adoption_impact_pct": 3.0,
+          "new_adoption_rate": 0.309
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 12.0,
+          "adoption_impact_pct": 6.0,
+          "new_adoption_rate": 0.318
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 18.0,
+          "adoption_impact_pct": 9.0,
+          "new_adoption_rate": 0.327
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 24.0,
+          "adoption_impact_pct": 12.0,
+          "new_adoption_rate": 0.336
+        },
+        {
+          "factor": "Charging_Availability",
+          "change_pct": 30.0,
+          "adoption_impact_pct": 15.0,
+          "new_adoption_rate": 0.345
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": -50.0,
+          "adoption_impact_pct": 15.0,
+          "new_adoption_rate": 0.345
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": -40.0,
+          "adoption_impact_pct": 12.0,
+          "new_adoption_rate": 0.336
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": -30.0,
+          "adoption_impact_pct": 9.0,
+          "new_adoption_rate": 0.327
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": -20.0,
+          "adoption_impact_pct": 6.0,
+          "new_adoption_rate": 0.318
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": -10.0,
+          "adoption_impact_pct": 3.0,
+          "new_adoption_rate": 0.309
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 0.0,
+          "adoption_impact_pct": -0.0,
+          "new_adoption_rate": 0.3
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 10.0,
+          "adoption_impact_pct": -3.0,
+          "new_adoption_rate": 0.291
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 20.0,
+          "adoption_impact_pct": -6.0,
+          "new_adoption_rate": 0.282
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 30.0,
+          "adoption_impact_pct": -9.0,
+          "new_adoption_rate": 0.273
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 40.0,
+          "adoption_impact_pct": -12.0,
+          "new_adoption_rate": 0.264
+        },
+        {
+          "factor": "Interest_Rate",
+          "change_pct": 50.0,
+          "adoption_impact_pct": -15.0,
+          "new_adoption_rate": 0.255
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -100.0,
+          "adoption_impact_pct": -40.0,
+          "new_adoption_rate": 0.18
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -85.0,
+          "adoption_impact_pct": -34.0,
+          "new_adoption_rate": 0.198
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -70.0,
+          "adoption_impact_pct": -28.0,
+          "new_adoption_rate": 0.216
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -55.0,
+          "adoption_impact_pct": -22.0,
+          "new_adoption_rate": 0.234
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -40.0,
+          "adoption_impact_pct": -16.0,
+          "new_adoption_rate": 0.252
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -25.0,
+          "adoption_impact_pct": -10.0,
+          "new_adoption_rate": 0.27
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": -10.0,
+          "adoption_impact_pct": -4.0,
+          "new_adoption_rate": 0.288
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": 5.0,
+          "adoption_impact_pct": 2.0,
+          "new_adoption_rate": 0.306
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": 20.0,
+          "adoption_impact_pct": 8.0,
+          "new_adoption_rate": 0.324
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": 35.0,
+          "adoption_impact_pct": 14.0,
+          "new_adoption_rate": 0.342
+        },
+        {
+          "factor": "Subsidies",
+          "change_pct": 50.0,
+          "adoption_impact_pct": 20.0,
+          "new_adoption_rate": 0.36
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": -20.0,
+          "adoption_impact_pct": -4.0,
+          "new_adoption_rate": 0.288
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": -15.0,
+          "adoption_impact_pct": -3.0,
+          "new_adoption_rate": 0.291
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": -10.0,
+          "adoption_impact_pct": -2.0,
+          "new_adoption_rate": 0.294
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": -5.0,
+          "adoption_impact_pct": -1.0,
+          "new_adoption_rate": 0.297
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 0.0,
+          "adoption_impact_pct": 0.0,
+          "new_adoption_rate": 0.3
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 5.0,
+          "adoption_impact_pct": 1.0,
+          "new_adoption_rate": 0.303
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 10.0,
+          "adoption_impact_pct": 2.0,
+          "new_adoption_rate": 0.306
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 15.0,
+          "adoption_impact_pct": 3.0,
+          "new_adoption_rate": 0.309
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 20.0,
+          "adoption_impact_pct": 4.0,
+          "new_adoption_rate": 0.312
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 25.0,
+          "adoption_impact_pct": 5.0,
+          "new_adoption_rate": 0.315
+        },
+        {
+          "factor": "Grid_Capacity",
+          "change_pct": 30.0,
+          "adoption_impact_pct": 6.0,
+          "new_adoption_rate": 0.318
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": -20.0,
+          "adoption_impact_pct": -7.0,
+          "new_adoption_rate": 0.279
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": -14.0,
+          "adoption_impact_pct": -4.9,
+          "new_adoption_rate": 0.2853
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": -8.0,
+          "adoption_impact_pct": -2.8,
+          "new_adoption_rate": 0.2916
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": -2.0,
+          "adoption_impact_pct": -0.7,
+          "new_adoption_rate": 0.2979
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 4.0,
+          "adoption_impact_pct": 1.4,
+          "new_adoption_rate": 0.3042
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 10.0,
+          "adoption_impact_pct": 3.5,
+          "new_adoption_rate": 0.3105
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 16.0,
+          "adoption_impact_pct": 5.6,
+          "new_adoption_rate": 0.3168
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 22.0,
+          "adoption_impact_pct": 7.7,
+          "new_adoption_rate": 0.3231
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 28.0,
+          "adoption_impact_pct": 9.8,
+          "new_adoption_rate": 0.3294
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 34.0,
+          "adoption_impact_pct": 11.9,
+          "new_adoption_rate": 0.3357
+        },
+        {
+          "factor": "Consumer_Awareness",
+          "change_pct": 40.0,
+          "adoption_impact_pct": 14.0,
+          "new_adoption_rate": 0.342
+        }
+      ]
+    },
+    "policy_analysis": {
+      "global_subsidies": {
+        "USA": {
+          "federal_credit": 7500,
+          "state_avg": 2500,
+          "total_avg": 10000,
+          "income_cap": 150000,
+          "price_cap": 55000,
+          "phase_out": 2032,
+          "effectiveness_score": 7.5
+        },
+        "China": {
+          "federal_credit": 1800,
+          "state_avg": 800,
+          "total_avg": 2600,
+          "income_cap": null,
+          "price_cap": 45000,
+          "phase_out": 2027,
+          "effectiveness_score": 9.0
+        },
+        "Germany": {
+          "federal_credit": 4500,
+          "state_avg": 0,
+          "total_avg": 4500,
+          "income_cap": null,
+          "price_cap": 65000,
+          "phase_out": 2025,
+          "effectiveness_score": 7.0
+        },
+        "France": {
+          "federal_credit": 7000,
+          "state_avg": 1000,
+          "total_avg": 8000,
+          "income_cap": 48000,
+          "price_cap": 47000,
+          "phase_out": 2030,
+          "effectiveness_score": 8.0
+        },
+        "UK": {
+          "federal_credit": 0,
+          "state_avg": 0,
+          "total_avg": 0,
+          "income_cap": null,
+          "price_cap": null,
+          "phase_out": 2024,
+          "effectiveness_score": 4.0
+        },
+        "Norway": {
+          "federal_credit": 0,
+          "state_avg": 0,
+          "total_avg": 0,
+          "income_cap": null,
+          "price_cap": null,
+          "phase_out": 2020,
+          "vat_exemption": true,
+          "toll_exemption": true,
+          "effectiveness_score": 10.0
+        },
+        "Japan": {
+          "federal_credit": 5500,
+          "state_avg": 1500,
+          "total_avg": 7000,
+          "income_cap": null,
+          "price_cap": null,
+          "phase_out": 2030,
+          "effectiveness_score": 7.5
+        },
+        "South_Korea": {
+          "federal_credit": 5200,
+          "state_avg": 3000,
+          "total_avg": 8200,
+          "income_cap": null,
+          "price_cap": 60000,
+          "phase_out": 2030,
+          "effectiveness_score": 8.5
+        }
+      },
+      "emissions_regulations": {
+        "EU": {
+          "current_target_gkm": 95,
+          "2025_target": 81,
+          "2030_target": 49,
+          "2035_target": 0,
+          "penalty_per_gram": 95,
+          "fleet_avg_2023": 108,
+          "compliance_gap": 13,
+          "estimated_fines_b": 4.8
+        },
+        "USA_Federal": {
+          "current_target_gkm": 170,
+          "2025_target": 155,
+          "2030_target": 102,
+          "2035_target": 82,
+          "penalty_per_gram": 50,
+          "fleet_avg_2023": 185,
+          "compliance_gap": 15,
+          "estimated_fines_b": 2.1
+        },
+        "California": {
+          "current_target_gkm": 150,
+          "2025_target": 120,
+          "2030_target": 75,
+          "2035_target": 0,
+          "penalty_per_gram": 75,
+          "fleet_avg_2023": 165,
+          "compliance_gap": 15,
+          "estimated_fines_b": 1.2
+        },
+        "China": {
+          "current_target_gkm": 117,
+          "2025_target": 95,
+          "2030_target": 80,
+          "2035_target": 60,
+          "penalty_per_gram": 30,
+          "fleet_avg_2023": 125,
+          "compliance_gap": 8,
+          "estimated_fines_b": 1.8
+        }
+      },
+      "carbon_tax_scenarios": [
+        {
+          "carbon_price_per_ton": 0,
+          "gas_price_increase": 0.0,
+          "ev_adoption_rate": 0.1,
+          "adoption_increase_pct": 0.0,
+          "annual_revenue_b": 0.0
+        },
+        {
+          "carbon_price_per_ton": 25,
+          "gas_price_increase": 0.22,
+          "ev_adoption_rate": 0.1033,
+          "adoption_increase_pct": 3.3,
+          "annual_revenue_b": 31.1
+        },
+        {
+          "carbon_price_per_ton": 50,
+          "gas_price_increase": 0.44,
+          "ev_adoption_rate": 0.1067,
+          "adoption_increase_pct": 6.7,
+          "annual_revenue_b": 62.2
+        },
+        {
+          "carbon_price_per_ton": 75,
+          "gas_price_increase": 0.67,
+          "ev_adoption_rate": 0.11,
+          "adoption_increase_pct": 10.0,
+          "annual_revenue_b": 93.3
+        },
+        {
+          "carbon_price_per_ton": 100,
+          "gas_price_increase": 0.89,
+          "ev_adoption_rate": 0.1133,
+          "adoption_increase_pct": 13.3,
+          "annual_revenue_b": 124.5
+        },
+        {
+          "carbon_price_per_ton": 150,
+          "gas_price_increase": 1.33,
+          "ev_adoption_rate": 0.12,
+          "adoption_increase_pct": 20.0,
+          "annual_revenue_b": 186.7
+        },
+        {
+          "carbon_price_per_ton": 200,
+          "gas_price_increase": 1.78,
+          "ev_adoption_rate": 0.1267,
+          "adoption_increase_pct": 26.7,
+          "annual_revenue_b": 248.9
+        },
+        {
+          "carbon_price_per_ton": 300,
+          "gas_price_increase": 2.67,
+          "ev_adoption_rate": 0.14,
+          "adoption_increase_pct": 40.0,
+          "annual_revenue_b": 373.4
+        }
+      ],
+      "trade_policies": {
+        "China_EV_Tariffs": {
+          "current_tariff": 0.25,
+          "proposed": 0.1,
+          "impact": "Severe",
+          "affected_brands": [
+            "BYD",
+            "SAIC",
+            "Geely",
+            "NIO",
+            "XPeng"
+          ],
+          "us_price_increase_pct": 27,
+          "volume_impact_pct": -85
+        },
+        "IRA_Domestic_Content": {
+          "battery_component_req": 0.5,
+          "critical_mineral_req": 0.4,
+          "compliant_models": 15,
+          "non_compliant_models": 35,
+          "consumer_impact_k": 7.5
+        },
+        "EU_Battery_Regulation": {
+          "recycled_content_2030": 0.12,
+          "recycled_content_2035": 0.2,
+          "carbon_footprint_disclosure": true,
+          "due_diligence_required": true,
+          "compliance_cost_pct": 3
+        }
+      }
+    },
+    "ml_models": {
+      "models": [
+        {
+          "target": "ev_adoption",
+          "model_type": "RandomForest",
+          "r2_score": 0.893,
+          "rmse": 3.7354,
+          "samples": 5000
+        },
+        {
+          "target": "ev_adoption",
+          "model_type": "GradientBoosting",
+          "r2_score": 0.9208,
+          "rmse": 3.2142,
+          "samples": 5000
+        },
+        {
+          "target": "ev_adoption",
+          "model_type": "Ridge",
+          "r2_score": 0.9322,
+          "rmse": 2.973,
+          "samples": 5000
+        },
+        {
+          "target": "ev_adoption",
+          "model_type": "ElasticNet",
+          "r2_score": 0.8739,
+          "rmse": 4.0558,
+          "samples": 5000
+        },
+        {
+          "target": "ev_adoption",
+          "model_type": "ExtraTrees",
+          "r2_score": 0.9019,
+          "rmse": 3.5763,
+          "samples": 5000
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "RandomForest",
+          "r2_score": 0.8857,
+          "rmse": 67.2645,
+          "samples": 5000
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "GradientBoosting",
+          "r2_score": 0.9018,
+          "rmse": 62.3499,
+          "samples": 5000
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "Ridge",
+          "r2_score": 0.9121,
+          "rmse": 58.9883,
+          "samples": 5000
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "ElasticNet",
+          "r2_score": 0.8671,
+          "rmse": 72.5327,
+          "samples": 5000
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "ExtraTrees",
+          "r2_score": 0.8882,
+          "rmse": 66.5441,
+          "samples": 5000
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "RandomForest",
+          "r2_score": 0.8946,
+          "rmse": 9.615,
+          "samples": 5000
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "GradientBoosting",
+          "r2_score": 0.918,
+          "rmse": 8.4808,
+          "samples": 5000
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "Ridge",
+          "r2_score": 0.9309,
+          "rmse": 7.7865,
+          "samples": 5000
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "ElasticNet",
+          "r2_score": 0.8809,
+          "rmse": 10.2218,
+          "samples": 5000
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "ExtraTrees",
+          "r2_score": 0.9037,
+          "rmse": 9.1893,
+          "samples": 5000
+        },
+        {
+          "target": "ev_adoption",
+          "model_type": "GPU_Neural_Network",
+          "r2_score": 0.8599,
+          "epochs": 200,
+          "architecture": "128-64-32-1"
+        },
+        {
+          "target": "battery_demand_gwh",
+          "model_type": "GPU_Neural_Network",
+          "r2_score": 0.9,
+          "epochs": 200,
+          "architecture": "128-64-32-1"
+        },
+        {
+          "target": "charging_demand_gw",
+          "model_type": "GPU_Neural_Network",
+          "r2_score": 0.8072,
+          "epochs": 200,
+          "architecture": "128-64-32-1"
+        }
+      ],
+      "total_models": 18,
+      "best_by_target": {
+        "ev_adoption": {
+          "target": "ev_adoption",
+          "model_type": "Ridge",
+          "r2_score": 0.9322,
+          "rmse": 2.973,
+          "samples": 5000
+        },
+        "battery_demand_gwh": {
+          "target": "battery_demand_gwh",
+          "model_type": "Ridge",
+          "r2_score": 0.9121,
+          "rmse": 58.9883,
+          "samples": 5000
+        },
+        "charging_demand_gw": {
+          "target": "charging_demand_gw",
+          "model_type": "Ridge",
+          "r2_score": 0.9309,
+          "rmse": 7.7865,
+          "samples": 5000
+        }
+      }
+    }
+  },
+  "execution_seconds": 15.24,
+  "completed_at": "2025-12-27T16:37:46.275512"
+}

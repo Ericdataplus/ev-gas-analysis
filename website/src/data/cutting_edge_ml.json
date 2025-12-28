@@ -1,0 +1,145 @@
+{
+  "generated_at": "2025-12-27T16:50:22.673040",
+  "models": [
+    {
+      "model": "LSTM",
+      "r2": 0.1635,
+      "layers": 2,
+      "hidden": 64
+    },
+    {
+      "model": "Transformer",
+      "r2": 0.2812,
+      "heads": 4,
+      "layers": 2
+    },
+    {
+      "model": "Autoencoder",
+      "anomalies": 150,
+      "threshold": 0.143996
+    },
+    {
+      "model": "MultiTask",
+      "adoption_r2": 0.98,
+      "battery_r2": 0.9851,
+      "charging_r2": 0.9784
+    },
+    {
+      "model": "GeneticAlgorithm",
+      "optimal_battery_cost": 50.0,
+      "optimal_price": 25000.0,
+      "optimal_range": 500.0,
+      "optimal_charging_speed": 350.0,
+      "fitness_score": 19.2
+    },
+    {
+      "model": "QLearning",
+      "optimal_hours": [],
+      "episodes": 5000
+    },
+    {
+      "model": "SurvivalAnalysis",
+      "10%_fail": 496,
+      "50%_fail": 979,
+      "90%_fail": 3382,
+      "temp_correlation": -0.0043
+    },
+    {
+      "model": "GraphAnalysis",
+      "critical_suppliers": [
+        {
+          "name": "CATL",
+          "centrality": 0.75
+        },
+        {
+          "name": "LG_Energy",
+          "centrality": 0.7
+        },
+        {
+          "name": "Samsung_SDI",
+          "centrality": 0.4
+        },
+        {
+          "name": "Panasonic",
+          "centrality": 0.35
+        },
+        {
+          "name": "BYD_Battery",
+          "centrality": 0.1
+        }
+      ]
+    },
+    {
+      "model": "Counterfactual",
+      "scenarios": [
+        {
+          "scenario": "No_Subsidies",
+          "adoption_rate": 10.5,
+          "impact_pct": -30.0
+        },
+        {
+          "scenario": "Double_Subsidies",
+          "adoption_rate": 21.0,
+          "impact_pct": 40.0
+        },
+        {
+          "scenario": "Gas_Tax_$50",
+          "adoption_rate": 18.8,
+          "impact_pct": 25.0
+        },
+        {
+          "scenario": "Gas_Tax_$100",
+          "adoption_rate": 22.5,
+          "impact_pct": 50.0
+        },
+        {
+          "scenario": "EV_Mandate_2030",
+          "adoption_rate": 27.0,
+          "impact_pct": 80.0
+        },
+        {
+          "scenario": "No_Charging_Investment",
+          "adoption_rate": 9.0,
+          "impact_pct": -40.0
+        },
+        {
+          "scenario": "Triple_Charging",
+          "adoption_rate": 20.2,
+          "impact_pct": 35.0
+        }
+      ],
+      "base_adoption": 15
+    },
+    {
+      "model": "FeatureImportance",
+      "features": [
+        {
+          "name": "year",
+          "importance": 0.3868
+        },
+        {
+          "name": "battery_cost",
+          "importance": 0.3194
+        },
+        {
+          "name": "charging_stations",
+          "importance": 0.2879
+        },
+        {
+          "name": "gas_price",
+          "importance": 0.0051
+        },
+        {
+          "name": "interest_rate",
+          "importance": 0.0004
+        },
+        {
+          "name": "median_income",
+          "importance": 0.0004
+        }
+      ]
+    }
+  ],
+  "execution_seconds": 7.11,
+  "total_models": 10
+}

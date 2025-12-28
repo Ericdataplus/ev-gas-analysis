@@ -1,0 +1,356 @@
+{
+  "generated_at": "2025-12-27T16:09:07.280600",
+  "phases": {
+    "data_loading": {
+      "datasets_loaded": 13
+    },
+    "feature_engineering": {
+      "total_features": 80,
+      "samples": 5000
+    },
+    "ensemble_training": {
+      "models_trained": [
+        "RandomForest",
+        "GradientBoosting",
+        "ExtraTrees",
+        "AdaBoost",
+        "Ridge",
+        "ElasticNet",
+        "BayesianRidge",
+        "Huber",
+        "KNN"
+      ],
+      "best_model": {
+        "name": "Huber",
+        "metrics": {
+          "r2": 0.9504,
+          "rmse": 1.9944,
+          "mae": 1.5848
+        }
+      },
+      "ensemble_performance": {
+        "voting": {
+          "r2": 0.9257,
+          "rmse": 2.4394
+        }
+      },
+      "feature_importance": {},
+      "individual_models": {
+        "RandomForest": {
+          "r2": 0.9154,
+          "rmse": 2.604,
+          "mae": 2.0403
+        },
+        "GradientBoosting": {
+          "r2": 0.9261,
+          "rmse": 2.433,
+          "mae": 1.9169
+        },
+        "ExtraTrees": {
+          "r2": 0.927,
+          "rmse": 2.4185,
+          "mae": 1.9123
+        },
+        "AdaBoost": {
+          "r2": 0.8205,
+          "rmse": 3.7923,
+          "mae": 2.998
+        },
+        "Ridge": {
+          "r2": 0.9503,
+          "rmse": 1.9947,
+          "mae": 1.5834
+        },
+        "ElasticNet": {
+          "r2": 0.907,
+          "rmse": 2.7301,
+          "mae": 2.1838
+        },
+        "BayesianRidge": {
+          "r2": 0.9503,
+          "rmse": 1.996,
+          "mae": 1.5843
+        },
+        "Huber": {
+          "r2": 0.9504,
+          "rmse": 1.9944,
+          "mae": 1.5848
+        },
+        "KNN": {
+          "r2": 0.5461,
+          "rmse": 6.0311,
+          "mae": 4.891
+        }
+      }
+    },
+    "deep_learning": {
+      "architectures": {
+        "deep_wide": {
+          "r2": 0.9249,
+          "epochs": 300,
+          "final_loss": 0.002619
+        },
+        "residual_style": {
+          "r2": 0.8981,
+          "epochs": 300,
+          "final_loss": 0.001999
+        },
+        "narrow_deep": {
+          "r2": 0.9426,
+          "epochs": 300,
+          "final_loss": 0.002037
+        }
+      },
+      "best_nn": "narrow_deep",
+      "gpu_used": true
+    },
+    "hyperparameter_optimization": {
+      "gradient_boosting": {
+        "best_params": {
+          "learning_rate": 0.05,
+          "max_depth": 5,
+          "n_estimators": 200
+        },
+        "best_score": 0.9357,
+        "cv_results": {
+          "mean": 0.9357,
+          "std": 0.0008
+        }
+      },
+      "random_forest": {
+        "best_params": {
+          "max_depth": 20,
+          "min_samples_split": 5,
+          "n_estimators": 200
+        },
+        "best_score": 0.9182
+      },
+      "cross_validation": {
+        "RandomForest": {
+          "mean": 0.92,
+          "std": 0.0027,
+          "scores": [
+            0.9213,
+            0.9221,
+            0.923,
+            0.9164,
+            0.9173
+          ]
+        },
+        "GradientBoosting": {
+          "mean": 0.938,
+          "std": 0.0028,
+          "scores": [
+            0.935,
+            0.9372,
+            0.9433,
+            0.9379,
+            0.9367
+          ]
+        }
+      }
+    },
+    "monte_carlo": {
+      "n_simulations": 10000,
+      "statistics": {
+        "mean": 40.5,
+        "median": 40.49,
+        "std": 8.96,
+        "percentile_5": 25.63,
+        "percentile_25": 34.6,
+        "percentile_75": 46.46,
+        "percentile_95": 55.08
+      },
+      "distribution": [
+        {
+          "range": "5.0-8.3",
+          "count": 3
+        },
+        {
+          "range": "8.3-11.6",
+          "count": 2
+        },
+        {
+          "range": "11.6-14.9",
+          "count": 18
+        },
+        {
+          "range": "14.9-18.3",
+          "count": 43
+        },
+        {
+          "range": "18.3-21.6",
+          "count": 113
+        },
+        {
+          "range": "21.6-24.9",
+          "count": 237
+        },
+        {
+          "range": "24.9-28.2",
+          "count": 452
+        },
+        {
+          "range": "28.2-31.5",
+          "count": 702
+        },
+        {
+          "range": "31.5-34.8",
+          "count": 1023
+        },
+        {
+          "range": "34.8-38.2",
+          "count": 1353
+        },
+        {
+          "range": "38.2-41.5",
+          "count": 1519
+        },
+        {
+          "range": "41.5-44.8",
+          "count": 1419
+        },
+        {
+          "range": "44.8-48.1",
+          "count": 1117
+        },
+        {
+          "range": "48.1-51.4",
+          "count": 854
+        },
+        {
+          "range": "51.4-54.7",
+          "count": 612
+        },
+        {
+          "range": "54.7-58.1",
+          "count": 279
+        },
+        {
+          "range": "58.1-61.4",
+          "count": 164
+        },
+        {
+          "range": "61.4-64.7",
+          "count": 52
+        },
+        {
+          "range": "64.7-68.0",
+          "count": 26
+        },
+        {
+          "range": "68.0-71.3",
+          "count": 12
+        }
+      ],
+      "scenarios": {
+        "pessimistic": 5.0,
+        "base": 20.5,
+        "optimistic": 39.0,
+        "breakthrough": 48.0
+      }
+    },
+    "causal_analysis": {
+      "target_correlations": {
+        "charging_stations_per_100k": 0.3706,
+        "gas_price": 0.2523,
+        "median_income": 0.1517,
+        "consumer_confidence": 0.057,
+        "interest_rate": 0.0298,
+        "ev_vehicle_price": 0.0079,
+        "battery_cost_kwh": -0.4069
+      },
+      "partial_correlations": {
+        "gas_price": 0.3012,
+        "battery_cost_kwh": -0.4618,
+        "charging_stations_per_100k": 0.4327
+      },
+      "causal_pathways": [
+        {
+          "path": "Gas Price \u2192 Fuel Savings \u2192 EV Adoption",
+          "strength": 0.72
+        },
+        {
+          "path": "Battery Cost \u2192 Vehicle Price \u2192 Affordability \u2192 Adoption",
+          "strength": 0.68
+        },
+        {
+          "path": "Charging Infrastructure \u2192 Range Anxiety \u2192 Adoption",
+          "strength": 0.55
+        },
+        {
+          "path": "Income \u2192 Affordability \u2192 Adoption",
+          "strength": 0.48
+        },
+        {
+          "path": "Interest Rate \u2192 Monthly Payment \u2192 Adoption",
+          "strength": -0.32
+        }
+      ]
+    },
+    "clustering": {
+      "cluster_profiles": {
+        "Segment_1": {
+          "size": 1207,
+          "avg_income": 69992,
+          "avg_ev_share": 30.4,
+          "urban_pct": 69.0,
+          "education_pct": 33.9
+        },
+        "Segment_2": {
+          "size": 1258,
+          "avg_income": 70999,
+          "avg_ev_share": 30.9,
+          "urban_pct": 76.8,
+          "education_pct": 35.8
+        },
+        "Segment_3": {
+          "size": 1308,
+          "avg_income": 66501,
+          "avg_ev_share": 33.9,
+          "urban_pct": 84.0,
+          "education_pct": 34.2
+        },
+        "Segment_4": {
+          "size": 1227,
+          "avg_income": 72838,
+          "avg_ev_share": 34.7,
+          "urban_pct": 60.3,
+          "education_pct": 35.4
+        }
+      },
+      "segment_names": {
+        "Segment_1": "Early Adopters (High Income, Urban)",
+        "Segment_2": "Mainstream Potential (Middle Class)",
+        "Segment_3": "Cost-Sensitive (Lower Income)",
+        "Segment_4": "Rural Skeptics (Low Urban, Low Interest)"
+      },
+      "dbscan": {
+        "n_clusters": 0,
+        "n_outliers": 5000,
+        "outlier_pct": 100.0
+      }
+    },
+    "anomaly_detection": {
+      "isolation_forest": {
+        "anomalies_detected": 250,
+        "pct": 5.0
+      },
+      "local_outlier_factor": {
+        "anomalies_detected": 250,
+        "pct": 5.0
+      },
+      "z_score": {
+        "anomalies_detected": 1,
+        "pct": 0.02,
+        "threshold": 3.0
+      },
+      "consensus_anomalies": {
+        "count": 116,
+        "pct": 2.32
+      }
+    }
+  },
+  "execution_time_seconds": 1008.46,
+  "completed_at": "2025-12-27T16:25:55.740771"
+}

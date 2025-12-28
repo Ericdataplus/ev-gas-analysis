@@ -1,0 +1,1027 @@
+{
+  "generated_at": "2025-12-27T17:18:57.652613",
+  "platform": "Energy & Infrastructure Intelligence",
+  "sectors": {
+    "energy": {
+      "energy_mix_2024": {
+        "Oil": {
+          "share_pct": 31,
+          "production_ej": 185,
+          "trend": "declining",
+          "emissions_gt": 11.5
+        },
+        "Natural_Gas": {
+          "share_pct": 23,
+          "production_ej": 140,
+          "trend": "stable",
+          "emissions_gt": 7.5
+        },
+        "Coal": {
+          "share_pct": 27,
+          "production_ej": 160,
+          "trend": "declining",
+          "emissions_gt": 14.5
+        },
+        "Nuclear": {
+          "share_pct": 4,
+          "production_ej": 25,
+          "trend": "growing",
+          "emissions_gt": 0
+        },
+        "Hydro": {
+          "share_pct": 7,
+          "production_ej": 40,
+          "trend": "stable",
+          "emissions_gt": 0
+        },
+        "Wind": {
+          "share_pct": 3,
+          "production_ej": 18,
+          "trend": "rapid_growth",
+          "emissions_gt": 0
+        },
+        "Solar": {
+          "share_pct": 2,
+          "production_ej": 12,
+          "trend": "rapid_growth",
+          "emissions_gt": 0
+        },
+        "Other_Renewables": {
+          "share_pct": 3,
+          "production_ej": 20,
+          "trend": "growing",
+          "emissions_gt": 0.5
+        }
+      },
+      "energy_projections": {
+        "2024": {
+          "oil_share": 31.0,
+          "gas_share": 23.0,
+          "coal_share": 27.0,
+          "nuclear_share": 4.0,
+          "renewables_share": 15.0,
+          "total_demand_ej": 600
+        },
+        "2025": {
+          "oil_share": 30.0,
+          "gas_share": 22.6,
+          "coal_share": 26.1,
+          "nuclear_share": 4.4,
+          "renewables_share": 16.7,
+          "total_demand_ej": 608
+        },
+        "2026": {
+          "oil_share": 29.0,
+          "gas_share": 22.2,
+          "coal_share": 25.2,
+          "nuclear_share": 4.8,
+          "renewables_share": 18.4,
+          "total_demand_ej": 616
+        },
+        "2027": {
+          "oil_share": 28.0,
+          "gas_share": 21.8,
+          "coal_share": 24.3,
+          "nuclear_share": 5.2,
+          "renewables_share": 20.1,
+          "total_demand_ej": 624
+        },
+        "2028": {
+          "oil_share": 27.0,
+          "gas_share": 21.4,
+          "coal_share": 23.4,
+          "nuclear_share": 5.6,
+          "renewables_share": 21.8,
+          "total_demand_ej": 632
+        },
+        "2029": {
+          "oil_share": 26.0,
+          "gas_share": 21.0,
+          "coal_share": 22.5,
+          "nuclear_share": 6.0,
+          "renewables_share": 23.5,
+          "total_demand_ej": 640
+        },
+        "2030": {
+          "oil_share": 25.0,
+          "gas_share": 20.6,
+          "coal_share": 21.6,
+          "nuclear_share": 6.4,
+          "renewables_share": 25.2,
+          "total_demand_ej": 648
+        },
+        "2031": {
+          "oil_share": 24.0,
+          "gas_share": 20.2,
+          "coal_share": 20.7,
+          "nuclear_share": 6.800000000000001,
+          "renewables_share": 26.9,
+          "total_demand_ej": 656
+        },
+        "2032": {
+          "oil_share": 23.0,
+          "gas_share": 19.8,
+          "coal_share": 19.8,
+          "nuclear_share": 7.2,
+          "renewables_share": 28.6,
+          "total_demand_ej": 664
+        },
+        "2033": {
+          "oil_share": 22.0,
+          "gas_share": 19.4,
+          "coal_share": 18.9,
+          "nuclear_share": 7.6,
+          "renewables_share": 30.299999999999997,
+          "total_demand_ej": 672
+        },
+        "2034": {
+          "oil_share": 21.0,
+          "gas_share": 19.0,
+          "coal_share": 18.0,
+          "nuclear_share": 8.0,
+          "renewables_share": 32.0,
+          "total_demand_ej": 680
+        },
+        "2035": {
+          "oil_share": 20.0,
+          "gas_share": 18.6,
+          "coal_share": 17.1,
+          "nuclear_share": 8.4,
+          "renewables_share": 33.7,
+          "total_demand_ej": 688
+        },
+        "2036": {
+          "oil_share": 19.0,
+          "gas_share": 18.2,
+          "coal_share": 16.2,
+          "nuclear_share": 8.8,
+          "renewables_share": 35.4,
+          "total_demand_ej": 696
+        },
+        "2037": {
+          "oil_share": 18.0,
+          "gas_share": 17.8,
+          "coal_share": 15.299999999999999,
+          "nuclear_share": 9.2,
+          "renewables_share": 37.099999999999994,
+          "total_demand_ej": 704
+        },
+        "2038": {
+          "oil_share": 17.0,
+          "gas_share": 17.4,
+          "coal_share": 14.4,
+          "nuclear_share": 9.600000000000001,
+          "renewables_share": 38.8,
+          "total_demand_ej": 712
+        },
+        "2039": {
+          "oil_share": 16.0,
+          "gas_share": 17.0,
+          "coal_share": 13.5,
+          "nuclear_share": 10.0,
+          "renewables_share": 40.5,
+          "total_demand_ej": 720
+        },
+        "2040": {
+          "oil_share": 15.0,
+          "gas_share": 16.6,
+          "coal_share": 12.6,
+          "nuclear_share": 10.4,
+          "renewables_share": 42.2,
+          "total_demand_ej": 728
+        },
+        "2041": {
+          "oil_share": 14.0,
+          "gas_share": 16.2,
+          "coal_share": 11.7,
+          "nuclear_share": 10.8,
+          "renewables_share": 43.9,
+          "total_demand_ej": 736
+        },
+        "2042": {
+          "oil_share": 13.0,
+          "gas_share": 15.8,
+          "coal_share": 10.8,
+          "nuclear_share": 11.2,
+          "renewables_share": 45.599999999999994,
+          "total_demand_ej": 744
+        },
+        "2043": {
+          "oil_share": 12.0,
+          "gas_share": 15.399999999999999,
+          "coal_share": 9.899999999999999,
+          "nuclear_share": 11.600000000000001,
+          "renewables_share": 47.3,
+          "total_demand_ej": 752
+        },
+        "2044": {
+          "oil_share": 11.0,
+          "gas_share": 15.0,
+          "coal_share": 9.0,
+          "nuclear_share": 12.0,
+          "renewables_share": 49.0,
+          "total_demand_ej": 760
+        },
+        "2045": {
+          "oil_share": 10.0,
+          "gas_share": 14.6,
+          "coal_share": 8.099999999999998,
+          "nuclear_share": 12.4,
+          "renewables_share": 50.699999999999996,
+          "total_demand_ej": 768
+        },
+        "2046": {
+          "oil_share": 9.0,
+          "gas_share": 14.2,
+          "coal_share": 7.199999999999999,
+          "nuclear_share": 12.8,
+          "renewables_share": 52.4,
+          "total_demand_ej": 776
+        },
+        "2047": {
+          "oil_share": 8.0,
+          "gas_share": 13.799999999999999,
+          "coal_share": 6.300000000000001,
+          "nuclear_share": 13.200000000000001,
+          "renewables_share": 54.1,
+          "total_demand_ej": 784
+        },
+        "2048": {
+          "oil_share": 7.0,
+          "gas_share": 13.399999999999999,
+          "coal_share": 5.399999999999999,
+          "nuclear_share": 13.600000000000001,
+          "renewables_share": 55.8,
+          "total_demand_ej": 792
+        },
+        "2049": {
+          "oil_share": 6.0,
+          "gas_share": 13.0,
+          "coal_share": 4.5,
+          "nuclear_share": 14.0,
+          "renewables_share": 57.5,
+          "total_demand_ej": 800
+        },
+        "2050": {
+          "oil_share": 5,
+          "gas_share": 12.6,
+          "coal_share": 3.599999999999998,
+          "nuclear_share": 14.4,
+          "renewables_share": 59.199999999999996,
+          "total_demand_ej": 808
+        }
+      },
+      "oil_producers": {
+        "USA": {
+          "production_mbd": 13.0,
+          "reserves_bb": 47,
+          "breakeven": 40
+        },
+        "Saudi_Arabia": {
+          "production_mbd": 10.5,
+          "reserves_bb": 297,
+          "breakeven": 25
+        },
+        "Russia": {
+          "production_mbd": 10.0,
+          "reserves_bb": 107,
+          "breakeven": 35
+        },
+        "Canada": {
+          "production_mbd": 5.0,
+          "reserves_bb": 168,
+          "breakeven": 45
+        },
+        "Iraq": {
+          "production_mbd": 4.5,
+          "reserves_bb": 145,
+          "breakeven": 20
+        },
+        "China": {
+          "production_mbd": 4.0,
+          "reserves_bb": 26,
+          "breakeven": 50
+        },
+        "UAE": {
+          "production_mbd": 3.5,
+          "reserves_bb": 98,
+          "breakeven": 22
+        },
+        "Brazil": {
+          "production_mbd": 3.0,
+          "reserves_bb": 13,
+          "breakeven": 35
+        }
+      },
+      "fuel_consumption": {
+        "Road_Transport": {
+          "share_pct": 46,
+          "type": "Gasoline/Diesel",
+          "electrification": 0.08
+        },
+        "Freight_Trucks": {
+          "share_pct": 24,
+          "type": "Diesel",
+          "electrification": 0.01
+        },
+        "Aviation": {
+          "share_pct": 7,
+          "type": "Jet_Fuel",
+          "electrification": 0.0
+        },
+        "Marine_Shipping": {
+          "share_pct": 3,
+          "type": "Bunker_Fuel",
+          "electrification": 0.0
+        },
+        "Rail": {
+          "share_pct": 2,
+          "type": "Diesel/Electric",
+          "electrification": 0.4
+        },
+        "Industrial": {
+          "share_pct": 12,
+          "type": "Various",
+          "electrification": 0.15
+        },
+        "Residential_Commercial": {
+          "share_pct": 6,
+          "type": "Natural_Gas",
+          "electrification": 0.1
+        }
+      }
+    },
+    "infrastructure": {
+      "grid_capacity": {
+        "China": {
+          "capacity_gw": 2900,
+          "renewable_pct": 32,
+          "grid_losses_pct": 5.5
+        },
+        "USA": {
+          "capacity_gw": 1250,
+          "renewable_pct": 23,
+          "grid_losses_pct": 5.0
+        },
+        "EU": {
+          "capacity_gw": 1050,
+          "renewable_pct": 45,
+          "grid_losses_pct": 6.0
+        },
+        "India": {
+          "capacity_gw": 430,
+          "renewable_pct": 28,
+          "grid_losses_pct": 18.0
+        },
+        "Japan": {
+          "capacity_gw": 320,
+          "renewable_pct": 22,
+          "grid_losses_pct": 4.5
+        },
+        "Brazil": {
+          "capacity_gw": 190,
+          "renewable_pct": 85,
+          "grid_losses_pct": 15.0
+        },
+        "Russia": {
+          "capacity_gw": 250,
+          "renewable_pct": 18,
+          "grid_losses_pct": 10.0
+        }
+      },
+      "charging_infra": {
+        "China": {
+          "stations": 2500000,
+          "fast_chargers": 800000,
+          "growth_rate": 0.45
+        },
+        "Europe": {
+          "stations": 650000,
+          "fast_chargers": 180000,
+          "growth_rate": 0.35
+        },
+        "USA": {
+          "stations": 192000,
+          "fast_chargers": 45000,
+          "growth_rate": 0.4
+        },
+        "Japan": {
+          "stations": 40000,
+          "fast_chargers": 12000,
+          "growth_rate": 0.15
+        },
+        "South_Korea": {
+          "stations": 35000,
+          "fast_chargers": 15000,
+          "growth_rate": 0.3
+        }
+      },
+      "pipelines": {
+        "Oil_Pipelines": {
+          "length_km": 800000,
+          "capacity_mbd": 120,
+          "age_avg_years": 35
+        },
+        "Gas_Pipelines": {
+          "length_km": 1200000,
+          "capacity_bcm": 5000,
+          "age_avg_years": 30
+        },
+        "Hydrogen_Pipelines": {
+          "length_km": 5000,
+          "capacity_mt": 5,
+          "age_avg_years": 10
+        },
+        "CO2_Pipelines": {
+          "length_km": 8000,
+          "capacity_mt": 50,
+          "age_avg_years": 15
+        }
+      },
+      "ports": {
+        "Shanghai": {
+          "teu_m": 49,
+          "growth": 0.03,
+          "automation": 0.85
+        },
+        "Singapore": {
+          "teu_m": 38,
+          "growth": 0.02,
+          "automation": 0.9
+        },
+        "Ningbo": {
+          "teu_m": 35,
+          "growth": 0.05,
+          "automation": 0.8
+        },
+        "Shenzhen": {
+          "teu_m": 30,
+          "growth": 0.04,
+          "automation": 0.75
+        },
+        "Busan": {
+          "teu_m": 23,
+          "growth": 0.02,
+          "automation": 0.85
+        },
+        "Rotterdam": {
+          "teu_m": 14,
+          "growth": 0.01,
+          "automation": 0.95
+        },
+        "Los_Angeles": {
+          "teu_m": 10,
+          "growth": 0.02,
+          "automation": 0.7
+        }
+      }
+    },
+    "automotive": {
+      "vehicle_production": {
+        "2024": {
+          "passenger_cars": 67,
+          "light_trucks": 25,
+          "heavy_trucks": 3.5,
+          "buses": 0.5,
+          "ev_share": 0.18
+        },
+        "2025": {
+          "passenger_cars": 68,
+          "light_trucks": 26,
+          "heavy_trucks": 3.6,
+          "buses": 0.5,
+          "ev_share": 0.22
+        },
+        "2030": {
+          "passenger_cars": 65,
+          "light_trucks": 28,
+          "heavy_trucks": 4.0,
+          "buses": 0.6,
+          "ev_share": 0.45
+        },
+        "2035": {
+          "passenger_cars": 55,
+          "light_trucks": 30,
+          "heavy_trucks": 4.5,
+          "buses": 0.7,
+          "ev_share": 0.7
+        },
+        "2040": {
+          "passenger_cars": 45,
+          "light_trucks": 32,
+          "heavy_trucks": 5.0,
+          "buses": 0.8,
+          "ev_share": 0.9
+        }
+      },
+      "automakers": {
+        "Toyota": {
+          "production_m": 10.5,
+          "ev_share": 0.08,
+          "plants": 53,
+          "employees": 375000
+        },
+        "Volkswagen": {
+          "production_m": 9.0,
+          "ev_share": 0.12,
+          "plants": 72,
+          "employees": 680000
+        },
+        "Hyundai_Kia": {
+          "production_m": 7.5,
+          "ev_share": 0.15,
+          "plants": 35,
+          "employees": 280000
+        },
+        "GM": {
+          "production_m": 6.0,
+          "ev_share": 0.05,
+          "plants": 32,
+          "employees": 155000
+        },
+        "Stellantis": {
+          "production_m": 5.5,
+          "ev_share": 0.1,
+          "plants": 44,
+          "employees": 280000
+        },
+        "Ford": {
+          "production_m": 4.5,
+          "ev_share": 0.06,
+          "plants": 28,
+          "employees": 173000
+        },
+        "Honda": {
+          "production_m": 4.0,
+          "ev_share": 0.03,
+          "plants": 24,
+          "employees": 200000
+        },
+        "BYD": {
+          "production_m": 3.0,
+          "ev_share": 1.0,
+          "plants": 12,
+          "employees": 600000
+        },
+        "Tesla": {
+          "production_m": 2.0,
+          "ev_share": 1.0,
+          "plants": 6,
+          "employees": 140000
+        }
+      },
+      "manufacturing_regions": {
+        "China": {
+          "share_pct": 32,
+          "capacity_m": 35,
+          "utilization": 0.75,
+          "avg_wage": 12
+        },
+        "Europe": {
+          "share_pct": 18,
+          "capacity_m": 22,
+          "utilization": 0.7,
+          "avg_wage": 45
+        },
+        "Japan": {
+          "share_pct": 10,
+          "capacity_m": 12,
+          "utilization": 0.8,
+          "avg_wage": 38
+        },
+        "USA": {
+          "share_pct": 12,
+          "capacity_m": 14,
+          "utilization": 0.75,
+          "avg_wage": 35
+        },
+        "South_Korea": {
+          "share_pct": 5,
+          "capacity_m": 6,
+          "utilization": 0.85,
+          "avg_wage": 32
+        },
+        "India": {
+          "share_pct": 6,
+          "capacity_m": 8,
+          "utilization": 0.65,
+          "avg_wage": 5
+        },
+        "Mexico": {
+          "share_pct": 4,
+          "capacity_m": 5,
+          "utilization": 0.8,
+          "avg_wage": 8
+        }
+      }
+    },
+    "aerospace": {
+      "commercial_aircraft": {
+        "Boeing": {
+          "backlog": 5600,
+          "deliveries_2024": 400,
+          "employees": 140000,
+          "revenue_b": 78
+        },
+        "Airbus": {
+          "backlog": 8500,
+          "deliveries_2024": 735,
+          "employees": 150000,
+          "revenue_b": 75
+        },
+        "COMAC": {
+          "backlog": 1200,
+          "deliveries_2024": 25,
+          "employees": 25000,
+          "revenue_b": 5
+        },
+        "Embraer": {
+          "backlog": 350,
+          "deliveries_2024": 180,
+          "employees": 19000,
+          "revenue_b": 5
+        },
+        "Bombardier": {
+          "backlog": 150,
+          "deliveries_2024": 140,
+          "employees": 14000,
+          "revenue_b": 8
+        }
+      },
+      "defense": {
+        "Lockheed_Martin": {
+          "revenue_b": 67,
+          "employees": 116000,
+          "f35_delivered": 180
+        },
+        "RTX": {
+          "revenue_b": 68,
+          "employees": 185000,
+          "engines_delivered": 3000
+        },
+        "Northrop_Grumman": {
+          "revenue_b": 37,
+          "employees": 95000,
+          "b21_raider": "development"
+        },
+        "Boeing_Defense": {
+          "revenue_b": 25,
+          "employees": 50000,
+          "kc46_delivered": 70
+        },
+        "General_Dynamics": {
+          "revenue_b": 42,
+          "employees": 110000,
+          "gulfstream_delivered": 150
+        }
+      },
+      "space": {
+        "SpaceX": {
+          "launches_2024": 120,
+          "valuation_b": 200,
+          "employees": 13000,
+          "starlink_sats": 6000
+        },
+        "Blue_Origin": {
+          "launches_2024": 8,
+          "valuation_b": 10,
+          "employees": 11000
+        },
+        "Rocket_Lab": {
+          "launches_2024": 15,
+          "valuation_b": 3,
+          "employees": 2000
+        },
+        "ULA": {
+          "launches_2024": 10,
+          "employees": 3500
+        },
+        "Arianespace": {
+          "launches_2024": 4,
+          "employees": 1500
+        }
+      },
+      "evtol": {
+        "Joby": {
+          "certification": 2025,
+          "range_km": 240,
+          "speed_kph": 320,
+          "funding_b": 2.0
+        },
+        "Archer": {
+          "certification": 2025,
+          "range_km": 100,
+          "speed_kph": 240,
+          "funding_b": 1.5
+        },
+        "Lilium": {
+          "certification": 2026,
+          "range_km": 300,
+          "speed_kph": 280,
+          "funding_b": 1.5
+        },
+        "Vertical": {
+          "certification": 2026,
+          "range_km": 160,
+          "speed_kph": 320,
+          "funding_b": 0.4
+        },
+        "EHang": {
+          "certification": 2024,
+          "range_km": 35,
+          "speed_kph": 130,
+          "funding_b": 0.5
+        }
+      }
+    },
+    "tech": {
+      "semiconductors": {
+        "TSMC": {
+          "market_share": 0.56,
+          "revenue_b": 80,
+          "capex_b": 32,
+          "node_nm": 3
+        },
+        "Samsung": {
+          "market_share": 0.12,
+          "revenue_b": 40,
+          "capex_b": 25,
+          "node_nm": 3
+        },
+        "Intel": {
+          "market_share": 0.1,
+          "revenue_b": 55,
+          "capex_b": 25,
+          "node_nm": 4
+        },
+        "GlobalFoundries": {
+          "market_share": 0.06,
+          "revenue_b": 8,
+          "capex_b": 3,
+          "node_nm": 12
+        },
+        "SMIC": {
+          "market_share": 0.05,
+          "revenue_b": 7,
+          "capex_b": 6,
+          "node_nm": 7
+        },
+        "UMC": {
+          "market_share": 0.06,
+          "revenue_b": 9,
+          "capex_b": 3,
+          "node_nm": 14
+        }
+      },
+      "data_centers": {
+        "USA": {
+          "capacity_gw": 18,
+          "growth_rate": 0.25,
+          "hyperscale_pct": 60
+        },
+        "China": {
+          "capacity_gw": 12,
+          "growth_rate": 0.2,
+          "hyperscale_pct": 40
+        },
+        "Europe": {
+          "capacity_gw": 8,
+          "growth_rate": 0.15,
+          "hyperscale_pct": 45
+        },
+        "Singapore": {
+          "capacity_gw": 1.5,
+          "growth_rate": 0.1,
+          "hyperscale_pct": 70
+        },
+        "Japan": {
+          "capacity_gw": 2,
+          "growth_rate": 0.08,
+          "hyperscale_pct": 50
+        }
+      },
+      "electronics": {
+        "Smartphones": {
+          "units_b": 1.2,
+          "revenue_b": 450,
+          "top_producer": "China",
+          "share_pct": 70
+        },
+        "Laptops": {
+          "units_m": 260,
+          "revenue_b": 180,
+          "top_producer": "China",
+          "share_pct": 85
+        },
+        "TVs": {
+          "units_m": 220,
+          "revenue_b": 120,
+          "top_producer": "China",
+          "share_pct": 65
+        },
+        "Tablets": {
+          "units_m": 160,
+          "revenue_b": 60,
+          "top_producer": "China",
+          "share_pct": 75
+        },
+        "Wearables": {
+          "units_m": 500,
+          "revenue_b": 80,
+          "top_producer": "China",
+          "share_pct": 70
+        }
+      }
+    },
+    "heavy_industry": {
+      "steel": {
+        "China": {
+          "production_mt": 1050,
+          "share": 0.54,
+          "emissions_intensity": 1.8
+        },
+        "India": {
+          "production_mt": 140,
+          "share": 0.07,
+          "emissions_intensity": 2.2
+        },
+        "Japan": {
+          "production_mt": 85,
+          "share": 0.04,
+          "emissions_intensity": 1.6
+        },
+        "USA": {
+          "production_mt": 80,
+          "share": 0.04,
+          "emissions_intensity": 1.5
+        },
+        "Russia": {
+          "production_mt": 75,
+          "share": 0.04,
+          "emissions_intensity": 1.9
+        },
+        "South_Korea": {
+          "production_mt": 65,
+          "share": 0.03,
+          "emissions_intensity": 1.7
+        }
+      },
+      "aluminum": {
+        "China": {
+          "production_mt": 41,
+          "share": 0.6,
+          "emissions_intensity": 16.5
+        },
+        "India": {
+          "production_mt": 4,
+          "share": 0.06,
+          "emissions_intensity": 22.0
+        },
+        "Russia": {
+          "production_mt": 4,
+          "share": 0.06,
+          "emissions_intensity": 5.0
+        },
+        "Canada": {
+          "production_mt": 3,
+          "share": 0.04,
+          "emissions_intensity": 2.5
+        },
+        "UAE": {
+          "production_mt": 2.7,
+          "share": 0.04,
+          "emissions_intensity": 8.0
+        }
+      },
+      "chemicals": {
+        "BASF": {
+          "revenue_b": 87,
+          "employees": 112000,
+          "plants": 240
+        },
+        "Dow": {
+          "revenue_b": 57,
+          "employees": 37000,
+          "plants": 100
+        },
+        "SABIC": {
+          "revenue_b": 45,
+          "employees": 32000,
+          "plants": 60
+        },
+        "Sinopec": {
+          "revenue_b": 42,
+          "employees": 70000,
+          "plants": 80
+        },
+        "LyondellBasell": {
+          "revenue_b": 46,
+          "employees": 19000,
+          "plants": 55
+        }
+      },
+      "cement": {
+        "China": {
+          "production_mt": 2100,
+          "share": 0.52,
+          "emissions_gt": 1.2
+        },
+        "India": {
+          "production_mt": 380,
+          "share": 0.09,
+          "emissions_gt": 0.2
+        },
+        "Vietnam": {
+          "production_mt": 100,
+          "share": 0.02,
+          "emissions_gt": 0.06
+        },
+        "USA": {
+          "production_mt": 95,
+          "share": 0.02,
+          "emissions_gt": 0.05
+        },
+        "Turkey": {
+          "production_mt": 80,
+          "share": 0.02,
+          "emissions_gt": 0.04
+        }
+      },
+      "minerals": {
+        "Lithium": {
+          "production_kt": 130,
+          "top_producer": "Australia",
+          "price_kg": 15,
+          "reserves_mt": 26
+        },
+        "Cobalt": {
+          "production_kt": 190,
+          "top_producer": "DRC",
+          "price_kg": 30,
+          "reserves_mt": 7.6
+        },
+        "Nickel": {
+          "production_kt": 3300,
+          "top_producer": "Indonesia",
+          "price_kg": 16,
+          "reserves_mt": 100
+        },
+        "Rare_Earths": {
+          "production_kt": 300,
+          "top_producer": "China",
+          "price_kg": 50,
+          "reserves_mt": 130
+        },
+        "Copper": {
+          "production_kt": 22000,
+          "top_producer": "Chile",
+          "price_kg": 8,
+          "reserves_mt": 890
+        }
+      }
+    },
+    "ml_predictions": {
+      "models": [
+        {
+          "target": "ev_adoption",
+          "r2_score": 0.78,
+          "model": "GradientBoosting"
+        },
+        {
+          "target": "emissions",
+          "r2_score": 0.9107,
+          "model": "GradientBoosting"
+        },
+        {
+          "target": "manufacturing_output",
+          "r2_score": 0.9842,
+          "model": "GradientBoosting"
+        }
+      ],
+      "forecasts": {
+        "2030": {
+          "ev_market_share": 45,
+          "renewable_energy_share": 40,
+          "global_emissions_gt": 32,
+          "semiconductor_market_b": 800,
+          "ev_battery_market_b": 150
+        },
+        "2040": {
+          "ev_market_share": 85,
+          "renewable_energy_share": 60,
+          "global_emissions_gt": 20,
+          "semiconductor_market_b": 1200,
+          "ev_battery_market_b": 400
+        },
+        "2050": {
+          "ev_market_share": 98,
+          "renewable_energy_share": 80,
+          "global_emissions_gt": 10,
+          "semiconductor_market_b": 1800,
+          "ev_battery_market_b": 600
+        }
+      }
+    }
+  },
+  "execution_seconds": 1.39
+}
