@@ -75,13 +75,13 @@ export default function Dashboard() {
     ]
 
     return (
-        <div style={{ padding: '1.5rem' }}>
+        <div className="mobile-p-sm" style={{ padding: '1.5rem' }}>
             {/* Hero Section */}
             <div style={{
                 background: 'linear-gradient(135deg, #0c0a20 0%, #1a1744 30%, #2d1b69 60%, #4c1d95 100%)',
-                borderRadius: '24px',
-                padding: '3rem',
-                marginBottom: '2rem',
+                borderRadius: '20px',
+                padding: 'clamp(1.25rem, 4vw, 3rem)',
+                marginBottom: '1.5rem',
                 position: 'relative',
                 overflow: 'hidden'
             }}>
@@ -95,19 +95,19 @@ export default function Dashboard() {
 
                 <div style={{ position: 'relative', zIndex: 1 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                        <span style={{ fontSize: '2.5rem' }}>⚡</span>
+                        <span style={{ fontSize: 'clamp(1.75rem, 5vw, 2.5rem)' }}>⚡</span>
                         <div>
-                            <h1 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'white', margin: 0, lineHeight: 1.1 }}>
+                            <h1 style={{ fontSize: 'clamp(1.25rem, 5vw, 2.5rem)', fontWeight: '800', color: 'white', margin: 0, lineHeight: 1.1 }}>
                                 Energy Transition Intelligence
                             </h1>
-                            <p style={{ color: 'rgba(255,255,255,0.7)', margin: '0.5rem 0 0', fontSize: '1.1rem' }}>
+                            <p style={{ color: 'rgba(255,255,255,0.7)', margin: '0.5rem 0 0', fontSize: 'clamp(0.8rem, 2.5vw, 1.1rem)' }}>
                                 100+ ML models • 200+ insights • Real-time analysis
                             </p>
                         </div>
                     </div>
 
                     {/* Hero Stats Grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1rem', marginTop: '2rem' }}>
+                    <div className="mobile-scroll-x" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '0.75rem', marginTop: '1.5rem' }}>
                         {heroStats.map((stat, i) => (
                             <div
                                 key={i}
@@ -137,10 +137,10 @@ export default function Dashboard() {
                                         {stat.trend}
                                     </span>
                                 </div>
-                                <div style={{ color: 'white', fontSize: '2rem', fontWeight: '700', margin: '0.5rem 0' }}>
+                                <div style={{ color: 'white', fontSize: 'clamp(1.25rem, 4vw, 2rem)', fontWeight: '700', margin: '0.5rem 0' }}>
                                     {stat.value}
                                 </div>
-                                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>
+                                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 'clamp(0.7rem, 2vw, 0.85rem)' }}>
                                     {stat.label}
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ export default function Dashboard() {
                 <h2 style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                     <span>🤖</span> ML Analysis Suites
                 </h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.75rem' }}>
+                <div className="mobile-scroll-x" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '0.5rem' }}>
                     {mlSummary.map((suite, i) => (
                         <NavLink
                             key={i}

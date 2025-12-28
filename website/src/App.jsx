@@ -26,6 +26,7 @@ import CuttingEdgeML from './pages/CuttingEdgeML'
 import DecadeAnalysis from './pages/DecadeAnalysis'
 import GlobalInfrastructure from './pages/GlobalInfrastructure'
 import './index.css'
+import './mobile.css'
 
 function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
